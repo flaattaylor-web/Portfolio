@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biotech Job Match — upload your CV, get ranked roles</title>
+<meta name="description" content="Upload a CV. It's read in your browser, matched against live postings pulled straight from 79 biotech company job boards, and ranked by fit. Nothing is uploaded anywhere.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0E1A; --bg-2:#0C1120; --panel:#121A2E; --panel-2:#0F1626;
+    --line:#243356; --line-soft:#1B2740;
+    --ink:#EAF0FF; --ink-2:#A7B4D4; --ink-3:#6B7BA0;
+    --signal-1:#38E1FF; --signal-2:#7B6CFF;
+    --A:#3BE8B0; --C:#4F9BFF; --G:#F0B429; --T:#FF5D73;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+  ::selection{background:var(--signal-1);color:#04121a}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.06;letter-spacing:-.02em;font-weight:600}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  nav{position:sticky;top:0;z-index:60;background:rgba(10,14,26,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'Space Grotesk';font-weight:700;font-size:17px;display:flex;align-items:center;gap:11px}
+  .helix{display:flex;gap:3px}
+  .helix i{width:5px;height:5px;border-radius:50%;display:block}
+  .bA{background:var(--A)}.bC{background:var(--C)}.bG{background:var(--G)}.bT{background:var(--T)}
+  .nav-cta{font-family:'JetBrains Mono';font-size:12.5px;letter-spacing:.05em;border:1px solid var(--line);padding:8px 15px;border-radius:8px;transition:.2s}
+  .nav-cta:hover{border-color:var(--signal-1);background:rgba(56,225,255,.06)}
+
+  header{padding:70px 0 20px;position:relative;overflow:hidden}
+  .glow{position:absolute;width:560px;height:560px;border-radius:50%;filter:blur(155px);opacity:.13;pointer-events:none;background:var(--signal-1);top:-320px;right:-180px}
+  .eyebrow{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--line)}
+  .eyebrow .idx{color:var(--signal-1)}
+  h1{font-size:clamp(34px,5.5vw,60px);margin-bottom:20px}
+  h1 .stroke{color:transparent;-webkit-text-stroke:1.3px var(--ink-2)}
+  .lead{font-size:17px;color:var(--ink-2);max-width:680px}
+  .lead b{color:var(--ink);font-weight:600}
+
+  /* ---------- dropzone: the signature element ---------- */
+  .drop{
+    margin-top:38px;border:1.5px dashed var(--line);border-radius:16px;
+    background:linear-gradient(180deg,rgba(18,26,46,.5),rgba(10,14,26,.2));
+    padding:48px 28px;text-align:center;cursor:pointer;transition:.22s;position:relative;overflow:hidden;
+  }
+  .drop:hover,.drop.over{border-color:var(--signal-1);background:rgba(56,225,255,.05)}
+  .drop.over{transform:scale(1.006)}
+  .drop:focus-visible{outline:2px solid var(--signal-1);outline-offset:3px}
+  .drop .ico{font-size:30px;margin-bottom:14px;color:var(--signal-1);font-family:'JetBrains Mono'}
+  .drop h3{font-size:20px;margin-bottom:8px}
+  .drop p{font-size:14px;color:var(--ink-3);max-width:460px;margin:0 auto}
+  .drop .fmts{font-family:'JetBrains Mono';font-size:11px;color:var(--ink-3);letter-spacing:.08em;margin-top:16px;opacity:.7}
+  .drop.busy{pointer-events:none;opacity:.65}
+  .privacy{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;font-family:'JetBrains Mono';font-size:11.5px;color:var(--A)}
+  .privacy::before{content:"●";font-size:8px}
+
+  /* ---------- profile readout ---------- */
+  .prof{margin-top:26px;border:1px solid var(--line-soft);border-radius:14px;background:var(--panel-2);overflow:hidden;display:none}
+  .prof.on{display:block}
+  .prof-head{display:flex;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px solid var(--line-soft);flex-wrap:wrap}
+  .dots{display:flex;gap:6px}
+  .dots i{width:10px;height:10px;border-radius:50%;display:block}
+  .dots i:nth-child(1){background:var(--T)}.dots i:nth-child(2){background:var(--G)}.dots i:nth-child(3){background:var(--A)}
+  .prof-head .lbl{font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink-3);letter-spacing:.08em}
+  .prof-head .lbl b{color:var(--signal-1);font-weight:500}
+  .prof-head .reset{margin-left:auto;font-family:'JetBrains Mono';font-size:11px;color:var(--ink-3);border:1px solid var(--line-soft);padding:5px 11px;border-radius:6px;cursor:pointer;background:none;transition:.2s}
+  .prof-head .reset:hover{border-color:var(--T);color:var(--T)}
+  .prof-body{padding:20px 18px}
+  .lvl{font-family:'JetBrains Mono';font-size:12px;color:var(--ink-3);margin-bottom:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .lvl select{font-family:'JetBrains Mono';font-size:12px;background:var(--panel);border:1px solid var(--line);color:var(--signal-1);padding:5px 9px;border-radius:6px;cursor:pointer}
+  .hint{font-size:12.5px;color:var(--ink-3);margin-bottom:14px;line-height:1.5}
+  .skills{display:flex;gap:6px;flex-wrap:wrap}
+  .sk{
+    font-family:'JetBrains Mono';font-size:11.5px;padding:6px 11px;border-radius:100px;
+    border:1px solid var(--line);color:var(--ink-2);cursor:pointer;background:transparent;
+    transition:.16s;display:inline-flex;align-items:center;gap:7px;
+  }
+  .sk:hover{border-color:var(--ink-3);color:var(--ink)}
+  .sk[aria-pressed=true]{background:rgba(56,225,255,.1);border-color:var(--signal-1);color:var(--signal-1)}
+  .sk[aria-pressed=true] .w{color:var(--signal-1)}
+  .sk .w{font-size:9.5px;opacity:.75;color:var(--ink-3)}
+  .sk:focus-visible{outline:2px solid var(--signal-1);outline-offset:2px}
+  .sk.off{opacity:.42;text-decoration:line-through}
+
+  /* ---------- controls ---------- */
+  .ctl{margin-top:22px;display:none}
+  .ctl.on{display:block}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .btn{font-family:'Space Grotesk';font-weight:500;font-size:14.5px;padding:12px 22px;border-radius:10px;cursor:pointer;border:0;transition:.2s;display:inline-flex;align-items:center;gap:9px}
+  .btn:focus-visible{outline:2px solid var(--signal-1);outline-offset:2px}
+  .btn-primary{background:linear-gradient(100deg,var(--signal-1),var(--signal-2));color:#05121c;box-shadow:0 8px 30px -10px rgba(56,225,255,.5)}
+  .btn-primary:hover{filter:brightness(1.08)}
+  .btn-primary:disabled{opacity:.5;cursor:not-allowed;box-shadow:none}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--ink-3);background:var(--panel)}
+  input[type=search],select.f{font-family:'Inter';font-size:14px;background:var(--panel-2);border:1px solid var(--line);color:var(--ink);padding:11px 13px;border-radius:9px;outline:none;transition:.2s}
+  input[type=search]{flex:1;min-width:200px}
+  input[type=search]:focus,select.f:focus{border-color:var(--signal-1)}
+  input[type=search]::placeholder{color:var(--ink-3)}
+  select.f{cursor:pointer}
+  label.check{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-2);cursor:pointer;user-select:none}
+  label.check input{accent-color:var(--signal-1);width:15px;height:15px;cursor:pointer}
+  /* distance control */
+  .geo-row{align-items:center}
+  .geo-lbl{font-family:'JetBrains Mono';font-size:12px;color:var(--ink-3);letter-spacing:.04em}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--panel-2)}
+  .seg button{
+    font-family:'JetBrains Mono';font-size:12px;letter-spacing:.03em;padding:9px 13px;
+    background:transparent;border:0;border-right:1px solid var(--line-soft);color:var(--ink-3);
+    cursor:pointer;transition:.16s;white-space:nowrap;
+  }
+  .seg button:last-child{border-right:0}
+  .seg button:hover{color:var(--ink);background:var(--panel)}
+  .seg button.on{background:rgba(56,225,255,.11);color:var(--signal-1)}
+  .seg button:focus-visible{outline:2px solid var(--signal-1);outline-offset:-2px}
+  #home{
+    font-family:'JetBrains Mono';font-size:12.5px;background:var(--panel-2);border:1px solid var(--line);
+    color:var(--ink);padding:9px 12px;border-radius:9px;outline:none;width:150px;transition:.2s;
+  }
+  #home:focus{border-color:var(--signal-1)}
+  #home::placeholder{color:var(--ink-3)}
+  #home.bad{border-color:var(--T)}
+  .geo-note{font-family:'JetBrains Mono';font-size:11px;color:var(--ink-3)}
+  .geo-note.ok{color:var(--A)}
+  .geo-note.bad{color:var(--T)}
+  .mi{font-family:'JetBrains Mono';font-size:10.5px;padding:2px 8px;border-radius:100px;border:1px solid var(--line);color:var(--ink-3)}
+  .mi.near{border-color:rgba(59,232,176,.35);color:var(--A)}
+  .mi.rem{border-color:rgba(79,155,255,.35);color:var(--C)}
+  .bar{height:3px;background:var(--line-soft);border-radius:3px;overflow:hidden;margin-top:16px;display:none}
+  .bar.on{display:block}
+  .bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--signal-1),var(--signal-2));transition:width .25s}
+  .status{font-family:'JetBrains Mono';font-size:12px;color:var(--ink-3);margin-top:11px;min-height:17px}
+  .status b{color:var(--signal-1);font-weight:500}
+  .status .err{color:var(--T)}
+  .status .ok{color:var(--A)}
+
+  /* ---------- results ---------- */
+  .meta{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin:44px 0 16px}
+  .count{font-family:'JetBrains Mono';font-size:12.5px;color:var(--ink-3);letter-spacing:.06em}
+  .count b{color:var(--ink);font-weight:500}
+  .job{
+    border:1px solid var(--line-soft);border-left:2px solid var(--line);border-radius:12px;
+    background:var(--panel-2);padding:18px 20px;margin-bottom:10px;
+    display:grid;grid-template-columns:1fr auto;gap:14px 20px;align-items:center;transition:.18s;
+  }
+  .job:hover{border-color:var(--line);border-left-color:var(--signal-1);background:var(--panel);transform:translateX(2px)}
+  .job.hot{border-left-color:var(--A)}
+  .job.warm{border-left-color:var(--G)}
+  .job h3{font-size:16.5px;font-weight:600;margin-bottom:7px;letter-spacing:-.01em}
+  .job h3 a:hover{color:var(--signal-1)}
+  .jline{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink-3)}
+  .jline .co{color:var(--ink-2)}
+  .jline .sep{color:var(--line)}
+  .tag{font-size:10.5px;padding:2px 8px;border-radius:100px;border:1px solid var(--line);color:var(--ink-3)}
+  .hits{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+  .hit{font-family:'JetBrains Mono';font-size:10.5px;padding:2.5px 8px;border-radius:4px;background:rgba(59,232,176,.09);color:var(--A);border:1px solid rgba(59,232,176,.22)}
+  .gap{background:rgba(240,180,41,.07);color:var(--G);border-color:rgba(240,180,41,.2)}
+  .right{display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+  .score{font-family:'JetBrains Mono';font-size:22px;font-weight:700;line-height:1;color:var(--ink-3)}
+  .score.hot{color:var(--A)}.score.warm{color:var(--G)}
+  .score span{font-size:10px;font-weight:400;color:var(--ink-3);display:block;text-align:right;margin-top:4px;letter-spacing:.08em}
+  .apply{font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:.05em;border:1px solid var(--line);padding:7px 14px;border-radius:7px;white-space:nowrap;transition:.2s}
+  .apply:hover{border-color:var(--signal-1);background:rgba(56,225,255,.07);color:var(--signal-1)}
+  .empty{text-align:center;padding:56px 20px;border:1px dashed var(--line);border-radius:14px;color:var(--ink-3)}
+  .empty h3{color:var(--ink-2);font-size:17px;margin-bottom:8px}
+  .empty p{font-size:14px;max-width:440px;margin:0 auto}
+
+  details.boards{margin-top:32px;border:1px solid var(--line-soft);border-radius:12px;background:var(--panel-2)}
+  details.boards summary{padding:14px 18px;cursor:pointer;font-family:'JetBrains Mono';font-size:12px;letter-spacing:.06em;color:var(--ink-2);list-style:none}
+  details.boards summary::-webkit-details-marker{display:none}
+  details.boards summary:hover{color:var(--ink)}
+  details.boards summary::before{content:"▸ ";color:var(--signal-1)}
+  details.boards[open] summary::before{content:"▾ "}
+  .bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:6px;padding:0 18px 18px}
+  .bstat{font-family:'JetBrains Mono';font-size:11px;padding:6px 9px;border-radius:6px;border:1px solid var(--line-soft);display:flex;justify-content:space-between;gap:8px;color:var(--ink-3)}
+  .bstat.ok{border-color:rgba(59,232,176,.28);color:var(--ink-2)}
+  .bstat.ok b{color:var(--A);font-weight:600}
+  .bstat.bad{border-color:rgba(255,93,115,.25)}
+  .bstat.bad b{color:var(--T);font-weight:600}
+
+  .agg{margin-top:34px;padding-top:28px;border-top:1px solid var(--line-soft)}
+  .agg h2{font-size:19px;margin-bottom:6px}
+  .agg p{font-size:14px;color:var(--ink-3);margin-bottom:16px;max-width:660px}
+  .agg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:8px}
+  .agg-grid a{border:1px solid var(--line-soft);border-radius:9px;padding:12px 14px;font-family:'JetBrains Mono';font-size:12px;color:var(--ink-2);transition:.18s;display:flex;justify-content:space-between;align-items:center;background:var(--panel-2)}
+  .agg-grid a:hover{border-color:var(--signal-1);color:var(--signal-1);background:var(--panel)}
+  .agg-grid a::after{content:"↗";opacity:.5;font-size:11px}
+
+  footer{margin-top:70px;padding:26px 0 44px;border-top:1px solid var(--line-soft);font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink-3);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  footer a:hover{color:var(--signal-1)}
+
+  @media(max-width:640px){
+    .wrap{padding:0 18px}
+    header{padding:40px 0 16px}
+    .drop{padding:34px 18px}
+    .job{grid-template-columns:1fr}
+    .right{flex-direction:row;align-items:center;justify-content:space-between;width:100%;border-top:1px solid var(--line-soft);padding-top:12px}
+    .score span{display:inline;margin-left:6px}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="https://taylorflaat.com">
+      <span class="helix"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></span>
+      Biotech Job Match
+    </a>
+    <a class="nav-cta" href="https://taylorflaat.com">Built by Taylor Flaat ↗</a>
+  </div>
+</nav>
+
+<header>
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">01</span> Upload</div>
+    <h1>Drop your CV.<br><span class="stroke">Get ranked roles.</span></h1>
+    <p class="lead">Your resume is read <b>inside your browser</b> and matched against live postings pulled straight from <b id="coN">79</b> biotech company job boards — Greenhouse, Lever, Ashby, SmartRecruiters. Every role is scored against the skills you actually have.</p>
+
+    <div class="drop" id="drop" tabindex="0" role="button" aria-label="Upload your CV">
+      <div class="ico">↑</div>
+      <h3>Drop your CV here</h3>
+      <p>Or click to choose a file. It's parsed locally — your resume is never uploaded, stored, or sent to any server.</p>
+      <div class="fmts">PDF · DOCX · TXT</div>
+      <input type="file" id="file" accept=".pdf,.docx,.txt,.md" hidden>
+    </div>
+    <div class="privacy">Runs entirely client-side. No backend. No tracking. Close the tab and it's gone.</div>
+
+    <!-- profile -->
+    <section class="prof" id="prof" aria-live="polite">
+      <div class="prof-head">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="lbl">profile <b id="fname">—</b></span>
+        <button class="reset" id="reset">✕ Clear CV</button>
+      </div>
+      <div class="prof-body">
+        <div class="lvl">
+          <span>Detected level:</span>
+          <select id="lvlSel" aria-label="Career level"></select>
+          <span id="skN"></span>
+        </div>
+        <p class="hint">These are the skills found in your CV, sized by how strongly they show up. <b>Click any skill to turn it off</b> — useful if it caught something you don't actually want to do. The weights drive every match score below.</p>
+        <div class="skills" id="skills"></div>
+      </div>
+    </section>
+
+    <!-- controls -->
+    <div class="ctl" id="ctl">
+      <div class="row">
+        <button class="btn btn-primary" id="run">▶ Find matching jobs</button>
+        <input type="search" id="q" placeholder="Filter results: AAV, qPCR, method development…">
+        <select class="f" id="sort">
+          <option value="score">Sort: best match</option>
+          <option value="dist">Sort: nearest</option>
+          <option value="date">Sort: newest</option>
+          <option value="co">Sort: company</option>
+        </select>
+      </div>
+      <div class="row geo-row" style="margin-top:12px">
+        <span class="geo-lbl">Within</span>
+        <div class="seg" id="dist" role="group" aria-label="Search radius">
+          <button data-d="25"   aria-pressed="false">25 mi</button>
+          <button data-d="50"   aria-pressed="false">50 mi</button>
+          <button data-d="100"  aria-pressed="false">100 mi</button>
+          <button data-d="remote" aria-pressed="false">Remote</button>
+          <button data-d="any"  aria-pressed="true" class="on">Anywhere</button>
+        </div>
+        <span class="geo-lbl">of</span>
+        <input type="text" id="home" placeholder="City, ST" aria-label="Your location" autocomplete="off">
+        <span class="geo-note" id="geoNote"></span>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <label class="check"><input type="checkbox" id="fitOnly" checked> Only show real matches</label>
+        <label class="check"><input type="checkbox" id="lvlOnly" checked> Match my career level</label>
+        <label class="check"><input type="checkbox" id="inclRemote" checked> Include remote roles</label>
+        <button class="btn btn-ghost" id="csv" style="margin-left:auto;padding:9px 16px;font-size:13px">↓ Export CSV</button>
+      </div>
+      <div class="bar" id="bar"><i></i></div>
+      <div class="status" id="status"></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="meta"><div class="count" id="count"></div></div>
+  <div id="results">
+    <div class="empty">
+      <h3>No CV yet</h3>
+      <p>Upload a resume above. Everything below fills in from it.</p>
+    </div>
+  </div>
+
+  <details class="boards" id="boards" hidden>
+    <summary>Board status — which companies responded</summary>
+    <div class="bgrid" id="bgrid"></div>
+  </details>
+
+  <section class="agg">
+    <h2>The rest of the web</h2>
+    <p>LinkedIn and Indeed have no open API and block browser requests, so no honest client-side tool can pull them in here. These links run a search on their sites instead.</p>
+    <div class="agg-grid" id="aggs"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>Built by Taylor Flaat · client-side, no backend, no data collection</span>
+  <span><a href="https://taylorflaat.com">taylorflaat.com</a></span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<script>
+/* ===== geo.js (inlined) ===== */
+/* ============================================================================
+   GAZETTEER — coordinates for distance filtering.
+   No geocoding API: a scan would need ~500 lookups and blow past every free
+   rate limit. Instead, ship the ~180 places biotech actually hires, plus state
+   centroids as fallback. Zero network calls, instant, works offline.
+   ============================================================================ */
+window.CITIES = [
+['cambridge','ma',42.3736,-71.1097],
+['boston','ma',42.3601,-71.0589],
+['waltham','ma',42.3765,-71.2356],
+['watertown','ma',42.3709,-71.1828],
+['lexington','ma',42.443,-71.229],
+['woburn','ma',42.4793,-71.1523],
+['somerville','ma',42.3876,-71.0995],
+['burlington','ma',42.5048,-71.1956],
+['bedford','ma',42.4906,-71.2761],
+['andover','ma',42.6583,-71.1368],
+['beverly','ma',42.5584,-70.88],
+['devens','ma',42.5417,-71.612],
+['norwood','ma',42.1945,-71.1995],
+['framingham','ma',42.2793,-71.4162],
+['worcester','ma',42.2626,-71.8023],
+['marlborough','ma',42.3459,-71.5523],
+['billerica','ma',42.5584,-71.2689],
+['canton','ma',42.1584,-71.1448],
+['south san francisco','ca',37.6547,-122.4077],
+['san francisco','ca',37.7749,-122.4194],
+['emeryville','ca',37.8313,-122.2852],
+['berkeley','ca',37.8715,-122.273],
+['oakland','ca',37.8044,-122.2712],
+['redwood city','ca',37.4852,-122.2364],
+['palo alto','ca',37.4419,-122.143],
+['menlo park','ca',37.453,-122.1817],
+['hayward','ca',37.6688,-122.0808],
+['fremont','ca',37.5485,-121.9886],
+['brisbane','ca',37.6808,-122.3999],
+['alameda','ca',37.7652,-122.2416],
+['santa clara','ca',37.3541,-121.9552],
+['san carlos','ca',37.5072,-122.2605],
+['foster city','ca',37.5585,-122.2711],
+['newark','ca',37.5297,-122.0402],
+['san mateo','ca',37.563,-122.3255],
+['mountain view','ca',37.3861,-122.0839],
+['sunnyvale','ca',37.3688,-122.0363],
+['san jose','ca',37.3382,-121.8863],
+['vacaville','ca',38.3566,-121.9877],
+['richmond','ca',37.9358,-122.3477],
+['san diego','ca',32.7157,-117.1611],
+['la jolla','ca',32.8328,-117.2713],
+['carlsbad','ca',33.1581,-117.3506],
+['vista','ca',33.2,-117.2425],
+['poway','ca',32.9628,-117.0359],
+['los angeles','ca',34.0522,-118.2437],
+['thousand oaks','ca',34.1706,-118.8376],
+['irvine','ca',33.6846,-117.8265],
+['pasadena','ca',34.1478,-118.1445],
+['santa monica','ca',34.0195,-118.4912],
+['agoura hills','ca',34.1533,-118.7615],
+['new york','ny',40.7128,-74.006],
+['brooklyn','ny',40.6782,-73.9442],
+['long island city','ny',40.7447,-73.9485],
+['tarrytown','ny',41.0762,-73.8587],
+['valhalla','ny',41.077,-73.7754],
+['pearl river','ny',41.0587,-74.0207],
+['jersey city','nj',40.7178,-74.0431],
+['newark','nj',40.7357,-74.1724],
+['rahway','nj',40.6082,-74.2776],
+['princeton','nj',40.3573,-74.6672],
+['summit','nj',40.7156,-74.3646],
+['kenilworth','nj',40.6773,-74.2907],
+['basking ridge','nj',40.7062,-74.549],
+['bridgewater','nj',40.5987,-74.6046],
+['branchburg','nj',40.5665,-74.7207],
+['cranbury','nj',40.3162,-74.5138],
+['warren','nj',40.6248,-74.514],
+['madison','nj',40.7598,-74.4171],
+['east hanover','nj',40.8195,-74.3646],
+['nutley','nj',40.8223,-74.1596],
+['clark','nj',40.6212,-74.3104],
+['plainsboro','nj',40.332,-74.5993],
+['piscataway','nj',40.4993,-74.3846],
+['north brunswick','nj',40.4515,-74.4832],
+['stamford','ct',41.0534,-73.5387],
+['new haven','ct',41.3083,-72.9279],
+['branford','ct',41.2793,-72.8151],
+['groton','ct',41.3498,-72.0784],
+['norwalk','ct',41.1177,-73.4082],
+['philadelphia','pa',39.9526,-75.1652],
+['king of prussia','pa',40.0893,-75.396],
+['malvern','pa',40.0362,-75.5138],
+['collegeville','pa',40.1857,-75.4527],
+['horsham','pa',40.1784,-75.1288],
+['wayne','pa',40.0443,-75.3877],
+['spring house','pa',40.1857,-75.2027],
+['west point','pa',40.2065,-75.2932],
+['radnor','pa',40.0459,-75.3599],
+['exton','pa',40.029,-75.6207],
+['plymouth meeting','pa',40.1082,-75.2793],
+['gaithersburg','md',39.1434,-77.2014],
+['rockville','md',39.084,-77.1528],
+['bethesda','md',38.9847,-77.0947],
+['frederick','md',39.4143,-77.4105],
+['baltimore','md',39.2904,-76.6122],
+['germantown','md',39.1732,-77.2717],
+['washington','dc',38.9072,-77.0369],
+['durham','nc',35.994,-78.8986],
+['raleigh','nc',35.7796,-78.6382],
+['research triangle park','nc',35.899,-78.8622],
+['morrisville','nc',35.8235,-78.8256],
+['cary','nc',35.7915,-78.7811],
+['chapel hill','nc',35.9132,-79.0558],
+['holly springs','nc',35.6513,-78.8336],
+['wilson','nc',35.7213,-77.9155],
+['seattle','wa',47.6062,-122.3321],
+['bothell','wa',47.7623,-122.2054],
+['redmond','wa',47.674,-122.1215],
+['bellevue','wa',47.6101,-122.2015],
+['chicago','il',41.8781,-87.6298],
+['north chicago','il',42.3253,-87.8412],
+['lake forest','il',42.2586,-87.8406],
+['deerfield','il',42.1711,-87.8445],
+['abbott park','il',42.3097,-87.8842],
+['st. louis','mo',38.627,-90.1994],
+['saint louis','mo',38.627,-90.1994],
+['indianapolis','in',39.7684,-86.1581],
+['kalamazoo','mi',42.2917,-85.5872],
+['madison','wi',43.0731,-89.4012],
+['minneapolis','mn',44.9778,-93.265],
+['ann arbor','mi',42.2808,-83.743],
+['houston','tx',29.7604,-95.3698],
+['austin','tx',30.2672,-97.7431],
+['dallas','tx',32.7767,-96.797],
+['san antonio','tx',29.4241,-98.4936],
+['college station','tx',30.628,-96.3344],
+['boulder','co',40.015,-105.2705],
+['denver','co',39.7392,-104.9903],
+['longmont','co',40.1672,-105.1019],
+['salt lake city','ut',40.7608,-111.891],
+['phoenix','az',33.4484,-112.074],
+['tucson','az',32.2226,-110.9747],
+['atlanta','ga',33.749,-84.388],
+['miami','fl',25.7617,-80.1918],
+['tampa','fl',27.9506,-82.4572],
+['gainesville','fl',29.6516,-82.3248],
+['alachua','fl',29.7936,-82.4834],
+['memphis','tn',35.1495,-90.049],
+['nashville','tn',36.1627,-86.7816],
+['birmingham','al',33.5186,-86.8104],
+['auburn','al',32.6099,-85.4808],
+['lexington','ky',38.0406,-84.5037],
+['cleveland','oh',41.4993,-81.6944],
+['columbus','oh',39.9612,-82.9988],
+['cincinnati','oh',39.1031,-84.512],
+['pittsburgh','pa',40.4406,-79.9959],
+['rochester','ny',43.1566,-77.6088],
+['buffalo','ny',42.8864,-78.8784],
+['albany','ny',42.6526,-73.7562],
+['ithaca','ny',42.444,-76.5019],
+['portland','or',45.5152,-122.6784],
+['hillsboro','or',45.5229,-122.9898],
+['las vegas','nv',36.1699,-115.1398],
+['providence','ri',41.824,-71.4128],
+['portsmouth','nh',43.0718,-70.7626],
+['manchester','nh',42.9956,-71.4548],
+['burlington','vt',44.4759,-73.2121],
+['portland','me',43.6591,-70.2568],
+['wilmington','de',39.7391,-75.5398],
+['newark','de',39.6837,-75.7497],
+['richmond','va',37.5407,-77.436],
+['charlottesville','va',38.0293,-78.4767],
+['new orleans','la',29.9511,-90.0715],
+['kansas city','mo',39.0997,-94.5786],
+['omaha','ne',41.2565,-95.9345],
+['iowa city','ia',41.6611,-91.5302],
+['oklahoma city','ok',35.4676,-97.5164],
+['little rock','ar',34.7465,-92.2896],
+['charleston','sc',32.7765,-79.9311],
+['columbia','sc',34.0007,-81.0348],
+['boise','id',43.615,-116.2023],
+['santa fe','nm',35.687,-105.9378],
+['albuquerque','nm',35.0844,-106.6504],
+['honolulu','hi',21.3069,-157.8583],
+['anchorage','ak',61.2181,-149.9003],
+['bozeman','mt',45.677,-111.0429],
+['fargo','nd',46.8772,-96.7898],
+['sioux falls','sd',43.546,-96.7313],
+['cheyenne','wy',41.14,-104.8202],
+['morgantown','wv',39.6295,-79.9559]
+];
+window.STATES = [['al',32.8,-86.8],['ak',64.7,-152.4],['az',34.2,-111.9],['ar',34.9,-92.4],['ca',37.2,-119.5],
+['co',39.0,-105.5],['ct',41.6,-72.7],['de',39.0,-75.5],['fl',28.6,-82.4],['ga',32.6,-83.4],
+['hi',20.3,-156.4],['id',44.4,-114.6],['il',40.0,-89.2],['in',39.9,-86.3],['ia',42.1,-93.5],
+['ks',38.5,-98.4],['ky',37.5,-85.3],['la',31.1,-92.0],['me',45.4,-69.2],['md',39.0,-76.8],
+['ma',42.3,-71.8],['mi',44.3,-85.4],['mn',46.3,-94.3],['ms',32.7,-89.7],['mo',38.4,-92.5],
+['mt',47.0,-109.6],['ne',41.5,-99.8],['nv',39.3,-116.6],['nh',43.7,-71.6],['nj',40.2,-74.7],
+['nm',34.4,-106.1],['ny',42.9,-75.5],['nc',35.5,-79.4],['nd',47.4,-100.5],['oh',40.3,-82.8],
+['ok',35.6,-97.5],['or',43.9,-120.6],['pa',40.9,-77.8],['ri',41.7,-71.6],['sc',33.9,-80.9],
+['sd',44.4,-100.2],['tn',35.8,-86.4],['tx',31.5,-99.3],['ut',39.3,-111.7],['vt',44.1,-72.7],
+['va',37.5,-78.9],['wa',47.4,-120.5],['wv',38.6,-80.6],['wi',44.6,-89.7],['wy',43.0,-107.6],['dc',38.9,-77.0]];
+window.STATE_NAMES = {'alabama':'al','alaska':'ak','arizona':'az','arkansas':'ar','california':'ca','colorado':'co','connecticut':'ct','delaware':'de','florida':'fl','georgia':'ga','hawaii':'hi','idaho':'id','illinois':'il','indiana':'in','iowa':'ia','kansas':'ks','kentucky':'ky','louisiana':'la','maine':'me','maryland':'md','massachusetts':'ma','michigan':'mi','minnesota':'mn','mississippi':'ms','missouri':'mo','montana':'mt','nebraska':'ne','nevada':'nv','new hampshire':'nh','new jersey':'nj','new mexico':'nm','new york':'ny','north carolina':'nc','north dakota':'nd','ohio':'oh','oklahoma':'ok','oregon':'or','pennsylvania':'pa','rhode island':'ri','south carolina':'sc','south dakota':'sd','tennessee':'tn','texas':'tx','utah':'ut','vermont':'vt','virginia':'va','washington':'wa','west virginia':'wv','wisconsin':'wi','wyoming':'wy','district of columbia':'dc'};
+
+
+/* ===== ontology.js (inlined — this file is fully self-contained) ===== */
+/* ============================================================================
+   BIOTECH SKILL ONTOLOGY
+   ----------------------------------------------------------------------------
+   The scoring model. Each canonical skill has:
+     id    - stable key
+     label - what the user sees
+     w     - base weight (how much this skill matters when matching a job)
+     g     - group (drives the "your profile" readout)
+     t     - trigger terms; ANY match in the CV claims the skill.
+             Also used to detect the skill in a job posting.
+   ----------------------------------------------------------------------------
+   Weights encode a real judgment: a specialized, hard-to-hire technique
+   (AAV vector engineering) is a stronger matching signal than a ubiquitous
+   one (PCR), because almost every bench CV has PCR — it doesn't discriminate.
+   ============================================================================ */
+window.ONTOLOGY = [
+  // ---- Viral vectors & gene therapy -----------------------------------------
+  {id:'aav',      label:'AAV / adeno-associated virus', w:15, g:'Viral vectors & gene therapy', t:['aav','adeno-associated','adeno associated']},
+  {id:'lenti',    label:'Lentiviral vectors',           w:14, g:'Viral vectors & gene therapy', t:['lentivir','lentiviral','lentivector']},
+  {id:'onco',     label:'Oncolytic virus',              w:15, g:'Viral vectors & gene therapy', t:['oncolytic','vsv','vesicular stomatitis','herpes oncolytic','reovirus']},
+  {id:'vector',   label:'Viral vector engineering',     w:14, g:'Viral vectors & gene therapy', t:['viral vector','vector design','vector engineering','capsid','retarget','tropism','pseudotype']},
+  {id:'genether', label:'Gene therapy',                 w:13, g:'Viral vectors & gene therapy', t:['gene therapy','gene-therapy','genetic medicine']},
+  {id:'celltx',   label:'Cell therapy',                 w:13, g:'Viral vectors & gene therapy', t:['cell therapy','cell-therapy','car-t','car t','tcr-t','nk cell therapy','ipsc']},
+  {id:'virprod',  label:'Virus production & titration', w:13, g:'Viral vectors & gene therapy', t:['virus production','viral production','viral titer','virus titer','plaque assay','tcid50','viral stock','virus rescue','transduction','moi']},
+  {id:'vaccine',  label:'Vaccine development',          w:12, g:'Viral vectors & gene therapy', t:['vaccine','immunogen','antigen design','prime-boost']},
+
+  // ---- Gene editing ----------------------------------------------------------
+  {id:'crispr',   label:'CRISPR / Cas9',                w:14, g:'Gene editing', t:['crispr','cas9','cas12','cas13','guide rna','sgrna','grna']},
+  {id:'baseedit', label:'Base / prime editing',         w:15, g:'Gene editing', t:['base editing','base editor','prime editing','prime editor','adenine base','cytosine base']},
+  {id:'editing',  label:'Gene editing (general)',       w:12, g:'Gene editing', t:['gene editing','gene-editing','genome editing','knock-in','knockin','knockout','knock-out','talen','zinc finger','homology-directed','hdr']},
+
+  // ---- Molecular biology & cloning -------------------------------------------
+  {id:'cloning',  label:'Molecular cloning',            w:9,  g:'Molecular biology', t:['molecular cloning','cloning','gibson','golden gate','hifi assembly','seamless cloning','restriction digest','ligation','in-fusion']},
+  {id:'mutagen',  label:'Site-directed mutagenesis',    w:10, g:'Molecular biology', t:['site-directed mutagenesis','site directed mutagenesis','mutagenesis']},
+  {id:'plasmid',  label:'Plasmid / construct design',   w:9,  g:'Molecular biology', t:['plasmid','construct design','vector construction','miniprep','maxiprep','transformation','electroporation']},
+  {id:'pcr',      label:'PCR',                          w:6,  g:'Molecular biology', t:['\\bpcr\\b','polymerase chain reaction','colony pcr','rt-pcr']},
+  {id:'extract',  label:'DNA / RNA extraction',         w:6,  g:'Molecular biology', t:['dna extraction','rna extraction','nucleic acid extraction','nucleic-acid','rna isolation','dna isolation','ffpe']},
+  {id:'transfect',label:'Transfection',                 w:8,  g:'Molecular biology', t:['transfection','transfect','lipofect','nucleofection']},
+  {id:'synbio',   label:'Synthetic biology',            w:12, g:'Molecular biology', t:['synthetic biology','synthetic virology','genome assembly','de novo synthesis','modular assembly','riboswitch','aptazyme']},
+
+  // ---- Assay & method development ---------------------------------------------
+  {id:'qpcr',     label:'qPCR / RT-qPCR',               w:12, g:'Assay & method development', t:['qpcr','rt-qpcr','real-time pcr','real time pcr','quantitative pcr','taqman']},
+  {id:'dpcr',     label:'Digital PCR (ddPCR)',          w:13, g:'Assay & method development', t:['ddpcr','\\bdpcr\\b','digital pcr','droplet digital']},
+  {id:'methdev',  label:'Method development',           w:13, g:'Assay & method development', t:['method development','method optimization','assay development','assay design','test method','method transfer']},
+  {id:'methqual', label:'Method qualification/validation',w:14,g:'Assay & method development', t:['method qualification','method validation','assay qualification','assay validation','analytical validation','ich q2','verification']},
+  {id:'anadev',   label:'Analytical development',       w:13, g:'Assay & method development', t:['analytical development','analytical method','analytical characterization','analytical sciences']},
+  {id:'potency',  label:'Potency / release assays',     w:13, g:'Assay & method development', t:['potency assay','release assay','release testing','lot release','identity assay','vcn','vector copy number','genomic titer','infectious titer','residual dna','residual host cell']},
+
+  // ---- Sequencing & genomics ---------------------------------------------------
+  {id:'ngs',      label:'NGS (next-gen sequencing)',    w:12, g:'Sequencing & genomics', t:['\\bngs\\b','next-generation sequencing','next generation sequencing','high-throughput sequencing','deep sequencing']},
+  {id:'libprep',  label:'NGS library preparation',      w:13, g:'Sequencing & genomics', t:['library prep','library preparation','adapter ligation','indexing','barcoding','multiplexed librar']},
+  {id:'illumina', label:'Illumina',                     w:10, g:'Sequencing & genomics', t:['illumina','novaseq','miseq','nextseq','hiseq']},
+  {id:'nanopore', label:'Oxford Nanopore',              w:13, g:'Sequencing & genomics', t:['nanopore','minion','promethion','gridion','long-read','long read']},
+  {id:'pacbio',   label:'PacBio',                       w:12, g:'Sequencing & genomics', t:['pacbio','pacific biosciences','smrt sequencing','hifi read']},
+  {id:'sanger',   label:'Sanger sequencing',            w:7,  g:'Sequencing & genomics', t:['sanger']},
+  {id:'rnaseq',   label:'RNA-seq / transcriptomics',    w:11, g:'Sequencing & genomics', t:['rna-seq','rnaseq','rna sequencing','transcriptom','direct rna','poly(a)','isoform']},
+  {id:'scseq',    label:'Single-cell sequencing',       w:13, g:'Sequencing & genomics', t:['single-cell','single cell sequencing','scrna','10x genomics','single-cell rna']},
+  {id:'epigen',   label:'Methylation / epigenomics',    w:12, g:'Sequencing & genomics', t:['methylation','bisulfite','epigenom','epigenetic','m6a','pseudouridine','chip-seq','atac-seq']},
+  {id:'bioinf',   label:'Bioinformatics / analysis',    w:10, g:'Sequencing & genomics', t:['bioinformatic','base-calling','basecalling','sequence alignment','variant calling','variant id','igv','galaxy','genome assembly','demultiplex','pipeline']},
+
+  // ---- Cell biology & immunoassays ---------------------------------------------
+  {id:'flow',     label:'Flow cytometry',               w:11, g:'Cell biology & immunoassays', t:['flow cytometry','flow cytometer','multicolor flow','multiparameter flow']},
+  {id:'facs',     label:'FACS / cell sorting',          w:12, g:'Cell biology & immunoassays', t:['facs','cell sorting','fluorescence-activated','cell sorter','rare-cell','rare cell','single-cell isolation']},
+  {id:'macs',     label:'MACS / magnetic separation',   w:10, g:'Cell biology & immunoassays', t:['macs','magnetic separation','magnetic bead separation','immunomagnetic']},
+  {id:'cellcult', label:'Mammalian cell culture',       w:7,  g:'Cell biology & immunoassays', t:['cell culture','tissue culture','mammalian cell','cell line maintenance','primary cell','aseptic technique']},
+  {id:'elisa',    label:'ELISA',                        w:8,  g:'Cell biology & immunoassays', t:['elisa','enzyme-linked immunosorbent']},
+  {id:'western',  label:'Western blot / SDS-PAGE',      w:7,  g:'Cell biology & immunoassays', t:['western blot','sds-page','sds page','immunoblot']},
+  {id:'cellassay',label:'Cell-based assays',            w:9,  g:'Cell biology & immunoassays', t:['cell-based assay','cell based assay','cytotoxicity','viability assay','proliferation assay','reporter assay','incucyte','live-cell imaging']},
+  {id:'immuno',   label:'Immunoassays / immunology',    w:10, g:'Cell biology & immunoassays', t:['immunoassay','immunology','immune cell','t cell','pbmc','cytokine','immunophenotyp','neutralization assay']},
+  {id:'micro',    label:'Microscopy',                   w:7,  g:'Cell biology & immunoassays', t:['microscopy','confocal','immunofluorescence','fluorescence microscop','imaging']},
+
+  // ---- Protein & biochemistry ---------------------------------------------------
+  {id:'protexp',  label:'Protein expression & purification', w:10, g:'Protein & biochemistry', t:['protein expression','protein purification','recombinant protein','affinity purification','his-tag','protein engineering']},
+  {id:'chrom',    label:'Chromatography (HPLC/FPLC)',   w:10, g:'Protein & biochemistry', t:['hplc','uplc','fplc','chromatograph','size exclusion','ion exchange','akta']},
+  {id:'massspec', label:'Mass spectrometry',            w:11, g:'Protein & biochemistry', t:['mass spec','mass spectrometry','lc-ms','proteomic']},
+  {id:'antibody', label:'Antibody development',         w:11, g:'Protein & biochemistry', t:['antibody','monoclonal','\\bmab\\b','hybridoma','bispecific','\\badc\\b','antibody-drug']},
+
+  // ---- Bioprocess & GMP ----------------------------------------------------------
+  {id:'upstream', label:'Upstream / cell culture process', w:11, g:'Bioprocess & GMP', t:['upstream','bioreactor','cell factory','suspension culture','fed-batch','perfusion','scale-up','scale up']},
+  {id:'downstream',label:'Downstream purification',     w:12, g:'Bioprocess & GMP', t:['downstream','uf/df','ultrafiltration','diafiltration','tangential flow','tff','density gradient','ultracentrifugation','clarification','depth filtration']},
+  {id:'procdev',  label:'Process development',          w:12, g:'Bioprocess & GMP', t:['process development','process optimization','process characterization','tech transfer','technology transfer']},
+  {id:'gmp',      label:'cGMP / GLP',                   w:13, g:'Bioprocess & GMP', t:['cgmp','gmp','glp','gcp','good manufacturing','good laboratory','21 cfr','part 11']},
+  {id:'qc',       label:'QC / quality control',         w:11, g:'Bioprocess & GMP', t:['quality control','\\bqc\\b','quality assurance','\\bqa\\b','deviation','\\bcapa\\b','\\boos\\b']},
+  {id:'reg',      label:'Regulatory / IND / CMC',       w:12, g:'Bioprocess & GMP', t:['\\bind\\b','ind-enabling','pre-ind','first-in-human','\\bcmc\\b','regulatory filing','\\bbla\\b','fda submission','\\bich\\b']},
+  {id:'sop',      label:'SOP & documentation',          w:8,  g:'Bioprocess & GMP', t:['sop','standard operating procedure','test method authoring','batch record','eln','electronic lab notebook','contemporaneous']},
+
+  // ---- In vivo & translational -----------------------------------------------------
+  {id:'invivo',   label:'In vivo / animal models',      w:11, g:'In vivo & translational', t:['in vivo','animal model','mouse model','murine','rat study','xenograft','iacuc','biodistribution','tolerability','efficacy study']},
+  {id:'pharm',    label:'Pharmacology / toxicology',    w:11, g:'In vivo & translational', t:['pharmacolog','toxicolog','pharmacokinetic','\\bpk\\b','dose-ranging','safety study']},
+  {id:'onc',      label:'Oncology',                     w:10, g:'In vivo & translational', t:['oncology','cancer','tumor','tumour','carcinoma','melanoma','leukemia','lymphoma','precision oncology']},
+  {id:'neuro',    label:'Neuroscience / CNS',           w:10, g:'In vivo & translational', t:['neuroscience','neurolog','\\bcns\\b','neurodegenerat','alzheimer','parkinson']},
+  {id:'rare',     label:'Rare disease',                 w:10, g:'In vivo & translational', t:['rare disease','orphan','duchenne','\\bdmd\\b','\\bsma\\b','hemophilia']},
+
+  // ---- Automation, data & instruments -------------------------------------------------
+  {id:'autom',    label:'Lab automation / liquid handling', w:11, g:'Automation & data', t:['automation','liquid handler','biomek','hamilton','tecan','opentrons','dragonfly','high-throughput screen','\\bhts\\b','robotic']},
+  {id:'qcinstr',  label:'QC instrumentation',           w:8,  g:'Automation & data', t:['qubit','tapestation','bioanalyzer','nanodrop','fragment analyzer','electrophoresis']},
+  {id:'coding',   label:'Programming (Python/R)',       w:11, g:'Automation & data', t:['python','\\br\\b','rstudio','matlab','bash','sql','pandas','scikit','javascript']},
+  {id:'stats',    label:'Statistics / data analysis',   w:9,  g:'Automation & data', t:['statistic','graphpad','prism','jmp','doe ','design of experiments','data analysis']},
+  {id:'ml',       label:'Machine learning / AI',        w:12, g:'Automation & data', t:['machine learning','deep learning','artificial intelligence','\\bai\\b','neural network','\\bllm\\b','model training']},
+
+  // ---- Professional ------------------------------------------------------------------
+  {id:'mentor',   label:'Mentoring & training',         w:7,  g:'Professional', t:['mentor','trained junior','training junior','supervis','onboarding','coach']},
+  {id:'lead',     label:'Project / team leadership',    w:9,  g:'Professional', t:['project lead','team lead','led a team','managed a team','cross-functional','stakeholder','program management']},
+  {id:'pubs',     label:'Publications & presentations', w:8,  g:'Professional', t:['publication','peer-reviewed','peer reviewed','first author','poster','conference','patent','thesis']},
+];
+
+/* ============================================================================
+   SENIORITY — read from the CV, applied as a filter on job titles.
+   Detected level -> which job titles are a step up, lateral, or a step down.
+   ============================================================================ */
+window.LEVELS = [
+  {id:'intern',    label:'Student / intern',      rank:0, cv:['intern','undergraduate student','currently pursuing','b.s. candidate','expected graduation']},
+  {id:'ra',        label:'Research associate',    rank:1, cv:['research associate','research technician','lab technician','laboratory technician','research assistant']},
+  {id:'scientist', label:'Scientist',             rank:2, cv:['scientist i','scientist ii','scientist,','research scientist','associate scientist','staff scientist']},
+  {id:'senior',    label:'Senior scientist',      rank:3, cv:['senior scientist','sr. scientist','sr scientist','senior research scientist','principal scientist','lead scientist']},
+  {id:'manager',   label:'Manager / director',    rank:4, cv:['manager','director','head of','associate director','group leader']},
+  {id:'exec',      label:'Executive',             rank:5, cv:['vice president','\\bvp\\b','chief scientific','\\bcso\\b','\\bcto\\b','\\bceo\\b']},
+];
+
+/* Job-title level markers — what a POSTING is asking for. */
+window.TITLE_LEVELS = [
+  {rank:0, t:['intern','internship','co-op','summer student','graduate student','phd student','trainee']},
+  {rank:1, t:['research associate','research technician','laboratory technician','lab technician','technician i','technician ii','assistant']},
+  {rank:2, t:['scientist i','scientist ii','associate scientist','research scientist','scientist,','scientist -','scientist –','staff scientist']},
+  {rank:3, t:['senior scientist','sr. scientist','sr scientist','principal scientist','lead scientist','senior research']},
+  {rank:4, t:['manager','director','head of','group leader','associate director']},
+  {rank:5, t:['vice president','\\bvp\\b','\\bchief\\b','\\bsvp\\b','executive director']},
+];
+
+/* Roles that are never a fit for a bench/biotech CV, regardless of keywords. */
+window.KILL = [
+  'software engineer','frontend','front-end','backend','back-end','full stack','full-stack',
+  'devops','site reliability','data engineer','platform engineer','mobile engineer',
+  'ux designer','ui designer','product designer','graphic designer',
+  'accountant','accounting','payroll','bookkeep','controller','tax ',
+  'legal counsel','paralegal','attorney','compliance officer',
+  'janitor','custodian','security guard','facilities technician','maintenance technician',
+  'construction','warehouse','forklift','driver','logistics coordinator',
+  'sales representative','account executive','account manager','business development',
+  'recruiter','talent acquisition','human resources',
+  'marketing manager','brand manager','social media','content marketing','copywriter',
+  'customer success','customer support','technical support','help desk',
+  'receptionist','administrative assistant','executive assistant','office manager',
+];
+
+
+/* ===== companies.js (inlined) ===== */
+/* ============================================================
+   BIOTECH EMPLOYER REGISTRY
+   Each entry: [ats, slug, DisplayName, tag]
+   ats: gh = Greenhouse | lv = Lever | ab = Ashby | sr = SmartRecruiters
+   tag: focus area, used for the filter chips
+   ------------------------------------------------------------
+   TO ADD A COMPANY: find their careers page. If the URL contains
+   boards.greenhouse.io/COMPANY -> use ['gh','COMPANY',...]
+   jobs.lever.co/COMPANY        -> use ['lv','COMPANY',...]
+   jobs.ashbyhq.com/COMPANY     -> use ['ab','COMPANY',...]
+   careers.smartrecruiters.com/COMPANY -> use ['sr','COMPANY',...]
+   Then add the line below. No other code changes needed.
+   ============================================================ */
+window.COMPANIES = [
+  // ---- Gene & cell therapy / viral vectors (core fit) ----
+  ['gh','sarepta','Sarepta Therapeutics','Gene therapy'],
+  ['gh','beamtx','Beam Therapeutics','Gene editing'],
+  ['gh','intelliatherapeutics','Intellia Therapeutics','Gene editing'],
+  ['gh','editasmedicine','Editas Medicine','Gene editing'],
+  ['gh','vervetherapeutics','Verve Therapeutics','Gene editing'],
+  ['gh','primemedicine','Prime Medicine','Gene editing'],
+  ['gh','tessatherapeutics','Tessera Therapeutics','Gene editing'],
+  ['gh','cariboubio','Caribou Biosciences','Gene editing'],
+  ['gh','sanabio','Sana Biotechnology','Cell therapy'],
+  ['gh','2seventybio','2seventy bio','Cell therapy'],
+  ['gh','allogene','Allogene Therapeutics','Cell therapy'],
+  ['gh','arcellx','Arcellx','Cell therapy'],
+  ['gh','cargotherapeutics','CARGO Therapeutics','Cell therapy'],
+  ['gh','kytopen','Kytopen','Cell therapy'],
+  ['gh','vorbiopharma','Vor Biopharma','Cell therapy'],
+  ['gh','capsida','Capsida Biotherapeutics','AAV / vectors'],
+  ['gh','voyagertherapeutics','Voyager Therapeutics','AAV / vectors'],
+  ['gh','tayshagene','Taysha Gene Therapies','AAV / vectors'],
+  ['gh','ultragenyx','Ultragenyx','AAV / vectors'],
+  ['gh','solidbio','Solid Biosciences','AAV / vectors'],
+  ['gh','askbio','AskBio','AAV / vectors'],
+  ['gh','formbio','Form Bio','AAV / vectors'],
+  ['lv','encodedtherapeutics','Encoded Therapeutics','AAV / vectors'],
+  ['gh','latusbio','Latus Bio','AAV / vectors'],
+
+  // ---- Oncolytic virus / immuno-oncology (your VSV work) ----
+  ['gh','replimune','Replimune','Oncolytic virus'],
+  ['gh','candelatx','Candel Therapeutics','Oncolytic virus'],
+  ['gh','turnstonebio','Turnstone Biologics','Oncolytic virus'],
+  ['gh','genelux','Genelux','Oncolytic virus'],
+  ['gh','iovance','Iovance Biotherapeutics','Immuno-oncology'],
+  ['gh','adaptimmune','Adaptimmune','Immuno-oncology'],
+
+  // ---- Vaccines / infectious disease ----
+  ['gh','modernatx','Moderna','Vaccines'],
+  ['gh','novavax','Novavax','Vaccines'],
+  ['gh','vaxcyte','Vaxcyte','Vaccines'],
+  ['gh','icosavax','Icosavax','Vaccines'],
+
+  // ---- Sequencing, genomics & tools (your NGS depth) ----
+  ['gh','illumina','Illumina','NGS / genomics'],
+  ['gh','oxfordnanoporetechnologies','Oxford Nanopore','NGS / genomics'],
+  ['gh','pacificbiosciences','PacBio','NGS / genomics'],
+  ['gh','elementbiosciences','Element Biosciences','NGS / genomics'],
+  ['gh','ultimagenomics','Ultima Genomics','NGS / genomics'],
+  ['gh','singulargenomics','Singular Genomics','NGS / genomics'],
+  ['gh','10xgenomics','10x Genomics','NGS / genomics'],
+  ['gh','twistbioscience','Twist Bioscience','Synthetic biology'],
+  ['gh','ginkgobioworks','Ginkgo Bioworks','Synthetic biology'],
+  ['gh','strandtx','Strand Therapeutics','Synthetic biology'],
+  ['gh','arcinstitute','Arc Institute','Research institute'],
+  ['gh','broadinstitute','Broad Institute','Research institute'],
+  ['gh','jacksonlaboratory','Jackson Laboratory','Research institute'],
+  ['gh','newenglandbiolabs','New England Biolabs','Reagents / tools'],
+  ['gh','tempus','Tempus','Precision oncology'],
+  ['gh','guardanthealth','Guardant Health','Precision oncology'],
+  ['gh','freenome','Freenome','Precision oncology'],
+  ['gh','grail','GRAIL','Precision oncology'],
+  ['gh','caris','Caris Life Sciences','Precision oncology'],
+  ['gh','natera','Natera','Precision oncology'],
+  ['gh','invitae','Invitae','Precision oncology'],
+  ['lv','colossal','Colossal Biosciences','Synthetic biology'],
+
+  // ---- CDMO / CRO / bioprocess (your UF-DF + titer QC) ----
+  ['sr','ThermoFisherScientific','Thermo Fisher','CDMO / tools'],
+  ['sr','Danaher','Danaher','CDMO / tools'],
+  ['gh','charlesriver','Charles River','CRO'],
+  ['sr','Lonza','Lonza','CDMO / tools'],
+  ['gh','emeraldcloudlab','Emerald Cloud Lab','CDMO / tools'],
+  ['gh','strateos','Strateos','CDMO / tools'],
+
+  // ---- Big pharma (you were at Merck) ----
+  ['sr','Novartis','Novartis','Big pharma'],
+  ['sr','Pfizer','Pfizer','Big pharma'],
+  ['sr','Bayer','Bayer','Big pharma'],
+  ['gh','genentech','Genentech','Big pharma'],
+  ['gh','vertexpharmaceuticals','Vertex Pharmaceuticals','Big pharma'],
+  ['gh','regeneron','Regeneron','Big pharma'],
+  ['gh','alnylam','Alnylam','Big pharma'],
+  ['gh','biogen','Biogen','Big pharma'],
+  ['gh','denalitherapeutics','Denali Therapeutics','Big pharma'],
+
+  // ---- NY / NJ metro (your commute) ----
+  ['gh','eikontx','Eikon Therapeutics','NY/NJ metro'],
+  ['gh','nysciencefoundation','Simons Foundation','NY/NJ metro'],
+  ['gh','flagshippioneering','Flagship Pioneering','NY/NJ metro'],
+  ['gh','recursion','Recursion','TechBio'],
+  ['gh','insitro','insitro','TechBio'],
+  ['gh','isomorphiclabs','Isomorphic Labs','TechBio'],
+  ['ab','chai-discovery','Chai Discovery','TechBio'],
+  ['gh','cradlebio','Cradle Bio','TechBio'],
+];
+
+</script>
+<script>
+const $ = id => document.getElementById(id);
+if (window.pdfjsLib) pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+$('coN').textContent = (window.COMPANIES||[]).length;
+
+let PROFILE = null;          // {skills:[], level:{}}
+let JOBS = [], BOARDS = [];
+const OFF = new Set();       // skills the user switched off
+
+/* ============================ 1. READ THE FILE ============================ */
+async function readFile(f){
+  const ext = f.name.split('.').pop().toLowerCase();
+  if (ext === 'pdf'){
+    const buf = await f.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({data:buf}).promise;
+    let out = '';
+    for (let i = 1; i <= pdf.numPages; i++){
+      const page = await pdf.getPage(i);
+      const tc = await page.getTextContent();
+      // Rebuild lines by Y position — a flat token join destroys the line
+      // structure that seniority detection depends on.
+      const rows = {};
+      for (const it of tc.items){
+        const y = Math.round(it.transform[5]);
+        (rows[y] = rows[y] || []).push(it.str);
+      }
+      out += Object.keys(rows).sort((a,b)=>b-a).map(y => rows[y].join(' ')).join('\n') + '\n';
+    }
+    return out;
+  }
+  if (ext === 'docx'){
+    const buf = await f.arrayBuffer();
+    const r = await mammoth.extractRawText({arrayBuffer:buf});
+    return r.value;
+  }
+  return await f.text();  // txt / md
+}
+
+/* ============================ 2. PARSE THE CV ============================= */
+function mk(term){
+  return new RegExp(term.includes('\\b') ? term : term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g');
+}
+function tally(hay, terms){
+  let n = 0;
+  for (const t of terms) n += (hay.match(mk(t)) || []).length;
+  return n;
+}
+function parseCV(text){
+  const T = ' ' + text.toLowerCase().replace(/\s+/g,' ') + ' ';
+  const lines = text.split('\n');
+
+  const skills = [];
+  for (const s of ONTOLOGY){
+    const n = tally(T, s.t);
+    if (n > 0){
+      // Damped: 1 mention -> 1.0x, 4 -> 2.0x, 16 -> 3.0x.
+      // Stops a word that's merely common in prose from outranking a specific technique.
+      const strength = 1 + Math.log2(n) / 2;
+      skills.push({id:s.id, label:s.label, g:s.g, t:s.t, w:s.w, n, signal: Math.round(s.w * strength)});
+    }
+  }
+
+  // Seniority. Manager/exec titles must appear on a DATED TITLE LINE, otherwise
+  // "managing staff" in a bullet promotes a bench scientist to VP.
+  let best = null;
+  for (const L of LEVELS){
+    let hit;
+    if (L.rank >= 4){
+      hit = lines.some(ln => {
+        const l = ' ' + ln.toLowerCase().trim() + ' ';
+        return l.length < 92 && /(19|20)\d{2}|present/.test(l) && tally(l, L.cv) > 0;
+      });
+    } else {
+      hit = tally(T, L.cv) > 0;
+    }
+    if (hit && (!best || L.rank > best.rank)) best = L;
+  }
+
+  return {skills: skills.sort((a,b)=>b.signal-a.signal), level: best || LEVELS[2]};
+}
+
+/* ============================ 3. SCORE A JOB ============================== */
+function scoreJob(job){
+  const T = ' ' + job.title.toLowerCase() + ' ';
+  const B = ' ' + (job.title + ' ' + job.body).toLowerCase() + ' ';
+  const L = job.loc.toLowerCase();
+
+  if (KILL.some(k => T.includes(k))) return {s:0, hits:[], gaps:[], lvl:2};
+
+  const live = PROFILE.skills.filter(s => !OFF.has(s.id));
+
+  // Measure against the person's CORE skills, not every skill they've ever touched.
+  // A 58-skill generalist can't cover their whole profile in one job — dividing by
+  // the full total would punish them for being broad. The top ~12 signals are the
+  // ones that actually define what they do.
+  const core = live.slice(0, 12);
+  const total = core.reduce((a,s) => a + s.signal, 0) || 1;
+
+  let earned = 0; const hits = [], gaps = [];
+  for (const s of live){
+    const inTitle = s.t.some(t => mk(t).test(T));
+    const inBody  = s.t.some(t => mk(t).test(B));
+    if (!inTitle && !inBody) continue;
+    const isCore = core.some(c => c.id === s.id);
+    // Core skills drive the score. Non-core matches still add a little — real
+    // credit for relevant depth — but can't alone carry a bad-fit job.
+    const v = isCore ? s.signal : s.signal * 0.25;
+    earned += inTitle ? v * 1.6 : v;   // a match in the TITLE is the role itself
+    hits.push(s.label);
+  }
+
+  // What the job wants that the CV doesn't show — the honest part.
+  for (const s of ONTOLOGY){
+    if (live.find(x => x.id === s.id)) continue;
+    if (s.t.some(t => mk(t).test(T))) gaps.push(s.label);
+  }
+
+  // Job's own level, from its title.
+  let jlvl = 2;
+  for (const g of TITLE_LEVELS) if (g.t.some(t => T.includes(t))) jlvl = g.rank;
+
+  // Coverage of the profile, scaled. sqrt keeps mid-range matches legible
+  // instead of everything clustering near zero.
+  let pct = Math.sqrt(earned / total) * 118;
+
+  // Seniority distance penalty.
+  const d = jlvl - PROFILE.level.rank;
+  if (d <= -2) pct *= 0.35;        // way too junior
+  else if (d === -1) pct *= 0.8;   // a step down
+  else if (d === 1) pct *= 0.92;   // a stretch — still worth showing
+  else if (d >= 2) pct *= 0.4;     // way too senior
+
+  return {s: Math.max(0, Math.min(100, Math.round(pct))), hits: hits.slice(0,5), gaps: gaps.slice(0,2), lvl: jlvl};
+}
+
+/* ============================ 3b. GEOGRAPHY ============================== */
+const CMAP = new Map(), SMAP = new Map();
+CITIES.forEach(([c,s,la,lo]) => { CMAP.set(c+','+s,[la,lo]); if(!CMAP.has(c)) CMAP.set(c,[la,lo]); });
+STATES.forEach(([s,la,lo]) => SMAP.set(s,[la,lo]));
+
+const RE_REMOTE = /\b(remote|work from home|wfh|anywhere|distributed|virtual)\b/;
+const RE_INTL   = /\b(united kingdom|england|london|oxford|scotland|ireland|dublin|germany|munich|berlin|basel|switzerland|zurich|geneva|france|paris|lyon|netherlands|amsterdam|leiden|utrecht|denmark|copenhagen|sweden|stockholm|norway|oslo|finland|spain|barcelona|madrid|italy|milan|rome|portugal|lisbon|china|shanghai|beijing|suzhou|japan|tokyo|osaka|singapore|india|bangalore|hyderabad|pune|australia|sydney|melbourne|canada|toronto|vancouver|montreal|ottawa|israel|tel aviv|korea|seoul|belgium|ghent|leuven|austria|vienna|poland|warsaw|czech|prague|brazil|sao paulo|mexico|taiwan|taipei|new zealand)\b/;
+// Strip these BEFORE parsing a city, or "Hybrid - Cambridge, MA" parses as a
+// city literally named "hybrid - cambridge" and falls back to the state centroid.
+const RE_MOD = /\b(hybrid|on-?site|in-?office|flexible|field[ -]based|usa?|united states|multiple locations|various|greater|area)\b[\s:,-]*/g;
+
+function geocode(raw){
+  if (!raw) return {kind:'unknown'};
+  const L = ' ' + raw.toLowerCase().replace(/\s+/g,' ').trim() + ' ';
+  const remote = RE_REMOTE.test(L);
+  const clean = raw.toLowerCase().replace(RE_MOD,' ').replace(/^[\s:,-]+/,'').replace(/\s+/g,' ');
+
+  for (const part of clean.split(/[;|\/]| or |and /)){
+    const m = part.match(/([a-z .'-]+?)\s*,\s*([a-z .]+)/);
+    if (!m) continue;
+    const city = m[1].trim();
+    let st = m[2].trim();
+    if (STATE_NAMES[st]) st = STATE_NAMES[st];
+    st = st.slice(0,2);
+    if (CMAP.has(city+','+st)) return {kind: remote?'hybrid':'onsite', c:CMAP.get(city+','+st), remote};
+    if (CMAP.has(city))        return {kind: remote?'hybrid':'onsite', c:CMAP.get(city), remote};
+    if (SMAP.has(st))          return {kind: remote?'hybrid':'onsite', c:SMAP.get(st), remote, fuzzy:true};
+  }
+  for (const [name,c] of CMAP){
+    if (name.includes(',')) continue;
+    if (L.includes(' '+name+' ') || L.includes(' '+name+',')) return {kind: remote?'hybrid':'onsite', c, remote};
+  }
+  for (const [n,ab] of Object.entries(STATE_NAMES))
+    if (L.includes(' '+n+' ') || L.includes(' '+n+',')) return {kind: remote?'hybrid':'onsite', c:SMAP.get(ab), remote, fuzzy:true};
+  for (const [ab,c] of SMAP)
+    if (new RegExp('[ ,]'+ab+'[ ,.]').test(L)) return {kind: remote?'hybrid':'onsite', c, remote, fuzzy:true};
+
+  if (remote) return {kind:'remote', remote:true};
+  if (RE_INTL.test(L)) return {kind:'intl'};
+  return {kind:'unknown'};
+}
+
+const RADIUS = 3958.8;  // earth radius, miles
+const toRad = d => d * Math.PI / 180;
+function haversine(a, b){
+  const dLa = toRad(b[0]-a[0]), dLo = toRad(b[1]-a[1]);
+  const x = Math.sin(dLa/2)**2 + Math.cos(toRad(a[0]))*Math.cos(toRad(b[0]))*Math.sin(dLo/2)**2;
+  return 2 * RADIUS * Math.asin(Math.sqrt(x));
+}
+
+let HOME = null;   // {label, c:[lat,lon]}
+let RANGE = 'any'; // 25 | 50 | 100 | 'remote' | 'any'
+
+function setHome(str){
+  const g = geocode(str);
+  if (!g.c){
+    HOME = null;
+    $('home').classList.add('bad');
+    $('geoNote').className = 'geo-note bad';
+    $('geoNote').textContent = "can't place that — try \"City, ST\"";
+    return false;
+  }
+  HOME = {label:str, c:g.c};
+  $('home').classList.remove('bad');
+  $('geoNote').className = 'geo-note ok';
+  $('geoNote').textContent = '✓ ' + (g.fuzzy ? 'approx.' : 'located');
+  return true;
+}
+
+// Pull the home city out of the CV header block (contact details live up top).
+function detectHome(text){
+  const head = text.split('\n').slice(0,40).join(' ').toLowerCase();
+  for (const [c,s] of CITIES){
+    if (new RegExp('\\b' + c.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\b').test(head))
+      return c.replace(/\b\w/g, m=>m.toUpperCase()) + ', ' + s.toUpperCase();
+  }
+  return '';
+}
+
+/* ============================ 4. UI: PROFILE ============================== */
+function showProfile(name){
+  $('fname').textContent = name;
+  $('prof').classList.add('on');
+  $('ctl').classList.add('on');
+
+  $('lvlSel').innerHTML = LEVELS.map(l =>
+    `<option value="${l.id}" ${l.id===PROFILE.level.id?'selected':''}>${l.label}</option>`).join('');
+  $('lvlSel').onchange = e => {
+    PROFILE.level = LEVELS.find(l => l.id === e.target.value);
+    if (JOBS.length) rescore();
+  };
+
+  $('skN').textContent = `· ${PROFILE.skills.length} skills found`;
+  $('skills').innerHTML = PROFILE.skills.map(s =>
+    `<button class="sk" aria-pressed="true" data-id="${s.id}" title="${s.g} — appears ${s.n}×">
+       ${esc(s.label)} <span class="w">${s.signal}</span>
+     </button>`).join('');
+
+  $('skills').querySelectorAll('.sk').forEach(b => b.onclick = () => {
+    const id = b.dataset.id;
+    if (OFF.has(id)){ OFF.delete(id); b.setAttribute('aria-pressed','true'); b.classList.remove('off'); }
+    else { OFF.add(id); b.setAttribute('aria-pressed','false'); b.classList.add('off'); }
+    if (JOBS.length) rescore();
+  });
+
+  $('status').innerHTML = `Profile built. <b>${PROFILE.skills.length}</b> skills · level: <b>${PROFILE.level.label}</b>. Now hit <b>Find matching jobs</b>.`;
+  $('results').innerHTML = `<div class="empty"><h3>Profile ready</h3><p>Hit <b>Find matching jobs</b> to scan ${COMPANIES.length} biotech boards. Takes about 20–40 seconds.</p></div>`;
+}
+
+function rescore(){
+  JOBS.forEach(j => Object.assign(j, scoreJob(j)));
+  render();
+}
+
+// Distance is a function of HOME, so it's recomputed whenever HOME changes —
+// never baked in at fetch time.
+function measure(){
+  for (const j of JOBS){
+    j.dist = (HOME && j.geo && j.geo.c) ? Math.round(haversine(HOME.c, j.geo.c)) : null;
+  }
+}
+
+/* ============================ 5. FETCH BOARDS ============================= */
+const ATS = {
+  gh:{name:'Greenhouse', url:s=>`https://boards-api.greenhouse.io/v1/boards/${s}/jobs?content=true`,
+      parse:d=>(d.jobs||[]).map(j=>({title:j.title, loc:j.location?.name||'', url:j.absolute_url, date:j.updated_at||j.first_published||'', body:strip(j.content||'')}))},
+  lv:{name:'Lever', url:s=>`https://api.lever.co/v0/postings/${s}?mode=json`,
+      parse:d=>(Array.isArray(d)?d:[]).map(j=>({title:j.text, loc:j.categories?.location||'', url:j.hostedUrl, date:j.createdAt?new Date(j.createdAt).toISOString():'', body:strip((j.descriptionPlain||'')+' '+(j.lists||[]).map(l=>l.text+' '+l.content).join(' '))}))},
+  ab:{name:'Ashby', url:s=>`https://api.ashbyhq.com/posting-api/job-board/${s}`,
+      parse:d=>(d.jobs||[]).map(j=>({title:j.title, loc:j.location||'', url:j.jobUrl||j.applyUrl, date:j.publishedAt||'', body:strip(j.descriptionPlain||j.descriptionHtml||'')}))},
+  sr:{name:'SmartRecruiters', url:s=>`https://api.smartrecruiters.com/v1/companies/${s}/postings?limit=100`,
+      parse:d=>(d.content||[]).map(j=>({title:j.name, loc:[j.location?.city,j.location?.region,j.location?.country].filter(Boolean).join(', '), url:`https://jobs.smartrecruiters.com/${j.company?.identifier||''}/${j.id}`, date:j.releasedDate||'', body:strip(j.name+' '+(j.jobAd?.sections?.jobDescription?.text||''))}))},
+};
+const strip = h => String(h).replace(/<[^>]*>/g,' ').replace(/&[a-z]+;|&#\d+;/gi,' ').replace(/\s+/g,' ').trim();
+
+async function fetchBoard([ats, slug, name, tag]){
+  const a = ATS[ats];
+  try{
+    const r = await fetch(a.url(slug), {headers:{Accept:'application/json'}});
+    if (!r.ok) return {name, ok:false, n:0, why:`HTTP ${r.status}`};
+    const jobs = a.parse(await r.json())
+      .filter(j => j.title && j.url)
+      .map(j => ({...j, co:name, tag, geo:geocode(j.loc), ...scoreJob(j)}));
+    return {name, ok:true, n:jobs.length, jobs};
+  }catch(e){
+    return {name, ok:false, n:0, why:'no response'};
+  }
+}
+
+async function run(){
+  if (!PROFILE) return;
+  const b = $('run'); b.disabled = true; b.textContent = '◌ Scanning…';
+  $('bar').classList.add('on');
+  JOBS = []; BOARDS = [];
+  let done = 0;
+
+  for (let i = 0; i < COMPANIES.length; i += 8){
+    const res = await Promise.all(COMPANIES.slice(i, i+8).map(fetchBoard));
+    for (const r of res){
+      BOARDS.push(r);
+      if (r.ok && r.jobs) JOBS.push(...r.jobs);
+      done++;
+    }
+    $('bar').firstElementChild.style.width = Math.round(done/COMPANIES.length*100) + '%';
+    $('status').innerHTML = `Scanned <b>${done}</b>/${COMPANIES.length} boards · <b>${JOBS.length}</b> postings`;
+    measure();
+    render();
+  }
+
+  const ok = BOARDS.filter(x=>x.ok).length;
+  const fit = JOBS.filter(j=>j.s>=30).length;
+  measure();
+  $('bar').classList.remove('on');
+  $('status').innerHTML = `<span class="ok">Done.</span> <b>${ok}</b>/${COMPANIES.length} boards responded · <b>${JOBS.length}</b> postings · <b>${fit}</b> match your CV`
+    + (ok < COMPANIES.length ? ` · <span class="err">${COMPANIES.length-ok} unreachable</span>` : '');
+  b.disabled = false; b.textContent = '↻ Re-scan';
+  renderBoards(); render();
+}
+
+/* ============================ 6. RENDER ================================== */
+function visible(){
+  const q = $('q').value.toLowerCase().trim();
+  const fit = $('fitOnly').checked, lo = $('lvlOnly').checked, keepRemote = $('inclRemote').checked;
+
+  let out = JOBS.filter(j=>{
+    if (fit && j.s < 30) return false;
+    if (lo && Math.abs(j.lvl - PROFILE.level.rank) > 1) return false;
+
+    // --- distance ---
+    if (RANGE === 'remote'){
+      if (!j.geo.remote) return false;                 // remote-only view
+    } else if (RANGE !== 'any'){
+      const isRemote = j.geo.remote;
+      if (isRemote && keepRemote){
+        // remote roles pass any radius — that's the point of remote
+      } else if (isRemote && !keepRemote){
+        return false;
+      } else {
+        if (!HOME || !j.geo.c) return false;           // can't measure it, so don't claim it's near
+        if (j.dist == null) return false;
+        if (j.dist > +RANGE) return false;
+      }
+    }
+
+    if (q && !(j.title+' '+j.co+' '+j.loc+' '+j.body).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  const s = $('sort').value;
+  const far = 1e9;
+  out.sort((a,b) =>
+    s==='date' ? (new Date(b.date||0)-new Date(a.date||0))||b.s-a.s :
+    s==='co'   ? a.co.localeCompare(b.co)||b.s-a.s :
+    s==='dist' ? ((a.dist==null?(a.geo.remote?-1:far):a.dist) - (b.dist==null?(b.geo.remote?-1:far):b.dist)) || b.s-a.s :
+                 b.s-a.s || (new Date(b.date||0)-new Date(a.date||0)));
+  return out;
+}
+
+function render(){
+  if (!PROFILE) return;
+  const list = visible();
+  $('count').innerHTML = JOBS.length ? `<b>${list.length}</b> role${list.length===1?'':'s'} shown · ${JOBS.length} scanned` : '';
+  if (!list.length){
+    $('results').innerHTML = JOBS.length
+      ? `<div class="empty"><h3>Nothing matches those filters</h3><p>Try unchecking <b>Only show real matches</b> or <b>Match my career level</b>.</p></div>`
+      : `<div class="empty"><h3>Profile ready</h3><p>Hit <b>Find matching jobs</b> to start the scan.</p></div>`;
+    return;
+  }
+  $('results').innerHTML = list.map(j=>{
+    const c = j.s>=65 ? 'hot' : j.s>=40 ? 'warm' : '';
+    const d = j.date ? new Date(j.date) : null;
+    const ago = d && !isNaN(d) ? since(d) : '';
+    return `<article class="job ${c}">
+      <div>
+        <h3><a href="${j.url}" target="_blank" rel="noopener">${esc(j.title)}</a></h3>
+        <div class="jline">
+          <span class="co">${esc(j.co)}</span><span class="sep">/</span>
+          <span>${esc(j.loc||'Location n/a')}</span>
+          ${badge(j)}
+          ${ago?`<span class="sep">/</span><span>${ago}</span>`:''}
+          <span class="tag">${esc(j.tag)}</span>
+        </div>
+        ${(j.hits.length||j.gaps.length) ? `<div class="hits">
+          ${j.hits.map(h=>`<span class="hit">${esc(h)}</span>`).join('')}
+          ${j.gaps.map(g=>`<span class="hit gap">wants: ${esc(g)}</span>`).join('')}
+        </div>` : ''}
+      </div>
+      <div class="right">
+        <div class="score ${c}">${j.s}<span>MATCH</span></div>
+        <a class="apply" href="${j.url}" target="_blank" rel="noopener">Open posting ↗</a>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+function renderBoards(){
+  $('boards').hidden = false;
+  $('bgrid').innerHTML = BOARDS.sort((a,b)=>(b.ok-a.ok)||b.n-a.n)
+    .map(b=>`<div class="bstat ${b.ok?'ok':'bad'}"><span>${esc(b.name)}</span><span><b>${b.ok?'✓':'✗'}</b> ${b.ok?b.n:(b.why||'')}</span></div>`).join('');
+}
+
+function badge(j){
+  if (j.geo.remote) return '<span class="mi rem">remote</span>';
+  if (j.dist == null) return '';
+  const near = j.dist <= 50;
+  const approx = j.geo.fuzzy ? '~' : '';
+  return `<span class="mi ${near?'near':''}">${approx}${j.dist} mi</span>`;
+}
+const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function since(d){
+  const n = Math.floor((Date.now()-d)/864e5);
+  return n<=0?'today':n===1?'1 day ago':n<30?n+' days ago':n<60?'1 month ago':Math.floor(n/30)+' months ago';
+}
+
+/* ============================ 7. WIRE UP ================================= */
+async function handle(f){
+  if (!f) return;
+  const d = $('drop'); d.classList.add('busy');
+  d.querySelector('h3').textContent = 'Reading ' + f.name + '…';
+  try{
+    const text = await readFile(f);
+    if (!text || text.trim().length < 120)
+      throw new Error('Could not read any text. If this is a scanned PDF, it has no text layer — export a text-based PDF or upload a DOCX.');
+    PROFILE = parseCV(text);
+    const hm = detectHome(text);
+    if (hm){ $('home').value = hm; setHome(hm); }
+    if (!PROFILE.skills.length)
+      throw new Error('No biotech skills found. This tool only matches life-sciences CVs.');
+    OFF.clear(); JOBS = []; BOARDS = [];
+    $('boards').hidden = true;
+    showProfile(f.name);
+  }catch(e){
+    $('status').innerHTML = `<span class="err">${esc(e.message)}</span>`;
+    $('prof').classList.remove('on');
+  }finally{
+    d.classList.remove('busy');
+    d.querySelector('h3').textContent = 'Drop your CV here';
+  }
+}
+
+const drop = $('drop');
+drop.onclick = () => $('file').click();
+drop.onkeydown = e => { if (e.key==='Enter'||e.key===' '){ e.preventDefault(); $('file').click(); } };
+$('file').onchange = e => handle(e.target.files[0]);
+['dragenter','dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => handle(e.dataTransfer.files[0]));
+
+$('reset').onclick = () => {
+  PROFILE = null; JOBS = []; BOARDS = []; OFF.clear();
+  $('prof').classList.remove('on'); $('ctl').classList.remove('on');
+  $('boards').hidden = true; $('file').value = ''; $('status').textContent = ''; $('count').textContent = '';
+  HOME = null; $('home').value = ''; $('geoNote').textContent = ''; $('home').classList.remove('bad');
+  $('results').innerHTML = `<div class="empty"><h3>No CV yet</h3><p>Upload a resume above. Everything below fills in from it.</p></div>`;
+};
+
+$('run').onclick = run;
+['q','sort','fitOnly','lvlOnly','inclRemote'].forEach(id =>
+  $(id).addEventListener(id==='q'?'input':'change', render));
+
+// distance segmented control
+$('dist').querySelectorAll('button').forEach(b => b.onclick = () => {
+  RANGE = b.dataset.d === 'any' || b.dataset.d === 'remote' ? b.dataset.d : +b.dataset.d;
+  $('dist').querySelectorAll('button').forEach(x => {
+    x.classList.toggle('on', x === b);
+    x.setAttribute('aria-pressed', x === b);
+  });
+  // A radius is meaningless without an origin. Say so instead of silently showing nothing.
+  if (RANGE !== 'any' && RANGE !== 'remote' && !HOME){
+    $('geoNote').className = 'geo-note bad';
+    $('geoNote').textContent = '← enter your location';
+    $('home').focus();
+  }
+  render();
+});
+
+let ht;
+$('home').addEventListener('input', e => {
+  clearTimeout(ht);
+  ht = setTimeout(() => {
+    const v = e.target.value.trim();
+    if (!v){ HOME = null; $('geoNote').textContent = ''; $('home').classList.remove('bad'); measure(); render(); return; }
+    setHome(v); measure(); render();
+  }, 350);
+});
+
+$('csv').onclick = () => {
+  const rows = visible(); if (!rows.length) return;
+  const q = v => `"${String(v).replace(/"/g,'""')}"`;
+  const csv = ['Match,Miles,Title,Company,Location,Focus,Posted,URL',
+    ...rows.map(j=>[j.s, j.geo.remote?'remote':(j.dist??''), j.title, j.co, j.loc, j.tag, j.date?j.date.slice(0,10):'', j.url].map(q).join(','))].join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download = 'biotech-matches.csv'; a.click();
+};
+
+$('aggs').innerHTML = [
+  ['LinkedIn','https://www.linkedin.com/jobs/search/?keywords=biotech%20scientist'],
+  ['Indeed','https://www.indeed.com/jobs?q=biotech+scientist'],
+  ['BioSpace','https://www.biospace.com/jobs/'],
+  ['Science Careers','https://jobs.sciencecareers.org/jobs/'],
+  ['Nature Careers','https://www.nature.com/naturecareers/jobs'],
+  ['BioPharmGuy','https://biopharmguy.com/links/company-by-location.php'],
+  ['Built In','https://builtin.com/jobs'],
+  ['Y Combinator','https://www.ycombinator.com/jobs'],
+].map(([n,u])=>`<a href="${u}" target="_blank" rel="noopener">${n}</a>`).join('');
+
+// fail loudly
+window.addEventListener('error', e => {
+  $('status').innerHTML = `<span class="err">Error: ${esc(e.message||'unknown')}</span> — open the console (F12) for detail.`;
+});
+if (location.protocol === 'file:'){
+  $('status').innerHTML = `<span class="err">Opened as a local file.</span> Browsers block job-board requests on file:// — serve over http (see README) or push it live.`;
+}
+</script>
+</body>
+</html>
