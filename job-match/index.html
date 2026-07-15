@@ -75,6 +75,7 @@
   .prof-body{padding:20px 18px}
   .lvl{font-family:'JetBrains Mono';font-size:12px;color:var(--ink-3);margin-bottom:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   .lvl select{font-family:'JetBrains Mono';font-size:12px;background:var(--panel);border:1px solid var(--line);color:var(--signal-1);padding:5px 9px;border-radius:6px;cursor:pointer}
+  .lvl .lvl-sep{color:var(--line);margin:0 2px}
   .hint{font-size:12.5px;color:var(--ink-3);margin-bottom:14px;line-height:1.5}
   .skills{display:flex;gap:6px;flex-wrap:wrap}
   .sk{
@@ -246,9 +247,15 @@
         <div class="lvl">
           <span>Detected level:</span>
           <select id="lvlSel" aria-label="Career level"></select>
+          <span class="lvl-sep">·</span>
+          <span>Degree:</span>
+          <select id="degSel" aria-label="Highest degree"></select>
+          <span class="lvl-sep">·</span>
+          <span>Experience:</span>
+          <select id="yrSel" aria-label="Years of experience"></select>
           <span id="skN"></span>
         </div>
-        <p class="hint">These are the skills found in your CV, sized by how strongly they show up. <b>Click any skill to turn it off</b> — useful if it caught something you don't actually want to do. The weights drive every match score below.</p>
+        <p class="hint">Level, degree, and years of experience are read from your CV — if any are off, <b>change them above</b> and every score updates. Below are the skills found in your CV, sized by how strongly they show up. <b>Click any skill to turn it off</b> if it caught something you don't want to do. Level, degree, experience, and skill weights all drive the match scores.</p>
         <div class="skills" id="skills"></div>
       </div>
     </section>
@@ -642,6 +649,32 @@ window.LEVELS = [
   {id:'exec',      label:'Executive',             rank:5, cv:['vice president','\\bvp\\b','chief scientific','\\bcso\\b','\\bcto\\b','\\bceo\\b']},
 ];
 
+/* ============================================================================
+   EDUCATION — the degree carried on the CV, and the degree a POSTING asks for.
+   Degree is a first-class qualification signal in biotech: a PhD (or the lack
+   of one) shifts both the seniority a candidate reads at and whether a given
+   posting is even open to them. rank orders the ladder; higher = more advanced.
+   ============================================================================ */
+window.DEGREES = [
+  {id:'phd',   label:'PhD',        rank:4, cv:['ph.d','phd','doctm of philosophy','doctor of philosophy','d.phil','dphil','sc.d','doctorate','postdoc','post-doc','post doctoral','postdoctoral']},
+  {id:'md',    label:'MD',         rank:4, cv:['\\bm.d\\b','\\bmd\\b','doctor of medicine','md/phd','md-phd']},
+  {id:'masters',label:'Master\u2019s',rank:3, cv:['\\bm.s\\b','\\bm.sc\\b','\\bmsc\\b','master of science','master\u2019s','masters degree','m.eng','\\bmba\\b','m.b.a','master of']},
+  {id:'bs',    label:'Bachelor\u2019s',rank:2, cv:['\\bb.s\\b','\\bb.sc\\b','\\bbsc\\b','bachelor of science','bachelor\u2019s','bachelors','b.a\\b','\\bba\\b','bachelor of','undergraduate degree']},
+  {id:'assoc', label:'Associate\u2019s',rank:1, cv:['associate of science','associate\u2019s degree','associate degree','\\ba.s\\b','a.a.s']},
+];
+/* PhD is worth flagging even when the CV never spells out the degree line:
+   these phrases essentially only appear on a doctoral-track CV. */
+window.PHD_HINTS = ['dissertation','thesis committee','doctoral','ph.d. candidate','phd candidate','defended my','my defense'];
+
+/* What a POSTING requires or prefers, degree-wise. Matched in the job body.
+   "required" and "preferred" are scored differently — a preference is a nudge,
+   a requirement is a gate. */
+window.DEGREE_REQ = [
+  {id:'phd',    rank:4, t:['ph.d','phd','doctorate','doctoral degree','d.phil']},
+  {id:'masters',rank:3, t:['master','m.s.','m.sc','msc degree']},
+  {id:'bs',     rank:2, t:['bachelor','b.s.','b.sc','bsc degree','undergraduate degree']},
+];
+
 /* Job-title level markers — what a POSTING is asking for. */
 window.TITLE_LEVELS = [
   {rank:0, t:['intern','internship','co-op','summer student','graduate student','phd student','trainee']},
@@ -826,6 +859,56 @@ function tally(hay, terms){
   for (const t of terms) n += (hay.match(mk(t)) || []).length;
   return n;
 }
+// Pull the number of years of professional experience out of a CV.
+// Two independent estimates, and we trust the larger:
+//   1. An explicit claim — "10+ years of experience", "a decade of".
+//   2. The span of dated EMPLOYMENT lines — earliest job start to now.
+// The span estimate is deliberately picky: it counts a year only when it sits
+// on an employment-style dated line (part of a "2015 - Present" style range) and
+// NOT on an education line. Counting graduation years or a citation's year as a
+// career start was inflating everyone by 5-8 years and is exactly what made the
+// detected level — and therefore every score — jump around.
+const EDU_LINE = /\b(ph\.?d|m\.?sc|b\.?sc|b\.?s\.?\b|m\.?s\.?\b|b\.?a\.?\b|bachelor|master|doctora|university|college|institute of technology|graduated|gpa|thesis|dissertation|major|minor|coursework)\b/i;
+const RANGE_LINE = /\b((?:19|20)\d{2})\s*(?:-|–|—|to)\s*((?:19|20)\d{2}|present|current|now)\b/i;
+
+function detectYears(text){
+  const T = ' ' + text.toLowerCase().replace(/\s+/g,' ') + ' ';
+  const nowY = new Date().getFullYear();
+  let claimed = 0;
+
+  // (1) Explicit claim: "10 years", "10+ years", "over 10 years of experience".
+  const re = /(\d{1,2})\s*\+?\s*(?:years?|yrs?)\b/g;
+  let m;
+  while ((m = re.exec(T)) !== null){
+    const near = T.slice(Math.max(0, m.index - 8), m.index + m[0].length + 30);
+    // Must be about work, not "3 years of graduate study" / "5-year-old line".
+    if (/experience|industry|bench|professional|hands-on|hands on|r&d|working|career|track record|tenure/.test(near)
+        && !/\b(study|studies|program|degree|phd|graduate|old)\b/.test(near.slice(0, near.indexOf(m[0]) + m[0].length + 6))){
+      const v = +m[1];
+      if (v >= 1 && v <= 45 && v > claimed) claimed = v;
+    }
+  }
+  if (/\bdecade\b/.test(T) && /experience|industry|bench|career|professional/.test(T) && claimed < 10) claimed = 10;
+
+  // (2) Employment-span estimate, line by line.
+  let earliest = null;
+  for (const rawln of text.split('\n')){
+    const ln = rawln.toLowerCase();
+    if (EDU_LINE.test(ln)) continue;             // skip degrees / schooling
+    const rg = ln.match(RANGE_LINE);
+    if (!rg) continue;                           // only true date ranges count as a job
+    const start = +rg[1];
+    if (start >= 1980 && start <= nowY && (earliest == null || start < earliest)) earliest = start;
+  }
+  let span = 0;
+  if (earliest != null){
+    span = nowY - earliest;
+    if (span > 45) span = 0;                     // stray/implausible — ignore
+  }
+
+  return Math.min(Math.max(claimed, span), 45);
+}
+
 function parseCV(text){
   const T = ' ' + text.toLowerCase().replace(/\s+/g,' ') + ' ';
   const lines = text.split('\n');
@@ -841,23 +924,84 @@ function parseCV(text){
     }
   }
 
-  // Seniority. Manager/exec titles must appear on a DATED TITLE LINE, otherwise
-  // "managing staff" in a bullet promotes a bench scientist to VP.
-  let best = null;
+  /* ---- EDUCATION: highest degree carried ---- */
+  // Prefer degree mentions from the top/education region, but accept anywhere.
+  // Highest rank wins; PhD hint phrases can establish a doctorate even when the
+  // literal "Ph.D." string is absent.
+  let degree = null;
+  for (const D of DEGREES){
+    if (tally(T, D.cv) > 0 && (!degree || D.rank > degree.rank)) degree = D;
+  }
+  if ((!degree || degree.rank < 4) && PHD_HINTS.some(h => T.includes(h)))
+    degree = DEGREES.find(d => d.id === 'phd');
+
+  /* ---- YEARS of professional experience ---- */
+  const years = detectYears(text);
+
+  /* ---- SENIORITY: title, degree, and years together ----
+     The old model read level from title keywords on dated lines only, which was
+     fragile — one stray "manager"/"scientist," line swung the whole result set.
+     Here the title gives a floor, then degree and years refine it, and the final
+     rank is the consensus. This is monotonic: more evidence never lowers you. */
+
+  // (a) Title floor. Senior-and-up titles must sit on a DATED TITLE LINE — a
+  //     job header, not prose — so "assisted senior scientists" or "managed
+  //     staff" in a bullet can't promote a Research Associate. Junior titles
+  //     (RA/intern) stay free-text: they're rarely the misleading object of a
+  //     verb, and juniors need the looser fallback to be detected at all.
+  //     We also drop any title phrase that reads as someone ELSE's role, i.e.
+  //     immediately following "assisted/supported/reported to/worked with/for".
+  const SUBORD = /(assist|support|report(ed|ing)? to|work(ed|ing)? (with|for|under|alongside)|collaborat\w* with|to the|for the|junior|shadow)\s*$/;
+  const titleLineHit = (terms) => lines.some(ln => {
+    const l = ' ' + ln.toLowerCase().trim() + ' ';
+    if (l.length >= 92 || !/(19|20)\d{2}|present/.test(l)) return false;
+    // require the term to appear AND not be preceded by a subordinating verb
+    return terms.some(t => {
+      const re = mk(t); let m;
+      while ((m = re.exec(l)) !== null){
+        const before = l.slice(0, m.index);
+        if (!SUBORD.test(before)) return true;
+      }
+      return false;
+    });
+  });
+  let titleRank = null;
   for (const L of LEVELS){
-    let hit;
-    if (L.rank >= 4){
-      hit = lines.some(ln => {
-        const l = ' ' + ln.toLowerCase().trim() + ' ';
-        return l.length < 92 && /(19|20)\d{2}|present/.test(l) && tally(l, L.cv) > 0;
-      });
-    } else {
-      hit = tally(T, L.cv) > 0;
-    }
-    if (hit && (!best || L.rank > best.rank)) best = L;
+    const hit = L.rank >= 3 ? titleLineHit(L.cv) : tally(T, L.cv) > 0;
+    if (hit && (titleRank == null || L.rank > titleRank)) titleRank = L.rank;
   }
 
-  return {skills: skills.sort((a,b)=>b.signal-a.signal), level: best || LEVELS[2]};
+  // (b) Years floor. Independent of any title string. Conservative thresholds
+  //     tuned to biotech industry norms. Crucially, years alone CAP at Senior:
+  //     a 12-year bench scientist is very often still an individual contributor,
+  //     so tenure can't promote anyone to Manager/Director — that needs a real
+  //     management title (handled by titleRank). Letting years reach rank 4 was
+  //     mislabeling senior ICs as directors and skewing their whole result set.
+  //     RA <2y · Scientist 2-5y · Senior 5y+
+  let yearsRank = years >= 5 ? 3 : years >= 2 ? 2 : years >= 1 ? 1 : null;
+
+  // (c) Degree floor. A fresh PhD/postdoc reads at scientist level even with no
+  //     industry title yet; that is how biotech actually hires doctorates.
+  let degRank = null;
+  if (degree){
+    if (degree.rank >= 4) degRank = 2;   // PhD/MD -> scientist floor
+    else if (degree.rank === 3) degRank = 1; // Master's -> RA floor
+  }
+
+  // Consensus: the strongest well-supported signal wins. A management title is
+  // trusted (it sat on a dated line), but the very top of the ladder needs some
+  // tenure behind it so a stray "director" token can't crown a junior CV.
+  let rank = Math.max(titleRank ?? -1, yearsRank ?? -1, degRank ?? -1);
+  if (rank < 0) rank = 2; // nothing found -> assume scientist, the modal biotech CV
+  // Exec (rank 5) with essentially no detected tenure is almost always a false
+  // read (e.g. "VP of the student club"); step it back to manager/director.
+  if (rank >= 5 && years > 0 && years < 8) rank = 4;
+  const level = LEVELS.find(l => l.rank === rank) || LEVELS[2];
+
+  return {
+    skills: skills.sort((a,b)=>b.signal-a.signal),
+    level, degree, years
+  };
 }
 
 /* ============================ 3. SCORE A JOB ============================== */
@@ -900,18 +1044,60 @@ function scoreJob(job){
   let jlvl = 2;
   for (const g of TITLE_LEVELS) if (g.t.some(t => T.includes(t))) jlvl = g.rank;
 
+  // ---- Degree requirement, read from the posting body ----
+  // Highest degree the posting mentions, and whether it's framed as required.
+  let reqDeg = 0;
+  for (const r of DEGREE_REQ) if (r.t.some(t => mk(t).test(B))) reqDeg = Math.max(reqDeg, r.rank);
+  // "required / must have" vs "preferred / a plus" — near the degree mention.
+  const reqIsHard = reqDeg > 0 && /\b(required|must have|minimum|is a must|ph\.?d\.? required)\b/.test(B)
+                    && !/\b(preferred|a plus|nice to have|desirable|ideally)\b/.test(
+                         B.slice(Math.max(0, B.search(/ph\.?d|master|bachelor|doctora/)), B.search(/ph\.?d|master|bachelor|doctora/) + 120) || B);
+  const haveDeg = PROFILE.degree ? PROFILE.degree.rank : 0;
+
+  // ---- Years requirement, read from the posting body ----
+  // "5+ years", "minimum of 3 years", "3-5 years of experience".
+  let reqYears = 0;
+  const ym = B.match(/(\d{1,2})\s*\+?\s*(?:-\s*\d{1,2}\s*)?(?:years?|yrs?)\b[^.]{0,30}(?:experience|industry|relevant|bench|professional)/);
+  if (ym) reqYears = Math.min(+ym[1], 25);
+  const haveYears = PROFILE.years || 0;
+
   // Coverage of the profile, scaled. sqrt keeps mid-range matches legible
   // instead of everything clustering near zero.
   let pct = Math.sqrt(earned / total) * 118;
 
-  // Seniority distance penalty.
+  // ---- Seniority distance penalty (smoothed) ----
+  // A continuous falloff instead of hard steps, so a single misread of the
+  // candidate's level nudges scores rather than collapsing the whole board.
   const d = jlvl - PROFILE.level.rank;
-  if (d <= -2) pct *= 0.35;        // way too junior
-  else if (d === -1) pct *= 0.8;   // a step down
-  else if (d === 1) pct *= 0.92;   // a stretch — still worth showing
-  else if (d >= 2) pct *= 0.4;     // way too senior
+  if (d < 0)      pct *= Math.max(0.45, 1 + 0.20 * d);   // too junior: -20%/level, floored
+  else if (d > 0) pct *= Math.max(0.45, 1 - 0.18 * d);   // too senior: -18%/level, floored
 
-  return {s: Math.max(0, Math.min(100, Math.round(pct))), hits: hits.slice(0,5), gaps: gaps.slice(0,2), lvl: jlvl};
+  // ---- Degree fit ----
+  if (reqDeg > 0){
+    if (haveDeg >= reqDeg){
+      if (reqDeg >= 4) pct *= 1.06;          // meets a PhD ask — small, real boost
+    } else {
+      const gap = reqDeg - haveDeg;
+      // Missing a *required* PhD is a near-disqualifier; a *preferred* one, a nudge.
+      pct *= reqIsHard ? Math.max(0.30, 1 - 0.45 * gap)
+                       : Math.max(0.70, 1 - 0.15 * gap);
+      if (reqIsHard && reqDeg >= 4 && haveDeg < 3) gaps.unshift('PhD required');
+      else if (reqDeg >= 4) gaps.unshift('PhD preferred');
+    }
+  }
+
+  // ---- Years fit ----
+  if (reqYears > 0 && haveYears > 0){
+    const short = reqYears - haveYears;
+    if (short > 0) pct *= Math.max(0.55, 1 - 0.06 * short);       // under-experienced: gentle
+    else if (short <= -6) pct *= 0.9;                             // wildly overqualified: slight
+  }
+
+  return {
+    s: Math.max(0, Math.min(100, Math.round(pct))),
+    hits: hits.slice(0,5), gaps: gaps.slice(0,3), lvl: jlvl,
+    reqDeg, reqYears
+  };
 }
 
 /* ============================ 3b. GEOGRAPHY ============================== */
@@ -1006,6 +1192,26 @@ function showProfile(name){
     if (JOBS.length) rescore();
   };
 
+  // Degree selector — "Not specified" plus every degree tier. Detection is a
+  // guess; let the user correct it, because a PhD flag swings scores a lot.
+  const curDeg = PROFILE.degree ? PROFILE.degree.id : '';
+  $('degSel').innerHTML = `<option value="" ${curDeg===''?'selected':''}>Not specified</option>` +
+    DEGREES.map(d => `<option value="${d.id}" ${d.id===curDeg?'selected':''}>${d.label}</option>`).join('');
+  $('degSel').onchange = e => {
+    PROFILE.degree = e.target.value ? DEGREES.find(d => d.id === e.target.value) : null;
+    if (JOBS.length) rescore();
+  };
+
+  // Years selector — coarse buckets that map onto how postings phrase asks.
+  const yrOpts = [0,1,2,3,5,7,10,15,20];
+  const nearest = yrOpts.reduce((a,b) => Math.abs(b-PROFILE.years) < Math.abs(a-PROFILE.years) ? b : a, 0);
+  $('yrSel').innerHTML = yrOpts.map(y =>
+    `<option value="${y}" ${y===nearest?'selected':''}>${y===0?'—':y+(y===20?'+ yrs':' yrs')}</option>`).join('');
+  $('yrSel').onchange = e => {
+    PROFILE.years = +e.target.value;
+    if (JOBS.length) rescore();
+  };
+
   $('skN').textContent = `· ${PROFILE.skills.length} skills found`;
   $('skills').innerHTML = PROFILE.skills.map(s =>
     `<button class="sk" aria-pressed="true" data-id="${s.id}" title="${s.g} — appears ${s.n}×">
@@ -1019,7 +1225,9 @@ function showProfile(name){
     if (JOBS.length) rescore();
   });
 
-  $('status').innerHTML = `Profile built. <b>${PROFILE.skills.length}</b> skills · level: <b>${PROFILE.level.label}</b>. Now hit <b>Find matching jobs</b>.`;
+  const degTxt = PROFILE.degree ? PROFILE.degree.label : 'no degree found';
+  const yrTxt = PROFILE.years ? `${PROFILE.years} yr${PROFILE.years===1?'':'s'} exp` : 'experience n/a';
+  $('status').innerHTML = `Profile built. <b>${PROFILE.skills.length}</b> skills · <b>${PROFILE.level.label}</b> · <b>${degTxt}</b> · <b>${yrTxt}</b>. Check these are right, then hit <b>Find matching jobs</b>.`;
   $('results').innerHTML = `<div class="empty"><h3>Profile ready</h3><p>Hit <b>Find matching jobs</b> to scan ${COMPANIES.length} biotech boards. Takes about 20–40 seconds.</p></div>`;
 }
 
