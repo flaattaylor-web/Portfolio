@@ -69,12 +69,12 @@
     border-bottom:1px solid transparent;transition:border-color .3s,background .3s;
   }
   nav.scrolled{border-bottom:1px solid var(--line-soft);background:rgba(10,14,26,.9)}
-  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between}
-  .brand{font-family:'Space Grotesk';font-weight:700;font-size:17px;letter-spacing:-.01em;display:flex;align-items:center;gap:11px}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:56px}
+  .brand{font-family:'Space Grotesk';font-weight:700;font-size:17px;letter-spacing:-.01em;display:flex;align-items:center;gap:11px;flex:0 0 auto;white-space:nowrap;margin-right:8px}
   .brand .dna{display:inline-flex;gap:3px}
   .brand .dna i{width:4px;height:18px;border-radius:2px;display:block;transform-origin:center}
-  .nav-links{display:flex;gap:32px;align-items:center}
-  .nav-links a{font-size:13.5px;color:var(--ink-2);font-weight:500;transition:color .2s;position:relative}
+  .nav-links{display:flex;gap:32px;align-items:center;flex-wrap:nowrap}
+  .nav-links a{font-size:13.5px;color:var(--ink-2);font-weight:500;transition:color .2s;position:relative;white-space:nowrap}
   .nav-links a:hover{color:var(--ink)}
   .nav-cta{
     font-family:'JetBrains Mono';font-size:12.5px;letter-spacing:.05em;
@@ -553,6 +553,7 @@
 
   /* ============ RESPONSIVE ============ */
   @media(max-width:900px){
+    .nav-inner{gap:16px}
     .nav-links{
       position:fixed;top:63px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--line);
       flex-direction:column;padding:20px 28px;gap:18px;align-items:flex-start;
@@ -654,11 +655,11 @@
       <span class="loc">Jersey City, NJ</span>
     </div>
     <h1 class="hero-title">
-      Reading the code
-      <span class="l2">of life, base by base.</span>
+      Messy biology in.
+      <span class="l2">Clean sequence out.</span>
     </h1>
     <p class="hero-sub">
-      Ten years turning noisy biology into clean signal, from <b>single-cell isolation</b> and <b>multicolor FACS</b> to <b>NGS across Illumina, Nanopore &amp; PacBio</b> and an <b>11,161&nbsp;bp synthetic viral genome</b> built from scratch.
+      Ten years of getting usable data out of material that didn&rsquo;t want to give it up — <b>single-cell isolation</b> and <b>multicolor FACS</b>, <b>NGS across Illumina, Nanopore &amp; PacBio</b>, and an <b>11,161&nbsp;bp synthetic viral genome</b> built from four pieces of DNA.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">Explore the work →</a>
@@ -685,21 +686,21 @@
     <div class="eyebrow"><span class="idx">01</span> Biography</div>
     <div class="about-grid">
       <div class="about-body reveal">
-        <h2 class="sec-title">A scientist since age three.</h2>
+        <h2 class="sec-title">I&rsquo;ve been asking inconvenient questions since I was three.</h2>
         <p>
-          The story goes that at three years old, Taylor was already interrogating the workings of the universe, and was unimpressed when the answers didn't come. Science fairs were the highlight of every school year (volcanoes, tornado chambers, the works), and <i>A Brief History of Time</i> was leisure reading. Growing up on the Gulf Coast of Florida, that curiosity ran on two tracks: fishing sharpened a fascination with the biology of fish, while playing baseball turned into an obsession with the physics of the game. A fifth-grade teacher predicted a career in shark biology. The species was off; the trajectory wasn't.
+          The story my family tells is that at three years old I was already interrogating how the universe worked, and taking it personally when the answers didn&rsquo;t come. Science fairs were the best week of every school year (volcanoes, tornado chambers, the works), and <i>A Brief History of Time</i> was what I read for fun, which tells you roughly everything about my childhood social calendar. Growing up on the Gulf Coast of Florida, that curiosity ran on two tracks: fishing turned into a fascination with the biology of fish, and baseball turned into an obsession with the physics of the game. A fifth-grade teacher told my parents I&rsquo;d end up a shark biologist. She had the species wrong. She did not have the trajectory wrong.
         </p>
         <p>
-          That curiosity became a decade of hands-on molecular biology spanning <b>academia, an early-stage biotech startup, and big pharma</b>. Taylor studied <b>Biomedical Sciences</b> at the University of South Florida with a minor in <b>Biomedical Physics</b>, then earned an <b>M.S. at Auburn University's College of Veterinary Medicine</b>, where a pivot from reproductive medicine into cancer biology and precision medicine set the course for everything that followed.
+          That turned into a decade of hands-on molecular biology across <b>academia, an early-stage biotech startup, and big pharma</b>. I studied <b>Biomedical Sciences</b> at the University of South Florida with a minor in <b>Biomedical Physics</b>, then took an <b>M.S. at Auburn University’s College of Veterinary Medicine</b>, where I walked in planning to work on reproductive medicine and walked out doing cancer biology and precision medicine. That pivot set up everything that came after it.
         </p>
         <p class="pull">
-          "The through-line of my work is signal extraction: pulling meaningful sequence out of the messiest biological material, then building the method so anyone can do it again."
+          &ldquo;Everything I do comes down to one thing: pulling real signal out of biological material that doesn&rsquo;t want to give it up, then writing the method down well enough that somebody else can run it.&rdquo;
         </p>
         <p>
-          At Auburn, Taylor developed the <b>first published protocol for isolating melanocytes from canine skin and oral mucosa</b>, a rare-cell problem where the target makes up just 3-5% of skin. Recruited straight out of the thesis defense by the founders of <b>Humane Genomics</b>, Taylor became one of the company's first three employees and built an entire synthetic-virology lab from the bench up: qPCR pipelines, Nanopore sequencing workflows, and viral vectors engineered for precision cancer therapy. Later chapters at <b>Merck</b> and <b>Azenta Life Sciences</b> deepened that method-development rigor across high-throughput, multi-platform sequencing.
+          At Auburn I developed the <b>first published protocol for isolating melanocytes from canine skin and oral mucosa</b>, which is a genuinely hard rare-cell problem, since melanocytes are only 3-5% of the cells in skin. The founders of <b>Humane Genomics</b> recruited me out of my thesis defense, and I became one of the company’s first three employees and built a synthetic-virology lab from an empty bench: qPCR pipelines, Nanopore sequencing workflows, and viral vectors engineered for precision cancer therapy. <b>Merck</b> and <b>Azenta Life Sciences</b> came after that, and both sharpened the method-development side across high-throughput, multi-platform sequencing.
         </p>
         <p>
-          GLP/GCP-trained and fluent in translating complex biological problems into actionable research strategy, Taylor now works at the intersection of <b>gene editing, viral vectors, and next-generation sequencing</b>, and is eager to apply that method-development rigor within a <b>cGMP analytical-development environment</b> supporting first-in-human and IND products.
+          I&rsquo;m GLP/GCP-trained, I&rsquo;m good at turning a messy biological problem into a research plan somebody can actually execute, and I currently work at the intersection of <b>gene editing, viral vectors, and next-generation sequencing</b>. What I want next is to point that same method-development rigor at a <b>cGMP analytical-development environment</b> supporting first-in-human and IND products.
         </p>
       </div>
 
@@ -732,8 +733,8 @@
   <div class="wrap">
     <div class="eyebrow"><span class="idx">02</span> Career Overview</div>
     <div class="sec-head reveal">
-      <h2 class="sec-title">From founding a lab to scaling pharma pipelines.</h2>
-      <p class="sec-lead">A path that runs the full arc of the field. Building bench science from day one at a three-person startup, then carrying that method-development discipline into large-pharma and CRO environments.</p>
+      <h2 class="sec-title">I built a lab out of an empty room, then learned how big pharma does it.</h2>
+      <p class="sec-lead">I&rsquo;ve seen this field from both ends. I built bench science from day one at a three-person startup, then carried that same method-development discipline into large-pharma and CRO environments, where the sample volume is a hundred times higher and the documentation matters even more than the result.</p>
     </div>
 
     <div class="timeline">
@@ -833,8 +834,8 @@
   <div class="wrap">
     <div class="eyebrow"><span class="idx">03</span> Selected Projects</div>
     <div class="sec-head reveal">
-      <h2 class="sec-title">Problems solved end-to-end.</h2>
-      <p class="sec-lead">Each of these started as a hard "how do we even measure this?" question and ended as a repeatable method. The kind of work that becomes a platform.</p>
+      <h2 class="sec-title">Problems I took end-to-end.</h2>
+      <p class="sec-lead">Every one of these started as a &ldquo;how do we even measure this?&rdquo; question and ended as a method somebody else could pick up and run. That second part is the part I actually care about.</p>
     </div>
 
     <div class="proj-grid">
@@ -843,7 +844,7 @@
         <div class="proj-kind">Synthetic Virology · Peer-Reviewed <span class="bases" aria-hidden="true"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></span></div>
         <h3>An 11,161 bp synthetic VSV genome, built from four modular fragments</h3>
         <p>
-          Co-developed a synthetic-biology platform to rapidly engineer <b>Vesicular Stomatitis Virus</b> from the ground up. A full-length genome was assembled from modularized DNA fragments, rescued, and titered, with <b>phenotypic analysis showing no significant difference between natural and synthetic virus</b>. The platform's flexibility was demonstrated by swapping a foreign glycoprotein and rearranging gene order (VSV-P ⇄ VSV-M) to prove design freedom.
+          I co-developed a synthetic-biology platform for engineering <b>Vesicular Stomatitis Virus</b> from the ground up. We assembled a full-length genome out of modularized DNA fragments, rescued it, and titered it, and <b>phenotypic analysis showed no significant difference between the natural and the synthetic virus</b> — which is the whole ballgame, because it means building the thing from scratch didn&rsquo;t cost us the biology. Then we proved the platform was actually flexible by swapping in a foreign glycoprotein and rearranging the gene order (VSV-P ⇄ VSV-M), which is design freedom you don&rsquo;t get from conventional reverse genetics.
         </p>
         <div class="genome-map reveal">
           <div class="gm-head">
@@ -904,7 +905,7 @@
         <div class="proj-kind">Vaccine Development · Pandemic Response <span class="bases" aria-hidden="true"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></span></div>
         <h3>A VSV-vectored COVID-19 vaccine candidate, bench to in vivo in five months</h3>
         <p>
-          At the height of the pandemic, the team built a SARS-CoV-2 vaccine candidate on the same <b>VSV backbone</b> behind Merck's approved Ebola vaccine, swapping the native glycoprotein for the <b>SARS-CoV-2 spike protein</b>. Designs went from concept to <b>functional virus particles in under a month</b>. Live-cell Incucyte imaging confirmed the vaccine displayed spike on its surface and <b>bound the ACE2 receptor</b> like the natural virus. Taylor scaled production <b>100-1000x</b> for animal work, and a rat study at Auburn's Scott-Ritchey Research Center showed the candidate was <b>well tolerated with no adverse reactions</b> (CBC &amp; clinical chemistry confirmed). The team wrote and submitted a <b>pre-IND to the FDA</b> before winding the program down once authorized vaccines reached the public.
+          At the height of the pandemic we built a SARS-CoV-2 vaccine candidate on the same <b>VSV backbone</b> behind Merck’s approved Ebola vaccine, swapping the native glycoprotein for the <b>SARS-CoV-2 spike protein</b>. We went from design to <b>functional virus particles in under a month</b>. Live-cell Incucyte imaging confirmed the candidate displayed spike on its surface and <b>bound the ACE2 receptor</b> the way the real virus does. I scaled production <b>100-1000x</b> for the animal work, and a rat study at Auburn’s Scott-Ritchey Research Center came back <b>well tolerated with no adverse reactions</b>, confirmed on CBC and clinical chemistry. We wrote and submitted a <b>pre-IND to the FDA</b>, and then we wound the program down, because authorized vaccines had reached the public and the world didn&rsquo;t need ours. That was the right call. It still stings a little.
         </p>
         <p style="font-family:'JetBrains Mono';font-size:12px;color:var(--ink-3);margin:2px 0 4px;line-height:1.9">
           Program write-ups:
@@ -965,7 +966,7 @@
         <div class="proj-kind">Method Development · Rapid Viral Screening <span class="bases" aria-hidden="true"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></span></div>
         <h3>A viral supernatant to Nanopore pipeline: 24 genomes screened in 24 hours</h3>
         <p>
-          Built a single end-to-end workflow that takes a candidate virus from <b>harvested supernatant to called sequence in one day</b>. The route runs supernatant harvest &rarr; <b>viral RNA isolation</b> &rarr; <b>cDNA synthesis</b> &rarr; <b>PCR amplification</b> &rarr; library prep on the Oxford Nanopore <b>Rapid Barcoding Kit</b> &rarr; sequencing &rarr; assembly and analysis. Barcoding let the method <b>multiplex up to 24 viral genomes in a single run</b>, turning what had been a serial, multi-day sequencing task into a parallel screen. The result is a same-day readout that lets a bench scientist confirm construct identity across a whole panel of viral candidates <b>within 24 hours</b>, fast enough to steer the next round of engineering.
+          I built one workflow that takes a candidate virus from <b>harvested supernatant to called sequence in a single day</b>. The route runs supernatant harvest &rarr; <b>viral RNA isolation</b> &rarr; <b>cDNA synthesis</b> &rarr; <b>PCR amplification</b> &rarr; library prep on the Oxford Nanopore <b>Rapid Barcoding Kit</b> &rarr; sequencing &rarr; assembly and analysis. Barcoding let me <b>multiplex up to 24 viral genomes in one run</b>, which turned a serial, multi-day sequencing chore into a parallel screen. What that buys you in practice: a bench scientist can confirm construct identity across a whole panel of candidates <b>within 24 hours</b>, which is fast enough to steer the next round of engineering instead of finding out a week later that round one was wrong.
         </p>
         <div class="cmp reveal">
           <div class="cmp-row head">
@@ -1011,7 +1012,7 @@
         <div class="proj-kind">Precision Oncology · M.S. Thesis</div>
         <h3>Isolating rare normal cells from canine tissue &amp; blood</h3>
         <p>
-          Built protocols to isolate the normal-cell counterparts of three skin tumors (<b>melanocytes, keratinocytes &amp; mast-cell progenitors</b>) as transcriptomic comparators for precision oncology. Delivered the <b>first published method for canine melanocyte isolation</b>, now independently reproduced by other labs.
+          I built protocols to isolate the normal-cell counterparts of three skin tumors (<b>melanocytes, keratinocytes &amp; mast-cell progenitors</b>), so precision-oncology work would have something honest to compare a tumor transcriptome against. The melanocyte method was the <b>first published route for canine cells</b>, and other labs have since reproduced it independently, which is the compliment I actually wanted.
         </p>
         <div class="proj-meta">
           <span class="chip">MACS + FACS</span>
@@ -1024,7 +1025,7 @@
         <div class="proj-kind">Assay Development · qPCR</div>
         <h3>Quantifying VSV titer by two-step RT-qPCR</h3>
         <p>
-          When low RNA yield &amp; purity from viral passaging broke one-step RT-qPCR, Taylor engineered a <b>two-step method</b> that cleanly quantified viral genomes across <b>10³ to 10¹² genome copies</b>, the titer data that dosed in vivo mouse studies, and the seed of the lab's genome-sequencing workflow.</p>
+          Viral passaging kept handing me RNA with yield and purity too poor for one-step RT-qPCR, so I engineered a <b>two-step method</b> instead. It quantified viral genomes cleanly across <b>10³ to 10¹² genome copies</b>, produced the titer data that dosed our in vivo mouse studies, and became the seed of the lab’s whole genome-sequencing workflow.</p>
         <div class="proj-meta">
           <span class="chip">RT-qPCR</span>
           <span class="chip">Primer design</span>
@@ -1036,7 +1037,7 @@
         <div class="proj-kind">Oncolytic Therapy · AACR 2023</div>
         <h3>Retargeted oncolytic VSV with a genetic on-switch for liver cancer</h3>
         <p>
-          Engineered oncolytic VSV to selectively kill <b>GPC3-positive</b> liver-cancer cells, pairing a retargeted glycoprotein with <b>aptazyme</b> replication switches. Showed infection &amp; lysis at low MOI with no effect in GPC3-negative cells, and <b>10⁷ PFU doses well tolerated in vivo</b>.</p>
+          I engineered oncolytic VSV to kill <b>GPC3-positive</b> liver-cancer cells and leave everything else alone, pairing a retargeted glycoprotein with <b>aptazyme</b> replication switches. It infected and lysed at low MOI, did nothing to GPC3-negative cells, and <b>10⁷ PFU doses were well tolerated in vivo</b>.</p>
         <div class="proj-meta">
           <span class="chip">Glypican-3 targeting</span>
           <span class="chip">Aptazyme switch</span>
@@ -1048,7 +1049,7 @@
         <div class="proj-kind">Method Development · Nanopore</div>
         <h3>A 2-hour NGS plasmid-sequencing method</h3>
         <p>
-          Built an indirect viral-sequencing route (RNA → cDNA → dsDNA → Nanopore) to sequence engineered virions base-by-base for QC, then compressed the plasmid workflow all the way down to <b>miniprep-to-analysis in two hours</b>.</p>
+          I built an indirect sequencing route (RNA &rarr; cDNA &rarr; dsDNA &rarr; Nanopore) to read engineered virions base by base for QC, then kept squeezing the plasmid version until it ran <b>miniprep-to-analysis in two hours</b>.</p>
         <div class="proj-meta">
           <span class="chip">cDNA synthesis</span>
           <span class="chip">Galaxy assembly</span>
@@ -1068,14 +1069,14 @@
     <div class="sec-head reveal">
       <span class="rna-badge"><span class="pulse"></span>In development · 2025-2026</span>
       <h2 class="sec-title">Multiplexed direct RNA sequencing.</h2>
-      <p class="sec-lead">A service concept for scaling native RNA-seq from single-sample pilots to 96-plex cohort studies, sequencing the true RNA strand with zero cDNA or PCR bias, on Oxford Nanopore's SQK-RNA004 chemistry.</p>
+      <p class="sec-lead">A service concept I&rsquo;m developing to scale native RNA-seq from single-sample pilots up to 96-plex cohort studies — sequencing the actual RNA strand, with no cDNA and no PCR bias, on Oxford Nanopore’s SQK-RNA004 chemistry.</p>
     </div>
 
     <!-- HERO BANNER -->
     <div class="rna-hero reveal">
       <div class="rna-hero-copy">
-        <h3>Collapsing the cost of native RNA-seq by 99%.</h3>
-        <p>Native RNA sequencing has always traded cost for authenticity: one flow cell, one sample, real modifications preserved. <b>96-barcode multiplexing</b> changes that math: pool an entire well-plate onto a single PromethION run and the per-sample cost falls from roughly <b>$900 to about $10</b>, without giving up direct-strand sensing.</p>
+        <h3>Native RNA-seq has always been too expensive. That math just changed.</h3>
+        <p>Direct RNA sequencing trades cost for authenticity: one flow cell, one sample, real modifications preserved. That&rsquo;s a fine trade until you want a cohort. <b>96-barcode multiplexing</b> rewrites the arithmetic — pool an entire well-plate onto a single PromethION run and the per-sample cost falls from roughly <b>$900 to about $10</b>, without giving up direct-strand sensing.</p>
         <div class="cost-collapse">
           <div class="cost-node from"><div class="lab">1-plex</div><div class="val">$900</div></div>
           <div class="cost-arrow"></div>
@@ -1156,8 +1157,8 @@
   <div class="wrap">
     <div class="eyebrow"><span class="idx">05</span> Capabilities</div>
     <div class="sec-head reveal">
-      <h2 class="sec-title">A full-stack bench toolkit.</h2>
-      <p class="sec-lead">From nucleic-acid extraction to base-called, aligned, variant-called data, with the assay-development and QC rigor to make each step reproducible.</p>
+      <h2 class="sec-title">What I can actually do at a bench.</h2>
+      <p class="sec-lead">Nucleic-acid extraction through base-called, aligned, variant-called data, with enough assay-development and QC discipline that every step still holds up when somebody else is the one running it.</p>
     </div>
     <div class="skill-grid">
       <div class="skill-cat reveal">
@@ -1252,7 +1253,7 @@
       <div class="bc-body">
         <div class="bc-kind">Built with code · Live app</div>
         <h3>Biotech Career Hub</h3>
-        <p>A self-built web application for navigating biotech careers, developed hands-on with modern AI tooling, the same skillset behind the Google AI Professional Certificate above. Turning credentials into shipped software.</p>
+        <p>A web application I built myself for navigating biotech careers, using the same modern AI tooling behind the Google AI Professional Certificate above. It seemed more useful to ship something with the skillset than to just hold the certificate.</p>
       </div>
       <a class="launch-cta" href="https://biotech-career-hub-56721929391.us-west1.run.app/" target="_blank" rel="noopener">
         Launch the app <span class="arr">↗</span>
@@ -1266,8 +1267,8 @@
   <div class="wrap">
     <div class="eyebrow"><span class="idx">07</span> Publications &amp; Posters</div>
     <div class="sec-head reveal">
-      <h2 class="sec-title">Peer-reviewed work &amp; conference science.</h2>
-      <p class="sec-lead">A decade of output spanning a peer-reviewed journal article, conference posters, a Master's thesis, and contributions to patented synthetic-virology technology.</p>
+      <h2 class="sec-title">The paper trail.</h2>
+      <p class="sec-lead">A decade of output: one peer-reviewed journal article, a stack of conference posters, a Master’s thesis, and contributions to patented synthetic-virology technology.</p>
     </div>
 
     <div class="reveal">
@@ -1348,8 +1349,8 @@
   <div class="wrap">
     <div class="eyebrow"><span class="idx">P</span> Protocols Built From the Thesis</div>
     <div class="sec-head reveal">
-      <h2 class="sec-title">Three rare-cell isolation protocols, bench-tested and published.</h2>
-      <p class="sec-lead">Precision oncology needs the <i>normal</i> counterpart of a tumor to compare against. These are the wet-lab methods I developed at Auburn to pull three hard-to-isolate normal cell types out of canine skin and blood. Each one a repeatable, single-cell-sequencing-grade workflow. Tap any step for detail.</p>
+      <h2 class="sec-title">Three protocols for cells that did not want to be isolated.</h2>
+      <p class="sec-lead">Precision oncology needs the <i>normal</i> counterpart of a tumor to compare against, and for these three cell types nobody had a clean way to get it. These are the wet-lab methods I developed at Auburn to pull three hard-to-isolate normal cell types out of canine skin and blood — each one repeatable, and clean enough for single-cell sequencing. Tap any step for detail.</p>
     </div>
 
     <div class="proto-legend reveal">
@@ -1522,16 +1523,16 @@
       <div class="trivia-body reveal">
         <h2 class="trivia-title">Also: I run <span class="hl">UntriviallyJess</span>, a trivia empire across Jersey City.</h2>
         <p>
-          Since 2024, Taylor has owned and operated a <b>weekly trivia business</b> spanning multiple Jersey City venues. The same rigor for accuracy that lives at the bench, pointed at pop culture and bar crowds.
+          Since 2024 I&rsquo;ve owned and operated a <b>weekly trivia business</b> across multiple Jersey City venues. It is the same obsession with getting the answer right that I bring to the bench, aimed at pop culture and a room full of people who have been drinking.
         </p>
         <p>
-          The role is equal parts host, statistician, and small-business owner: <b>curating and fact-checking quizzes</b>, running the room for <b>200+ guests</b>, managing staff, and negotiating client contracts, all on a tight weekly schedule with real-time scorekeeping and spreadsheet wrangling.
+          The job is equal parts host, statistician, and small-business owner: <b>writing and fact-checking the quizzes</b>, running a room of <b>200+ guests</b>, managing staff, negotiating client contracts, and keeping real-time scores on a weekly schedule that doesn&rsquo;t move.
         </p>
         <p>
-          To keep regulars coming back, Taylor built a <b>custom loyalty-leaderboard app</b> that ingests every night's scores and turns them into a living season standing. Each team earns a <b>Loyalty Score</b> and a <b>tier</b> (Casual → Intermediate → Pro), with trend arrows tracking who's heating up week to week.
+          To keep regulars coming back I built a <b>custom loyalty-leaderboard app</b> that eats every night’s scores and turns them into a living season standing. Each team earns a <b>Loyalty Score</b> and a <b>tier</b> (Casual &rarr; Intermediate &rarr; Pro), with trend arrows showing who&rsquo;s heating up week to week.
         </p>
         <p>
-          The twist is a set of <b>alternative standings designed so the same few powerhouse teams don't win everything</b>, giving newer and casual teams their own races to chase: a <b>Handicap Cup</b> that rewards beating your own past average, a <b>Giant Slayer Cup</b> for upsetting dominant teams, and <b>Median Battles</b> crowning the most consistently middle-of-the-pack squad.
+          The good part is the alternative standings. A handful of powerhouse teams will win everything if you let them, so I built races <b>they cannot dominate</b>: a <b>Handicap Cup</b> that rewards beating your own past average, a <b>Giant Slayer Cup</b> for upsetting the dominant teams, and <b>Median Battles</b>, which crowns the most reliably middle-of-the-pack squad in the room. Everybody gets something to chase.
         </p>
         <div class="trivia-stats">
           <div class="tstat"><div class="n">200+</div><div class="l">guests per event</div></div>
@@ -1588,7 +1589,7 @@
     <div class="sec-head reveal">
       <span class="rna-badge"><span class="pulse"></span>Live tool · free · no signup</span>
       <h2 class="sec-title">Biotech Job Match.</h2>
-      <p class="sec-lead">A job search engine for life-sciences scientists. Drop in a CV and it reads your skills, then ranks live postings pulled straight from the job boards of 79 biotech companies. Built because every existing job site matches on keywords and job titles, which is a terrible proxy for whether a bench scientist can actually do the work.</p>
+      <p class="sec-lead">A job search engine for life-sciences scientists. Drop in a CV and it reads your skills, then ranks live postings pulled straight from the job boards of 79 biotech companies. I built it because every job site I used was matching me on keywords and job titles, which is a terrible proxy for whether a bench scientist can actually do the work, and I got tired of it while job hunting myself.</p>
     </div>
 
     <div class="jm-hero reveal">
@@ -1600,9 +1601,9 @@
       <div class="jm-body">
         <div class="jm-copy">
           <h3>Matching on skills, not job titles.</h3>
-          <p>Most job boards search the text of a posting. This parses the CV against an ontology of <b>67 canonical biotech skills</b> — AAV, oncolytic vectors, RT-qPCR, Nanopore, FACS, UF/DF, cGMP — and builds a weighted profile of what you can actually do at the bench.</p>
-          <p>Every posting is then scored against that profile. It surfaces what a keyword search misses, and shows the <b>gaps</b> too: skills a role wants that your CV doesn't evidence.</p>
-          <p>There is no backend. The PDF is parsed by JavaScript in your own browser, and the postings come from the public ATS APIs that companies already serve. <b>Nothing is stored, and nothing is sent anywhere.</b></p>
+          <p>Most job boards just search the text of a posting. This one parses your CV against an ontology of <b>67 canonical biotech skills</b> — AAV, oncolytic vectors, RT-qPCR, Nanopore, FACS, UF/DF, cGMP — and builds a weighted profile of what you can actually do at a bench.</p>
+          <p>Every posting gets scored against that profile. It surfaces roles a keyword search would bury, and it shows you the <b>gaps</b> too: skills a role wants that your CV doesn&rsquo;t evidence yet.</p>
+          <p>There is no backend. The PDF is parsed by JavaScript in your own browser, and the postings come from the public ATS APIs companies already serve. <b>Nothing is stored and nothing is sent anywhere</b>, including to me.</p>
           <div class="jm-cta">
             <a href="/job-match" class="btn btn-primary">Try it with your CV →</a>
             <a href="/job-match" class="btn btn-ghost">See how it scores</a>
@@ -1664,8 +1665,8 @@
   <div class="wrap">
     <div class="contact-inner reveal">
       <div class="bases" style="justify-content:center;margin-bottom:26px" aria-hidden="true"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></div>
-      <h2 class="contact-title">Let's build<br>something rigorous.</h2>
-      <p>Open to senior research-scientist and analytical-development roles in gene &amp; cell therapy, NGS, and synthetic biology.</p>
+      <h2 class="contact-title">If nobody can measure it yet,<br>I want to hear about it.</h2>
+      <p>I&rsquo;m open to senior research-scientist and analytical-development roles in gene &amp; cell therapy, NGS, and synthetic biology. Email is the fastest way to reach me.</p>
       <div class="contact-methods">
         <a class="cmethod" href="mailto:flaattaylor@gmail.com"><span><span class="cl">Email</span><span class="cv">flaattaylor@gmail.com</span></span></a>
         <a class="cmethod" href="tel:8508196836"><span><span class="cl">Phone</span><span class="cv">850·819·6836</span></span></a>
