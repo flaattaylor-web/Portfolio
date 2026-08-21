@@ -1359,8 +1359,18 @@
         <div class="venue"><span class="ty">Thesis</span><br>Auburn Univ.<br>April 2020</div>
       </a>
 
-      <button type="button" class="pub pub-link poster-link" data-poster="mastcell">
+      <button type="button" class="pub pub-link poster-link" data-poster="hunting">
         <div class="pn">P04</div>
+        <div>
+          <h4>Hunting Mast Cell Progenitors in Normal Canine Blood <span class="ext">↗</span></h4>
+          <div class="auth"><span class="me">Flaat TD</span>, Sandey M, Smith BF. Dept. of Pathobiology, Auburn University CVM</div>
+          <div class="pub-note">View poster: two MACS/FACS strategies to isolate CD117⁺ progenitors from whole blood</div>
+        </div>
+        <div class="venue"><span class="ty">Poster</span><br>Phi Zeta<br>Nov 2019</div>
+      </button>
+
+      <button type="button" class="pub pub-link poster-link" data-poster="mastcell">
+        <div class="pn">P05</div>
         <div>
           <h4>Identification of Canine Mast Cell Progenitors in Blood <span class="ext">↗</span></h4>
           <div class="auth"><span class="me">Flaat TD</span>, Smith BF. Scott-Ritchey Research Center, Auburn University</div>
@@ -1370,23 +1380,13 @@
       </button>
 
       <button type="button" class="pub pub-link poster-link" data-poster="melano">
-        <div class="pn">P05</div>
+        <div class="pn">P06</div>
         <div>
           <h4>Evaluation of Two Methods to Collect Canine Melanocytes <span class="ext">↗</span></h4>
           <div class="auth"><span class="me">Flaat TD</span>, Agarwal P, Nance R, Platton P, Smith BF. Auburn &amp; Texas A&amp;M CVM</div>
           <div class="pub-note">View poster: differential-adhesion vs. hair-follicle explant isolation</div>
         </div>
-        <div class="venue"><span class="ty">Poster</span><br>Phi Zeta · 2019</div>
-      </button>
-
-      <button type="button" class="pub pub-link poster-link" data-poster="hunting">
-        <div class="pn">P06</div>
-        <div>
-          <h4>Hunting Mast Cell Progenitors in Normal Canine Blood <span class="ext">↗</span></h4>
-          <div class="auth"><span class="me">Flaat TD</span>, Sandey M, Smith BF. Dept. of Pathobiology, Auburn University CVM</div>
-          <div class="pub-note">View poster: two MACS/FACS strategies to isolate CD117⁺ progenitors from whole blood</div>
-        </div>
-        <div class="venue"><span class="ty">Poster</span><br>Auburn Univ.<br>2019</div>
+        <div class="venue"><span class="ty">Poster</span><br>Phi Zeta<br>Nov 2018</div>
       </button>
 
       <div class="pub">
@@ -2172,10 +2172,10 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 <script>
 (function(){
   var POSTERS={
-    mastcell:{src:"assets/poster-mastcell.jpg",cap:"<b>Identification of Canine Mast Cell Progenitors in Blood</b>. Flaat &amp; Smith · Scott-Ritchey Research Center, Auburn University · 2019"},
-    melano:{src:"assets/poster-melanocytes.jpg",cap:"<b>Evaluation of Two Methods to Collect Canine Melanocytes</b>. Flaat, Agarwal, Nance, Platton &amp; Smith · Auburn &amp; Texas A&amp;M CVM · 2019"},
-    hunting:{src:"assets/poster-hunting.jpg",cap:"<b>Hunting Mast Cell Progenitors in Normal Canine Blood</b>. Flaat, Sandey &amp; Smith · Dept. of Pathobiology, Auburn University CVM · 2019"},
-    aacr:{src:"assets/poster-aacr.jpg",cap:"<b>#688 · Oncolytic Viral Therapy with Retargeted Glycoprotein &amp; Genetic On-Switch for Precise Targeting of Liver Cancer</b>. Moles, Basu, <span style=\"color:#F5A623\">Flaat</span>, Ho, Farhat, Weijmarshausen, Smith &amp; Whitt · Humane Genomics · AACR Annual 2023",href:"https://www.humanegenomics.com/extra/AACR-2023_poster.pdf"}
+    mastcell:{src:"assets/poster-mastcell.jpg",cap:"<b>Identification of Canine Mast Cell Progenitors in Blood</b>. Flaat &amp; Smith · Scott-Ritchey Research Center, Auburn University · April 2019",href:"assets/posters/flaat-2019-canine-mast-cell-progenitors-blood.pdf"},
+    melano:{src:"assets/poster-melanocytes.jpg",cap:"<b>Evaluation of Two Methods to Collect Canine Melanocytes</b>. Flaat, Agarwal, Nance, Platton &amp; Smith · Phi Zeta Research Day · Auburn &amp; Texas A&amp;M CVM · Nov 2018",href:"assets/posters/flaat-2018-phizeta-canine-melanocytes.pdf"},
+    hunting:{src:"assets/poster-hunting.jpg",cap:"<b>Hunting Mast Cell Progenitors in Normal Canine Blood</b>. Flaat, Sandey &amp; Smith · Phi Zeta Research Day · Dept. of Pathobiology, Auburn University CVM · Nov 2019",href:"assets/posters/flaat-2019-phizeta-hunting-mast-cell-progenitors.pdf"},
+    aacr:{src:"assets/poster-aacr.jpg",cap:"<b>#688 · Oncolytic Viral Therapy with Retargeted Glycoprotein &amp; Genetic On-Switch for Precise Targeting of Liver Cancer</b>. Moles, Basu, <span style=\"color:#F5A623\">Flaat</span>, Ho, Farhat, Weijmarshausen, Smith &amp; Whitt · Humane Genomics · AACR Annual 2023",href:"assets/posters/flaat-2023-aacr-oncolytic-vsv-liver-cancer.pdf"}
   };
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),
       cap=document.getElementById('lbCap'),openBtn=document.getElementById('lbOpen'),
@@ -2185,6 +2185,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     lastFocus=document.activeElement;
     img.src=p.src; img.alt=p.cap.replace(/<[^>]+>/g,'');
     cap.innerHTML=p.cap; openBtn.href=p.href||p.src;
+    openBtn.textContent=p.href?'Open the PDF ↗':'Open full size ↗';
     lb.classList.add('open');
     requestAnimationFrame(function(){lb.classList.add('show');});
     document.body.style.overflow='hidden';
