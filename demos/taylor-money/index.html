@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Taylor Money — a personal budgeting app. Static demo running on invented sample data.">
+<meta name="robots" content="noindex">
+<title>Taylor Money — demo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2300C88C'/%3E%3Cpath d='M16 7l7 8h-4v10h-6V15H9z' fill='%2304241B'/%3E%3C/svg%3E">
+<style>
+  #demo-flag{position:fixed;left:0;right:0;bottom:0;z-index:9999;
+    font:500 12.5px/1.45 ui-sans-serif,system-ui,sans-serif;letter-spacing:.01em;
+    background:#04241B;color:#8FE9CC;border-top:1px solid #00C88C33;
+    padding:7px 14px;text-align:center}
+  #demo-flag b{color:#00C88C;font-weight:600}
+  body{padding-bottom:34px}
+</style>
+</head>
+<body>
+<div id="app">
+  <div style="display:grid;place-items:center;height:100vh">
+    <div class="spinner" role="status" aria-label="Loading"></div>
+  </div>
+</div>
+<div class="toast-host" id="toasts" aria-live="polite"></div>
+<div class="tooltip" id="tooltip" role="tooltip"></div>
+<div id="demo-flag"><b>Demo.</b> Invented sample data, read-only. The real app runs on your own machine and never uploads anything.</div>
+<script src="demo-data.js"></script>
+<script src="demo-shim.js"></script>
+<script src="app.js" type="module"></script>
+</body>
+</html>

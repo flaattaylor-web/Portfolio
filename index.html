@@ -104,8 +104,9 @@
     transition:border-color .2s,background .2s;
   }
   .nav-cta:hover{border-color:var(--signal-1);background:rgba(56,225,255,.06)}
-  /* 1151-1535px: 11 nav items still fit, but only if the gaps tighten. Added 2026-08-21. */
-  @media(min-width:1151px) and (max-width:1535px){
+  /* 1151px and up: the nav only fits if the gaps tighten. No upper bound on purpose,
+     so adding a nav item later cannot silently clip the CTA again. Added 2026-08-21. */
+  @media(min-width:1151px){
     .nav-inner{gap:18px;padding-left:20px;padding-right:20px}
     .nav-links{gap:12px}
     .nav-links a{font-size:12.5px}
@@ -437,6 +438,17 @@
 
   /* ============ BIOSOP (10) ============ */
   #biosop{border-top:1px solid var(--line-soft)}
+  /* ===== SECTIONS 11-12: PAYROLL + TAYLOR MONEY (added 2026-08-21) ===== */
+  #payroll{border-top:1px solid var(--line-soft);background:var(--bg-2)}
+  #money{border-top:1px solid var(--line-soft)}
+  .demo-frame{margin-top:24px;border:1px solid var(--line);border-radius:14px;
+    overflow:hidden;background:var(--bg-2)}
+  .demo-frame .dfbar{display:flex;align-items:center;gap:11px;padding:10px 15px;
+    border-bottom:1px solid var(--line-soft);font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;letter-spacing:.05em;color:var(--ink-2)}
+  .demo-frame iframe{display:block;width:100%;height:780px;border:0;background:#0b0b0d}
+  @media(max-width:900px){.demo-frame iframe{height:600px}}
+  @media(max-width:620px){.demo-frame iframe{height:520px}}
 
   /* ============ CV VIEWER ============ */
   .cvm{position:fixed;inset:0;z-index:210;display:none;flex-direction:column;padding:32px;gap:14px;background:rgba(6,9,17,.9);backdrop-filter:blur(8px);opacity:0;transition:opacity .22s}
@@ -669,6 +681,8 @@
       <a href="#protocols">Protocols</a>
       <a href="#jobmatch">Job Match</a>
       <a href="#biosop">BioSOP</a>
+      <a href="#payroll">Payroll</a>
+      <a href="#money">Money</a>
       <a href="#trivia">Trivia Co.</a>
       <a href="#" data-cv>CV</a>
       <a href="#contact" class="nav-cta">Get in touch</a>
@@ -1829,6 +1843,141 @@
     </div>
   </div>
 </section>
+
+<section id="payroll">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">11</span> Software &amp; Applied AI</div>
+    <div class="sec-head reveal">
+      <span class="rna-badge"><span class="pulse"></span>Live demo &middot; invented books &middot; nothing real in it</span>
+      <h2 class="sec-title">Payroll and accounting for a trivia business.</h2>
+      <p class="sec-lead">I host pub trivia on the side, and for two years the books lived in a spreadsheet only I could read. So I built the thing that replaced it: invoices, expenses, host payouts, W-2 paychecks with tipped hours, mileage, estimated tax, a partner ledger and a Schedule C export. It runs in the browser against an encrypted vault, with no server and no account to sign up for. The demo below is the real application, loaded with a set of books I made up.</p>
+    </div>
+
+    <div class="jm-hero reveal">
+      <div class="jm-bar">
+        <span class="dot"><i></i><i></i><i></i></span>
+        <span class="lbl">encrypted vault &middot; <b>AES-256, in your own browser, no server</b></span>
+      </div>
+      <div class="jm-body">
+        <div class="jm-copy">
+          <h3>Nine checks, and every one of them is arithmetic.</h3>
+          <p>No model, nothing inferred. Date subtraction, medians and counts. Each check shows the number it fired on, so you can look at that number and disagree with it.</p>
+          <p>The one I care about most is invoice aging, because it measures a venue against <b>its own settled history</b> rather than a flat 30 days. A venue that has always paid in 45 isn&rsquo;t late on day 31. A venue that has always paid in 10 is.</p>
+          <p>It earned its keep the week I finished it. It flagged a night billed at a small fraction of what that venue paid on every other night of the year, with a host cut of the same odd amount sitting on the same date. The event fee had been filled in from the host-cut column.</p>
+          <p>Two bugs surfaced while I was building the outlier check, and both were the same shape. A venue whose fee never varies has a median absolute deviation of <b>zero</b>, so the check silently never fired on it. And the app announced that a venue&rsquo;s fee &ldquo;has never varied&rdquo; any time that statistic came back zero, which is true whenever more than half the nights simply match. Both now read the actual values.</p>
+        </div>
+        <div class="jm-steps">
+          <div class="jm-step"><span class="n">01</span><div><h4>Enter the night</h4><p>Venue, fee, host, date. A season generator fills a recurring weekly night in one pass instead of thirty.</p></div></div>
+          <div class="jm-step"><span class="n">02</span><div><h4>Bill it</h4><p>Numbered invoices, aging measured per venue, and PDF import for the ones that come back as attachments.</p></div></div>
+          <div class="jm-step"><span class="n">03</span><div><h4>Pay everyone</h4><p>Host payouts gated on the venue actually paying first, and W-2 paychecks with tipped hours and the full deduction breakdown.</p></div></div>
+          <div class="jm-step"><span class="n">04</span><div><h4>Hand it to an accountant</h4><p>Double-entry journal and trial balance, Schedule C, 1099 thresholds, and quarterly estimated tax.</p></div></div>
+        </div>
+      </div>
+      <div class="jm-nums">
+        <div class="jm-num"><div class="v">9</div><div class="k">checks, all arithmetic</div></div>
+        <div class="jm-num"><div class="v">140</div><div class="k">assertions, all green</div></div>
+        <div class="jm-num"><div class="v">0</div><div class="k">servers involved</div></div>
+      </div>
+    </div>
+
+    <div class="jm-hero reveal">
+      <div class="jm-bar">
+        <span class="dot"><i></i><i></i><i></i></span>
+        <span class="lbl">reports &middot; <b>double entry, and it will tell you when it disagrees with itself</b></span>
+      </div>
+      <div class="jm-body">
+        <div class="jm-copy">
+          <h3>It told me my own estimated tax was wrong.</h3>
+          <p>The app had always counted a night&rsquo;s fee on the night it happened. That is the accrual basis, and I had never labelled it as such, which meant the estimated tax figure was quietly including money nobody had collected yet.</p>
+          <p>Both bases now sit side by side, and the gap between them is broken out rather than asserted: invoiced but not yet collected, hosted but never invoiced, and a timing line for invoices dated in a different year from the night they cover. That third line exists because the first two don&rsquo;t account for the whole difference, and a decomposition that quietly fails to add up is worse than no decomposition at all.</p>
+          <p>The reports screen translates the books into double entry, every record becoming a balanced pair. Balancing proves very little on its own, since a translation that halved every figure would balance perfectly, so it is also tied back to the totals the app already asserts elsewhere. If any of those ever disagree, the screen says so instead of showing a tidy number.</p>
+          <p>Mileage is deliberately absent from the trial balance. It is a tax deduction, not a movement of cash, and including it would make these numbers disagree with the bank. It stays on the Schedule C export, where it belongs.</p>
+          <div class="jm-cta">
+            <a href="/demos/payroll/" target="_blank" rel="noopener" class="btn btn-primary">Open the demo full screen &#8599;</a>
+          </div>
+        </div>
+        <div class="jm-steps">
+          <div class="jm-step"><span class="n">01</span><div><h4>Cash or accrual</h4><p>Switch the basis and the Schedule C profit moves. Take-home and outstanding deliberately do not, and that is asserted in the tests.</p></div></div>
+          <div class="jm-step"><span class="n">02</span><div><h4>Journal and trial balance</h4><p>Every record becomes a balanced pair, exported as CSV so an accountant can work in QuickBooks or anything else.</p></div></div>
+          <div class="jm-step"><span class="n">03</span><div><h4>Two figures that differ on purpose</h4><p>Receivables counts everything earned but uncollected, so it runs above the outstanding tile, which counts invoices only. Both are correct.</p></div></div>
+          <div class="jm-step"><span class="n">04</span><div><h4>Not tax advice</h4><p>It is arithmetic on records I entered. Whether you may change basis after filing is a question for an accountant, and the app says so.</p></div></div>
+        </div>
+      </div>
+      <div class="demo-frame">
+        <div class="dfbar"><span class="dot"><i></i><i></i><i></i></span><span>payroll demo &middot; sample data &middot; read-only</span></div>
+        <iframe src="/demos/payroll/" loading="lazy" title="Payroll and accounting app, live demo on sample data"></iframe>
+      </div>
+      <div class="proj-meta"><span>encrypted local vault</span><span>double-entry export</span><span>Schedule C</span><span>1099 thresholds</span><span>estimated tax</span><span>no server</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="money">
+  <div class="wrap">
+    <div class="eyebrow"><span class="idx">12</span> Software &amp; Applied AI</div>
+    <div class="sec-head reveal">
+      <span class="rna-badge"><span class="pulse"></span>Live demo &middot; invented transactions &middot; runs on your own machine</span>
+      <h2 class="sec-title">Taylor Money.</h2>
+      <p class="sec-lead">A personal budgeting app in the shape of Rocket Money: subscription detection, category budgets, net worth over time, and a bills calendar. It runs on your own machine and there is no account to make. Export a CSV from your bank and drop it in, or add your own Plaid keys and let it sync. The demo below is the real front end on eighteen months of transactions I invented.</p>
+    </div>
+
+    <div class="jm-hero reveal">
+      <div class="jm-bar">
+        <span class="dot"><i></i><i></i><i></i></span>
+        <span class="lbl">import &middot; <b>every layout below works with no configuration</b></span>
+      </div>
+      <div class="jm-body">
+        <div class="jm-copy">
+          <h3>Banks disagree about what a purchase looks like.</h3>
+          <p>Chase writes purchases as negative numbers. Amex writes them as positive, which is the exact opposite. Capital One splits debit and credit into separate columns, Citi does the same and adds a status column, Wells Fargo ships no header row at all, Discover keeps the transaction date and the posting date apart, and European exports arrive with semicolons, day-first dates and <b>1.234,56</b> where the decimal should be.</p>
+          <p>All of those import without configuration, because the layout is read off the file rather than declared. Amounts are the one thing the app refuses to be quiet about, since getting the sign backwards inverts every number downstream. It tells you what it decided, in a sentence with the totals in it, and puts a <b>Flip</b> button next to the sentence.</p>
+          <p>Re-importing the same file is safe. Rows match on date, amount and merchant, so a second import of the same statement adds nothing. It counts rather than de-duplicates, which is the distinction that matters: two genuinely separate $4.75 coffees on the same afternoon both survive. Every import undoes in one click.</p>
+        </div>
+        <div class="jm-steps">
+          <div class="jm-step"><span class="n">01</span><div><h4>Get the data in</h4><p>A CSV from any bank, no signup. Plaid is fully built and switched off until you add your own keys.</p></div></div>
+          <div class="jm-step"><span class="n">02</span><div><h4>It categorises</h4><p>Eighteen categories, rules you can pin so a merchant always lands where you want, and a confidence flag on anything it guessed at.</p></div></div>
+          <div class="jm-step"><span class="n">03</span><div><h4>It finds the leaks</h4><p>Recurring detection surfaces price rises, subscriptions you forgot, and charges that quietly stopped arriving.</p></div></div>
+          <div class="jm-step"><span class="n">04</span><div><h4>Watch the shape</h4><p>Net worth over time, category budgets that suggest their own starting numbers, and a calendar of what is still coming.</p></div></div>
+        </div>
+      </div>
+      <div class="jm-nums">
+        <div class="jm-num"><div class="v">7</div><div class="k">bank layouts, no config</div></div>
+        <div class="jm-num"><div class="v">18</div><div class="k">months in the demo</div></div>
+        <div class="jm-num"><div class="v">0</div><div class="k">data leaving the machine</div></div>
+      </div>
+    </div>
+
+    <div class="jm-hero reveal">
+      <div class="jm-bar">
+        <span class="dot"><i></i><i></i><i></i></span>
+        <span class="lbl">recurring &middot; <b>the useful signal is change, not frequency</b></span>
+      </div>
+      <div class="jm-body">
+        <div class="jm-copy">
+          <h3>The interesting part is what stopped charging you.</h3>
+          <p>Subscription detection is easy to do badly. Group by merchant, call anything monthly a subscription, and you have built something that finds Netflix. Everyone already knows about Netflix.</p>
+          <p>What is worth surfacing is <b>change</b>: the streaming service that went up 16%, the internet bill that went up 19%, the six entertainment subscriptions that each look reasonable on their own and together cost more than the internet does. The demo shows all three, because the sample generator plants them deliberately, along with a gym that quietly stopped charging and was never cancelled.</p>
+          <p>The Plaid integration is complete: link flow, token exchange, <b>/transactions/sync</b> with cursor pagination, and pending-charge handling. It ships switched off, because Plaid keys belong to a person rather than to an application. Sandbox mode uses fake banks, so the whole flow can be driven end to end before it is ever pointed at a real one.</p>
+          <div class="jm-cta">
+            <a href="/demos/taylor-money/" target="_blank" rel="noopener" class="btn btn-primary">Open the demo full screen &#8599;</a>
+          </div>
+        </div>
+        <div class="jm-steps">
+          <div class="jm-step"><span class="n">01</span><div><h4>Price rises</h4><p>The old amount, the new amount, and what the difference costs over a year. That last number is the one that changes behaviour.</p></div></div>
+          <div class="jm-step"><span class="n">02</span><div><h4>Clusters</h4><p>Six streaming services is not six decisions, it is one decision made six times. The app groups them so it reads that way.</p></div></div>
+          <div class="jm-step"><span class="n">03</span><div><h4>Charges that stopped</h4><p>A subscription that goes quiet is either cancelled or about to surprise you. Both are worth knowing.</p></div></div>
+          <div class="jm-step"><span class="n">04</span><div><h4>Nothing is uploaded</h4><p>The store is a JSON file on your own disk. The demo you are looking at is a static snapshot with no server behind it at all.</p></div></div>
+        </div>
+      </div>
+      <div class="demo-frame">
+        <div class="dfbar"><span class="dot"><i></i><i></i><i></i></span><span>taylor money demo &middot; invented transactions &middot; read-only</span></div>
+        <iframe src="/demos/taylor-money/" loading="lazy" title="Taylor Money budgeting app, live demo on invented transactions"></iframe>
+      </div>
+      <div class="proj-meta"><span>CSV import</span><span>Plaid sync</span><span>recurring detection</span><span>net worth</span><span>category budgets</span><span>local only</span></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ================= CONTACT ================= -->
 <section id="contact">
