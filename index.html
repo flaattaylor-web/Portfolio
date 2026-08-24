@@ -505,6 +505,10 @@
   .trivia-cta:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
   .trivia-cta .arr{transition:transform .2s}
   .trivia-cta:hover .arr{transform:translate(2px,-2px)}
+  .trivia-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  .trivia-ctas .trivia-cta{margin-top:0}
+  .trivia-cta.ghost{background:transparent;border-color:#4a3813;color:#d8c9a8}
+  .trivia-cta.ghost:hover{border-color:#6b4f16;background:rgba(245,166,35,.06);color:var(--amber)}
   /* built-with-code feature card (Biotech Career Hub) */
   .build-card{margin-top:16px;border:1px solid var(--line-soft);border-radius:14px;background:linear-gradient(180deg,var(--panel),rgba(18,26,46,.4));padding:26px 28px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
   .build-card .bc-ic{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--signal-1),var(--signal-2));display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#05121c;font-size:24px}
@@ -1595,7 +1599,10 @@
           <div class="tstat"><div class="n">200+</div><div class="l">guests per event</div></div>
           <div class="tstat"><div class="n">4</div><div class="l">Jersey City venues</div></div>
         </div>
-        <a class="trivia-cta" href="https://trivia-loyalty-leaderboard-56721929391.us-central1.run.app/" target="_blank" rel="noopener">View the live leaderboard <span class="arr" aria-hidden="true">↗</span></a>
+        <div class="trivia-ctas">
+          <a class="trivia-cta" href="https://untriviallyjess.com" target="_blank" rel="noopener">Visit UntriviallyJess.com <span class="arr" aria-hidden="true">↗</span></a>
+          <a class="trivia-cta ghost" href="https://trivia-loyalty-leaderboard-56721929391.us-central1.run.app/" target="_blank" rel="noopener">View the live leaderboard <span class="arr" aria-hidden="true">↗</span></a>
+        </div>
       </div>
 
       <div class="venue-list reveal">
