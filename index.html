@@ -137,6 +137,22 @@
   .hero-glow{position:absolute;width:900px;height:900px;border-radius:50%;filter:blur(140px);opacity:.22;pointer-events:none}
   .hero-glow.g1{background:var(--signal-1);top:-360px;right:-200px}
   .hero-glow.g2{background:var(--signal-2);bottom:-420px;left:-260px;opacity:.18}
+  .hero-media{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+  .hero-media img{
+    position:absolute;top:50%;right:-8%;transform:translateY(-50%);
+    width:min(80%,1280px);height:auto;opacity:.30;
+    mask-image:radial-gradient(ellipse 68% 78% at 66% 50%,#000 18%,transparent 72%);
+    -webkit-mask-image:radial-gradient(ellipse 68% 78% at 66% 50%,#000 18%,transparent 72%);
+  }
+
+  /* ============ FULL-BLEED DNA BAND ============ */
+  .dna-band{position:relative;height:clamp(170px,24vw,300px);overflow:hidden;background:var(--bg);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .dna-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%}
+  .dna-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,rgba(10,14,26,.16) 32%,rgba(10,14,26,.34) 68%,var(--bg) 100%)}
+  .dna-band .band-cap{
+    position:absolute;left:24px;right:24px;bottom:20px;z-index:2;text-align:center;
+    font-family:'JetBrains Mono';font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);
+  }
 
   .hero-inner{position:relative;z-index:2;width:100%}
   .hero-tag{
@@ -639,6 +655,9 @@
     .proto-legend .pl-hint{margin-left:0;flex-basis:100%}
   }
   @media(max-width:720px){
+    /* hero backdrop: text spans full width here, so pull the image back */
+    .hero-media img{width:118%;right:-30%;opacity:.17}
+    .dna-band .band-cap{font-size:10.5px;letter-spacing:.16em}
     /* pre-IND timeline -> vertical */
     .tl-track{grid-template-columns:1fr;gap:0}
     .tl-track::before{left:8px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,var(--signal-1),var(--signal-2))}
@@ -706,6 +725,7 @@
 
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
+  <div class="hero-media" aria-hidden="true"><img src="assets/hero-dna.jpg" alt="" fetchpriority="low" decoding="async" width="1700" height="1105"></div>
   <div class="hero-grid"></div>
   <div class="hero-glow g1"></div>
   <div class="hero-glow g2"></div>
@@ -1123,6 +1143,12 @@
 </section>
 
 
+<!-- ================= DNA BAND ================= -->
+<div class="dna-band">
+  <img src="assets/band-dna.jpg" alt="" loading="lazy" width="2400" height="760">
+  <div class="band-cap">// native strand &middot; no cDNA &middot; modifications preserved</div>
+</div>
+
 <!-- ================= DIRECT RNA-SEQ CONCEPT ================= -->
 <section id="rnaseq">
   <div class="wrap">
@@ -1177,7 +1203,7 @@
       <div class="pillar reveal">
         <div class="pillar-media">
           <span class="pillar-tag" style="color:var(--G)">Strategic Value</span>
-          <img src="assets/rna-hero.jpg" alt="Standardized workflow" loading="lazy">
+          <img src="assets/pillar-strategic.jpg" alt="Standardized 96-barcode workflow" loading="lazy">
         </div>
         <div class="pillar-body">
           <h4>Democratized access</h4>
