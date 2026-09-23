@@ -113,9 +113,9 @@
     transition:border-color .2s,background .2s;
   }
   .nav-cta:hover{border-color:var(--signal-1);background:rgba(56,225,255,.06)}
-  /* 1151px and up: the nav only fits if the gaps tighten. No upper bound on purpose,
+  /* 1200px and up: the nav only fits if the gaps tighten. No upper bound on purpose,
      so adding a nav item later cannot silently clip the CTA again. Added 2026-08-21. */
-  @media(min-width:1151px){
+  @media(min-width:1200px){
     .nav-inner{gap:18px;padding-left:20px;padding-right:20px}
     .nav-links{gap:12px}
     .nav-links a{font-size:12.5px}
@@ -639,7 +639,7 @@
   .proto-foot a:hover{border-color:var(--signal-1)}
 
   /* ============ RESPONSIVE ============ */
-  @media(max-width:1150px){
+  @media(max-width:1199px){
     .nav-inner{gap:16px}
     .nav-links{
       position:fixed;top:63px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--line);
@@ -729,7 +729,8 @@
       <a href="#payroll">Payroll</a>
       <a href="#money">Money</a>
       <a href="#trivia">Trivia Co.</a>
-      <a href="#" data-cv>CV</a>
+      <a href="#" data-cv="cv">CV</a>
+      <a href="#" data-cv="resume">Résumé</a>
       <a href="#contact" class="nav-cta">Get in touch</a>
     </div>
     <div class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></div>
@@ -758,7 +759,8 @@
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">Explore the work →</a>
-      <button type="button" class="btn btn-ghost" data-cv>View CV ↗</button>
+      <button type="button" class="btn btn-ghost" data-cv="cv">View CV ↗</button>
+      <button type="button" class="btn btn-ghost" data-cv="resume">View Résumé ↗</button>
       <a href="#contact" class="btn btn-ghost">Contact</a>
     </div>
 
