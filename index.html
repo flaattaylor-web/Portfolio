@@ -491,6 +491,9 @@
   .cvm-btn.primary:hover{color:#05121c;filter:brightness(1.05)}
   .cvm-frame{flex:1;width:100%;max-width:1100px;margin:0 auto;border-radius:10px;border:1px solid var(--line);box-shadow:0 24px 80px rgba(0,0,0,.6);background:var(--panel)}
   .cvm-btn:focus-visible{outline:2px solid var(--signal-1);outline-offset:3px}
+  .cvm-btn[aria-pressed="true"]{border-color:var(--signal-1);color:var(--signal-1);background:var(--panel-2)}
+  .cvm-docs{display:flex;gap:8px;align-items:center;margin-right:auto;padding-left:18px}
+  @media(max-width:760px){.cvm-docs{margin-right:0;padding-left:0;width:100%;order:3}}
   @media(max-width:640px){
     .cvm{padding:16px;gap:10px}
     .cvm-title{font-size:14px}
@@ -2090,7 +2093,8 @@
         <a class="cmethod" href="mailto:flaattaylor@gmail.com"><span><span class="cl">Email</span><span class="cv">flaattaylor@gmail.com</span></span></a>
         <a class="cmethod" href="tel:8508196836"><span><span class="cl">Phone</span><span class="cv">850·819·6836</span></span></a>
         <a class="cmethod" href="https://linkedin.com/in/taylor-flaat-6206b51a4" target="_blank" rel="noopener"><span><span class="cl">LinkedIn</span><span class="cv">taylor-flaat</span></span></a>
-        <a class="cmethod" href="#" data-cv><span><span class="cl">Curriculum Vitae</span><span class="cv">View / download PDF ↗</span></span></a>
+        <a class="cmethod" href="#" data-cv="cv"><span><span class="cl">Curriculum Vitae</span><span class="cv">View / download PDF ↗</span></span></a>
+        <a class="cmethod" href="#" data-cv="resume"><span><span class="cl">Résumé · 2 pages</span><span class="cv">View / download PDF ↗</span></span></a>
       </div>
     </div>
   </div>
@@ -2301,7 +2305,11 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   <div class="cvm-head">
     <div class="cvm-title">
       <span class="dna" aria-hidden="true"><i style="background:var(--A)"></i><i style="background:var(--C)"></i><i style="background:var(--G)"></i><i style="background:var(--T)"></i></span>
-      Taylor Flaat · Curriculum Vitae
+      Taylor Flaat · <span id="cvmDocTitle">Curriculum Vitae</span>
+    </div>
+    <div class="cvm-docs" role="group" aria-label="Choose document">
+      <button type="button" class="cvm-btn" data-doc-tab="cv" aria-pressed="true">Curriculum Vitae</button>
+      <button type="button" class="cvm-btn" data-doc-tab="resume" aria-pressed="false">Résumé</button>
     </div>
     <div class="cvm-actions">
       <a class="cvm-btn primary" id="cvmDownload" download="Taylor_Flaat_CV.pdf">Download PDF ↓</a>
@@ -2313,18 +2321,38 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </div>
 <script>
 (function(){
-  var CV_SRC="assets/Taylor_Flaat_CV.pdf";
+  var DOCS={
+    cv:{src:"assets/Taylor_Flaat_CV.pdf",file:"Taylor_Flaat_CV.pdf",title:"Curriculum Vitae"},
+    resume:{src:"assets/Taylor_Flaat_Resume.pdf",file:"Taylor_Flaat_Resume.pdf",title:"Résumé"}
+  };
+  var CV_SRC=DOCS.cv.src;
   var cvm=document.getElementById('cvm'),
       frame=document.getElementById('cvmFrame'),
       dl=document.getElementById('cvmDownload'),
       openBtn=document.getElementById('cvmOpen'),
       closeBtn=document.getElementById('cvmClose'),
-      lastFocus=null,loaded=false;
-  dl.href=CV_SRC; openBtn.href=CV_SRC;
+      docTitle=document.getElementById('cvmDocTitle'),
+      tabs=document.querySelectorAll('[data-doc-tab]'),
+      lastFocus=null,current=null;
+  function show(key){
+    var d=DOCS[key]||DOCS.cv;
+    if(current===key) return;
+    current=key;
+    frame.src=d.src+"#view=FitH";
+    frame.title="Taylor Flaat "+d.title;
+    frame.setAttribute('aria-label',d.title+" PDF");
+    dl.href=d.src; dl.setAttribute('download',d.file);
+    openBtn.href=d.src;
+    docTitle.textContent=d.title;
+    cvm.setAttribute('aria-label',d.title);
+    tabs.forEach(function(t){t.setAttribute('aria-pressed', t.getAttribute('data-doc-tab')===key?'true':'false');});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-doc-tab'));});});
   function open(e){
     if(e) e.preventDefault();
     lastFocus=document.activeElement;
-    if(!loaded){frame.src=CV_SRC+"#view=FitH";loaded=true;}
+    var key=(this&&this.getAttribute&&this.getAttribute('data-cv'))||'cv';
+    show(key);
     cvm.classList.add('open');
     requestAnimationFrame(function(){cvm.classList.add('show');});
     document.body.style.overflow='hidden';
