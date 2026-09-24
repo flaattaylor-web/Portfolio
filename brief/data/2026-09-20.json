@@ -4,10 +4,10 @@
  "window_label": "14 \u2013 20 September 2026",
  "generated": "2026-09-24",
  "counts": {
-  "news": 366,
-  "papers": 227,
+  "news": 369,
+  "papers": 229,
   "clusters": 22,
-  "radar": 4
+  "radar": 5
  },
  "picked": {
   "buzz": [
@@ -23,10 +23,10 @@
     "outlets": [
      "Cure Today",
      "Eli Lilly",
+     "OncLive",
      "Oncology Nursing News",
      "Targeted Oncology",
-     "The ASCO Post",
-     "The Clinical Trial Vanguard"
+     "The ASCO Post"
     ]
    },
    {
@@ -41,8 +41,8 @@
     "outlets": [
      "BioPharm International",
      "Medical Professionals Reference",
-     "Pharmaceutical Technology",
-     "Sanfilippo Syndrome News"
+     "Sanfilippo Syndrome News",
+     "pharmaceutical-technology.com"
     ]
    },
    {
@@ -61,47 +61,47 @@
     ]
    },
    {
-    "title": "CHMP Backs Perioperative Pembrolizumab Plus Enfortumab Vedotin for Resectable MIBC - onclive.com",
+    "title": "FDA approves pioneering breast cancer drug that nips resistance in the bud - Nature",
+    "clean": "FDA approves pioneering breast cancer drug that nips resistance in the bud",
+    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ZdFFzSXRGU3hmOWFCTUNXODJiYjZhV0ZIUUtqWURMMXpVY2J3RS04V2NJbjk0NW96Nk1JdmZld2VXQWxyMDFCMjB1dm9TWmk5S25XZmxPc0NlQnAwckpZ?oc=5",
+    "source": "Nature",
+    "desc": " FDA approves pioneering breast cancer drug that nips resistance in the bud &nbsp;&nbsp; Nature ",
+    "date": "2026-09-16",
+    "cat": "drugs",
+    "n_outlets": 3,
+    "outlets": [
+     "CancerNetwork",
+     "Nature",
+     "Reuters"
+    ]
+   },
+   {
+    "title": "CHMP Backs Perioperative Pembrolizumab Plus Enfortumab Vedotin for Resectable MIBC - OncLive",
     "clean": "CHMP Backs Perioperative Pembrolizumab Plus Enfortumab Vedotin for Resectable MIBC",
     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOU01OdW9DUld2eW51MlRtaGJhOUc1a1ZPb29lQkhiQkxmU0h5bjdkZFJpcnprZjQwR0Nka0ZHbVRhUER5bkp3UEFaS1k5czc3ZWd6Ym5odVR2VjdiRTdVbHZmaS1BTUFkVENxTGlqUExYZVFHc1JUY0p3ODdhcTczOFdJRW9iSHplTU00TExLaDBoUlBCQjJvd0EtLTVYd1hRRzVNaVVCLU93LTRJb2NYUA?oc=5",
-    "source": "onclive.com",
-    "desc": " CHMP Backs Perioperative Pembrolizumab Plus Enfortumab Vedotin for Resectable MIBC &nbsp;&nbsp; onclive.com ",
+    "source": "OncLive",
+    "desc": " CHMP Backs Perioperative Pembrolizumab Plus Enfortumab Vedotin for Resectable MIBC &nbsp;&nbsp; OncLive ",
     "date": "2026-09-18",
     "cat": "drugs",
     "n_outlets": 3,
     "outlets": [
      "CancerNetwork",
-     "Urology Times",
-     "onclive.com"
+     "OncLive",
+     "Urology Times"
     ]
    },
    {
-    "title": "US FDA approves Lilly's breast cancer drug combo - Reuters",
-    "clean": "US FDA approves Lilly's breast cancer drug combo",
-    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTXlJZ0pUc3JoMHBCd2tEY2N5NWxsbHRXTFZFQ0RVaXRzV0UxZEM2TFNMcjVWUldkaUFaandZbHIxVmRqaUV3b2tPUzRKV3BPZ281TlRMblRGeTlZdjBrb1o3M0xnaHpEV1NyaExrdkFSSkFZcUJndVBQS2FGMHJwSXdJajlmZDV3amYzN2xRYVZZTWxlX1dscllPSjJDYWRxekE?oc=5",
-    "source": "Reuters",
-    "desc": " US FDA approves Lilly's breast cancer drug combo &nbsp;&nbsp; Reuters ",
-    "date": "2026-09-18",
-    "cat": "drugs",
-    "n_outlets": 3,
-    "outlets": [
-     "CancerNetwork",
-     "Reuters",
-     "nature.com"
-    ]
-   },
-   {
-    "title": "PharmAla Biotech (MDMA.CN) Appoints Davidson & Company as Auditor, Partners with Watertower Research and Oak Hill Advisory - kalkinemedia.com",
+    "title": "PharmAla Biotech (MDMA.CN) Appoints Davidson & Company as Auditor, Partners with Watertower Research and Oak Hill Advisory - Kalkine Media",
     "clean": "PharmAla Biotech (MDMA.CN) Appoints Davidson & Company as Auditor, Partners with Watertower Research and Oak Hill Advisory",
     "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNSVhxVjVTS1ZUdlhxWktha041eUl6OHNaQ2pFVi1yLWtnbDZBejY5eWJiT3NaMTFadENxZVdjcVBzVm9sY3c1cGsyaWZMQ2hTTVVrSV8xemZJeENfUHE4eWdTRFhjLTJxMjdaQ29mUlVhOWJCeDdUMnBzMmZjM0g3bGxyOWhnUjhqNFZkdkVwakhuYXhFdGNpZUt3YWRxV2RzbUlUMDlGZ0JDLXFta1oxRVRWeWIxMnA2V1IwREJBQk9vSjBxMEdrU2hVT0tqSDctU09UZFRjY2FjakNIbGVFbUNFS0JJLUp0ckZQV0RZWnVyemxjYVE?oc=5",
-    "source": "kalkinemedia.com",
-    "desc": " PharmAla Biotech (MDMA.CN) Appoints Davidson & Company as Auditor, Partners with Watertower Research and Oak Hill Advisory &nbsp;&nbsp; kalkinemedia.com ",
+    "source": "Kalkine Media",
+    "desc": " PharmAla Biotech (MDMA.CN) Appoints Davidson & Company as Auditor, Partners with Watertower Research and Oak Hill Advisory &nbsp;&nbsp; Kalkine Media ",
     "date": "2026-09-17",
     "cat": "hiring",
     "n_outlets": 2,
     "outlets": [
-     "kalkine.ca",
-     "kalkinemedia.com"
+     "Kalkine Media",
+     "kalkine.ca"
     ]
    },
    {
@@ -147,17 +147,17 @@
     ]
    },
    {
-    "title": "Scientists target gum disease with bacteriophage virus - Medical Xpress",
+    "title": "Scientists target gum disease with bacteriophage virus - medicalxpress.com",
     "clean": "Scientists target gum disease with bacteriophage virus",
     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNUW8zcTUwQUFPTnhoM0Z3bUpnWDNXOVpDYTZLSGR6RVBvUVd0TWNWUDQ4cnNua2J1M3dMMlV1cGJSODU5N1JxdXlwNnRMVWQxcnRhQTAwSmxjaTh1NHA0MTJ0MTc2Q015UUphU1l6WGRDcWRmREIxTjAzdmw1Nng4eDk0OG1aRll6U0hVVGhCcw?oc=5",
-    "source": "Medical Xpress",
-    "desc": " Scientists target gum disease with bacteriophage virus &nbsp;&nbsp; Medical Xpress ",
+    "source": "medicalxpress.com",
+    "desc": " Scientists target gum disease with bacteriophage virus &nbsp;&nbsp; medicalxpress.com ",
     "date": "2026-09-14",
     "cat": "virology",
     "n_outlets": 2,
     "outlets": [
-     "Medical Xpress",
-     "NZDoctor"
+     "medicalxpress.com",
+     "nzdoctor.co.nz"
     ]
    }
   ],
@@ -193,11 +193,11 @@
     "n_outlets": 2
    },
    {
-    "title": "Mithrl Raises $20M to Bring Custom AI Infrastructure to Biopharma, Grounded in Its Biomedical World Model - businesswire.com",
+    "title": "Mithrl Raises $20M to Bring Custom AI Infrastructure to Biopharma, Grounded in Its Biomedical World Model - Business Wire",
     "clean": "Mithrl Raises $20M to Bring Custom AI Infrastructure to Biopharma, Grounded in Its Biomedical World Model",
     "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPT0RSWjhBUERlRS0xMlJkOURJYWZnNy1hQThXUEtmdk92TlF4Wjdia0NkTFhnVEF3OGJLLTA5SVRQbTFHVXVlZVBPTllSbHpxQXM0ZENTbzhoYWIzdFhHZWFjMjVPZ01DcjhiLUdubEZBQk9mSUktZkRYNnVGTnM4dW5Eb2JYWHp1b09zUHFCbjF0RzJLTnhxeDJMa0xUN0NaMEhzQnd2OXlPZDR1ZjRFVHNpVHZmTFhyWF9JUFlJdHVsdXFpYTR3WG8tekYwcldfT3BrY21MakN2ZXJjcHczc1I2THZXTzBFalptUmFqSE9JblhrVkE?oc=5",
-    "source": "businesswire.com",
-    "desc": " Mithrl Raises $20M to Bring Custom AI Infrastructure to Biopharma, Grounded in Its Biomedical World Model &nbsp;&nbsp; businesswire.com ",
+    "source": "Business Wire",
+    "desc": " Mithrl Raises $20M to Bring Custom AI Infrastructure to Biopharma, Grounded in Its Biomedical World Model &nbsp;&nbsp; Business Wire ",
     "date": "2026-09-15",
     "cat": "funding",
     "n_outlets": 2
@@ -225,34 +225,14 @@
     "n_outlets": 2
    },
    {
-    "title": "Sudarshan Pharma Says Proposed 9.5% Stake Acquisition in US Firm Under Due Diligence - firstindia.co.in",
+    "title": "Sudarshan Pharma Says Proposed 9.5% Stake Acquisition in US Firm Under Due Diligence - First India",
     "clean": "Sudarshan Pharma Says Proposed 9.5% Stake Acquisition in US Firm Under Due Diligence",
     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQTW5ySlNPc2VrYnZrTnlKS3VWdlpxSmRlWkdjeDlhOFRRVkJVMVA1REhaa20yNHhrTVEwWE1ZYlVXclJOQnhiYTdJcGlub3BrUmN5M1dpMjE0aDlPdU5jWUdJWUxxRzNDVDVVSGY1VlJCaXlWOXNZMTdFamE0d2Qzb1ZrQlFzSmRhQlAyUmNHdDlLM3hvb1VhNUQ2czlBblpBNk5ObmJObUhGWlN3VGRDaThmYUMzb2xqNnM3NWZFLWNTTi1IOWxhVzZOa001cS0tN29MVg?oc=5",
-    "source": "firstindia.co.in",
-    "desc": " Sudarshan Pharma Says Proposed 9.5% Stake Acquisition in US Firm Under Due Diligence &nbsp;&nbsp; firstindia.co.in ",
+    "source": "First India",
+    "desc": " Sudarshan Pharma Says Proposed 9.5% Stake Acquisition in US Firm Under Due Diligence &nbsp;&nbsp; First India ",
     "date": "2026-09-15",
     "cat": "mergers",
     "n_outlets": 2
-   },
-   {
-    "title": "Newly formed Jaguar acquires AFib device assets from J&J - Fierce Biotech",
-    "clean": "Newly formed Jaguar acquires AFib device assets from J&J",
-    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSFJwR2RUajR0N3FXZ0xiaW5Fbm1LQWZlRmJhR3lqZ0F3QW9BMENpQnh0bUtDbFBza2JPMFM0WjRhR0stalZidmVia1VRNk9wa0RkSzIzT1I3Z0l0VWRPcW9NQW8wWWxpaUlqQ1JDVVBPRlZreTZIcmIyMkJ2U0RYODYxYW9aTDVCU2ZUTk15S2loZw?oc=5",
-    "source": "Fierce Biotech",
-    "desc": " Newly formed Jaguar acquires AFib device assets from J&J &nbsp;&nbsp; Fierce Biotech ",
-    "date": "2026-09-15",
-    "cat": "mergers",
-    "n_outlets": 1
-   },
-   {
-    "title": "North Immunology goes public via reverse merger as eczema drug heads toward clinic - Fierce Biotech",
-    "clean": "North Immunology goes public via reverse merger as eczema drug heads toward clinic",
-    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRkxQb1VMQm51RFpjM1VoeUtneGxpVDBZLUpJMC1lNy0zVi1HVFY5WFM5UWItM3hXdDZoVS1pcTNQbmJqX2NRTldlX25JMjliRG4yRGNWTkJjT21mV1hZX2d3V2czU0JaTWMyYXJWaHRxTzh1UUlKRElJd2txeG5hN3FKaG5iNkpwLUc5d2tuQnJ5RjBMYXJmQUJ6X2luU3phWERVems0bm5LeWJZNmpveGEzNA?oc=5",
-    "source": "Fierce Biotech",
-    "desc": " North Immunology goes public via reverse merger as eczema drug heads toward clinic &nbsp;&nbsp; Fierce Biotech ",
-    "date": "2026-09-17",
-    "cat": "mergers",
-    "n_outlets": 1
    },
    {
     "title": "North Immunology joins biotech reverse merger boom with Aethlon deal - BioPharma Dive",
@@ -261,6 +241,26 @@
     "source": "BioPharma Dive",
     "desc": " North Immunology joins biotech reverse merger boom with Aethlon deal &nbsp;&nbsp; BioPharma Dive ",
     "date": "2026-09-17",
+    "cat": "mergers",
+    "n_outlets": 1
+   },
+   {
+    "title": "A Parkinson\u2019s biotech debut, fundraising campaign and licensing deal - Endpoints News",
+    "clean": "A Parkinson\u2019s biotech debut, fundraising campaign and licensing deal",
+    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWXh1RGQxTkEwRng1b19EajdQT2VLTUg0U2c4YUxhWXBkbEMzMGw5YkM2Q2c0WThTeWN0M0QyM1phN2pVU0pseWVlaldFS3h1elUxSXNDSjB0SFRnUGFxa0x5OGRzTmZUWm9jamV4Y0tRc1dlZmdMNUswT2h2WTU3bU9CemtKeW9ydU93M2hmUC1VTERu?oc=5",
+    "source": "Endpoints News",
+    "desc": " A Parkinson\u2019s biotech debut, fundraising campaign and licensing deal &nbsp;&nbsp; Endpoints News ",
+    "date": "2026-09-17",
+    "cat": "mergers",
+    "n_outlets": 1
+   },
+   {
+    "title": "Australia's Telix Pharma agrees to buy Germany's ITM Isotope for about $1.65 billion - Reuters",
+    "clean": "Australia's Telix Pharma agrees to buy Germany's ITM Isotope for about $1.65 billion",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZlZwZVVkaW9MNXJIbnVVUjBpUjVyX1h6UzY5Skp5TERnZzEwQXcyRnJ2aEU4eTFQaHVGdmNOcmNwXzZaOHdhUDN2RGZwcHR6ckhJVEdqZF9sbDB0Zk5XbE50Si15ekRIU015cmxvUzhOaElOV2dTQ0Qydy1oT0RvWE04dnBYa3otRjZndW03VXV2bDZiZjA1cU9fQjVJXzF4T19sWVVFb0ZEZ1h2MXc2dXZmaGM4VVpYbGYySkRRak43U210YW5ZTg?oc=5",
+    "source": "Reuters",
+    "desc": " Australia's Telix Pharma agrees to buy Germany's ITM Isotope for about $1.65 billion &nbsp;&nbsp; Reuters ",
+    "date": "2026-09-20",
     "cat": "mergers",
     "n_outlets": 1
    }
@@ -307,57 +307,17 @@
     "n_outlets": 2
    },
    {
-    "title": "Sionna lays off 46% of workforce in strategic shift after cystic fibrosis trial fail - Fierce Biotech",
-    "clean": "Sionna lays off 46% of workforce in strategic shift after cystic fibrosis trial fail",
-    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWm52dHFCZGlBN3g4RjBfMG5lMWRJeDQ3R1ZWbnpXTHc1ZTRwNmtlbFJkcWRWNzJVZzZjRHB2ZUN4bWpubTh5R2V3bFJCVk5IRG5lZFc4UGFPaXJ2aERpTE5XOVhVMDItc0Fyc01PZVY2NFhfSmMwR0JacHY5dURKMWM5Z0V1RlZIQ2tzYVNjeVZXWXFrRUpVdkpHWFZiZVdhck5zeE91WThhZGJ4bWNTUw?oc=5",
-    "source": "Fierce Biotech",
-    "desc": " Sionna lays off 46% of workforce in strategic shift after cystic fibrosis trial fail &nbsp;&nbsp; Fierce Biotech ",
-    "date": "2026-09-15",
+    "title": "mlHealth360 appoints Prashant Naidu as Chief Business Officer for India, Emerging Markets - Indian Pharma Post",
+    "clean": "mlHealth360 appoints Prashant Naidu as Chief Business Officer for India, Emerging Markets",
+    "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQZnFiUUJuOFZDbFNlSmh2NmQ2cFAyYnVTa1pWLUx2eFFDdnM2VWx0THE5WlV4WlR2aWRoLXpwaTZwSFFnSXNRTWdDbnNEQnQ2d2xCdG9nM2VqNjdEcERPNEFyeG05WHpsRzZxOW5FTVc2c0FGckFWVUN0UkZmaFNGWFNJYWhTMkFoQmJoam04el9QcHhsNWdYNEV6dXBzU0N5V1VIeUI0OGo2NmJ6NE5zUXY1OFNMOE0xYnFfWE12VVdoU3E5UmZOR0xtX2J6Q1HSAdYBQVVfeXFMTnBzOFFVdGJSQ2UzYmlKRGJDRmY5dU1FMDgzWjd6UDFmSW13VkZmOVhwc0V0TGNCMlpjNVZVWmxyRElPeEQ4UFB5RUhaVmk3ckRzX3lIaEF2eldJenZ5enVjNURTVTJYcUJLVEctM2FuSXhaeExWYm5Ed1c4OUVwX0hzTHQtWWd6SGdoSXZVOVZrM3NtOENuRWJoUzJlajlpVXc3Zzd1R0JfcGNTaklDVGdhRXZnbzlYMFpSYmF6NzlRY3JPUDYxMHlvV19nWHRYQ0VWZkJKdw?oc=5",
+    "source": "Indian Pharma Post",
+    "desc": " mlHealth360 appoints Prashant Naidu as Chief Business Officer for India, Emerging Markets &nbsp;&nbsp; Indian Pharma Post ",
+    "date": "2026-09-14",
     "cat": "hiring",
     "n_outlets": 1
    }
   ],
   "trials": [
-   {
-    "title": "Vera kidney drug Trutakna shows strong final results in Phase 3 trial - STAT",
-    "clean": "Vera kidney drug Trutakna shows strong final results in Phase 3 trial",
-    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMjZkcjd1dWkxUVdlSjNJU0M2OFhSeVJ4WEJXeHNrd1QxMlUxUFh1U3NFeDhib3l5ejdpa2pHTW1qRkZnOWQzSHpEMVVrNVprT1FUaTRoN2NRdzRHTmZudEFsU0xUVHlTU1RLX29vMnFCWWZnejZTVXlaQjFXWTVRVEdfbXJ5QTVDSnlsQ28zWldsMldFUF9fY1Vlcmg?oc=5",
-    "source": "STAT",
-    "desc": " Vera kidney drug Trutakna shows strong final results in Phase 3 trial &nbsp;&nbsp; STAT ",
-    "date": "2026-09-15",
-    "cat": "trials",
-    "n_outlets": 1
-   },
-   {
-    "title": "Novartis ends ALS program after phase 2 flop, adding to R&D woes - Fierce Biotech",
-    "clean": "Novartis ends ALS program after phase 2 flop, adding to R&D woes",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQa3VXcGFxbEhpd1lDQ0hteXVzVTFjbzVGSnBCSG13akc3T0E3enRjams5RERTMVN1MkktX25hNGJKWnozRV9xUWxHRV9Na1IxRTk2TjJaMDktRDQ4c1pxVE1NN1N6Q1A2ZWZseWk5MHFoTmZXVl8zcXBuZnZkMGVuNVVhNzVmQWNuMWVKMkFGc0d3aGJweDZyTGtkb05SUQ?oc=5",
-    "source": "Fierce Biotech",
-    "desc": " Novartis ends ALS program after phase 2 flop, adding to R&D woes &nbsp;&nbsp; Fierce Biotech ",
-    "date": "2026-09-16",
-    "cat": "trials",
-    "n_outlets": 1
-   },
-   {
-    "title": "Sling reels in $123M series C to fund oral Tepezza rival through phase 3 trial - Fierce Biotech",
-    "clean": "Sling reels in $123M series C to fund oral Tepezza rival through phase 3 trial",
-    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTG5lbTRZcjhXWWxzbHJDMjdOeXVqTVQ0ZDFnWlBZSXdHSVQwZ25QM25FeURPeUhIWnFQczZZRllhRUxsNUR2Uk5JQnpPWUhrWll2TV9Jb3lQQVgySlFVTW80bFlmbC1SWnJ1MTBPRm5YSGgzZU1KaHR4U3ZIVk1tNnh5TEJDWElhdGhjaVUzRXpISDRhXzNhV2pfZ1Bwa0x3U0liaC1SQ1hzUQ?oc=5",
-    "source": "Fierce Biotech",
-    "desc": " Sling reels in $123M series C to fund oral Tepezza rival through phase 3 trial &nbsp;&nbsp; Fierce Biotech ",
-    "date": "2026-09-16",
-    "cat": "trials",
-    "n_outlets": 1
-   },
-   {
-    "title": "BMS dumps $100M Orum degrader-antibody conjugate after glimpsing phase 1 data - Fierce Biotech",
-    "clean": "BMS dumps $100M Orum degrader-antibody conjugate after glimpsing phase 1 data",
-    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVjdjLXRUdFYwUU0xaWtERFJlT0JWVzUyeDBCTGZOQVl5OC1KRkdpc1dMT2wzbDh3bEswVF9uYUlpeEpaREdqU05IbEZsSjBzVjFlZGNQaklRZUhUVmUzaUkxZTNnNWJSRl96d2FvdGFQRDMxaXlERDRBTjhIb29ubXJRcDRFcVAtTTl4dDBUalRVdVVZQmt5MEd1NTdZR1RtVm5JQWxlZnVrRXJ0eHZyNjhOakc?oc=5",
-    "source": "Fierce Biotech",
-    "desc": " BMS dumps $100M Orum degrader-antibody conjugate after glimpsing phase 1 data &nbsp;&nbsp; Fierce Biotech ",
-    "date": "2026-09-18",
-    "cat": "trials",
-    "n_outlets": 1
-   },
    {
     "title": "GENFIT Advances Nangibotide in Phase 2 Clinical Investigation in ACLF - Yahoo Finance UK",
     "clean": "GENFIT Advances Nangibotide in Phase 2 Clinical Investigation in ACLF",
@@ -365,6 +325,46 @@
     "source": "Yahoo Finance UK",
     "desc": " GENFIT Advances Nangibotide in Phase 2 Clinical Investigation in ACLF &nbsp;&nbsp; Yahoo Finance UK ",
     "date": "2026-09-14",
+    "cat": "trials",
+    "n_outlets": 1
+   },
+   {
+    "title": "Bezisterim may help with some Long COVID symptoms, drug\u2019s developer reports in early trial results - The Sick Times",
+    "clean": "Bezisterim may help with some Long COVID symptoms, drug\u2019s developer reports in early trial results",
+    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQY1pkWkNJcEJFRFNPTDVVdnlycUZIUWV5REx0RnExR3BoQ2k2UzZ2M1dVRkNNX0VYUjNfWERlR2gxb1hiVGlTWlkzR2k0RTc5RGZWdVhQanlJRm1MRnFvWFVTdXgyaXA1NXE2b1JkZlJ5ZmliaTBNbUZvenhOdGM2cDE1X1RLb05HczU4TXMzUmtZVUl4Uk9mTWdfMHA3R1Z1VUJDVXVKakpyY3cyX2xFWjFZMTJESkZlNVpBZzhNRVRpY05UZVlaT25kNTE5UQ?oc=5",
+    "source": "The Sick Times",
+    "desc": " Bezisterim may help with some Long COVID symptoms, drug\u2019s developer reports in early trial results &nbsp;&nbsp; The Sick Times ",
+    "date": "2026-09-15",
+    "cat": "trials",
+    "n_outlets": 1
+   },
+   {
+    "title": "Vera kidney drug Trutakna shows strong final results in Phase 3 trial - statnews.com",
+    "clean": "Vera kidney drug Trutakna shows strong final results in Phase 3 trial",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMjZkcjd1dWkxUVdlSjNJU0M2OFhSeVJ4WEJXeHNrd1QxMlUxUFh1U3NFeDhib3l5ejdpa2pHTW1qRkZnOWQzSHpEMVVrNVprT1FUaTRoN2NRdzRHTmZudEFsU0xUVHlTU1RLX29vMnFCWWZnejZTVXlaQjFXWTVRVEdfbXJ5QTVDSnlsQ28zWldsMldFUF9fY1Vlcmg?oc=5",
+    "source": "statnews.com",
+    "desc": " Vera kidney drug Trutakna shows strong final results in Phase 3 trial &nbsp;&nbsp; statnews.com ",
+    "date": "2026-09-15",
+    "cat": "trials",
+    "n_outlets": 1
+   },
+   {
+    "title": "Encouraging news from Skyhawk, as SKY-0515 Phase 1/2 data continues to hold promise - HDBuzz \u2013 Huntington\u2019s disease research news.",
+    "clean": "Encouraging news from Skyhawk, as SKY-0515 Phase 1/2 data continues to hold promise - HDBuzz \u2013 Huntington\u2019s disease research news.",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUUhNOGExQ0FvZnAxQ3VlRHVmdDBxcDRXX1QzdUlWOGhxT2tLU2hRQkdxLThXQ1k1WS1lbVZBcWF5MFZrdEJiMFFiUW8tLUNvTzd0cTRYRnZ5M0RPRTBkVXdmclF3VGR1bkR2WkdDUXhJT1JubzRBZVk1cjJIR1dqaFRxb0o1bDNQbWFTX05RVmJNaFIxZnFBYnZzZmtFLXZJVG50T21nemw?oc=5",
+    "source": "HDBuzz \u2013 Huntington\u2019s disease research news.",
+    "desc": " Encouraging news from Skyhawk, as SKY-0515 Phase 1/2 data continues to hold promise &nbsp;&nbsp; HDBuzz \u2013 Huntington\u2019s disease research news. ",
+    "date": "2026-09-16",
+    "cat": "trials",
+    "n_outlets": 1
+   },
+   {
+    "title": "Optimi Health Expands Clinical Program with Phase 3 Trial Evaluating MDMA-Assisted Therapy for Post-Traumatic Stress Disorder - Yahoo Finance",
+    "clean": "Optimi Health Expands Clinical Program with Phase 3 Trial Evaluating MDMA-Assisted Therapy for Post-Traumatic Stress Disorder",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTTAzZmsxQW80bVIzTjM0LTV1UHlHeDhMQUJUaFBsb19YX3h4T2dUSDMxaVYwbHM3YzdfLXRNc3FJcU1oZkJtVlFwcXRKMmxKcDByZ2RSMVlvbzR4ZUQ1QXptMXljUkdEdzQxamI0NjUxSXY1M0Q3Z0UtbmxLQWVVNXJpdENNZXluSUxtZFpnNC05SEtYbC1ScjUxcFVYSHYw?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " Optimi Health Expands Clinical Program with Phase 3 Trial Evaluating MDMA-Assisted Therapy for Post-Traumatic Stress Disorder &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-09-16",
     "cat": "trials",
     "n_outlets": 1
    }
@@ -411,11 +411,11 @@
     "n_outlets": 7
    },
    {
-    "title": "FDA Approves Imlunestrant Plus Abemaciclib for ER+, HER2\u2013, ESR1-Mutated Metastatic Breast Cancer - onclive.com",
+    "title": "FDA Approves Imlunestrant Plus Abemaciclib for ER+, HER2\u2013, ESR1-Mutated Metastatic Breast Cancer - OncLive",
     "clean": "FDA Approves Imlunestrant Plus Abemaciclib for ER+, HER2\u2013, ESR1-Mutated Metastatic Breast Cancer",
     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUGZiTWlLVi1CNnU3NWNkeUxidWlNM1pUMmdRajRVZGlSTGtkeVVFQmRUd2NJeVMxLVlXelJoaWFURUFONXZaRkYyblM2MTVnc1RVX3FzWWZnYXZtalJPV01Ed3JzUXR5LWN5VS1WWnZFVzR4N21Db2t0Sm1NMFBCaFBQM0ZhR1ZGRGlxdHhlOExMZ0RnbFM5bVZYZVk0M3ZSb0YyemVydGVNd1BiTWVNd0ZvZnlxdHItVk9FYUpn?oc=5",
-    "source": "onclive.com",
-    "desc": " FDA Approves Imlunestrant Plus Abemaciclib for ER+, HER2\u2013, ESR1-Mutated Metastatic Breast Cancer &nbsp;&nbsp; onclive.com ",
+    "source": "OncLive",
+    "desc": " FDA Approves Imlunestrant Plus Abemaciclib for ER+, HER2\u2013, ESR1-Mutated Metastatic Breast Cancer &nbsp;&nbsp; OncLive ",
     "date": "2026-09-18",
     "cat": "drugs",
     "n_outlets": 7
@@ -443,33 +443,33 @@
     "n_outlets": 1
    },
    {
-    "title": "New lawsuit argues NIH violated First Amendment rights of grant applicants - STAT",
-    "clean": "New lawsuit argues NIH violated First Amendment rights of grant applicants",
-    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcEpySEc5VFB4V29uVm9RWHU2ODhsOXkxMGt2UzFWWjZzekh0YTdTeFVKSUw5NGNtNHN4VkVpT25HYmFVd0JYaVZBWlJPcVVnZFRaZFZZaTRDY1RzbkZnQ01nQWVac2JfelM2N0cwZUh4T1JaTGZfY3lTOERCNXhiaEVHbHZDX0VOSnZrclNaV2RvOWJIUnJhb0tDd2VPMzhvcEVlUk1n?oc=5",
-    "source": "STAT",
-    "desc": " New lawsuit argues NIH violated First Amendment rights of grant applicants &nbsp;&nbsp; STAT ",
-    "date": "2026-09-17",
+    "title": "How research funding took me out of the lab and into leadership - Nature",
+    "clean": "How research funding took me out of the lab and into leadership",
+    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE40Tl9HTjB6NWVuQjdhM3FvSHJJZmZmNXdVLU5WU2VSeGZXM2tYNVZTdU5CRnA5QUEwS0JkTzhfWWNvQzhIUnZXb2lMREIwZ3JwUTBINmpMV3FrRWo3bTJn?oc=5",
+    "source": "Nature",
+    "desc": " How research funding took me out of the lab and into leadership &nbsp;&nbsp; Nature ",
+    "date": "2026-09-19",
     "cat": "academia",
     "n_outlets": 1
    },
    {
-    "title": "What\u2019s at Stake: Federal Research Funding - Children's Hospital Association",
-    "clean": "What\u2019s at Stake: Federal Research Funding",
-    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWTk1cllac2UxNU5hUnB4bWNVZWdpTTB6T21iQU5FX3FOZjdHeXhud1dBaFozRTVkOHN2YkVrNXIxWWlPUHRhUEQ0WXNKT2tYQ3ZvZURLLWZxY0lUZlFWN0tjNk10Vk9pdUIwM1RsY3NqUEItcHcwWF9BMzJDSmJYMlNrTjRySUpKVW1IMW9OZG50c3VKN0Uta3d4Vms?oc=5",
-    "source": "Children's Hospital Association",
-    "desc": " What\u2019s at Stake: Federal Research Funding &nbsp;&nbsp; Children's Hospital Association ",
-    "date": "2026-09-15",
+    "title": "Trump seeks to bring health-research funding under his control, Politico reports - Reuters",
+    "clean": "Trump seeks to bring health-research funding under his control, Politico reports",
+    "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQcHFPVFJQWkZGSFpvSUh0cGlxYWlOUEJFYVJVQS1Ma0RiRWlBMHdGcHFCa3J1SUtsRUE0c3d1YjcwM1pBVTFIUkR1MHhxamhZZHNWbTQwSU1ZSDI3eUtvU0JIYnd4TDV2UVU0ZGN1bEllMzRyZmJ1cjZndnZJb1VyZHpZalVWdmNmU3RHSktTS2NVdUcwcmVwSktncTVZam9WRU9TMkVKRHhWazVtTmJsdHQxbnJYdXJvTWdPZ2J1NlJ5akwzcm5UQ1FBZ0NwZTRrcVF5cGwyZGhIVWZsQzRjb3Nn?oc=5",
+    "source": "Reuters",
+    "desc": " Trump seeks to bring health-research funding under his control, Politico reports &nbsp;&nbsp; Reuters ",
+    "date": "2026-09-20",
     "cat": "academia",
     "n_outlets": 1
    }
   ],
   "platform": [
    {
-    "title": "Scientists use virus to dismantle gum disease bacteria - NZDoctor",
+    "title": "Scientists use virus to dismantle gum disease bacteria - nzdoctor.co.nz",
     "clean": "Scientists use virus to dismantle gum disease bacteria",
     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNk4yZ1JCbkdjWnZZUlJ6dW4tWkxkTzY3QXRMcnFmN25Xb041SUdJb1EwaGd4NkdrRlN0LWtZRjcyTmJ5VnpGT3J1VWdTT3FrTHRsMElkSEo4VXZibVJyUEFTWlZQTHoyTGtQajdWSExZbzAwbFdPSGdqLXgzSDE1QVhDcTY0TVBkdDRUejNUTkl1aVVpRHJxSGtsdGwtdw?oc=5",
-    "source": "NZDoctor",
-    "desc": " Scientists use virus to dismantle gum disease bacteria &nbsp;&nbsp; NZDoctor ",
+    "source": "nzdoctor.co.nz",
+    "desc": " Scientists use virus to dismantle gum disease bacteria &nbsp;&nbsp; nzdoctor.co.nz ",
     "date": "2026-09-14",
     "cat": "virology",
     "n_outlets": 2
@@ -485,11 +485,11 @@
     "n_outlets": 2
    },
    {
-    "title": "Oxford Nanopore Technologies (ONT) Secures Preliminary Injunction Against MGI Tech GmbH Over CycloneSEQ Patent Violations - kalkinemedia.com",
+    "title": "Oxford Nanopore Technologies (ONT) Secures Preliminary Injunction Against MGI Tech GmbH Over CycloneSEQ Patent Violations - Kalkine Media",
     "clean": "Oxford Nanopore Technologies (ONT) Secures Preliminary Injunction Against MGI Tech GmbH Over CycloneSEQ Patent Violations",
     "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNQy1vZzZDOEpvMFFXYmJrbG8xOWdFU210ZnMzcDUtQ0xSdU5selhtTEV4dHpBM3FjejdCcmRtRk1ZYmt3azk4d25MdUI0MXFPcjhlaVBFSHNtY3ZlRURXNDg1YkhJbUtPZ3BPeEM3VlhFUjRBcktOT2ZvczV2UkEtbjFrY1ZOOFhua1dsWlBHeDFsajRkcmh3c1puUEQ3UjBnbHhWRE5jQlNmcUpFRTNNQnp5bUVFdVhwRTRCeWRndTloOVFnaDRheGRCZW1pVHh6WmtTMHRiY3dMdUZXY3p4T0tzME9kTHdKS3NRNXRNTlNvNEFja0lGbS1B?oc=5",
-    "source": "kalkinemedia.com",
-    "desc": " Oxford Nanopore Technologies (ONT) Secures Preliminary Injunction Against MGI Tech GmbH Over CycloneSEQ Patent Violations &nbsp;&nbsp; kalkinemedia.com ",
+    "source": "Kalkine Media",
+    "desc": " Oxford Nanopore Technologies (ONT) Secures Preliminary Injunction Against MGI Tech GmbH Over CycloneSEQ Patent Violations &nbsp;&nbsp; Kalkine Media ",
     "date": "2026-09-16",
     "cat": "ngs",
     "n_outlets": 2
@@ -517,6 +517,17 @@
   ]
  },
  "radar": {
+  "Merck": [
+   {
+    "title": "Merck Receives Positive EU CHMP Opinion for KEYTRUDA\u00ae (pembrolizumab) Plus Padcev\u00ae (enfortumab vedotin-ejfv) as Perioperative Treatment for Adults With Resectable Muscle-Invasive Bladder Cancer (MIBC) - Yahoo Finance",
+    "clean": "Merck Receives Positive EU CHMP Opinion for KEYTRUDA\u00ae (pembrolizumab) Plus Padcev\u00ae (enfortumab vedotin-ejfv) as Perioperative Treatment for Adults With Resectable Muscle-Invasive Bladder Cancer (MIBC)",
+    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxON0tIM3FLUTRoNU9BUDNTQnFLZEFNeHhYcEZkekxuVVBBQVhxU0NEclRlYmdFVEktRDlKQUZQUzE4RkFWSTBYcGF3dkt3NEc3ZDJoamY4OFdmN0g0ZXBvQnNFS0VONGh2eHlWaXlmTjY0enc2QzVSZEw1LXhya3FLUXAzVjdlZWxuMTRsakQ1cTJlc2hybjZz?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " Merck Receives Positive EU CHMP Opinion for KEYTRUDA\u00ae (pembrolizumab) Plus Padcev\u00ae (enfortumab vedotin-ejfv) as Perioperative Treatment for Adults With Resectable Muscle-Invasive Bladder Cancer (MIBC) &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-09-18",
+    "cat": "drugs"
+   }
+  ],
   "Pfizer": [
    {
     "title": "Novartis India acquires Pfizer\u2019s Minipress brands for $150 million - The Pharma Letter",
@@ -548,11 +559,11 @@
     "cat": "drugs"
    },
    {
-    "title": "Novartis ends ALS program after phase 2 flop, adding to R&D woes - Fierce Biotech",
+    "title": "Novartis ends ALS program after phase 2 flop, adding to R&D woes - fiercebiotech.com",
     "clean": "Novartis ends ALS program after phase 2 flop, adding to R&D woes",
     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQa3VXcGFxbEhpd1lDQ0hteXVzVTFjbzVGSnBCSG13akc3T0E3enRjams5RERTMVN1MkktX25hNGJKWnozRV9xUWxHRV9Na1IxRTk2TjJaMDktRDQ4c1pxVE1NN1N6Q1A2ZWZseWk5MHFoTmZXVl8zcXBuZnZkMGVuNVVhNzVmQWNuMWVKMkFGc0d3aGJweDZyTGtkb05SUQ?oc=5",
-    "source": "Fierce Biotech",
-    "desc": " Novartis ends ALS program after phase 2 flop, adding to R&D woes &nbsp;&nbsp; Fierce Biotech ",
+    "source": "fiercebiotech.com",
+    "desc": " Novartis ends ALS program after phase 2 flop, adding to R&D woes &nbsp;&nbsp; fiercebiotech.com ",
     "date": "2026-09-16",
     "cat": "trials"
    }
@@ -638,19 +649,17 @@
  ],
  "also": [
   {
-   "pmid": "42746633",
-   "title": "Pre-vaccine sentinel antibodies predict blunted vaccine responses",
-   "journal": "Cell Press Blue",
-   "date": "2026 Aug 20",
-   "doi": "10.1016/j.cpblue.2026.100088",
-   "authors": "Song L \u2026 LaBaer J",
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42746633/",
+   "pmid": "42743925",
+   "title": "Programmed ribosomal frameshifting triggers translational stress to promote viral replication",
+   "journal": "Cell",
+   "date": "2026 Sep 14",
+   "doi": "10.1016/j.cell.2026.08.031",
+   "authors": "Xavier A \u2026 Dikic I",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42743925/",
    "field": "Virology",
-   "score": 14,
-   "hits": [
-    "vaccine"
-   ],
-   "why": "Overlaps my bench work: vaccine."
+   "score": 10,
+   "hits": [],
+   "why": "High-profile result in one of my fields."
   },
   {
    "pmid": "42760507",
@@ -698,19 +707,19 @@
    "why": "Overlaps my bench work: single-cell."
   },
   {
-   "pmid": "42736314",
-   "title": "DUSP4 promotes anti-tumor CD8(+) T cell function and boosts CAR-T cell efficacy in mouse colorectal cancer",
-   "journal": "Nat Commun",
-   "date": "2026 Aug 15",
-   "doi": "10.1038/s41467-026-76779-8",
-   "authors": "Li H \u2026 Zhang Y",
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42736314/",
+   "pmid": "42755487",
+   "title": "Global trends and emerging frontiers in cancer immunotherapy and gut microbiota-derived metabolites: a bibliometric analysis",
+   "journal": "Front Cell Infect Microbiol",
+   "date": "2026",
+   "doi": "10.3389/fcimb.2026.1876450",
+   "authors": "Hu Y \u2026 Zhang D",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42755487/",
    "field": "Oncology",
-   "score": 12,
+   "score": 13,
    "hits": [
-    "car-t"
+    "immunotherapy"
    ],
-   "why": "Overlaps my bench work: car-t."
+   "why": "Overlaps my bench work: immunotherapy."
   },
   {
    "pmid": "42755045",
