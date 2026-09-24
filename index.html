@@ -634,6 +634,8 @@
   .fstep.is-end .fs-node{width:13px;height:13px;left:calc(100% - 12px);background:var(--signal-1);border-color:var(--signal-1)}
   .track-card.mast .fstep.alt.is-end .fs-node{background:var(--A);border-color:var(--A)}
 
+  .bc-ctas{display:flex;gap:10px;flex-wrap:wrap}
+  @media(max-width:620px){.bc-ctas{width:100%}.bc-ctas .launch-cta{flex:1 1 100%}}
   .proto-foot{margin-top:34px;font-family:'JetBrains Mono';font-size:12.5px;color:var(--ink-3);text-align:center}
   .proto-foot a{color:var(--signal-1);border-bottom:1px solid transparent;transition:border-color .2s}
   .proto-foot a:hover{border-color:var(--signal-1)}
@@ -1565,6 +1567,19 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="build-card reveal" style="margin-top:34px">
+      <div class="bc-ic" aria-hidden="true">¶</div>
+      <div class="bc-body">
+        <div class="bc-kind">Thesis summary · 5 pages · not peer reviewed</div>
+        <h3>The thesis, in five pages</h3>
+        <p>The full thesis runs 67 pages. This is the short version: all four isolation routes, what each one yielded, and which ones hold up as normal comparators for single-cell sequencing. It is my own work and words, condensed with AI assistance from Claude Science, and every number in it was checked against the thesis. <b>It is not a published paper and it has not been peer reviewed.</b> The full thesis in the Auburn repository is still the source of record.</p>
+      </div>
+      <div class="bc-ctas">
+        <a class="launch-cta" href="assets/flaat_2020_thesis_summary.pdf" target="_blank" rel="noopener">Read the summary <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="launch-cta" href="assets/flaat_2020_thesis_summary.pdf" download="Taylor_Flaat_Thesis_Summary.pdf">Download PDF <span aria-hidden="true">↓</span></a>
+      </div>
     </div>
 
     <p class="proto-foot reveal">Full parameters, controls and gating strategy are in the <a href="https://etd.auburn.edu/handle/10415/7140" target="_blank" rel="noopener">M.S. thesis</a> and the <a href="#" data-poster="mastcell">progenitor</a> / <a href="#" data-poster="melano">melanocyte</a> posters.</p>
