@@ -1,0 +1,50 @@
+name: Monday Brief
+
+# 11:10 UTC every Monday = 07:10 America/New_York (EDT) / 06:10 (EST).
+# GitHub's scheduler is best-effort and can lag by several minutes under load.
+on:
+  schedule:
+    - cron: "10 11 * * 1"
+  workflow_dispatch:
+    inputs:
+      weeks:
+        description: "How many trailing weeks to cover (1 = previous Mon-Sun)"
+        required: false
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monday-brief
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the issue
+        env:
+          BRIEF_WEEKS: ${{ github.event.inputs.weeks || '1' }}
+          # Optional: set an NCBI_EMAIL repo variable to identify the caller to
+          # PubMed. Omitted is fine -- E-utilities serves anonymous requests.
+          NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+        run: python scripts/build_brief.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "monday-brief bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add brief
+          if git diff --cached --quiet; then
+            echo "no change - nothing to commit"
+            exit 0
+          fi
+          git commit -m "brief: issue for week ending $(date -u -d 'last Sunday' +%Y-%m-%d)"
+          git push
