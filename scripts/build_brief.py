@@ -169,10 +169,15 @@ def fetch_news(start, end):
     return news
 
 
+def _ncbi_suffix():
+    """NCBI asks for a contact address on automated requests; it is optional."""
+    email = os.environ.get("NCBI_EMAIL", "").strip()
+    return f"&email={urllib.parse.quote(email)}" if email else ""
+
+
 def fetch_papers(start, end):
     """PubMed esearch + esummary over the entry-date window, one pass per field."""
-    email = os.environ.get("NCBI_EMAIL", "").strip()
-    suffix = f"&email={urllib.parse.quote(email)}" if email else ""
+    suffix = _ncbi_suffix()
     by_field, meta = {}, {}
     for field, stem in FIELDS.items():
         term = f'({stem}) AND ("{start:%Y/%m/%d}"[EDAT] : "{end:%Y/%m/%d}"[EDAT])'
@@ -215,6 +220,9 @@ def fetch_papers(start, end):
                           "title": re.sub(r"\s+", " ", rec["title"]).strip().rstrip("."),
                           "journal": rec.get("source", ""), "date": rec.get("pubdate", ""),
                           "doi": doi, "authors": byline,
+                          # esummary already returns this; it costs no extra call
+                          # and distinguishes a meta-analysis from a case report.
+                          "pubtype": [p for p in rec.get("pubtype", []) if p],
                           "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"}
         time.sleep(0.4)
     print(f"  metadata: {len(meta)}/{len(every)}")
@@ -336,6 +344,143 @@ def score_paper(rec):
     return score, [kw for kw, _w in sorted(hits, key=lambda x: -x[1])[:3]]
 
 
+# PubMed publication types, most specific first: the first match wins, so
+# "Meta-Analysis" beats the "Journal Article" that accompanies it.
+ARTICLE_KINDS = (
+    ("Meta-Analysis", "Meta-analysis"),
+    ("Systematic Review", "Systematic review"),
+    ("Evidence Synthesis", "Evidence synthesis"),
+    ("Randomized Controlled Trial", "Randomised controlled trial"),
+    ("Clinical Trial", "Clinical trial"),
+    ("Review", "Review"),
+    ("Case Reports", "Case report"),
+    ("Comment", "Commentary"),
+    ("Editorial", "Editorial"),
+    ("Preprint", "Preprint"),
+)
+
+VENUE_STANDING = {5: "a leading general journal", 4: "a leading specialist journal",
+                  3: "a well-regarded specialist journal", 2: "a field journal",
+                  1: "a specialist journal"}
+
+SIGNIFICANCE_PROMPT = """You write one-sentence significance notes for a weekly research digest read by working bench scientists.
+
+Given a paper's title, journal and abstract, write ONE sentence, at most 28 words, saying what the finding changes, enables or rules out FOR THE FIELD.
+
+Rules:
+- Ground every claim in the abstract. Never add facts that are not in it.
+- Write about the science, not the reader: no "you", no "your fields", no
+  "relevant to", no "matches".
+- No hype: avoid "groundbreaking", "novel", "important", "sheds light".
+- Do not open with "This study", "Researchers" or the journal name.
+- State the substance, e.g. what is now measurable, which mechanism is
+  implicated, which approach is shown not to work.
+- If the abstract is missing, uninformative or purely administrative, reply
+  with exactly: SKIP
+
+Reply with the sentence alone, no preamble and no quotation marks."""
+
+
+def fetch_abstracts(pmids, suffix=""):
+    """PubMed efetch, 20 at a time. Returns {pmid: abstract text}."""
+    out = {}
+    pmids = [p for p in pmids if p]
+    for i in range(0, len(pmids), 20):
+        chunk = pmids[i:i + 20]
+        blob = get(f"{NCBI}/efetch.fcgi?db=pubmed&retmode=xml&rettype=abstract"
+                   f"&id={','.join(chunk)}{suffix}")
+        if not blob:
+            continue
+        try:
+            root = ET.fromstring(blob)
+        except ET.ParseError as exc:
+            print(f"  ! abstract parse failed: {exc}", file=sys.stderr)
+            continue
+        for art in root.iter("PubmedArticle"):
+            pid = art.findtext(".//PMID") or ""
+            parts = []
+            for node in art.iter("AbstractText"):
+                label = (node.get("Label") or "").strip()
+                text = "".join(node.itertext()).strip()
+                if text:
+                    parts.append(f"{label}: {text}" if label else text)
+            if pid and parts:
+                out[pid] = re.sub(r"\s+", " ", " ".join(parts)).strip()
+        time.sleep(0.4)
+    print(f"  abstracts: {len(out)}/{len(pmids)}")
+    return out
+
+
+def article_kind(row):
+    for needle, label in ARTICLE_KINDS:
+        if any(needle.lower() == (p or "").lower() for p in row.get("pubtype", [])):
+            return label
+    return "Primary research"
+
+
+def deterministic_why(row):
+    """Fallback: article type, venue standing and topic. No significance claim.
+
+    Used when no model is configured, no abstract exists, or the call fails.
+    Everything here is read off metadata the pipeline already has, so it can
+    never be wrong about the paper -- it just says less.
+    """
+    kind = article_kind(row)
+    venue = VENUE_STANDING[journal_tier(row.get("journal", ""))]
+    topics = ", ".join(row.get("hits", []))
+    tail = f" Topics: {topics}." if topics else ""
+    return f"{kind} in {venue}.{tail}"
+
+
+def llm_significance(rows, abstracts):
+    """Ask a model for one significance sentence per paper.
+
+    Opt-in and fail-soft by design: with no BRIEF_LLM_KEY the whole step is
+    skipped and every row keeps its deterministic line, so the Monday build
+    never depends on a third-party API being up. Anthropic's messages API;
+    set BRIEF_LLM_MODEL if the default id is not right for your account.
+    """
+    key = os.environ.get("BRIEF_LLM_KEY", "").strip()
+    if not key:
+        print("  significance: BRIEF_LLM_KEY unset, keeping deterministic lines")
+        return 0
+    model = os.environ.get("BRIEF_LLM_MODEL", "claude-3-5-haiku-latest").strip()
+    written = 0
+    for row in rows:
+        abstract = abstracts.get(row["pmid"], "")
+        if len(abstract) < 200:          # too thin to say anything grounded
+            continue
+        payload = json.dumps({
+            "model": model,
+            "max_tokens": 120,
+            "system": SIGNIFICANCE_PROMPT,
+            "messages": [{"role": "user", "content":
+                          f"Title: {row['title']}\nJournal: {row['journal']}\n"
+                          f"Type: {article_kind(row)}\n\nAbstract: {abstract[:4000]}"}],
+        }).encode()
+        req = urllib.request.Request(
+            "https://api.anthropic.com/v1/messages", data=payload, method="POST",
+            headers={"x-api-key": key, "anthropic-version": "2023-06-01",
+                     "content-type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                body = json.loads(resp.read())
+        except Exception as exc:         # noqa: BLE001 - keep the fallback line
+            print(f"  ! significance {row['pmid']}: {type(exc).__name__}: {exc}",
+                  file=sys.stderr)
+            continue
+        text = "".join(b.get("text", "") for b in body.get("content", [])).strip()
+        text = text.strip('"').strip()
+        if not text or text.upper().startswith("SKIP") or len(text) > 320:
+            continue
+        if not text.endswith((".", "?", "!")):
+            text += "."
+        row["why"] = text
+        written += 1
+    print(f"  significance: {written}/{len(rows)} written by model")
+    return written
+
+
 def rank_papers(by_field, meta):
     scored = {}
     for field, ids in by_field.items():
@@ -368,8 +513,7 @@ def rank_papers(by_field, meta):
                 taken.add(row["pmid"])
                 break
     for row in top + extra:
-        row["why"] = ("Matches this issue's focus areas: " + ", ".join(row["hits"]) + "."
-                      if row["hits"] else "High-profile result in one of the covered fields.")
+        row["why"] = deterministic_why(row)
     return top, extra
 
 
@@ -755,6 +899,9 @@ def main():
     print("papers:")
     by_field, meta = fetch_papers(start, end)
     top5, also = rank_papers(by_field, meta)
+    # Upgrade the deterministic blurbs to real significance notes where we can.
+    papers = top5 + also
+    llm_significance(papers, fetch_abstracts([p["pmid"] for p in papers], suffix=_ncbi_suffix()))
 
     if not items and not meta:
         print("no data fetched — leaving the site untouched", file=sys.stderr)

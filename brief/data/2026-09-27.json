@@ -636,7 +636,10 @@
    "hits": [
     "canine"
    ],
-   "why": "Matches this issue's focus areas: canine."
+   "why": "CPV infection triggers species-specific metabolic dysregulation in pangolins, with Malaysian pangolins showing lipid pathway disruption and Chinese pangolins exhibiting amino acid and bile acid reprogramming.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42782785",
@@ -651,7 +654,10 @@
    "hits": [
     "canine"
    ],
-   "why": "Matches this issue's focus areas: canine."
+   "why": "Patient-derived xenograft and cell line models from canine B-cell lymphoma enable preclinical testing of therapeutics for a spontaneous tumor with DLBCL-like pathology.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42790423",
@@ -666,7 +672,11 @@
    "hits": [
     "organoid"
    ],
-   "why": "Matches this issue's focus areas: organoid."
+   "why": "iPSC-derived retinal organoid transplantation demonstrates functional synaptic integration in primate retina, establishing feasibility for vision restoration in retinal degenerative disease.",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ]
   },
   {
    "pmid": "42787166",
@@ -681,7 +691,10 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Matches this issue's focus areas: single-cell."
+   "why": "CDC20 links prostate cancer recurrence to benzo[a]pyrene-responsive proliferation and migration in luminal epithelial cells.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42798197",
@@ -696,7 +709,11 @@
    "hits": [
     "immunotherapy"
    ],
-   "why": "Matches this issue's focus areas: immunotherapy."
+   "why": "Oncofetal fibronectin isoforms drive vascular remodeling, EMT, and immunosuppression in solid tumors, making them targetable biomarkers for overcoming immunotherapy resistance.",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ]
   }
  ],
  "also": [
@@ -711,7 +728,10 @@
    "field": "Virology",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of the covered fields."
+   "why": "Environmental AIV surveillance in central China identified sustained circulation of H9N2 and emerging H3N8 with genetic evidence linking human infections to co-circulating poultry viruses.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42764338",
@@ -726,7 +746,10 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Matches this issue's focus areas: single-cell."
+   "why": "Single-cell transcriptomics reveal sex-dimorphic immune aging trajectories with distinct peaks in CD4 and CD8 T cells and male-specific CD4 immunometabolic changes.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42785293",
@@ -741,7 +764,10 @@
    "hits": [
     "organoid"
    ],
-   "why": "Matches this issue's focus areas: organoid."
+   "why": "Patient-derived organoids preserve tumor heterogeneity and architecture, enabling functional evaluation of CAR T targets and resistance mechanisms in solid tumors.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42778587",
@@ -756,7 +782,10 @@
    "hits": [
     "nanopore"
    ],
-   "why": "Matches this issue's focus areas: nanopore."
+   "why": "Nanopore sequencing with machine-learning classification enables rapid measurement of unnatural base-pair replication fidelity across diverse chemistries and conditions.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42777708",
@@ -769,7 +798,10 @@
    "field": "Oncology",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of the covered fields."
+   "why": "CD4 T cells primed by dendritic cells to produce IFN-\u03b3 mediate macrophage-dependent tumor clearance, converting transient KRAS inhibitor responses to durable pancreatic cancer remissions.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42800809",
@@ -782,7 +814,10 @@
    "field": "Veterinary Medicine",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of the covered fields."
+   "why": "Galectin-3 suppresses T cell activation and restrains IFN-\u03b3 production in testicular and epididymal inflammation, preventing autoimmune-mediated organ damage.",
+   "pubtype": [
+    "Journal Article"
+   ]
   }
  ]
 }

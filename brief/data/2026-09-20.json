@@ -584,7 +584,10 @@
     "vaccine",
     "immunotherapy"
    ],
-   "why": "Matches this issue's focus areas: vaccine, immunotherapy."
+   "why": "Acid-responsive metal-coordinated nanoshells on bacterial OMVs enable cytosolic antigen cross-presentation, prevent CD8+ T cell exhaustion, and reduce endotoxin toxicity in chronic infection models.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42752133",
@@ -599,7 +602,10 @@
    "hits": [
     "crispr"
    ],
-   "why": "Matches this issue's focus areas: crispr."
+   "why": "Noncontiguous RNA-guide recognition precedes canonical base-pairing in the evolutionary origin of CRISPR-Cas adaptive immunity.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42749812",
@@ -614,7 +620,10 @@
    "hits": [
     "organoid"
    ],
-   "why": "Matches this issue's focus areas: organoid."
+   "why": "Human stem cell-derived cortical organoids can replace depleted mouse neocortex, integrate functionally, and enable behavioural phenotyping of human neural circuits in vivo.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42736414",
@@ -629,7 +638,10 @@
    "hits": [
     "nanopore"
    ],
-   "why": "Matches this issue's focus areas: nanopore."
+   "why": "Engineered MspA-FPBA nanopore simultaneously identifies amino acids, nucleotides, saccharides, and peptides with 98.7% accuracy using machine learning classification.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42743921",
@@ -644,7 +656,10 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Matches this issue's focus areas: single-cell."
+   "why": "Tumor-reactive CD8+ T cells reinvigorate from exhaustion during TIL ex vivo expansion with lineage-dependent CD4+ changes; type 17 and regulatory T cell expansion associate with non-response.",
+   "pubtype": [
+    "Journal Article"
+   ]
   }
  ],
  "also": [
@@ -659,7 +674,10 @@
    "field": "Virology",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of the covered fields."
+   "why": "Programmed ribosomal frameshifting activates the GCN2 stress pathway through DRG1 and IGF2BP3 to suppress host protein synthesis and enable viral replication across multiple RNA viruses.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42760507",
@@ -674,7 +692,10 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Matches this issue's focus areas: single-cell."
+   "why": "CD74 expression level predicts osteogenic differentiation capacity of bone marrow mesenchymal stem cells and may explain variable clinical outcomes after transplantation.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42759501",
@@ -689,7 +710,10 @@
    "hits": [
     "organoid"
    ],
-   "why": "Matches this issue's focus areas: organoid."
+   "why": "Bidirectional Wnt signaling coordinates peripheral and central nervous system fate specification, enabling disease phenotyping and teratogenicity screening in self-organizing organoids.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42754741",
@@ -704,7 +728,10 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Matches this issue's focus areas: single-cell."
+   "why": "Clonal CD8+ T cell differentiation into tissue-resident memory phenotypes at epithelial injury sites drives severe graft-versus-host disease pathology.",
+   "pubtype": [
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42755487",
@@ -719,7 +746,11 @@
    "hits": [
     "immunotherapy"
    ],
-   "why": "Matches this issue's focus areas: immunotherapy."
+   "why": "Metabolite-centered mechanisms are replacing microbiome composition as the focus for enhancing cancer immunotherapy response through gut-derived mediators.",
+   "pubtype": [
+    "Evidence Synthesis",
+    "Journal Article"
+   ]
   },
   {
    "pmid": "42755045",
@@ -734,7 +765,10 @@
    "hits": [
     "canine"
    ],
-   "why": "Matches this issue's focus areas: canine."
+   "why": "High-frequency ultrasound reliably localizes carpal swelling by compartment and characterizes soft tissue abnormalities, establishing radiography-plus-ultrasound as first-line canine carpal imaging.",
+   "pubtype": [
+    "Journal Article"
+   ]
   }
  ]
 }
