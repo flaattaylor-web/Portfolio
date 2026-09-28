@@ -55,6 +55,12 @@ jobs:
           # forcing is manual-only: it is how you re-run a week on purpose, and
           # how you test the email path once an issue is already committed.
           BRIEF_FORCE: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
+          # Optional. With BRIEF_LLM_KEY unset, the paper blurbs fall back to
+          # deterministic_why() -- article type, venue standing, topic -- and
+          # the build neither calls out nor fails. Set it to get one sentence
+          # of field significance written from each abstract.
+          BRIEF_LLM_KEY: ${{ secrets.BRIEF_LLM_KEY }}
+          BRIEF_LLM_MODEL: ${{ vars.BRIEF_LLM_MODEL }}
         run: python scripts/build_brief.py
 
       # The email goes out before the commit, not after. The commit is what

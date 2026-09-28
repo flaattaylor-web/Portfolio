@@ -444,7 +444,10 @@ def llm_significance(rows, abstracts):
     if not key:
         print("  significance: BRIEF_LLM_KEY unset, keeping deterministic lines")
         return 0
-    model = os.environ.get("BRIEF_LLM_MODEL", "claude-3-5-haiku-latest").strip()
+    # Pinned snapshot, not the claude-haiku-4-5 alias: an alias silently
+    # migrates to a new snapshot, and a weekly unattended build should not
+    # change model underneath you. Override with the BRIEF_LLM_MODEL variable.
+    model = os.environ.get("BRIEF_LLM_MODEL", "claude-haiku-4-5-20251001").strip()
     written = 0
     for row in rows:
         abstract = abstracts.get(row["pmid"], "")
@@ -466,8 +469,10 @@ def llm_significance(rows, abstracts):
             with urllib.request.urlopen(req, timeout=60) as resp:
                 body = json.loads(resp.read())
         except Exception as exc:         # noqa: BLE001 - keep the fallback line
-            print(f"  ! significance {row['pmid']}: {type(exc).__name__}: {exc}",
-                  file=sys.stderr)
+            # Name the model: a wrong or retired id is the likeliest cause, and
+            # it fails silently into the deterministic line otherwise.
+            print(f"  ! significance {row['pmid']} (model {model}): "
+                  f"{type(exc).__name__}: {exc}", file=sys.stderr)
             continue
         text = "".join(b.get("text", "") for b in body.get("content", [])).strip()
         text = text.strip('"').strip()
