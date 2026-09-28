@@ -36,9 +36,12 @@ API_VERSION = "2026-04-01"
 
 # Gmail appends a "[Message clipped] View entire message" link above this size
 # and hides everything past it, which on a full issue means the last sections
-# and the footer. The body below is only the content well: Buttondown's Header
-# and Footer blocks wrap it on send and are not visible to this script, so
-# allow for them before comparing. Measured at 4.0 kB + 6.1 kB.
+# and the footer. The body below is only the content well: Buttondown wraps it
+# on send with things this script cannot see, so allow for them before
+# comparing. The allowance covers the pasted Header and Footer blocks -- 2.5 kB
+# and 4.0 kB once flattened for the Markdown field -- plus Buttondown's own
+# injected "did someone forward you this" and unsubscribe blocks, rounded up.
+# Deliberately generous: warning early is cheap, clipping silently is not.
 CLIP_BYTES = 102_000
 CHROME_BYTES = 10_500
 
