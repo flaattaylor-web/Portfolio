@@ -34,6 +34,14 @@ from send_brief import render_html
 API = "https://api.buttondown.com/v1"
 API_VERSION = "2026-04-01"
 
+# Gmail appends a "[Message clipped] View entire message" link above this size
+# and hides everything past it, which on a full issue means the last sections
+# and the footer. The body below is only the content well: Buttondown's Header
+# and Footer blocks wrap it on send and are not visible to this script, so
+# allow for them before comparing. Measured at 4.0 kB + 6.1 kB.
+CLIP_BYTES = 102_000
+CHROME_BYTES = 10_500
+
 
 def call(method, path, key, payload=None):
     data = json.dumps(payload).encode() if payload is not None else None
@@ -68,11 +76,19 @@ def main():
 
     body = render_html(issue)
     if body.lstrip().startswith("---"):
-        # Buttondown reads a leading --- as front matter; ours starts with a
-        # doctype, so this is a guard against a future template change.
+        # Buttondown reads a leading --- as front matter; ours opens with a
+        # hidden preheader div, so this guards a future template change.
         print("body starts with ---, which Buttondown would parse as front "
               "matter; refusing to send", file=sys.stderr)
         return 1
+
+    size = len(body.encode())
+    if size + CHROME_BYTES > CLIP_BYTES:
+        print(f"warning: body is {size} bytes and Buttondown adds about "
+              f"{CHROME_BYTES} more, which puts this issue over Gmail's "
+              f"roughly {CLIP_BYTES}-byte clip threshold; the tail of the "
+              f"issue will be hidden behind a 'view entire message' link",
+              file=sys.stderr)
 
     draft = call("POST", "/emails", key, {
         "subject": f'The Monday Brief - {issue["window_label"]}',

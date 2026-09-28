@@ -1,45 +1,89 @@
 """Weekly biotech/pharma/academia digest -> email-safe HTML.
 
-Reusable: feed it the handoff JSONs produced by the collection cells and it
-returns a single self-contained, inline-styled HTML document that renders in
-Gmail as well as in a browser.
-"""
-import html, json
+Feed it the handoff JSONs produced by the collection cells and it returns the
+issue's **content well**: an inline-styled HTML fragment, 680px wide, with no
+<html>, <head> or <body> of its own.
 
-INK      = "#10233b"
-MUTED    = "#5c6b7a"
-ACCENT   = "#0b6b5b"
-ACCENT2  = "#b8531a"
-RULE     = "#e3e6ea"
-PAPER    = "#ffffff"
-CANVAS   = "#f2f1ec"
-CHIP_BG  = "#eef4f2"
+The masthead and the sign-off footer are NOT here. They live in Buttondown
+under Design > Email > Header and Footer, which wrap this fragment on send,
+and are styled to match taylorflaat.com. Two consequences worth knowing:
+
+* Styling is inline because Outlook desktop and the Gmail app drop <style>
+  blocks. Buttondown's Email CSS field only refines what it renders itself.
+* The Gmail SMTP fallback in send_brief.py gets no masthead or footer, since
+  nothing wraps the fragment on that path. Fix that before relying on it.
+"""
+import html, json, re
+
+# Palette lifted from taylorflaat.com. The site's four accent hues are its
+# --A/--C/--G/--T variables -- the DNA bases -- and they drive the section
+# rotation below. The dark chrome lives in the Buttondown header and footer;
+# here each base is darkened to clear 4.5:1 against white.
+A        = "#1D8664"   # adenine   <- site --A #3BE8B0
+C        = "#1A73E8"   # cytosine  <- site --C #4F9BFF
+G        = "#967019"   # guanine   <- site --G #F0B429
+T        = "#E81B37"   # thymine   <- site --T #FF5D73
+BASES    = (A, C, G, T)
+
+INK      = "#101A2E"   # headings
+BODY     = "#3D4A63"   # body copy
+MUTED    = "#697691"   # metadata and source lines
+ACCENT   = "#0F8297"   # site --signal-1 #38E1FF, darkened for white
+ACCENT2  = "#7161EF"   # site --signal-2 #7C6CFF, darkened for white
+RULE     = "#DCE2EC"
+RULE_2   = "#EAEEF5"
+PAPER    = "#FFFFFF"
+PAPER_2  = "#F7F9FC"
+CANVAS   = "#EDF0F6"   # must match the Buttondown header/footer ground
+CHIP_BG  = "#F7F9FC"
+
+# Mail clients do not fetch webfonts, so these degrade to an OS face. Keep the
+# stacks SHORT: each one is repeated inline a hundred-plus times per issue, and
+# a long stack costs several kB against Gmail's clip threshold. The site's real
+# three (Inter, Space Grotesk, JetBrains Mono) do load on the archive page.
 FONT     = "Helvetica,Arial,sans-serif"
-SERIF    = "Georgia,serif"
+DISPLAY  = "'Space Grotesk',Helvetica,Arial,sans-serif"
+MONO     = "Consolas,monospace"
+
+
+def base(i):
+    """Section accent, cycling adenine, cytosine, guanine, thymine."""
+    return BASES[(i - 1) % 4]
 
 
 def e(s):
     return html.escape(str(s or ""), quote=True)
 
 
+def squeeze(s):
+    """Strip the template's own indentation from the rendered fragment.
+
+    A full issue runs close to Gmail's ~102 kB clip threshold, and Buttondown's
+    header and footer take roughly 10 kB of that before this fragment starts.
+    Only whitespace runs containing a newline are touched, so single spaces
+    between inline elements -- which separate words -- are left alone.
+    """
+    s = re.sub(r">\s*\n\s*<", "><", s)
+    return re.sub(r"\s*\n\s*", " ", s).strip()
+
+
 def chip(text, bg=CHIP_BG, fg=ACCENT):
-    return (f'<span style="display:inline-block;background:{bg};color:{fg};font:600 10px/1 {FONT};'
-            f'letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:3px;'
+    return (f'<span style="display:inline-block;background:{bg};color:{fg};font:500 9.5px/1 {MONO};'
+            f'letter-spacing:.14em;text-transform:uppercase;padding:5px 9px;border-radius:999px;'
             f'white-space:nowrap;">{e(text)}</span>')
 
 
 def section(num, title, subtitle=""):
-    sub = (f'<div style="font:400 12px/1.5 {FONT};color:{MUTED};padding-top:3px;">{e(subtitle)}</div>'
-           if subtitle else "")
+    hue = base(num)
+    sub = (f'<div style="font:400 12.5px/1.6 {FONT};color:{MUTED};padding-left:16px;'
+           f'padding-top:7px;">{e(subtitle)}</div>' if subtitle else "")
     return f"""
-    <tr><td style="padding:34px 32px 10px 32px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-        <td width="34" valign="top" style="font:700 22px/1 {SERIF};color:{ACCENT};">{num:02d}</td>
-        <td valign="top" style="border-bottom:2px solid {INK};padding-bottom:8px;">
-          <div style="font:700 15px/1.2 {FONT};color:{INK};letter-spacing:.1em;text-transform:uppercase;">{e(title)}</div>
-          {sub}
-        </td>
-      </tr></table>
+    <tr><td style="padding:30px 32px 0 32px;">
+      <div style="font:700 10px/1 {MONO};color:{hue};letter-spacing:.22em;
+                  text-transform:uppercase;padding-bottom:10px;">{num:02d}</div>
+      <div style="font:700 21px/1.24 {DISPLAY};color:{INK};letter-spacing:-.4px;
+                  border-left:3px solid {hue};padding-left:13px;">{e(title)}</div>
+      {sub}
     </td></tr>"""
 
 
@@ -47,53 +91,57 @@ def paper_card(i, c):
     meta = " · ".join(x for x in [c.get("journal"), c.get("date"), c.get("authors")] if x)
     doi = (f' &nbsp;<a href="https://doi.org/{e(c["doi"])}" style="color:{MUTED};text-decoration:none;">doi</a>'
            if c.get("doi") else "")
-    why = (f'<div style="margin-top:9px;border-left:3px solid {ACCENT};background:{CHIP_BG};'
-           f'padding:9px 12px;font:400 13px/1.55 {FONT};color:{INK};">'
-           f'<strong style="color:{ACCENT};">Why it matters:</strong> {e(c["why"])}</div>') if c.get("why") else ""
+    hue = base(i)
+    why = (f'<div style="margin-top:11px;padding-top:10px;border-top:1px solid {RULE_2};'
+           f'font:400 12.5px/1.6 {FONT};color:{BODY};">'
+           f'<strong style="color:{INK};">Why it matters:</strong> {e(c["why"])}</div>') if c.get("why") else ""
     return f"""
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-             style="margin-bottom:18px;border:1px solid {RULE};border-radius:5px;">
-        <tr><td style="padding:16px 18px;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-            <td valign="top" width="30" style="font:700 19px/1 {SERIF};color:{ACCENT2};padding-top:1px;">{i}</td>
-            <td valign="top">
-              {chip(c.get("field",""))}
-              <div style="font:600 16px/1.4 {SERIF};color:{INK};margin:9px 0 5px;">
+             style="margin-bottom:12px;background:{PAPER_2};border:1px solid {RULE};border-radius:8px;">
+        <tr>
+          <td width="3" style="width:3px;line-height:1px;font-size:1px;
+                               background:{hue};border-radius:8px 0 0 8px;">&nbsp;</td>
+          <td style="padding:15px 17px;">
+            <div style="font:400 10px/1 {MONO};color:{MUTED};letter-spacing:.16em;
+                        text-transform:uppercase;padding-bottom:8px;">
+              <span style="color:{hue};font-weight:700;">{i:02d}</span>&nbsp;&nbsp;{e(c.get("field",""))}</div>
+              <div style="font:600 15px/1.36 {DISPLAY};color:{INK};letter-spacing:-.15px;margin:0 0 8px;">
                 <a href="{e(c["url"])}" style="color:{INK};text-decoration:none;">{e(c["title"])}</a></div>
-              <div style="font:400 11px/1.5 {FONT};color:{MUTED};">{e(meta)}</div>
+              <div style="font:400 10.5px/1.6 {MONO};color:{MUTED};">{e(meta)}</div>
               {why}
-              <div style="margin-top:9px;font:600 11px/1 {FONT};letter-spacing:.06em;">
+              <div style="margin-top:10px;font:500 10.5px/1 {MONO};letter-spacing:.1em;">
                 <a href="{e(c["url"])}" style="color:{ACCENT};text-decoration:none;">PubMed {e(c["pmid"])} &rarr;</a>{doi}</div>
-            </td>
-          </tr></table>
-        </td></tr>
+          </td>
+        </tr>
       </table>"""
 
 
 def news_row(it, rank=None, show_reach=False):
-    lead = (f'<td valign="top" width="30" style="font:700 17px/1.2 {SERIF};color:{ACCENT2};">{rank}</td>'
-            if rank else "")
-    angle = (f'<div style="margin-top:7px;font:italic 400 12.5px/1.55 {FONT};color:{ACCENT};">'
-             f'&#9656; {e(it["angle"])}</div>') if it.get("angle") else ""
+    hue = base(rank) if rank else ACCENT
+    lead = (f'<td valign="top" width="28" style="width:28px;font:700 11px/1.55 {MONO};'
+            f'color:{hue};padding-top:2px;">{rank:02d}</td>' if rank else "")
+    angle = (f'<div style="margin-top:7px;font:400 12.5px/1.55 {FONT};color:{BODY};'
+             f'border-left:2px solid {RULE};padding-left:9px;">'
+             f'{e(it["angle"])}</div>') if it.get("angle") else ""
     reach = ""
     if show_reach and it.get("n_outlets"):
-        reach = chip(f'{it["n_outlets"]} outlets', bg="#fdf1e7", fg=ACCENT2)
+        reach = chip(f'{it["n_outlets"]} outlets', bg=PAPER_2, fg=hue)
     tag = chip(it["tag"]) if it.get("tag") else ""
     tags = (f'<div style="margin-bottom:8px;">{reach}{"&nbsp;" if reach and tag else ""}{tag}</div>'
             if (reach or tag) else "")
     return f"""
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-             style="border-bottom:1px solid {RULE};">
-        <tr><td style="padding:15px 0;">
+             style="border-bottom:1px solid {RULE_2};">
+        <tr><td style="padding:14px 0;">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
             {lead}
             <td valign="top">
               {tags}
-              <div style="font:600 15px/1.4 {FONT};color:{INK};">
-                <a href="{e(it["link"])}" style="color:{INK};text-decoration:none;">{e(it["headline"])}</a></div>
-              <div style="margin-top:5px;font:400 13.5px/1.6 {FONT};color:#3b4a5a;">{e(it.get("line",""))}</div>
+              <div style="font:500 13.5px/1.5 {FONT};">
+                <a href="{e(it["link"])}" style="color:{C};text-decoration:none;">{e(it["headline"])}</a></div>
+              <div style="margin-top:5px;font:400 13px/1.6 {FONT};color:{BODY};">{e(it.get("line",""))}</div>
               {angle}
-              <div style="margin-top:7px;font:400 11px/1 {FONT};color:{MUTED};letter-spacing:.03em;">
+              <div style="margin-top:6px;font:400 10.5px/1.6 {MONO};color:{MUTED};">
                 {e(it.get("outlet",""))} &nbsp;·&nbsp; {e(it.get("date",""))}</div>
             </td>
           </tr></table>
@@ -106,18 +154,22 @@ def radar_block(radar):
         return (f'<div style="font:400 13px/1.6 {FONT};color:{MUTED};">No coverage of the tracked '
                 f'companies in this window.</div>')
     out = []
-    for co, hits in radar.items():
+    for n, (co, hits) in enumerate(radar.items(), 1):
+        hue = base(n)
         rows = "".join(
-            f'<div style="padding:7px 0 0 0;font:400 13px/1.5 {FONT};color:#3b4a5a;">'
-            f'<a href="{e(h["l"])}" style="color:{INK};text-decoration:none;">{e(h["t"])}</a>'
-            f'<span style="color:{MUTED};font-size:11px;"> &nbsp;{e(h["s"])} · {e(h["d"])}</span></div>'
+            f'<div style="padding:9px 0 0 0;">'
+            f'<a href="{e(h["l"])}" style="font:400 12.5px/1.5 {FONT};'
+            f'color:{C};text-decoration:none;">{e(h["t"])}</a>'
+            f'<div style="font:400 10px/1.5 {MONO};color:{MUTED};padding-top:2px;">'
+            f'{e(h["s"])} &middot; {e(h["d"])}</div></div>'
             for h in hits)
         out.append(
             f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
-            f'style="margin-bottom:12px;background:{CHIP_BG};border-radius:5px;">'
-            f'<tr><td style="padding:12px 14px;border-left:3px solid {ACCENT2};">'
-            f'<div style="font:700 12px/1 {FONT};color:{INK};letter-spacing:.09em;text-transform:uppercase;">'
-            f'{e(co)}</div>{rows}</td></tr></table>')
+            f'style="margin-bottom:11px;background:{PAPER_2};border:1px solid {RULE};border-radius:8px;">'
+            f'<tr><td style="padding:14px 16px;">'
+            f'<div style="font:700 13px/1 {DISPLAY};color:{INK};letter-spacing:-.1px;">'
+            f'<span style="display:inline-block;width:6px;height:6px;border-radius:999px;'
+            f'background:{hue};margin-right:7px;"></span>{e(co)}</div>{rows}</td></tr></table>')
     return "".join(out)
 
 
@@ -138,14 +190,14 @@ def build(*, issue, window, papers, picked, radar, tracked, counts, generated):
 
     also_rows = "".join(
         f'<tr>'
-        f'<td valign="top" style="padding:11px 10px 11px 0;border-bottom:1px solid {RULE};width:130px;">'
+        f'<td valign="top" style="padding:11px 10px 11px 0;border-bottom:1px solid {RULE_2};width:130px;">'
         f'{chip(c["field"])}</td>'
-        f'<td valign="top" style="padding:11px 0;border-bottom:1px solid {RULE};">'
-        f'<div style="font:600 14px/1.45 {SERIF};color:{INK};">'
+        f'<td valign="top" style="padding:11px 0;border-bottom:1px solid {RULE_2};">'
+        f'<div style="font:600 14px/1.45 {DISPLAY};color:{INK};letter-spacing:-.1px;">'
         f'<a href="{e(c["url"])}" style="color:{INK};text-decoration:none;">{e(c["title"])}</a></div>'
-        f'<div style="margin-top:4px;font:400 11px/1.5 {FONT};color:{MUTED};">'
-        f'{e(c["journal"])} · {e(c["date"])} · PMID {e(c["pmid"])}</div>'
-        f'<div style="margin-top:5px;font:400 12.5px/1.55 {FONT};color:{ACCENT};">{e(c["why"])}</div>'
+        f'<div style="margin-top:4px;font:400 10.5px/1.5 {MONO};color:{MUTED};">'
+        f'{e(c["journal"])} &middot; {e(c["date"])} &middot; PMID {e(c["pmid"])}</div>'
+        f'<div style="margin-top:5px;font:400 12.5px/1.55 {FONT};color:{BODY};">{e(c["why"])}</div>'
         f'</td></tr>'
         for c in papers["per_field"])
 
@@ -195,63 +247,58 @@ def build(*, issue, window, papers, picked, radar, tracked, counts, generated):
     <tr><td style="padding:0 32px 10px 32px;">{block("platform")}</td></tr>
     """
 
-    return f"""<!DOCTYPE html>
-<html><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Monday Brief &mdash; {e(window)}</title></head>
-<body style="margin:0;padding:0;background:{CANVAS};">
-<div style="display:none;max-height:0;overflow:hidden;">{e(counts['headline_preview'])}</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:{CANVAS};">
-<tr><td align="center" style="padding:22px 12px;">
-<table role="presentation" width="680" cellpadding="0" cellspacing="0" border="0"
-       style="width:680px;max-width:680px;background:{PAPER};border-radius:7px;overflow:hidden;
-              box-shadow:0 1px 3px rgba(16,35,59,.10);">
+    stats = [(counts['news'], "headlines screened"),
+             (counts['papers'], "papers assessed"),
+             (counts['clusters'], "multi-outlet stories"),
+             (len(radar), "watchlist hits")]
+    statcells = "".join(
+        f'<td width="25%" align="center" style="padding:0 4px;">'
+        f'<div style="font:700 22px/1 {DISPLAY};color:{base(n)};letter-spacing:-.5px;">{v}</div>'
+        f'<div style="font:400 9px/1.4 {MONO};color:{MUTED};letter-spacing:.1em;'
+        f'text-transform:uppercase;padding-top:6px;">{k}</div></td>'
+        for n, (v, k) in enumerate(stats, 1))
 
-  <tr><td style="background:{INK};padding:26px 32px 22px 32px;">
-    <div style="font:400 10px/1 {FONT};color:#8fa6bd;letter-spacing:.22em;text-transform:uppercase;">
-      Issue {e(issue)} &nbsp;·&nbsp; Biotech &middot; Pharma &middot; Academia</div>
-    <div style="font:700 33px/1.1 {SERIF};color:#ffffff;letter-spacing:-.4px;margin:10px 0 0;">
-      The Monday Brief</div>
-    <div style="font:400 13px/1.5 {FONT};color:#b9c9d8;margin-top:7px;">
-      Week in review &nbsp;·&nbsp; {e(window)}</div>
-    <div style="margin-top:16px;padding-top:14px;border-top:1px solid #23395c;
-                font:400 11px/1.7 {FONT};color:#8fa6bd;">{nav}</div>
+    # The masthead and the sign-off footer now live in Buttondown's Header and
+    # Footer blocks, so this returns the content well only -- no <html>, no
+    # <body>, no wordmark. The issue number and date window moved in here
+    # because a static Buttondown header cannot carry per-issue values.
+    return squeeze(f"""<div style="display:none;max-height:0;overflow:hidden;">{e(counts['headline_preview'])}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:{CANVAS};">
+<tr><td align="center" style="padding:0 12px;">
+<table role="presentation" width="680" cellpadding="0" cellspacing="0" border="0"
+       style="width:680px;max-width:680px;background:{PAPER};">
+
+  <tr><td style="padding:26px 32px 0 32px;">
+    <div style="font:400 10px/1 {MONO};color:{MUTED};letter-spacing:.22em;text-transform:uppercase;">
+      <span style="color:{ACCENT};font-weight:700;">{e(issue)}</span>&nbsp;&nbsp;Week in review</div>
+    <div style="font:700 27px/1.16 {DISPLAY};color:{INK};letter-spacing:-.7px;margin:11px 0 0;">
+      {e(window)}</div>
+    <div style="margin-top:12px;padding-top:11px;border-top:1px solid {RULE_2};
+                font:400 10.5px/1.8 {MONO};color:{MUTED};">{nav}</div>
   </td></tr>
 
-  <tr><td style="padding:20px 32px 4px 32px;background:#fbfbf9;border-bottom:1px solid {RULE};">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td style="font:400 12px/1.7 {FONT};color:{MUTED};">
-        <strong style="color:{INK};">This issue:</strong>
-        {counts['news']} headlines screened across 10 topic feeds &nbsp;·&nbsp;
-        {counts['papers']} newly indexed papers assessed &nbsp;·&nbsp;
-        {counts['clusters']} stories cross-checked for multi-outlet pickup
-        <div style="margin-top:7px;color:#8794a3;font-size:11px;">
-          &ldquo;Most-shared&rdquo; ranks by how many independent outlets ran a story. X and LinkedIn expose no
-          engagement data to this pipeline, so no post-level virality is claimed.
-        </div>
-      </td></tr></table>
+  <tr><td style="padding:20px 32px 0 32px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           style="background:{PAPER_2};border:1px solid {RULE};border-radius:8px;">
+      <tr><td style="padding:17px 10px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>{statcells}</tr></table>
+      </td></tr>
+      <tr><td style="padding:0 18px 15px 18px;font:400 11px/1.65 {FONT};color:{MUTED};">
+        &ldquo;Most-shared&rdquo; ranks by how many independent outlets ran a story. X and LinkedIn expose no
+        engagement data to this pipeline, so no post-level virality is claimed.
+      </td></tr>
+    </table>
   </td></tr>
 
   {body}
 
-  <tr><td style="padding:26px 32px 30px 32px;background:#fbfbf9;border-top:1px solid {RULE};">
-    <div style="font:700 11px/1 {FONT};color:{INK};letter-spacing:.1em;text-transform:uppercase;">
-      How this was built</div>
-    <div style="margin-top:9px;font:400 11.5px/1.7 {FONT};color:{MUTED};">
-      Papers: PubMed, entry date {e(window)}, screened across virology, molecular biology, cell biology,
-      NGS/genomics, oncology and veterinary medicine, then ranked on journal tier and topical fit. Publication
-      dates can predate the indexing window. News: ten topic feeds over the same window, de-duplicated, with
-      stock-promotion and aggregator content dropped. &ldquo;Most-shared&rdquo; is measured as the number of
-      independent outlets that ran the same story &mdash; X and LinkedIn expose no engagement data to this
-      pipeline, so cross-outlet pickup is the reach proxy and no post-level virality is claimed. Every headline
-      links to its source; nothing is paraphrased beyond the outlet&rsquo;s own summary.
-    </div>
-    <div style="margin-top:14px;padding-top:12px;border-top:1px solid {RULE};
-                font:400 11px/1.6 {FONT};color:#8794a3;">
-      Generated {e(generated)} &nbsp;·&nbsp; Next issue Monday.
+  <tr><td style="padding:24px 32px 30px 32px;">
+    <div style="padding-top:14px;border-top:1px solid {RULE_2};
+                font:400 10.5px/1.7 {MONO};color:{MUTED};">
+      Generated {e(generated)} &nbsp;&middot;&nbsp; Next issue Monday.
     </div>
   </td></tr>
 
 </table>
-</td></tr></table>
-</body></html>"""
+</td></tr></table>""")
