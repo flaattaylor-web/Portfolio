@@ -4,9 +4,9 @@
  "window_label": "21 \u2013 27 September 2026",
  "generated": "2026-09-28",
  "counts": {
-  "news": 661,
-  "papers": 221,
-  "clusters": 57,
+  "news": 633,
+  "papers": 231,
+  "clusters": 52,
   "radar": 9
  },
  "picked": {
@@ -21,12 +21,29 @@
     "cat": "drugs",
     "n_outlets": 7,
     "outlets": [
-     "Beyond Type 1",
      "Eli Lilly",
      "LiveNOW from FOX",
      "PR Newswire",
+     "Patient Care Online",
      "Pharmacy Times",
      "Reuters"
+    ]
+   },
+   {
+    "title": "The next Alnylam? RNAi biotech City Therapeutics files for IPO - Endpoints News",
+    "clean": "The next Alnylam? RNAi biotech City Therapeutics files for IPO",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMzlibEVDVjN0a1h5YVk0T1dHODNlemhucUZWM09DeDhNMmRtWDU1OXo5dzFSOGlESEdMaG1WVTB6TU9hSHlUbWxCdGhFOENQWWxvM0dqM1ktWk9wWnNzZnp1SmZrWnFBamQyNFlQMjRHb0NQb2pWdVBWR1doMDRGMldVLUVlc3JzZk9fX2huck4?oc=5",
+    "source": "Endpoints News",
+    "desc": " The next Alnylam? RNAi biotech City Therapeutics files for IPO &nbsp;&nbsp; Endpoints News ",
+    "date": "2026-09-25",
+    "cat": "funding",
+    "n_outlets": 5,
+    "outlets": [
+     "AOL.ca",
+     "Endpoints News",
+     "Investing.com",
+     "The Lufkin Daily News",
+     "TradingView"
     ]
    },
    {
@@ -39,26 +56,10 @@
     "cat": "drugs",
     "n_outlets": 4,
     "outlets": [
-     "Cure Today",
      "OncLive",
      "Oncology News Central",
-     "Pharmaceutical Executive"
-    ]
-   },
-   {
-    "title": "Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters - Investing.com",
-    "clean": "Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters",
-    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd3hpR3FtVWdSclpmQ0ZaMTVJeU5aSjNSbHJQaXJyTGZnNUNRcFJaaDVPNTZaVGJ3UHljUVVpVm02eHhwOG02WTlOcTB0dlpYUFhKbE5MTjQ2RWlrWkZCUDF1THJNSVNtOFVHb21BNzc2SkRwTlZ5SHQzRnFJZjBuWVMteVZtaVpaZ29GRDBpMFNSQzhXTUpWUW81TU50dXF0c1RCR2N0am1XdGltb2oxWDZMaTFFWUZPblJUVmNYbU43UW1qOUpyTjNR?oc=5",
-    "source": "Investing.com",
-    "desc": " Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters &nbsp;&nbsp; Investing.com ",
-    "date": "2026-09-21",
-    "cat": "funding",
-    "n_outlets": 4,
-    "outlets": [
-     "AOL.ca",
-     "CNA",
-     "Investing.com",
-     "Voice of Healthcare"
+     "Pharmaceutical Executive",
+     "curetoday.com"
     ]
    },
    {
@@ -80,17 +81,17 @@
    {
     "title": "FDA Approves Lirafugratinib for Previously Treated, Unresectable, Locally Advanced or Metastatic Cholangiocarcinoma - The ASCO Post",
     "clean": "FDA Approves Lirafugratinib for Previously Treated, Unresectable, Locally Advanced or Metastatic Cholangiocarcinoma",
-    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZVpLU3NYV0pIMHJrYnhuaTZERVY3NGUwb2dITWJ4dzI2NEVBTjZ5N0hjZUxCT1hmaDVGTWRsMERTOGZwZUtSaUNBMkZtU0xNN1NPMm5lbjdtQ1hSTm1kak56VFJEcGNWWS05OE1XX0pVd1VqQWpETG5rNUw0TnV4azladUlCUWNQVVljbkw0S090eWtUSVlwZWVneHlzRVVRd2JRSW5VTUY1VHNxcXZwYVl6VFI4aFBRRVdtTFpSWmpTUk9ubDlyNk1RVVp0bWluU3k0MC1LSQ?oc=5",
+    "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQNm80QkVPdVJWQXBSenQtR3BOcDRmTE5KRzlVOXBKZWZNSkVIanlkRWRnRFlnUkdvdkU4TTJIZV9OZ2tNOVNZRHkyS3hoLUNFem11QzYwU3U0WC1RZUNYOGdBYXRxS0M5MTl1Tm9jbm5WVjF0WjdBaFllMW9LYXN6dlAzUWZTWm1YZ3V6Nk9zUWFpbGVTSEpOd21ReHd2OVgxcy0zYnpsWi1VckVVWmJ1VlIyZjBJSWFWSFBiV1luOFZRdGp4SUJNcFFYTEZWQTRlTm14ZGlMc1ZvazJOcGViTW54ZFM1Y1pVN1k0?oc=5",
     "source": "The ASCO Post",
     "desc": " FDA Approves Lirafugratinib for Previously Treated, Unresectable, Locally Advanced or Metastatic Cholangiocarcinoma &nbsp;&nbsp; The ASCO Post ",
-    "date": "2026-09-24",
+    "date": "2026-09-23",
     "cat": "drugs",
     "n_outlets": 4,
     "outlets": [
      "OncLive",
      "Pharmacy Times",
-     "Targeted Oncology",
-     "The ASCO Post"
+     "The ASCO Post",
+     "curetoday.com"
     ]
    },
    {
@@ -122,39 +123,37 @@
      "Dermatology Times",
      "HCPLive",
      "PR Newswire",
-     "clinicaltrialvanguard.com"
+     "The Clinical Trial Vanguard"
     ]
    },
    {
-    "title": "ADARx Pharmaceuticals raises $446.3 million in upsized US IPO - Yahoo Finance Singapore",
-    "clean": "ADARx Pharmaceuticals raises $446.3 million in upsized US IPO",
-    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONm96T0htaE95dElOWHFwVUl1dmYyVUNNbzFsM2Q3S2NvSENHeVNJQS14X253SXVlRFpBRUluOFFqQnFEQ0RzU1RrRnFYLTVNRzhJTVlSOFNJTVZDRUd4QXhScTRfbEkyYk9FekRTbmZJZDRPTGRNbzJZRWE1TndId3R0UTl0OFJadE84?oc=5",
-    "source": "Yahoo Finance Singapore",
-    "desc": " ADARx Pharmaceuticals raises $446.3 million in upsized US IPO &nbsp;&nbsp; Yahoo Finance Singapore ",
-    "date": "2026-09-25",
+    "title": "FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma - Oncology Nursing News",
+    "clean": "FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUHVsMmRhbzc0MEdKdkFmVzhKWXFMdGZ0MlY2TGQwNENNQUdFdnk3NGhDelBrY0k1WVhWbm9PUm9YWndyczJ1b1VRd00zUGFDb1liQ3lRNW1pbnhWNkpZQV9keXo4Q0cxSndWQ3RlLXV4N2dHWWc2WGtCbWhxSGcyLTNqZEhvSFl1ZXJNUGkxYlNZOWR2aGNyQS00TTBCd2NZUzBV?oc=5",
+    "source": "Oncology Nursing News",
+    "desc": " FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma &nbsp;&nbsp; Oncology Nursing News ",
+    "date": "2026-09-23",
+    "cat": "drugs",
+    "n_outlets": 3,
+    "outlets": [
+     "Oncology News Central",
+     "Oncology Nursing News",
+     "Targeted Oncology"
+    ]
+   },
+   {
+    "title": "Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters - Investing.com",
+    "clean": "Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters",
+    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd3hpR3FtVWdSclpmQ0ZaMTVJeU5aSjNSbHJQaXJyTGZnNUNRcFJaaDVPNTZaVGJ3UHljUVVpVm02eHhwOG02WTlOcTB0dlpYUFhKbE5MTjQ2RWlrWkZCUDF1THJNSVNtOFVHb21BNzc2SkRwTlZ5SHQzRnFJZjBuWVMteVZtaVpaZ29GRDBpMFNSQzhXTUpWUW81TU50dXF0c1RCR2N0am1XdGltb2oxWDZMaTFFWUZPblJUVmNYbU43UW1qOUpyTjNR?oc=5",
+    "source": "Investing.com",
+    "desc": " Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters &nbsp;&nbsp; Investing.com ",
+    "date": "2026-09-21",
     "cat": "funding",
-    "n_outlets": 4,
+    "n_outlets": 3,
     "outlets": [
      "AOL.ca",
-     "WTVB",
-     "Yahoo Finance Singapore",
-     "qz.com"
-    ]
-   },
-   {
-    "title": "The next Alnylam? RNAi biotech City Therapeutics files for IPO - Endpoints News",
-    "clean": "The next Alnylam? RNAi biotech City Therapeutics files for IPO",
-    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMzlibEVDVjN0a1h5YVk0T1dHODNlemhucUZWM09DeDhNMmRtWDU1OXo5dzFSOGlESEdMaG1WVTB6TU9hSHlUbWxCdGhFOENQWWxvM0dqM1ktWk9wWnNzZnp1SmZrWnFBamQyNFlQMjRHb0NQb2pWdVBWR1doMDRGMldVLUVlc3JzZk9fX2huck4?oc=5",
-    "source": "Endpoints News",
-    "desc": " The next Alnylam? RNAi biotech City Therapeutics files for IPO &nbsp;&nbsp; Endpoints News ",
-    "date": "2026-09-25",
-    "cat": "funding",
-    "n_outlets": 4,
-    "outlets": [
-     "Endpoints News",
      "Investing.com",
-     "The Lufkin Daily News",
-     "TradingView"
+     "Voice of Healthcare"
     ]
    },
    {
@@ -175,16 +174,6 @@
   ],
   "funding": [
    {
-    "title": "Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum - Voice of Healthcare",
-    "clean": "Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum",
-    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWHk4eVBheFNyX0ttbmFXeUxFX0dSMGJXSnpsbzI0UVFlWjNhclBwRVdpWHdyNmwxbW0wQmVBTWJMUE5mcURHYTlobnVIMVpTUmt1MkNrYTFsSEpKX24zeXMtdTRUMlRwZHZwUmZTdmQxQ3Z3cldkQkVLOGwwMVVqOFM0OEc0dzNIMGdpS1Z6Z3AwQm4yTkpfNVg1UXFmcksyaEdaaXhxTndYSFNpbFdoc2k2MWlySmc?oc=5",
-    "source": "Voice of Healthcare",
-    "desc": " Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum &nbsp;&nbsp; Voice of Healthcare ",
-    "date": "2026-09-22",
-    "cat": "funding",
-    "n_outlets": 4
-   },
-   {
     "title": "Drug developer City Therapeutics files for US IPO as biotech listings surge - The Lufkin Daily News",
     "clean": "Drug developer City Therapeutics files for US IPO as biotech listings surge",
     "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNdFRRS2FLS0FkNG8tX2w3cW9OUU9kZUx5Q0ItRjdLYU9PdjhnaXRXX1VraXhPVG5KUmg2empLWC1aS3IzSEMzZDFrYVNUVndWdWtDZFp4d25lWVdSSGdtWVVpLU82NEZhWHJua085VTFQZ1hjMURqUjhYLTZucEUtcXNELUh5MllpR01iOHV1dmdZamFsT0ZCV1hKdUo0UjJRNVpZRGx3U0U5Rlk3NjBZQkNnV0ZlVlppWDFXdlk1aHcwc3llRWlUUGF3ZFptTktBaWFmN2FWbnBYRzQxa1BBMFVkYkdtMUtzTlJTV2trbW5pZlZYX0wwTmJQREMybE5jRkc4U2t3?oc=5",
@@ -192,7 +181,7 @@
     "desc": " Drug developer City Therapeutics files for US IPO as biotech listings surge &nbsp;&nbsp; The Lufkin Daily News ",
     "date": "2026-09-24",
     "cat": "funding",
-    "n_outlets": 4
+    "n_outlets": 5
    },
    {
     "title": "City Therapeutics files for US IPO as biotech listings surge - TradingView",
@@ -202,27 +191,37 @@
     "desc": " City Therapeutics files for US IPO as biotech listings surge &nbsp;&nbsp; TradingView ",
     "date": "2026-09-24",
     "cat": "funding",
-    "n_outlets": 4
+    "n_outlets": 5
    },
    {
-    "title": "ADARx Pharmaceuticals raises $446 million in upsized IPO - qz.com",
-    "clean": "ADARx Pharmaceuticals raises $446 million in upsized IPO",
-    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMHJES0VvRzVLQk40Y3Iwb2pvX1h3MC1UVXpmZnZYSExkYzd1S0FiOURRUDNCNE9UQ2tGY1B1RGlhdkNNQXNkanh1SGx0YXRKSU9HZzRtSlp2MEFBdUlLazFqMF9abnR0ZjJrWEg5bzBMRTdIdjR0Mm5GWlVzMzVxenM3M2dTaExDMmJNQnUxNDU0aF9iVHJfWmhGMU1KSy1Mb3BJek1VMlBpUHdSQWg4dXE0eEwyWVVtQkwzak9DTVltdXg0czlhWWpEaUVvTktSUDdhRmxGSQ?oc=5",
-    "source": "qz.com",
-    "desc": " ADARx Pharmaceuticals raises $446 million in upsized IPO &nbsp;&nbsp; qz.com ",
-    "date": "2026-09-25",
+    "title": "Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum - Voice of Healthcare",
+    "clean": "Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum",
+    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWHk4eVBheFNyX0ttbmFXeUxFX0dSMGJXSnpsbzI0UVFlWjNhclBwRVdpWHdyNmwxbW0wQmVBTWJMUE5mcURHYTlobnVIMVpTUmt1MkNrYTFsSEpKX24zeXMtdTRUMlRwZHZwUmZTdmQxQ3Z3cldkQkVLOGwwMVVqOFM0OEc0dzNIMGdpS1Z6Z3AwQm4yTkpfNVg1UXFmcksyaEdaaXhxTndYSFNpbFdoc2k2MWlySmc?oc=5",
+    "source": "Voice of Healthcare",
+    "desc": " Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum &nbsp;&nbsp; Voice of Healthcare ",
+    "date": "2026-09-22",
     "cat": "funding",
-    "n_outlets": 4
+    "n_outlets": 3
    },
    {
-    "title": "ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO - WTVB",
-    "clean": "ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO",
-    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVm5RSlA4LS1ZajJPalVhZkM2LW9XaGV2eG9WX1JSR1ppbElOYTBCdDBtblpxcjFEYm9OcVItYVdPcmxCSHVYRzhfY3pyN296TnQ2cWhNaUhBd0k4eGVDZTJHbHMwYjAxZjJlbDF6bmJobF94YnBhMnp2SDRoYTFvdlNCVUpFcmV5UmlEQUxCM1pSa1hmb0E?oc=5",
-    "source": "WTVB",
-    "desc": " ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO &nbsp;&nbsp; WTVB ",
-    "date": "2026-09-25",
+    "title": "ADARx Targets $1.74B IPO Valuation - Voice of Healthcare",
+    "clean": "ADARx Targets $1.74B IPO Valuation",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNU3V0VjBNdTU4TUthZ1NVdHFIck5SSm8wRXVjdDRWSHFwc2lQaEd4Yzd5THFGVFd4V2xCbjg4Wi1OTEV1VW9DUElFcHl6QmFyWXc3Zmk1d0FPUENkc1pvY3dZN3pHUVhTRngyTzNPM1ZPcVRQQU9kQUgtNHh6Q1Z5MkpSS2tnMjJDa0ItenBTZlFLZk9rQ3JsZEhtd1I4N3M?oc=5",
+    "source": "Voice of Healthcare",
+    "desc": " ADARx Targets $1.74B IPO Valuation &nbsp;&nbsp; Voice of Healthcare ",
+    "date": "2026-09-22",
     "cat": "funding",
-    "n_outlets": 4
+    "n_outlets": 3
+   },
+   {
+    "title": "Nvidia-backed Iambic files for IPO, disclosing new clinic and dealmaking details - Endpoints News",
+    "clean": "Nvidia-backed Iambic files for IPO, disclosing new clinic and dealmaking details",
+    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTDB2Rnl5VU05YmpnOUQ4SXRPM3RCUHdVaml1UTctdjhGS0w3MHdJX1lMempyYmNVUl9NNW5HemZoNDlzWE5wbjlaVEFHSDl1a0I0dnRNeFRzQzREM1FDZWhPSjJBWU5ZVThxRmFVMnRLYUJYX3F5cHVkOEtIVXNWakRmYnpISS1EQ1E?oc=5",
+    "source": "Endpoints News",
+    "desc": " Nvidia-backed Iambic files for IPO, disclosing new clinic and dealmaking details &nbsp;&nbsp; Endpoints News ",
+    "date": "2026-09-22",
+    "cat": "funding",
+    "n_outlets": 2
    }
   ],
   "mergers": [
@@ -247,11 +246,11 @@
     "n_outlets": 4
    },
    {
-    "title": "Telix to Buy ITM in $1.65B Radiopharma Deal - contractpharma.com",
+    "title": "Telix to Buy ITM in $1.65B Radiopharma Deal - Contract Pharma",
     "clean": "Telix to Buy ITM in $1.65B Radiopharma Deal",
     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNWlabHBZQW5XUkx2RlVSVEFUZW9jUFF1dFJvZkpvbl9vdkIzZlNUY3VUSEF4LWdDdFNxclVLTjhIclVIUFc4bmgxZS1oOFRXaEpZd1FCVjVDWkRuZlJVaXZDYnk5YzlIYmN3am5QakdNTFNZbFE4VlpjOWxUT1l6TnNRbXhPYTlnR0I3RERPZnI2UQ?oc=5",
-    "source": "contractpharma.com",
-    "desc": " Telix to Buy ITM in $1.65B Radiopharma Deal &nbsp;&nbsp; contractpharma.com ",
+    "source": "Contract Pharma",
+    "desc": " Telix to Buy ITM in $1.65B Radiopharma Deal &nbsp;&nbsp; Contract Pharma ",
     "date": "2026-09-21",
     "cat": "mergers",
     "n_outlets": 2
@@ -289,6 +288,16 @@
     "n_outlets": 3
    },
    {
+    "title": "ImmunoScape Appoints Peter Olagunju as Chief Executive Officer - Business Wire",
+    "clean": "ImmunoScape Appoints Peter Olagunju as Chief Executive Officer",
+    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPT0ozN1JycDhtNEJ6YVJQSVJXTC1USU5WdkdsQXRPVndvRDZ1X0dBOTVaWmNWSE1TTTRaWW1vUDlyS29RV2p3SWpiZmNrbFNKbk5XRV9lQlZua2FkMFBPZVVZRkkwQmhkTUQ0ei1vMy1uN3g3UnBpbEVIS2NUVjNrU2ZUdnNIbGI1SFNTRUpOQjVxRmJvcl9ldk9uVjB5V2JWSHZycXBkVEE1ZGwzWVNJVkdvN2xfdHRnaWtr?oc=5",
+    "source": "Business Wire",
+    "desc": " ImmunoScape Appoints Peter Olagunju as Chief Executive Officer &nbsp;&nbsp; Business Wire ",
+    "date": "2026-09-23",
+    "cat": "hiring",
+    "n_outlets": 2
+   },
+   {
     "title": "Engitix appoints Sonia Quaratino as EVP Chief Medical Officer - PMLiVE",
     "clean": "Engitix appoints Sonia Quaratino as EVP Chief Medical Officer",
     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYTVELWlHblpiQ0JvdW43enBBYzU5d2hnQ1lnU3g3SkJ2bEZ1OWd3SjdEcnBWZU1ZeWM3c1FrUHhEUnYwMVJlQVp2M2lzUmJQZ3JrSmNpTHVTRVZuV2luVllVcXpyMmkyWWNNclQwOWVVc0NjQ2NDNGNjOVhyY05jak1XdGhrdm91aTR1RWRCeEJvUk5aQ2xxZFVGR19QTHdhVFFj?oc=5",
@@ -309,22 +318,12 @@
     "n_outlets": 2
    },
    {
-    "title": "Diageo Appoints WPP\u2019s Joanne Wilson As Chief Financial Officer - directorstalkinterviews.com",
+    "title": "Diageo Appoints WPP\u2019s Joanne Wilson As Chief Financial Officer - DirectorsTalk Interviews",
     "clean": "Diageo Appoints WPP\u2019s Joanne Wilson As Chief Financial Officer",
     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUW1KTjJBU0pzLTRjSWFoOExMVmJtS1JCaTBGaVUwcmEzMXBjZ0pWMjBsS0NkNVp3TGFqMlJRM3FXUkIzWldYRllpQ0U1dHdoQ0hnTWZhcVBmQUZuVktpZ2VlRFpCVkxRZ1BEZmp1R3BqNlc3dW93M3JWNHJHQ21tVy1pNXpTZ2NrZ1prVWRLNWEtVXNOVlU2NUh4MGtISFlOZDlDbk15cTB2OU1tRjh1Q0U5dw?oc=5",
-    "source": "directorstalkinterviews.com",
-    "desc": " Diageo Appoints WPP\u2019s Joanne Wilson As Chief Financial Officer &nbsp;&nbsp; directorstalkinterviews.com ",
+    "source": "DirectorsTalk Interviews",
+    "desc": " Diageo Appoints WPP\u2019s Joanne Wilson As Chief Financial Officer &nbsp;&nbsp; DirectorsTalk Interviews ",
     "date": "2026-09-23",
-    "cat": "hiring",
-    "n_outlets": 2
-   },
-   {
-    "title": "Hikma appoints Rebecca Hall as chief financial officer - The Pharma Letter",
-    "clean": "Hikma appoints Rebecca Hall as chief financial officer",
-    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYWNyV0NqZ09PcnhUcEg1NnZYSjhiNmtoNEdRS3RvZkpmdDJ2bU5OSVBXMmkxYnhQV2hFWHZLUGlBYTlBRGc3QkhOMUh3Q2FQcHpFd1JQUlFJWGhmcTJaODNBVi1acWdJM29xZjNsWXdzdndjOWl5NUVXTkJOU3pjd3MzYmZ3WC1Ea1VlMHZIWG4yYWx3NE9JMkE3SVd1UTdtRDE2SlY3aGJKQWJ0dHY5akdmdWZUV00?oc=5",
-    "source": "The Pharma Letter",
-    "desc": " Hikma appoints Rebecca Hall as chief financial officer &nbsp;&nbsp; The Pharma Letter ",
-    "date": "2026-09-24",
     "cat": "hiring",
     "n_outlets": 2
    }
@@ -341,21 +340,31 @@
     "n_outlets": 3
    },
    {
-    "title": "Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis - psychiatrictimes.com",
+    "title": "U.S. FDA Approves Update to the Label for WINREVAIR\u2122 (sotatercept-csrk) to Include Data from the Phase 3 HYPERION Trial Evaluating Adults Recently Diagnosed with Pulmonary Arterial Hypertension (PAH, WHO* Group 1 Pulmonary Hypertension) - BioSpace",
+    "clean": "U.S. FDA Approves Update to the Label for WINREVAIR\u2122 (sotatercept-csrk) to Include Data from the Phase 3 HYPERION Trial Evaluating Adults Recently Diagnosed with Pulmonary Arterial Hypertension (PAH, WHO* Group 1 Pulmonary Hypertension)",
+    "link": "https://news.google.com/rss/articles/CBMiggNBVV95cUxNeEJUMXZzZy1PSlRfekhKRlZ6M2F1M1FlZW9xMk5DemZtMlBvTFQ5Z3lobVJKZ2dTcnB3UVRjalB6QlE5OVdDSVJIMG1NdE8yay1hRUlkVmhNVEs0cEs4akl2Qy1DZ040V042TlNPazl2QjZkY1FKWlE1YXdVVGRCbS00STJfQm5NclFuRW9PQkNYeExzY0ZCTDRlNmxnakNSakd3MXcweTlybDVDcXk5OTBUdUc1alhoT0JlM29iRVBJWTktc0szMmRCQVZUYk9QTzZZbFo4SFZVX1dtVHlfdzExVWVzY3JHaGNzSEhWdEJVVjAyN2ZBd0RWN21xZHppc3NmYU14TVZoSjlmT3JYVGpMMW85TFptMmtCVnp0cXRNVWZoenEwOHMxNFZYUDFqV182ZEZGSERLQWFfQVIzTUFWS1lacVFSNGhDTm12T1NQVXN5T25VX1RoYlVsQ1A5QlFoZG1oTUR0ZHVsY3IwQlhXZkx0RWlBWlBTNW1CY3QyUQ?oc=5",
+    "source": "BioSpace",
+    "desc": " U.S. FDA Approves Update to the Label for WINREVAIR\u2122 (sotatercept-csrk) to Include Data from the Phase 3 HYPERION Trial Evaluating Adults Recently Diagnosed with Pulmonary Arterial Hypertension (PAH, WHO* Group 1 Pulmonary Hypertension) &nbsp;&nbsp; BioSpace ",
+    "date": "2026-09-22",
+    "cat": "trials",
+    "n_outlets": 3
+   },
+   {
+    "title": "Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis - Psychiatric Times",
     "clean": "Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis",
     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTFYtVTFCMTFDZUJxQ0VVSFEyTVFZbXoxV3NxUGFWY3FhNU53T1BJZlJWY05YSFRmaFhxZ180ZFBxVldZVXdHc2pkbXZleU4ySmJ2VHY0RlhFbmVrLTV3bVByMlRwZFp5b1YzY0tRM21haFlCbDQ4eGoyYlBpc1Q3RENnVE1oT2VXRGZXb2JXbHZHQkkzQ2Z4NHhLOTRYV0FnQTFCdENkVHVWUF9OT3ZDbFNaR28tTzBLeFpZN0NLN1RUMGFFRXl1RVVnU1ByZw?oc=5",
-    "source": "psychiatrictimes.com",
-    "desc": " Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis &nbsp;&nbsp; psychiatrictimes.com ",
+    "source": "Psychiatric Times",
+    "desc": " Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis &nbsp;&nbsp; Psychiatric Times ",
     "date": "2026-09-24",
     "cat": "trials",
     "n_outlets": 3
    },
    {
-    "title": "Acadia Pharmaceuticals Announces Phase 3 Enabling Topline Results from Phase 2 RADIANT Study of Remlifanserin for the Treatment of Alzheimer\u2019s Disease Psychosis (ADP) - Yahoo Finance",
+    "title": "Acadia Pharmaceuticals Announces Phase 3 Enabling Topline Results from Phase 2 RADIANT Study of Remlifanserin for the Treatment of Alzheimer\u2019s Disease Psychosis (ADP) - Yahoo Finance Singapore",
     "clean": "Acadia Pharmaceuticals Announces Phase 3 Enabling Topline Results from Phase 2 RADIANT Study of Remlifanserin for the Treatment of Alzheimer\u2019s Disease Psychosis (ADP)",
-    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTFFrbUxPYUJmOU9wbnVFV2hOUlozWXdld3Npb29EV2xPNnJWRGdGVXFKVGExMVF5eGxPa01JckVSNmdCNVBmOU1Zci1iN1dwS0xiRjctOGlGUmJuS1hFMHlENWwyUDFRd3RRYk9vdWpDdEhobHJ1clRRc0ViYktGN24zZkhUZDhmRVI1RXZOVUFTUXl6a1ktZWlQMnVYOGNxSWdz?oc=5",
-    "source": "Yahoo Finance",
-    "desc": " Acadia Pharmaceuticals Announces Phase 3 Enabling Topline Results from Phase 2 RADIANT Study of Remlifanserin for the Treatment of Alzheimer\u2019s Disease Psychosis (ADP) &nbsp;&nbsp; Yahoo Finance ",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPVzdRSmZCWFd0eENUQmcxd1ZQeEZEMnQ2cm5oWTI4TjFiOTBhOHpyeXJOZ3hhelZZMFZTX29RUlkwNXNRT0pmY0hxZTNkdU1HZHVfRm4xejBKbE8tQUR2QmZZTWE4d01KM3R1VzdRY2stNFRTOXJYU1BIRi0wcnl0OE9YdjJoSGFkMGlhYmR1eXlqeFU?oc=5",
+    "source": "Yahoo Finance Singapore",
+    "desc": " Acadia Pharmaceuticals Announces Phase 3 Enabling Topline Results from Phase 2 RADIANT Study of Remlifanserin for the Treatment of Alzheimer\u2019s Disease Psychosis (ADP) &nbsp;&nbsp; Yahoo Finance Singapore ",
     "date": "2026-09-24",
     "cat": "trials",
     "n_outlets": 3
@@ -367,16 +376,6 @@
     "source": "GlobeNewswire",
     "desc": " aTyr Pharma Announces Alignment with FDA on Phase 3 Study of Efzofitimod in Pulmonary Sarcoidosis &nbsp;&nbsp; GlobeNewswire ",
     "date": "2026-09-24",
-    "cat": "trials",
-    "n_outlets": 3
-   },
-   {
-    "title": "aTyr Pharma Reaches FDA Protocol Agreement for Efzofitimod Phase 3 Trial - clinicaltrialvanguard.com",
-    "clean": "aTyr Pharma Reaches FDA Protocol Agreement for Efzofitimod Phase 3 Trial",
-    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPc2lyMnR6d2E4MU5mc0ZrMHR2MkV5RUZPSUJ3MllPQUUzbnNjbFpDdWM1Qjd4RFhUOUVGTDFtb09KV3ZCUWUxOGd1VmFnTXJqT253clNTZW9mZHY1U1NJdGxuVGU0VUh1bnVLSnJ1a0lqSW9SUnBualJiZEtpa0RRSVlLOTltYVNnbzg3b1VxbmZFS19JNW8ydm1NQ0NtZThhRnlueHI0dWVuOEtpejBsejY2VGRQT0E?oc=5",
-    "source": "clinicaltrialvanguard.com",
-    "desc": " aTyr Pharma Reaches FDA Protocol Agreement for Efzofitimod Phase 3 Trial &nbsp;&nbsp; clinicaltrialvanguard.com ",
-    "date": "2026-09-25",
     "cat": "trials",
     "n_outlets": 3
    }
@@ -413,21 +412,21 @@
     "n_outlets": 7
    },
    {
-    "title": "FDA Approves Insulin Efsitora Alfa-Gobe for Adults With Type 2 Diabetes - patientcareonline.com",
+    "title": "FDA Approves Insulin Efsitora Alfa-Gobe for Adults With Type 2 Diabetes - Patient Care Online",
     "clean": "FDA Approves Insulin Efsitora Alfa-Gobe for Adults With Type 2 Diabetes",
     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPell1d3RQOFdtMkVlekhIdldyendkbk5laDN5RUJiZGtFenZiWGRyVHBubUpQb3RBRl9ESjVDbmJSeWxGYkFGNUdSRFk3U04yVzZtN3ZuenpWbzc3Vlk2NXdTR0drWmE3QWxyTGEwNzlQV0FubmRWeHB5dWRHbEdYWWxJa0xaU3VqNGFrVGFidFRqZzBTVWlmel85eW1aVFBjalhGb1hVZVBRSzU3T3VxdzhrdXhXNGRwNlRJ?oc=5",
-    "source": "patientcareonline.com",
-    "desc": " FDA Approves Insulin Efsitora Alfa-Gobe for Adults With Type 2 Diabetes &nbsp;&nbsp; patientcareonline.com ",
+    "source": "Patient Care Online",
+    "desc": " FDA Approves Insulin Efsitora Alfa-Gobe for Adults With Type 2 Diabetes &nbsp;&nbsp; Patient Care Online ",
     "date": "2026-09-24",
     "cat": "drugs",
     "n_outlets": 7
    },
    {
-    "title": "FDA Approves Onswik: A Once-Weekly Insulin For Adults With Type 2 Diabetes - Beyond Type 1",
+    "title": "FDA Approves Onswik: A Once-Weekly Insulin For Adults With Type 2 Diabetes - beyondtype1.org",
     "clean": "FDA Approves Onswik: A Once-Weekly Insulin For Adults With Type 2 Diabetes",
     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9IN2hua2NFYXdkU0NnWXRMNmtPRkNic3pGblhFQVNVUzZvcVRYcDFaR2dXS3dsNmxUaVl6M0x4cmp3bU5kX29MMHc5aG1DOFRvcXM4Snd4YTJCNUJSRVE?oc=5",
-    "source": "Beyond Type 1",
-    "desc": " FDA Approves Onswik: A Once-Weekly Insulin For Adults With Type 2 Diabetes &nbsp;&nbsp; Beyond Type 1 ",
+    "source": "beyondtype1.org",
+    "desc": " FDA Approves Onswik: A Once-Weekly Insulin For Adults With Type 2 Diabetes &nbsp;&nbsp; beyondtype1.org ",
     "date": "2026-09-25",
     "cat": "drugs",
     "n_outlets": 7
@@ -487,11 +486,11 @@
     "n_outlets": 2
    },
    {
-    "title": "A Common Virus Shows Signs of Reactivating Up to 3 Months Before a Multiple Sclerosis Attack - ScienceAlert",
+    "title": "A Common Virus Shows Signs of Reactivating Up to 3 Months Before a Multiple Sclerosis Attack - sciencealert.com",
     "clean": "A Common Virus Shows Signs of Reactivating Up to 3 Months Before a Multiple Sclerosis Attack",
     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSHVPY19nNjNvN0owNW1OMWVEZ2IyOU9RR25fdzh5bXFDZEZnVFNRTTNmc1hlcURXWG5IZVRERDV3NG1tclhFYzFTc2ktVC1XZlhfa3JzMnltanVmZ2s5YnRvOElBTHFMWkE5WlQyanVfUHJhUERnOV9TdW1ZVDdxblhkbjlFelBzcGJnWmlzVUhnR3FhWDVrckJvRHBpaUZWemREdHpsWDVFS0VJVnc?oc=5",
-    "source": "ScienceAlert",
-    "desc": " A Common Virus Shows Signs of Reactivating Up to 3 Months Before a Multiple Sclerosis Attack &nbsp;&nbsp; ScienceAlert ",
+    "source": "sciencealert.com",
+    "desc": " A Common Virus Shows Signs of Reactivating Up to 3 Months Before a Multiple Sclerosis Attack &nbsp;&nbsp; sciencealert.com ",
     "date": "2026-09-22",
     "cat": "virology",
     "n_outlets": 2
@@ -640,6 +639,23 @@
    "why": "Matches this issue's focus areas: canine."
   },
   {
+   "pmid": "42771310",
+   "title": "Production of Lentiviral Vectors Encoding the CRISPR-Cas13d System for RNA Targeting",
+   "journal": "Methods Mol Biol",
+   "date": "2027",
+   "doi": "10.1007/978-1-0716-5547-4_7",
+   "authors": "Stilhano R \u2026 Martin L",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42771310/",
+   "field": "Molecular Biology",
+   "score": 16,
+   "hits": [
+    "viral vector",
+    "crispr",
+    "lentivir"
+   ],
+   "why": "Matches this issue's focus areas: viral vector, crispr, lentivir."
+  },
+  {
    "pmid": "42790423",
    "title": "iPSC-derived retinal organoids: Biological insights and progress toward photoreceptor replacement therapy",
    "journal": "Cell Rep Med",
@@ -653,21 +669,6 @@
     "organoid"
    ],
    "why": "Matches this issue's focus areas: organoid."
-  },
-  {
-   "pmid": "42780883",
-   "title": "Ferroptosis-driven cell death perpetuates the chronic inflammatory cycle in periodontitis: a single-cell transcriptomic study",
-   "journal": "Front Cell Dev Biol",
-   "date": "2026",
-   "doi": "10.3389/fcell.2026.1904996",
-   "authors": "Yang H \u2026 Zhou Z",
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42780883/",
-   "field": "NGS / Genomics",
-   "score": 14,
-   "hits": [
-    "single-cell"
-   ],
-   "why": "Matches this issue's focus areas: single-cell."
   },
   {
    "pmid": "42798197",
@@ -685,19 +686,19 @@
    "why": "Matches this issue's focus areas: immunotherapy."
   },
   {
-   "pmid": "42778537",
-   "title": "Personalized single-cell transcriptomics reveals molecular diversity in Alzheimer's disease",
-   "journal": "Nat Commun",
+   "pmid": "42778685",
+   "title": "NLRX1 is a critical neutrophil checkpoint modulating ferroptosis and suppressing NETosis to attenuate joint damage in arthritis",
+   "journal": "Cell Death Differ",
    "date": "2026 Sep 23",
-   "doi": "10.1038/s41467-026-72310-1",
-   "authors": "Chandrashekar PB \u2026 Wang D",
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42778537/",
-   "field": "Molecular Biology",
+   "doi": "10.1038/s41418-026-01875-7",
+   "authors": "Feng Z \u2026 Wu J",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42778685/",
+   "field": "NGS / Genomics",
    "score": 12,
    "hits": [
-    "single-cell"
+    "checkpoint"
    ],
-   "why": "Matches this issue's focus areas: single-cell."
+   "why": "Matches this issue's focus areas: checkpoint."
   }
  ],
  "also": [
@@ -719,30 +720,34 @@
    "why": "Matches this issue's focus areas: viral vector, crispr, adeno-associated."
   },
   {
-   "pmid": "42785308",
-   "title": "HOPX regulates the development and lineage progression of human stem cell-derived outer radial glia-like cells",
-   "journal": "Stem Cell Reports",
-   "date": "2026 Sep 24",
-   "doi": "10.1016/j.stemcr.2026.103087",
-   "authors": "Dong XX \u2026 Li Y",
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42785308/",
+   "pmid": "42786170",
+   "title": "Methylation Mesa define functional regulatory elements for targeted gene activation",
+   "journal": "Nat Commun",
+   "date": "2026 Aug 26",
+   "doi": "10.1038/s41467-026-76648-4",
+   "authors": "Liu YV \u2026 Bassal MA",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42786170/",
    "field": "Molecular Biology",
-   "score": 10,
-   "hits": [],
-   "why": "High-profile result in one of the covered fields."
+   "score": 11,
+   "hits": [
+    "methylation"
+   ],
+   "why": "Matches this issue's focus areas: methylation."
   },
   {
-   "pmid": "42782750",
-   "title": "ELAVL Proteins, miRNA Fate, and Extracellular RNA Communication in Brain Aging and Neurodegeneration",
-   "journal": "Cells",
-   "date": "2026 Sep 11",
-   "doi": "10.3390/cells15181649",
-   "authors": "Mukherjee K \u2026 Bhattacharyya SN",
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42782750/",
+   "pmid": "42785293",
+   "title": "Human-centric preclinical models for CAR T cell therapy in solid tumors: Where patient-derived organoids fit",
+   "journal": "Cancer Cell",
+   "date": "2026 Sep 24",
+   "doi": "10.1016/j.ccell.2026.08.011",
+   "authors": "Ma X \u2026 Brown CE",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42785293/",
    "field": "Cell Biology",
-   "score": 10,
-   "hits": [],
-   "why": "High-profile result in one of the covered fields."
+   "score": 14,
+   "hits": [
+    "organoid"
+   ],
+   "why": "Matches this issue's focus areas: organoid."
   },
   {
    "pmid": "42768024",
@@ -758,19 +763,17 @@
    "why": "High-profile result in one of the covered fields."
   },
   {
-   "pmid": "42767770",
-   "title": "Intravenously deliverable oncolytic virus VET3-TGI favorably alters the tumor microenvironment",
-   "journal": "J Immunother Cancer",
-   "date": "2026 Sep 21",
-   "doi": "10.1136/jitc-2026-015643",
-   "authors": "Zhang M \u2026 Thorne SH",
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42767770/",
+   "pmid": "42777241",
+   "title": "Phase 1 Study of Anito-cel, a d-Domain BCMA CAR T Cell for Refractory or Recurrent Myeloma",
+   "journal": "N Engl J Med",
+   "date": "2026 Sep 24",
+   "doi": "10.1056/NEJMoa2603527",
+   "authors": "Frigault MJ \u2026 Bishop MR",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42777241/",
    "field": "Oncology",
-   "score": 8,
-   "hits": [
-    "oncolytic"
-   ],
-   "why": "Matches this issue's focus areas: oncolytic."
+   "score": 10,
+   "hits": [],
+   "why": "High-profile result in one of the covered fields."
   },
   {
    "pmid": "42800809",
