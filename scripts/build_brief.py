@@ -32,7 +32,7 @@ SITE = "https://taylorflaat.com"
 # Form action from Buttondown's embed snippet (Settings -> Embedding).
 # While this is empty the signup block is omitted entirely, so the page never
 # shows a form that posts nowhere.
-SUBSCRIBE_ACTION = ""
+SUBSCRIBE_ACTION = "https://buttondown.com/api/emails/embed-subscribe/TheMondayBrief-TaylorFlaat.com"
 UA = {"User-Agent": "taylorflaat.com monday-brief generator (+https://taylorflaat.com)"}
 NCBI = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
