@@ -521,20 +521,29 @@ def render_issue(issue):
         f'<div class="stat"><b>{counts["radar"]}</b><span>watchlist hits</span></div>'
         f'</div></div>']
 
-    if issue["radar"]:
-        cards = []
-        for company, hits in issue["radar"].items():
-            rows = "".join(
-                f'<p><a href="{e(h["link"])}" target="_blank" rel="noopener">{e(h["clean"])}</a>'
-                f'<br><span class="src">{e(h["source"])} &middot; {e(h["date"])}</span></p>'
-                for h in hits)
-            cards.append(f'<div class="radar"><div class="co">{e(company)}</div>{rows}</div>')
-        parts.append(
-            f'<section><div class="wrap"><div class="sec-head">'
-            f'<div class="eyebrow"><span class="idx">01</span> Watchlist</div>'
-            f'<h2 class="sec-title">Companies on my radar.</h2>'
-            f'<p class="sec-lead">Past employers and places I have an application open.</p></div>'
-            f'<div class="grid">{"".join(cards)}</div></div></section>')
+    # Render the watchlist every week, not only when something hit: a quiet
+    # company should read as "watched, no news", not vanish from the page.
+    cards = []
+    for company, hits in issue["radar"].items():
+        rows = "".join(
+            f'<p><a href="{e(h["link"])}" target="_blank" rel="noopener">{e(h["clean"])}</a>'
+            f'<br><span class="src">{e(h["source"])} &middot; {e(h["date"])}</span></p>'
+            for h in hits)
+        cards.append(f'<div class="radar"><div class="co">{e(company)}</div>{rows}</div>')
+    grid = f'<div class="grid">{"".join(cards)}</div>' if cards else ""
+    quiet = [c for c in ALIASES if c not in issue["radar"]]
+    roster = ""
+    if quiet:
+        roster = (f'<p class="sec-lead" style="margin-top:{16 if cards else 0}px">'
+                  f'<strong style="color:var(--ink-2)">Also watching, nothing this window:</strong> '
+                  f'{e(", ".join(quiet))}</p>')
+    parts.append(
+        f'<section><div class="wrap"><div class="sec-head">'
+        f'<div class="eyebrow"><span class="idx">01</span> Watchlist</div>'
+        f'<h2 class="sec-title">Companies on my radar.</h2>'
+        f'<p class="sec-lead">Past employers and places I have an application open '
+        f'&mdash; {len(ALIASES)} tracked.</p></div>'
+        f'{grid}{roster}</div></section>')
 
     cards = []
     for i, paper in enumerate(issue["top5"], 1):
@@ -662,6 +671,20 @@ def main():
     label = (f"{start:%d %B} – {end:%d %B %Y}" if start.month != end.month
              else f"{start:%d} – {end:%d %B %Y}")
     print(f"window {start} .. {end}")
+
+    # Retry crons must not churn the repo: if this week's issue was already
+    # built today, stop before spending any network calls. BRIEF_FORCE=1 or a
+    # manual dispatch with a different BRIEF_WEEKS still rebuilds.
+    prior_path = os.path.join(OUT, "data", f"{stamp}.json")
+    if os.environ.get("BRIEF_FORCE", "") != "1" and os.path.exists(prior_path):
+        try:
+            with open(prior_path, encoding="utf-8") as fh:
+                prior = json.load(fh)
+        except (ValueError, OSError):
+            prior = {}
+        if prior.get("generated") == datetime.date.today().isoformat():
+            print(f"issue for {stamp} already generated today - nothing to do")
+            return 0
 
     print("news:")
     news = fetch_news(start, end)
