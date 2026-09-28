@@ -7,9 +7,12 @@ name: Monday Brief
 # early once that week's issue has been generated, so the later two are no-ops.
 on:
   schedule:
-    - cron: "10 11 * * 1"
-    - cron: "10 15 * * 1"
-    - cron: "10 19 * * 1"
+    # Every 20 min from 11:10 to 13:50 UTC, then two later safety nets in case
+    # GitHub's load spike outlasts the whole morning. Offsets avoid :00, which
+    # is the most heavily contended minute and the likeliest to be dropped.
+    - cron: "10,30,50 11-13 * * 1"
+    - cron: "10 16 * * 1"
+    - cron: "10 21 * * 1"
   workflow_dispatch:
     inputs:
       weeks:
