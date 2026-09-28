@@ -23,6 +23,10 @@ on:
         description: "Also email this run (scheduled runs always email)"
         required: false
         default: "false"
+      force:
+        description: "Rebuild even if this week's issue was already built today"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -47,6 +51,10 @@ jobs:
           # Optional: set an NCBI_EMAIL repo variable to identify the caller to
           # PubMed. Omitted is fine -- E-utilities serves anonymous requests.
           NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+          # The retry crons rely on the "already built today" short-circuit, so
+          # forcing is manual-only: it is how you re-run a week on purpose, and
+          # how you test the email path once an issue is already committed.
+          BRIEF_FORCE: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
         run: python scripts/build_brief.py
 
       # The email goes out before the commit, not after. The commit is what
