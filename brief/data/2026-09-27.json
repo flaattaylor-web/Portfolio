@@ -4,9 +4,9 @@
  "window_label": "21 \u2013 27 September 2026",
  "generated": "2026-09-28",
  "counts": {
-  "news": 619,
-  "papers": 230,
-  "clusters": 53,
+  "news": 623,
+  "papers": 229,
+  "clusters": 52,
   "radar": 9
  },
  "picked": {
@@ -22,11 +22,11 @@
     "n_outlets": 7,
     "outlets": [
      "Beyond Type 1",
+     "Eli Lilly",
      "LiveNOW from FOX",
      "PR Newswire",
      "Patient Care Online",
-     "Pharmacy Times",
-     "Reuters"
+     "Pharmacy Times"
     ]
    },
    {
@@ -56,10 +56,10 @@
     "cat": "drugs",
     "n_outlets": 4,
     "outlets": [
-     "Cure Today",
      "OncLive",
      "Oncology News Central",
-     "Pharmaceutical Executive"
+     "Pharmaceutical Executive",
+     "curetoday.com"
     ]
    },
    {
@@ -88,10 +88,10 @@
     "cat": "drugs",
     "n_outlets": 4,
     "outlets": [
-     "Cure Today",
      "OncLive",
      "Pharmacy Times",
-     "The ASCO Post"
+     "The ASCO Post",
+     "curetoday.com"
     ]
    },
    {
@@ -104,41 +104,41 @@
     "cat": "drugs",
     "n_outlets": 4,
     "outlets": [
-     "Oncology Nursing News",
+     "CancerNetwork",
      "Pharmacy Times",
      "Urology Times",
-     "cancernetwork.com"
+     "oncnursingnews.com"
     ]
    },
    {
-    "title": "FDA approves Lilly's Olumiant (baricitinib) for pediatric patients 12 years of age and older with severe alopecia areata - investor.lilly.com",
+    "title": "FDA approves Lilly's Olumiant (baricitinib) for pediatric patients 12 years of age and older with severe alopecia areata - Eli Lilly",
     "clean": "FDA approves Lilly's Olumiant (baricitinib) for pediatric patients 12 years of age and older with severe alopecia areata",
     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaGVvM1ppa1pJOUtyal9ZVWlxX2E0bDdqUWR3VHdGSFRPZmN3eC1oUGRyT1FDb19hbkZpdmZfY24zdy1nYzJvU09uQ3R5WkxWc2dSVE5acmZnTEhVSXdEc3lIQzJkRURZVlczRldUYVFCVk4tNXlrQ2N3eXZGcTdVeEhVa0ZkamVGc0QwS2duYzlVNEZrdDQ5NmRqVzRIZVdaLU40enNCb094TG5ETTd3UHJRbjFGbWk2dmU1QUdyc2V0dw?oc=5",
-    "source": "investor.lilly.com",
-    "desc": " FDA approves Lilly's Olumiant (baricitinib) for pediatric patients 12 years of age and older with severe alopecia areata &nbsp;&nbsp; investor.lilly.com ",
+    "source": "Eli Lilly",
+    "desc": " FDA approves Lilly's Olumiant (baricitinib) for pediatric patients 12 years of age and older with severe alopecia areata &nbsp;&nbsp; Eli Lilly ",
     "date": "2026-09-25",
     "cat": "drugs",
     "n_outlets": 4,
     "outlets": [
      "Dermatology Times",
+     "Eli Lilly",
      "HCPLive",
-     "The Clinical Trial Vanguard",
-     "investor.lilly.com"
+     "The Clinical Trial Vanguard"
     ]
    },
    {
-    "title": "FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma - Oncology Nursing News",
+    "title": "FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma - oncnursingnews.com",
     "clean": "FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma",
     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUHVsMmRhbzc0MEdKdkFmVzhKWXFMdGZ0MlY2TGQwNENNQUdFdnk3NGhDelBrY0k1WVhWbm9PUm9YWndyczJ1b1VRd00zUGFDb1liQ3lRNW1pbnhWNkpZQV9keXo4Q0cxSndWQ3RlLXV4N2dHWWc2WGtCbWhxSGcyLTNqZEhvSFl1ZXJNUGkxYlNZOWR2aGNyQS00TTBCd2NZUzBV?oc=5",
-    "source": "Oncology Nursing News",
-    "desc": " FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma &nbsp;&nbsp; Oncology Nursing News ",
+    "source": "oncnursingnews.com",
+    "desc": " FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma &nbsp;&nbsp; oncnursingnews.com ",
     "date": "2026-09-23",
     "cat": "drugs",
     "n_outlets": 3,
     "outlets": [
      "Oncology News Central",
-     "Oncology Nursing News",
-     "Targeted Oncology"
+     "Targeted Oncology",
+     "oncnursingnews.com"
     ]
    },
    {
@@ -288,11 +288,11 @@
     "n_outlets": 3
    },
    {
-    "title": "ImmunoScape Appoints Peter Olagunju as Chief Executive Officer - Business Wire",
+    "title": "ImmunoScape Appoints Peter Olagunju as Chief Executive Officer - businesswire.com",
     "clean": "ImmunoScape Appoints Peter Olagunju as Chief Executive Officer",
     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPT0ozN1JycDhtNEJ6YVJQSVJXTC1USU5WdkdsQXRPVndvRDZ1X0dBOTVaWmNWSE1TTTRaWW1vUDlyS29RV2p3SWpiZmNrbFNKbk5XRV9lQlZua2FkMFBPZVVZRkkwQmhkTUQ0ei1vMy1uN3g3UnBpbEVIS2NUVjNrU2ZUdnNIbGI1SFNTRUpOQjVxRmJvcl9ldk9uVjB5V2JWSHZycXBkVEE1ZGwzWVNJVkdvN2xfdHRnaWtr?oc=5",
-    "source": "Business Wire",
-    "desc": " ImmunoScape Appoints Peter Olagunju as Chief Executive Officer &nbsp;&nbsp; Business Wire ",
+    "source": "businesswire.com",
+    "desc": " ImmunoScape Appoints Peter Olagunju as Chief Executive Officer &nbsp;&nbsp; businesswire.com ",
     "date": "2026-09-23",
     "cat": "hiring",
     "n_outlets": 2
@@ -330,21 +330,21 @@
   ],
   "trials": [
    {
-    "title": "Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis - psychiatrictimes.com",
+    "title": "Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis - Psychiatric Times",
     "clean": "Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis",
     "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTFYtVTFCMTFDZUJxQ0VVSFEyTVFZbXoxV3NxUGFWY3FhNU53T1BJZlJWY05YSFRmaFhxZ180ZFBxVldZVXdHc2pkbXZleU4ySmJ2VHY0RlhFbmVrLTV3bVByMlRwZFp5b1YzY0tRM21haFlCbDQ4eGoyYlBpc1Q3RENnVE1oT2VXRGZXb2JXbHZHQkkzQ2Z4NHhLOTRYV0FnQTFCdENkVHVWUF9OT3ZDbFNaR28tTzBLeFpZN0NLN1RUMGFFRXl1RVVnU1ByZw?oc=5",
-    "source": "psychiatrictimes.com",
-    "desc": " Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis &nbsp;&nbsp; psychiatrictimes.com ",
+    "source": "Psychiatric Times",
+    "desc": " Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis &nbsp;&nbsp; Psychiatric Times ",
     "date": "2026-09-24",
     "cat": "trials",
     "n_outlets": 3
    },
    {
-    "title": "New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder - psychiatrictimes.com",
+    "title": "New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder - Psychiatric Times",
     "clean": "New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder",
     "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOZ09LaWNFVEZ3cjlYUlgyaW9kMzJISTNsbU83aGJNVkpKcmMycWo1TnZIeWFubzBSVHpzUEdpLXVXOGZUVWlCbDJybUlXQkFCaUlRWDVFTUxBUl8yUEdzUkxyUE81LWpwOUNBcW5EODBERUFtb3ZZOXdsNldHenNuTS1iS2t3QUdtOGRPMjhuc0Nvc1NXRHZkSGRfN1BZNV9ZSUNIdUdjTFhkYkJZVlFHZnQxZ1h3UjRnNUUyQnpqWlA4NVY3bFEtQ3hUMEdSb1VlcWZvN1FCbGxVXzlBTVhaM3BQM1VPekdHMVRjQ0tCR3FXa04tREhkbzhrR0dBS0RKTWc?oc=5",
-    "source": "psychiatrictimes.com",
-    "desc": " New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder &nbsp;&nbsp; psychiatrictimes.com ",
+    "source": "Psychiatric Times",
+    "desc": " New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder &nbsp;&nbsp; Psychiatric Times ",
     "date": "2026-09-22",
     "cat": "trials",
     "n_outlets": 2
@@ -454,21 +454,21 @@
     "n_outlets": 2
    },
    {
-    "title": "UH Manoa secures $5.9M NIH grant to expand Maui wildfire study - hawaiinewsnow.com",
-    "clean": "UH Manoa secures $5.9M NIH grant to expand Maui wildfire study",
-    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZzFPRm9TOVUxTUVmSjhMUmNBamlhSTVlOXBEQ0JzNnUtZDJJYld3N1VsYkcyUzZmeDdXQUx0YUxYYVZ6ZnN1VzNaSUFjajN0S2w4S01RbDFOa2tsZ29YWlZ3dVYtcGgxcDVXR25xaVJ5V2VSV3EyMHdsY2Q0S2daemx5VFNHVHpNWXlBUUJ5VF9yd3Y5bHdrMXRRVE1KZkE50gG0AUFVX3lxTFBDSjNXVGhmOTFYM0RMSlZ1clhCbGpKSkVNRkNfcnBlZE1mNFNlZVpWSmRWQ0tnMVExSHQ1UHJqZWFLb2VFdDFyY1FueWFyNmRaQzZlbkticzNka3E5ZVZNZXZNX2NZUl8yRVFrYURJUk5KZjBEa2p3UEsxNDY0cmo3TkNuRU54VTZVVG5pYVU5Y2pnZTNkMmlMVV96cGtWRXNFZ2daRVo0a0RtUnM1VU9OWm5naw?oc=5",
-    "source": "hawaiinewsnow.com",
-    "desc": " UH Manoa secures $5.9M NIH grant to expand Maui wildfire study &nbsp;&nbsp; hawaiinewsnow.com ",
-    "date": "2026-09-22",
+    "title": "These 6 charts show how NIH research funding has been reshaped under Trump - NPR",
+    "clean": "These 6 charts show how NIH research funding has been reshaped under Trump",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWV96Y3ZXMHJwRDJEQk51Nm5EcnBpNFpaRkxWNDVVWnhCVXhUSWNiWnhjSTg5WExVR2hvYkpSU0RQVEx0VjBveWstNnprWXBiSlhxaDl0VVhFUy1HM213Y2ptM3R4ellYaHczY040N2MyY0JkeW9UdjhOVk9Jd2F1SnZpNnQwRGNhTzVyMXZYVHczYkk?oc=5",
+    "source": "NPR",
+    "desc": " These 6 charts show how NIH research funding has been reshaped under Trump &nbsp;&nbsp; NPR ",
+    "date": "2026-09-24",
     "cat": "academia",
     "n_outlets": 2
    },
    {
-    "title": "These 6 charts show how NIH research funding has been reshaped under Trump - npr.org",
-    "clean": "These 6 charts show how NIH research funding has been reshaped under Trump",
-    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWV96Y3ZXMHJwRDJEQk51Nm5EcnBpNFpaRkxWNDVVWnhCVXhUSWNiWnhjSTg5WExVR2hvYkpSU0RQVEx0VjBveWstNnprWXBiSlhxaDl0VVhFUy1HM213Y2ptM3R4ellYaHczY040N2MyY0JkeW9UdjhOVk9Jd2F1SnZpNnQwRGNhTzVyMXZYVHczYkk?oc=5",
-    "source": "npr.org",
-    "desc": " These 6 charts show how NIH research funding has been reshaped under Trump &nbsp;&nbsp; npr.org ",
+    "title": "University of Minnesota to cut $225 million from its budget over next 2 years - CBS News",
+    "clean": "University of Minnesota to cut $225 million from its budget over next 2 years",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMTBnOXJWUm1nMEZ3TlFUc1VSZDBaRWRFSHNzbjVnbEYwMU9UbzNZSldLdnh5VGc3ZU5XZ3VhSi03b05KaFFnb1ZXVTByQVpnV0NzZXRBVGRXWExuUllnUWQyNW5zVU9tOU9xX0lHNXd3WktJU01OMjlnbEJScmM1UzZqRUhYUFNfX0pDUnVDS0E?oc=5",
+    "source": "CBS News",
+    "desc": " University of Minnesota to cut $225 million from its budget over next 2 years &nbsp;&nbsp; CBS News ",
     "date": "2026-09-24",
     "cat": "academia",
     "n_outlets": 2
@@ -476,11 +476,11 @@
   ],
   "platform": [
    {
-    "title": "New research shows genetic changes were behind the Kent meningitis outbreak - meningitisnow.org",
+    "title": "New research shows genetic changes were behind the Kent meningitis outbreak - Meningitis Now",
     "clean": "New research shows genetic changes were behind the Kent meningitis outbreak",
     "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNNEYwRWxmSHVTZEhQZWRTbXBTVFJDWEJfRWxkMnU3Y3ZXak1fNXZHR0t1TXdQY3RwTEhvMm9BNWhQN3ZWdGxKZnJ0aDRrempiNzRFYTZVM1h5T3diS3BSZHBQTUV0VDE5WWxnaXpOZDR6ZWtram1PZF95ek9nUjhpTVl6VHRWMU5Sb0N3Z1ZjU1lOUTllUkpIMGRCdkNucEVKRC1qMGtUakFHQklwRTk0UlNMcHdRLW9XcVJ2d1RKYzZwRHAwX2Y0eUlSMDJrbWZjVTd2TXByZFRkZVRJQzRr?oc=5",
-    "source": "meningitisnow.org",
-    "desc": " New research shows genetic changes were behind the Kent meningitis outbreak &nbsp;&nbsp; meningitisnow.org ",
+    "source": "Meningitis Now",
+    "desc": " New research shows genetic changes were behind the Kent meningitis outbreak &nbsp;&nbsp; Meningitis Now ",
     "date": "2026-09-22",
     "cat": "virology",
     "n_outlets": 2
@@ -516,11 +516,11 @@
     "n_outlets": 2
    },
    {
-    "title": "Animal use in veterinary vaccines quality control falls to lowest levels in a decade - GOV.UK",
+    "title": "Animal use in veterinary vaccines quality control falls to lowest levels in a decade - gov.uk",
     "clean": "Animal use in veterinary vaccines quality control falls to lowest levels in a decade",
     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMG9KMWl3bGo0VVJGUjFQcGRpLUZvOVl3TGl1LXRnTjZiM1VidGVnTW5ya3RqdmVqU1o3YWNLOFRmTXQ1czEwQVg1YmdqNkZUU2RnNXRsZnFrMGJDbXZydGVxa1VtWEtib0h0b2NfTTNHWHVNSGppU2xCcU5aVmFuMlhrcmRMMUEwcEpSVUEwMnJKeVpiczRoMEdZMndTc0c0c092d2dnQXhlUDlvTHk1Q29JejFxRjJLd293?oc=5",
-    "source": "GOV.UK",
-    "desc": " Animal use in veterinary vaccines quality control falls to lowest levels in a decade &nbsp;&nbsp; GOV.UK ",
+    "source": "gov.uk",
+    "desc": " Animal use in veterinary vaccines quality control falls to lowest levels in a decade &nbsp;&nbsp; gov.uk ",
     "date": "2026-09-23",
     "cat": "vet",
     "n_outlets": 2
@@ -639,7 +639,117 @@
    "hits": [
     "canine"
    ],
-   "why": "Primary research in a leading general journal. Topics: canine."
+   "why": "CPV infection triggers distinct metabolic signatures in pangolins, with Malaysian species showing lipid dysregulation while Chinese pangolins exhibit amino acid and bile acid reprogramming."
+  },
+  {
+   "pmid": "42775080",
+   "title": "HOMEBRED: A unified CRISPR platform for field-ready shadowing of infectious agents and oncogenic mutations",
+   "journal": "iScience",
+   "date": "2026 Oct 16",
+   "doi": "10.1016/j.isci.2026.117532",
+   "authors": "Asadbeigi A \u2026 Bakhtiarizadeh MR",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42775080/",
+   "field": "Molecular Biology",
+   "score": 14,
+   "hits": [
+    "crispr"
+   ],
+   "why": "HOMEBRED enables field-deployable CRISPR detection of pathogens and oncogenic mutations with visual readout, overcoming vaccine-strain discrimination challenges in livestock diagnostics."
+  },
+  {
+   "pmid": "42788198",
+   "title": "Timing and Dosage of Notch Inhibition and Wnt Activation Enhanced Hair Cell-Like Cell Generation and Stereocilia Elongation in Otic Organoids",
+   "journal": "Stem Cells Dev",
+   "date": "2026 Sep 25",
+   "doi": "10.1177/15473287261490309",
+   "authors": "Kim H \u2026 Ha J",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42788198/",
+   "field": "Cell Biology",
+   "score": 14,
+   "hits": [
+    "organoid"
+   ],
+   "why": "Late-phase, low-dose Notch inhibition and Wnt activation enhance hair cell marker expression and stereocilia elongation in embryonic stem cell-derived otic organoids."
+  },
+  {
+   "pmid": "42782746",
+   "title": "Decoding PVAT Complexity in Vascular Remodeling: Multimodal Single-Cell Technologies Unveil Novel Therapeutic Targets",
+   "journal": "Cells",
+   "date": "2026 Sep 11",
+   "doi": "10.3390/cells15181645",
+   "authors": "Xu Y \u2026 Bersi MR",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42782746/",
+   "field": "NGS / Genomics",
+   "score": 14,
+   "hits": [
+    "single-cell"
+   ],
+   "why": "Multimodal single-cell technologies reveal PVAT cellular heterogeneity and identify Dpp4+ preadipocytes and BMP4-induced browning as potential therapeutic targets in vascular disease."
+  },
+  {
+   "pmid": "42784692",
+   "title": "Senescence-directed nanotherapy ameliorates fibrosis and overcomes immune exclusion in cancer",
+   "journal": "Science",
+   "date": "2026 Sep 24",
+   "doi": "10.1126/science.aeg4791",
+   "authors": "Hinterleitner C \u2026 Lowe SW",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42784692/",
+   "field": "Oncology",
+   "score": 10,
+   "hits": [],
+   "why": "P-selectin-targeted nanoparticles selectively eliminate disease-driving senescent cells, reducing fibrosis and restoring immune infiltration in tumors resistant to checkpoint inhibitors."
+  }
+ ],
+ "also": [
+  {
+   "pmid": "42774241",
+   "title": "Post-marketing safety surveillance of tetanus, diphtheria, and acellular pertussis (Tdap) vaccine: a disproportionality analysis of the vaccine adverse event reporting system (2015-2025)",
+   "journal": "Front Cell Infect Microbiol",
+   "date": "2026",
+   "doi": "10.3389/fcimb.2026.1831548",
+   "authors": "Song W \u2026 Liang Z",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42774241/",
+   "field": "Virology",
+   "score": 14,
+   "hits": [
+    "vaccine"
+   ],
+   "why": "Tdap disproportionality analysis of 20,128 VAERS reports identified no unexpected safety signals in older adults, males, or pregnant individuals, though radiculitis brachial signals in non-pregnant females warrant further investigation."
+  },
+  {
+   "pmid": "42772142",
+   "title": "Nanopore long-read transcriptome sequencing reveals miR-22-3p-mediated transcriptomic remodeling and alternative splicing in chicken pectoral muscle",
+   "journal": "Poult Sci",
+   "date": "2026 Sep 13",
+   "doi": "10.1016/j.psj.2026.107769",
+   "authors": "Yi J \u2026 Ma Z",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42772142/",
+   "field": "Molecular Biology",
+   "score": 13,
+   "hits": [
+    "nanopore",
+    "long-read"
+   ],
+   "why": "miR-22-3p knockdown in chicken muscle suppresses ECM and focal adhesion pathways while remodeling alternative splicing patterns independently of gene-level expression changes."
   },
   {
    "pmid": "42790423",
@@ -658,41 +768,23 @@
    "hits": [
     "organoid"
    ],
-   "why": "Review in a leading general journal. Topics: organoid."
+   "why": "Both cone precursor and retinal organoid transplantation achieve functional synaptic integration with host retina, with genome editing enhancing synaptogenesis and adult primate retina retaining rewiring capacity."
   },
   {
-   "pmid": "42787166",
-   "title": "Multimodal integration of pathomics and single-cell transcriptomics reveals CDC20 as a link between prostate cancer recurrence and benzo[a]pyrene-responsive phenotypes",
-   "journal": "Front Cell Dev Biol",
-   "date": "2026",
-   "doi": "10.3389/fcell.2026.1965589",
-   "authors": "Dai X \u2026 Zhu J",
+   "pmid": "42768024",
+   "title": "Eggerthella lenta disrupts the gut vascular barrier to drive colorectal cancer liver metastasis",
+   "journal": "Cell Discov",
+   "date": "2026 Sep 22",
+   "doi": "10.1038/s41421-026-00922-4",
+   "authors": "Kong C \u2026 Ma Y",
    "pubtype": [
     "Journal Article"
    ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42787166/",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42768024/",
    "field": "NGS / Genomics",
-   "score": 14,
-   "hits": [
-    "single-cell"
-   ],
-   "why": "Primary research in a leading general journal. Topics: single-cell."
-  },
-  {
-   "pmid": "42789384",
-   "title": "Transcriptional and epigenomic analysis of insulin sensitivity in human adipocytes",
-   "journal": "Cell Rep",
-   "date": "2026 Sep 25",
-   "doi": "10.1016/j.celrep.2026.118042",
-   "authors": "Zhang Q \u2026 Rosen ED",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42789384/",
-   "field": "Molecular Biology",
    "score": 10,
    "hits": [],
-   "why": "Primary research in a leading general journal."
+   "why": "Eggerthella lenta disrupts the gut vascular barrier through TLR4-dependent endoplasmic reticulum stress, promoting colorectal cancer liver metastasis via tight junction compromise."
   },
   {
    "pmid": "42777708",
@@ -708,117 +800,23 @@
    "field": "Oncology",
    "score": 10,
    "hits": [],
-   "why": "Primary research in a leading general journal."
-  }
- ],
- "also": [
-  {
-   "pmid": "42771312",
-   "title": "Adeno-Associated Viral Vector (AAV)-Mediated In Vivo CRISPR-Cas9 Delivery",
-   "journal": "Methods Mol Biol",
-   "date": "2027",
-   "doi": "10.1007/978-1-0716-5547-4_9",
-   "authors": "Llanos-Ardaiz A \u2026 Gonzalez-Aseguinolaza G",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42771312/",
-   "field": "Virology",
-   "score": 16,
-   "hits": [
-    "viral vector",
-    "crispr",
-    "adeno-associated"
-   ],
-   "why": "Primary research in a specialist journal. Topics: viral vector, crispr, adeno-associated."
+   "why": "IL-21 mimetics combined with KRAS inhibitors achieve durable pancreatic cancer remissions through CD4 T cell-dependent macrophage activation, bypassing CD8 T cell and MHC class I requirements."
   },
   {
-   "pmid": "42782740",
-   "title": "Circulating Soluble Thrombomodulin Is Elevated in Early-Stage CKD and Is Associated with Renal Dysfunction: A Transcriptomic and Retrospective Cohort Study",
-   "journal": "Cells",
-   "date": "2026 Sep 10",
-   "doi": "10.3390/cells15181639",
-   "authors": "Wang J \u2026 Wu W",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42782740/",
-   "field": "Molecular Biology",
-   "score": 10,
-   "hits": [],
-   "why": "Primary research in a leading general journal."
-  },
-  {
-   "pmid": "42785293",
-   "title": "Human-centric preclinical models for CAR T cell therapy in solid tumors: Where patient-derived organoids fit",
-   "journal": "Cancer Cell",
+   "pmid": "42784669",
+   "title": "Fibroblasts restrain gut inflammation by IGF1-dependent regulation of innate lymphocytes",
+   "journal": "Science",
    "date": "2026 Sep 24",
-   "doi": "10.1016/j.ccell.2026.08.011",
-   "authors": "Ma X \u2026 Brown CE",
+   "doi": "10.1126/science.aei0062",
+   "authors": "Lin Q \u2026 Zhou L",
    "pubtype": [
     "Journal Article"
    ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42785293/",
-   "field": "Cell Biology",
-   "score": 14,
-   "hits": [
-    "organoid"
-   ],
-   "why": "Primary research in a leading general journal. Topics: organoid."
-  },
-  {
-   "pmid": "42778587",
-   "title": "Quantifying replication fidelity of unnatural base pairs using nanopore sequencing",
-   "journal": "Nat Commun",
-   "date": "2026 Aug 25",
-   "doi": "10.1038/s41467-026-76964-9",
-   "authors": "Kaplan NA \u2026 Marchand JA",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42778587/",
-   "field": "NGS / Genomics",
-   "score": 14,
-   "hits": [
-    "nanopore"
-   ],
-   "why": "Primary research in a leading specialist journal. Topics: nanopore."
-  },
-  {
-   "pmid": "42798731",
-   "title": "AI-driven genotype-phenotype modeling: a framework integrating multi-modal single-cell genomics and reverse vaccinology for de novo design of multi-epitope cancer vaccines",
-   "journal": "Front Genet",
-   "date": "2026",
-   "doi": "10.3389/fgene.2026.1909167",
-   "authors": "Mallik M \u2026 Mollick SA",
-   "pubtype": [
-    "Journal Article",
-    "Review"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42798731/",
-   "field": "Oncology",
-   "score": 10,
-   "hits": [
-    "vaccine",
-    "single-cell"
-   ],
-   "why": "Review in a specialist journal. Topics: vaccine, single-cell."
-  },
-  {
-   "pmid": "42800809",
-   "title": "Galectin-3 restrains T cell-driven inflammation in the testis and epididymis",
-   "journal": "Cell Death Dis",
-   "date": "2026 Sep 26",
-   "doi": "10.1038/s41419-026-09304-w",
-   "authors": "Hasan H \u2026 Fijak M",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42800809/",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42784669/",
    "field": "Veterinary Medicine",
    "score": 10,
    "hits": [],
-   "why": "Primary research in a leading general journal."
+   "why": "IGF1-producing fibroblasts suppress ILC3-mediated CXCL10 production and pDC recruitment, a pathway reduced in inflammatory bowel disease patients."
   }
  ]
 }
