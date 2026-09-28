@@ -39,10 +39,13 @@ CHIP_BG  = "#F7F9FC"
 
 # Mail clients do not fetch webfonts, so these degrade to an OS face. Keep the
 # stacks SHORT: each is repeated inline once per styled element, which in the
-# 2026-09-27 issue meant 154 uses of FONT and 118 of MONO (DISPLAY, at 33, is
+# 2026-09-27 issue meant 121 uses of FONT and 118 of MONO (DISPLAY, at 33, is
 # the one that can afford its 'Space Grotesk' prefix). Lengthening FONT and
 # MONO to full webfont stacks cost 8.2 kB against Gmail's ~102 kB clip
 # threshold. The site's real three do load on the archive page.
+#
+# Counting these: FONT's value is a substring of DISPLAY's, so a bare
+# str.count() of it over rendered output double-counts every DISPLAY use.
 FONT     = "Helvetica,Arial,sans-serif"
 DISPLAY  = "'Space Grotesk',Helvetica,Arial,sans-serif"
 MONO     = "Consolas,monospace"
