@@ -447,7 +447,13 @@ def llm_significance(rows, abstracts):
     # Pinned snapshot, not the claude-haiku-4-5 alias: an alias silently
     # migrates to a new snapshot, and a weekly unattended build should not
     # change model underneath you. Override with the BRIEF_LLM_MODEL variable.
-    model = os.environ.get("BRIEF_LLM_MODEL", "claude-haiku-4-5-20251001").strip()
+    #
+    # `or` rather than a get() default, deliberately. Actions substitutes an
+    # unset ${{ vars.X }} as an EMPTY STRING, so the key is present and
+    # get()'s default never fires -- which sent model="" and drew HTTP 400 on
+    # every paper in run 36480949185.
+    model = os.environ.get("BRIEF_LLM_MODEL", "").strip() or "claude-haiku-4-5-20251001"
+    print(f"  significance: model {model}")
     written = 0
     for row in rows:
         abstract = abstracts.get(row["pmid"], "")
