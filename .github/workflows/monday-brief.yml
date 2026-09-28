@@ -2,9 +2,14 @@ name: Monday Brief
 
 # 11:10 UTC every Monday = 07:10 America/New_York (EDT) / 06:10 (EST).
 # GitHub's scheduler is best-effort and can lag by several minutes under load.
+# GitHub's scheduler is best-effort: runs can be delayed by hours or dropped
+# entirely under load. Three Monday attempts instead of one; the build exits
+# early once that week's issue has been generated, so the later two are no-ops.
 on:
   schedule:
     - cron: "10 11 * * 1"
+    - cron: "10 15 * * 1"
+    - cron: "10 19 * * 1"
   workflow_dispatch:
     inputs:
       weeks:
