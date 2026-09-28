@@ -1,0 +1,789 @@
+{
+ "issue": "02",
+ "date": "2026-09-27",
+ "window_label": "21 \u2013 27 September 2026",
+ "generated": "2026-09-28",
+ "counts": {
+  "news": 661,
+  "papers": 221,
+  "clusters": 57,
+  "radar": 9
+ },
+ "picked": {
+  "buzz": [
+   {
+    "title": "US FDA approves Lilly's once-weekly insulin injection for type 2 diabetes - Reuters",
+    "clean": "US FDA approves Lilly's once-weekly insulin injection for type 2 diabetes",
+    "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQSEZSYmhoOGl6Z28wbjF1RjVWMEdDczVZVUIzUTJITkU0Zjllc2Zib2E5SVBTOTlPZGN1UTNOTWZtZmdIcWszNUFmLUc0dnlkb2tLOXQ0T1Q3VWVpZnJVcFlCcXVxY210WnNCVm1QWTV1eHZWUDlMT2FVSUJvR2VOczdERExGYVVaVkZ3WGtibS1CakhPNGhRQldkQmJFRTlZZlZuc2txYVFWb1VsenBYTHlMTnVjdmpTbGlVQzJR?oc=5",
+    "source": "Reuters",
+    "desc": " US FDA approves Lilly's once-weekly insulin injection for type 2 diabetes &nbsp;&nbsp; Reuters ",
+    "date": "2026-09-24",
+    "cat": "drugs",
+    "n_outlets": 7,
+    "outlets": [
+     "Beyond Type 1",
+     "Eli Lilly",
+     "LiveNOW from FOX",
+     "PR Newswire",
+     "Pharmacy Times",
+     "Reuters"
+    ]
+   },
+   {
+    "title": "FDA Approves Welireg Plus Lenvima for Previously Treated Adult Patients With ccRCC - Pharmaceutical Executive",
+    "clean": "FDA Approves Welireg Plus Lenvima for Previously Treated Adult Patients With ccRCC",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdWhuNHg5eHZjS045V1hfX0VVcUhWRWxBc21hbV9vR2RBX2VSUjlEZnZBYVN1NTJ1Xy0tSHN0dDVNR0RHYnBvVC1BaUVlck83Z29JSkJ3d2JETllQbFlIb3NYd1pWYUhldHhIdEM1UjBNWXNPQmFQZmY2Nk5BcDEtM1RQS1ZGSVhKNGFBbENR?oc=5",
+    "source": "Pharmaceutical Executive",
+    "desc": " FDA Approves Welireg Plus Lenvima for Previously Treated Adult Patients With ccRCC &nbsp;&nbsp; Pharmaceutical Executive ",
+    "date": "2026-09-25",
+    "cat": "drugs",
+    "n_outlets": 4,
+    "outlets": [
+     "Cure Today",
+     "OncLive",
+     "Oncology News Central",
+     "Pharmaceutical Executive"
+    ]
+   },
+   {
+    "title": "Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters - Investing.com",
+    "clean": "Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters",
+    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd3hpR3FtVWdSclpmQ0ZaMTVJeU5aSjNSbHJQaXJyTGZnNUNRcFJaaDVPNTZaVGJ3UHljUVVpVm02eHhwOG02WTlOcTB0dlpYUFhKbE5MTjQ2RWlrWkZCUDF1THJNSVNtOFVHb21BNzc2SkRwTlZ5SHQzRnFJZjBuWVMteVZtaVpaZ29GRDBpMFNSQzhXTUpWUW81TU50dXF0c1RCR2N0am1XdGltb2oxWDZMaTFFWUZPblJUVmNYbU43UW1qOUpyTjNR?oc=5",
+    "source": "Investing.com",
+    "desc": " Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on By Reuters &nbsp;&nbsp; Investing.com ",
+    "date": "2026-09-21",
+    "cat": "funding",
+    "n_outlets": 4,
+    "outlets": [
+     "AOL.ca",
+     "CNA",
+     "Investing.com",
+     "Voice of Healthcare"
+    ]
+   },
+   {
+    "title": "Fredun Pharmaceuticals acquires 26% stake in Rs. 300 crore valued Goodman Vetcare - Indian Pharma Post",
+    "clean": "Fredun Pharmaceuticals acquires 26% stake in Rs. 300 crore valued Goodman Vetcare",
+    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPTE9RS2tkalJlcExsWnUtbm1HSDZYRE5acFFfQ1J1dzczbEMtUERXc1hfN2pLZlVjZUZKMkFBWDFJM1dXRzFfcXZmandRRG5sdEIyUlczTEhFRlhHSnhqSE02SE41S2NYa01jLVRvNTNlakRwNGhKUWFIenFDaHpjTEdkRzJQVzRXT2JxbTluY2RjMUg1Ukk3bXdtRVU3UDNRZUJHTFJ0RERzOWJhSEpMdnpYWjdyY0UwQXNtNjNiZUfSAccBQVVfeXFMTVpIUEJ1RkVzTS1XaERPQXkwZlp2VThVSWdnQmRUWnVydzFubE1KcmQtZDJUb2hvSng2NUlVVGNBNUU3dGZiNFVoc2FLbUl5U2JjdGRDaVJYekI0WktSRmt4SnRRRjZ1R1FpZTVNTTMwUDRVR0k5S3IwSVIxQ0RLZnVRdGRaZ2pNc0ZhTWlTakJNTmM4Z1ZyZ2YyaHBzNjVWZjh5LXFNNWdvZFNtcFY1RWdBWmpMUWg4bVJGU3ZFeUJvYnBsTGRTcw?oc=5",
+    "source": "Indian Pharma Post",
+    "desc": " Fredun Pharmaceuticals acquires 26% stake in Rs. 300 crore valued Goodman Vetcare &nbsp;&nbsp; Indian Pharma Post ",
+    "date": "2026-09-22",
+    "cat": "mergers",
+    "n_outlets": 4,
+    "outlets": [
+     "BusinessLine",
+     "Indian Pharma Post",
+     "TradingView",
+     "scanx.trade"
+    ]
+   },
+   {
+    "title": "FDA Approves Lirafugratinib for Previously Treated, Unresectable, Locally Advanced or Metastatic Cholangiocarcinoma - The ASCO Post",
+    "clean": "FDA Approves Lirafugratinib for Previously Treated, Unresectable, Locally Advanced or Metastatic Cholangiocarcinoma",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZVpLU3NYV0pIMHJrYnhuaTZERVY3NGUwb2dITWJ4dzI2NEVBTjZ5N0hjZUxCT1hmaDVGTWRsMERTOGZwZUtSaUNBMkZtU0xNN1NPMm5lbjdtQ1hSTm1kak56VFJEcGNWWS05OE1XX0pVd1VqQWpETG5rNUw0TnV4azladUlCUWNQVVljbkw0S090eWtUSVlwZWVneHlzRVVRd2JRSW5VTUY1VHNxcXZwYVl6VFI4aFBRRVdtTFpSWmpTUk9ubDlyNk1RVVp0bWluU3k0MC1LSQ?oc=5",
+    "source": "The ASCO Post",
+    "desc": " FDA Approves Lirafugratinib for Previously Treated, Unresectable, Locally Advanced or Metastatic Cholangiocarcinoma &nbsp;&nbsp; The ASCO Post ",
+    "date": "2026-09-24",
+    "cat": "drugs",
+    "n_outlets": 4,
+    "outlets": [
+     "OncLive",
+     "Pharmacy Times",
+     "Targeted Oncology",
+     "The ASCO Post"
+    ]
+   },
+   {
+    "title": "FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy - Pharmacy Times",
+    "clean": "FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPeU9wU0pvU1ZpanE3NDFGWjBQRFFWYVQ3SlZGSnY0Q0pyWlZiSnZ3cjhLM1Ziem9LTHlIemdJTFZ5UW82R2pDdGF1RUpybjIxN2s3QUN3dDNqN2dLWXYzLTJYYjFNZFh3WGVIUWlpT1M0TmYtUzlMWlNNcEgzYjNYN3VsNE9fUTZWY3hoTjluUmx4aXJzTTM5aGZlN2JDQmZNdlpDcElMbW9HMVZGOC10ZFRDVVFSNG1TZGVaNGQ0VzNiWUdIejF3?oc=5",
+    "source": "Pharmacy Times",
+    "desc": " FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy &nbsp;&nbsp; Pharmacy Times ",
+    "date": "2026-09-24",
+    "cat": "drugs",
+    "n_outlets": 4,
+    "outlets": [
+     "CancerNetwork",
+     "Oncology Nursing News",
+     "Pharmacy Times",
+     "Urology Times"
+    ]
+   },
+   {
+    "title": "FDA approves Lilly's Olumiant (baricitinib) for pediatric patients 12 years of age and older with severe alopecia areata - PR Newswire",
+    "clean": "FDA approves Lilly's Olumiant (baricitinib) for pediatric patients 12 years of age and older with severe alopecia areata",
+    "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNZ1p1REpSQ3RlODBoY1dndFRMaVl2V25CdlNiOVk1Z3dTaWhxV21aRGdqMkNua25qcU1jTzJmVVRKdmJoeXRKUUluTnZVSTQ4TlhYTVBDRkdycUQwR3VNdGxQNURjVnlURl9UYW9SeDJPOThtNWcweU5Rcm8zb2VwYUJYTXl2aFlhdnlGZTRpOXFUUzRBSl9jMWwxMXFNRjFwMDQxY1hXNDA0aHRtaUFOdEFwcXhpWFZaRHJaVURYUk5LdTZ3R1hiWXNMcC1PeTF5ejc1OE1yZVBhTkRmRk80TEhuQ21zWHNaNXZlbWdscGdxS3hyejlJS2Q0UVlHODlXM080?oc=5",
+    "source": "PR Newswire",
+    "desc": " FDA approves Lilly's Olumiant (baricitinib) for pediatric patients 12 years of age and older with severe alopecia areata &nbsp;&nbsp; PR Newswire ",
+    "date": "2026-09-25",
+    "cat": "drugs",
+    "n_outlets": 4,
+    "outlets": [
+     "Dermatology Times",
+     "HCPLive",
+     "PR Newswire",
+     "clinicaltrialvanguard.com"
+    ]
+   },
+   {
+    "title": "ADARx Pharmaceuticals raises $446.3 million in upsized US IPO - Yahoo Finance Singapore",
+    "clean": "ADARx Pharmaceuticals raises $446.3 million in upsized US IPO",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONm96T0htaE95dElOWHFwVUl1dmYyVUNNbzFsM2Q3S2NvSENHeVNJQS14X253SXVlRFpBRUluOFFqQnFEQ0RzU1RrRnFYLTVNRzhJTVlSOFNJTVZDRUd4QXhScTRfbEkyYk9FekRTbmZJZDRPTGRNbzJZRWE1TndId3R0UTl0OFJadE84?oc=5",
+    "source": "Yahoo Finance Singapore",
+    "desc": " ADARx Pharmaceuticals raises $446.3 million in upsized US IPO &nbsp;&nbsp; Yahoo Finance Singapore ",
+    "date": "2026-09-25",
+    "cat": "funding",
+    "n_outlets": 4,
+    "outlets": [
+     "AOL.ca",
+     "WTVB",
+     "Yahoo Finance Singapore",
+     "qz.com"
+    ]
+   },
+   {
+    "title": "The next Alnylam? RNAi biotech City Therapeutics files for IPO - Endpoints News",
+    "clean": "The next Alnylam? RNAi biotech City Therapeutics files for IPO",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMzlibEVDVjN0a1h5YVk0T1dHODNlemhucUZWM09DeDhNMmRtWDU1OXo5dzFSOGlESEdMaG1WVTB6TU9hSHlUbWxCdGhFOENQWWxvM0dqM1ktWk9wWnNzZnp1SmZrWnFBamQyNFlQMjRHb0NQb2pWdVBWR1doMDRGMldVLUVlc3JzZk9fX2huck4?oc=5",
+    "source": "Endpoints News",
+    "desc": " The next Alnylam? RNAi biotech City Therapeutics files for IPO &nbsp;&nbsp; Endpoints News ",
+    "date": "2026-09-25",
+    "cat": "funding",
+    "n_outlets": 4,
+    "outlets": [
+     "Endpoints News",
+     "Investing.com",
+     "The Lufkin Daily News",
+     "TradingView"
+    ]
+   },
+   {
+    "title": "Drug developer ADARx seeks $1.74 billion valuation in US IPO - Reuters",
+    "clean": "Drug developer ADARx seeks $1.74 billion valuation in US IPO",
+    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOUDdGZzVQcUgxaHgwWVV5Z1h2Z3NrdFZYYjVNdnhxX0tzb0NKUEs0RXZVeEdCMHEybkJvRWNpWllYWEtzcmhlQXVwQzB5MzJfUGppNkR3Snd6cXF6MXk4aUEwQ3JHWlBQY1NTRm9YVmVHeFdQdVF0RmdQNG5tbWZyb1J2cUVFVklrNVVTUmxKWjQxcncxalQyR0ExX0FwQW45S1dZX2FSazhXbnBxaWVHRVlqd3FLYzVWSVYxRHFnZGpWcXBOb1pHYnRR?oc=5",
+    "source": "Reuters",
+    "desc": " Drug developer ADARx seeks $1.74 billion valuation in US IPO &nbsp;&nbsp; Reuters ",
+    "date": "2026-09-21",
+    "cat": "funding",
+    "n_outlets": 3,
+    "outlets": [
+     "AOL.ca",
+     "Reuters",
+     "Voice of Healthcare"
+    ]
+   }
+  ],
+  "funding": [
+   {
+    "title": "Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum - Voice of Healthcare",
+    "clean": "Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum",
+    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWHk4eVBheFNyX0ttbmFXeUxFX0dSMGJXSnpsbzI0UVFlWjNhclBwRVdpWHdyNmwxbW0wQmVBTWJMUE5mcURHYTlobnVIMVpTUmt1MkNrYTFsSEpKX24zeXMtdTRUMlRwZHZwUmZTdmQxQ3Z3cldkQkVLOGwwMVVqOFM0OEc0dzNIMGdpS1Z6Z3AwQm4yTkpfNVg1UXFmcksyaEdaaXhxTndYSFNpbFdoc2k2MWlySmc?oc=5",
+    "source": "Voice of Healthcare",
+    "desc": " Nvidia and QIA-Backed Iambic Therapeutics Files for US IPO Amid Biotech Momentum &nbsp;&nbsp; Voice of Healthcare ",
+    "date": "2026-09-22",
+    "cat": "funding",
+    "n_outlets": 4
+   },
+   {
+    "title": "Drug developer City Therapeutics files for US IPO as biotech listings surge - The Lufkin Daily News",
+    "clean": "Drug developer City Therapeutics files for US IPO as biotech listings surge",
+    "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNdFRRS2FLS0FkNG8tX2w3cW9OUU9kZUx5Q0ItRjdLYU9PdjhnaXRXX1VraXhPVG5KUmg2empLWC1aS3IzSEMzZDFrYVNUVndWdWtDZFp4d25lWVdSSGdtWVVpLU82NEZhWHJua085VTFQZ1hjMURqUjhYLTZucEUtcXNELUh5MllpR01iOHV1dmdZamFsT0ZCV1hKdUo0UjJRNVpZRGx3U0U5Rlk3NjBZQkNnV0ZlVlppWDFXdlk1aHcwc3llRWlUUGF3ZFptTktBaWFmN2FWbnBYRzQxa1BBMFVkYkdtMUtzTlJTV2trbW5pZlZYX0wwTmJQREMybE5jRkc4U2t3?oc=5",
+    "source": "The Lufkin Daily News",
+    "desc": " Drug developer City Therapeutics files for US IPO as biotech listings surge &nbsp;&nbsp; The Lufkin Daily News ",
+    "date": "2026-09-24",
+    "cat": "funding",
+    "n_outlets": 4
+   },
+   {
+    "title": "City Therapeutics files for US IPO as biotech listings surge - TradingView",
+    "clean": "City Therapeutics files for US IPO as biotech listings surge",
+    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMnkwanRHZWFPaGNpUTkxQ1VIbURIVEdjc0hwY2l6aFVBb05NNFg2eDVYdWZlN25SMGZocmxENlYtZ0JzWkEzRXlYQV9IaFJmNU9pTmJqcTh5NFIyakJmT0VaM2dpTExXN0Y5ZjFKNTRIY3NpSGJRR1U3M0JqRUo5NWNpUDFZV044WnFfRTdmRnRHNTcwM082UTlJN0QzNWZtMGJBWXctR19UckJuREFXLWRWYWFHcXd5MFNfQnEzYkVoRmw0RWRvMU9n?oc=5",
+    "source": "TradingView",
+    "desc": " City Therapeutics files for US IPO as biotech listings surge &nbsp;&nbsp; TradingView ",
+    "date": "2026-09-24",
+    "cat": "funding",
+    "n_outlets": 4
+   },
+   {
+    "title": "ADARx Pharmaceuticals raises $446 million in upsized IPO - qz.com",
+    "clean": "ADARx Pharmaceuticals raises $446 million in upsized IPO",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMHJES0VvRzVLQk40Y3Iwb2pvX1h3MC1UVXpmZnZYSExkYzd1S0FiOURRUDNCNE9UQ2tGY1B1RGlhdkNNQXNkanh1SGx0YXRKSU9HZzRtSlp2MEFBdUlLazFqMF9abnR0ZjJrWEg5bzBMRTdIdjR0Mm5GWlVzMzVxenM3M2dTaExDMmJNQnUxNDU0aF9iVHJfWmhGMU1KSy1Mb3BJek1VMlBpUHdSQWg4dXE0eEwyWVVtQkwzak9DTVltdXg0czlhWWpEaUVvTktSUDdhRmxGSQ?oc=5",
+    "source": "qz.com",
+    "desc": " ADARx Pharmaceuticals raises $446 million in upsized IPO &nbsp;&nbsp; qz.com ",
+    "date": "2026-09-25",
+    "cat": "funding",
+    "n_outlets": 4
+   },
+   {
+    "title": "ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO - WTVB",
+    "clean": "ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVm5RSlA4LS1ZajJPalVhZkM2LW9XaGV2eG9WX1JSR1ppbElOYTBCdDBtblpxcjFEYm9OcVItYVdPcmxCSHVYRzhfY3pyN296TnQ2cWhNaUhBd0k4eGVDZTJHbHMwYjAxZjJlbDF6bmJobF94YnBhMnp2SDRoYTFvdlNCVUpFcmV5UmlEQUxCM1pSa1hmb0E?oc=5",
+    "source": "WTVB",
+    "desc": " ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO &nbsp;&nbsp; WTVB ",
+    "date": "2026-09-25",
+    "cat": "funding",
+    "n_outlets": 4
+   }
+  ],
+  "mergers": [
+   {
+    "title": "Fredun Pharma acquires 26% stake in Goodman Vetcare Private Limited - TradingView",
+    "clean": "Fredun Pharma acquires 26% stake in Goodman Vetcare Private Limited",
+    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaWIwUjYtT2hzZWJ2ZnJHdHJ0VVJ5VzhiVjZBYWRGQ3A0dHZaTVc3U3RINUUyNmhyOEk2V1Y3MVdMTTZMWVZQX0c0U2o1c0wwc0RsWUZRSGEyeURCYzhseHIxM3lrdG1QNFpuMVZiWVlXSkg4RTE0RllxNzBJOVF4M2xETlVPbkJOd2xBZXlfOURhcDNpVDJpdHBGd1lPckZyWktTSVI2ZENBandhNDR5b2U1MHI3Q1lzblhCa09UOGw?oc=5",
+    "source": "TradingView",
+    "desc": " Fredun Pharma acquires 26% stake in Goodman Vetcare Private Limited &nbsp;&nbsp; TradingView ",
+    "date": "2026-09-22",
+    "cat": "mergers",
+    "n_outlets": 4
+   },
+   {
+    "title": "Fredun Pharma acquires 26% stake in Goodman Vetcare for \u20b9300 crore - scanx.trade",
+    "clean": "Fredun Pharma acquires 26% stake in Goodman Vetcare for \u20b9300 crore",
+    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdE50WFZIbnQtVlNXUGcwb1ZvOHFvYTdsQ3h2WDZuc21JUUxWR1prQUdDV0Vhemd6YTlNU0tQYTVscDk5Z2k3OVdfRTJRaUI2dWFCWE5mdmhVUG93elVHNVB0akRkZGRBeG1kRkJEOHZ0QnEtNzNsNldteVlrMUpzaGwzUkVQX1FpMmxmdHItbGJqQ25mV3FmVlBWTXNId2pGVkpmNjFGSjB0R0F5RUZYelRLclJWejIwbXZOc29RUQ?oc=5",
+    "source": "scanx.trade",
+    "desc": " Fredun Pharma acquires 26% stake in Goodman Vetcare for \u20b9300 crore &nbsp;&nbsp; scanx.trade ",
+    "date": "2026-09-23",
+    "cat": "mergers",
+    "n_outlets": 4
+   },
+   {
+    "title": "Telix to Buy ITM in $1.65B Radiopharma Deal - contractpharma.com",
+    "clean": "Telix to Buy ITM in $1.65B Radiopharma Deal",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNWlabHBZQW5XUkx2RlVSVEFUZW9jUFF1dFJvZkpvbl9vdkIzZlNUY3VUSEF4LWdDdFNxclVLTjhIclVIUFc4bmgxZS1oOFRXaEpZd1FCVjVDWkRuZlJVaXZDYnk5YzlIYmN3am5QakdNTFNZbFE4VlpjOWxUT1l6TnNRbXhPYTlnR0I3RERPZnI2UQ?oc=5",
+    "source": "contractpharma.com",
+    "desc": " Telix to Buy ITM in $1.65B Radiopharma Deal &nbsp;&nbsp; contractpharma.com ",
+    "date": "2026-09-21",
+    "cat": "mergers",
+    "n_outlets": 2
+   },
+   {
+    "title": "Telix to buy radiopharma rival ITM for $1.65bn upfront - pharmaphorum",
+    "clean": "Telix to buy radiopharma rival ITM for $1.65bn upfront",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPamQtTGdKSldpWVpqQktCRFdxT3c1ckkwSVJhTl9FR3loTjA1dENNNjExV0pGcTcySm80WTFJX3lWbGM4N0h1X2gyV3hKUDExY3ZhWkRHUVcxaVprVzNPb1llbDByTnEwSjhzTTJBUWFveHYwdHN1MWtibk9mbWp4Sw?oc=5",
+    "source": "pharmaphorum",
+    "desc": " Telix to buy radiopharma rival ITM for $1.65bn upfront &nbsp;&nbsp; pharmaphorum ",
+    "date": "2026-09-21",
+    "cat": "mergers",
+    "n_outlets": 2
+   },
+   {
+    "title": "Gr\u00fcnenthal acquires cancer treatment Stivarga - The Pharma Letter",
+    "clean": "Gr\u00fcnenthal acquires cancer treatment Stivarga",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVlBIblRzSFZXaVE4V0FyTl8ybmhYM05CeDJscXQzUkpCTWZCN1pXUW44WUxVcEQxbGtQOFUyXzI5TFY5WEpwSUtVSW9QZE82UDM0bFFzRVB3QmVCblBvamFKaFpxZDBUdHdzQVhtQWR0cmIzN2F1Nl9pMHdRUDBpVUdkRFRDSi1pWWNxeE1jQjgzMHM?oc=5",
+    "source": "The Pharma Letter",
+    "desc": " Gr\u00fcnenthal acquires cancer treatment Stivarga &nbsp;&nbsp; The Pharma Letter ",
+    "date": "2026-09-21",
+    "cat": "mergers",
+    "n_outlets": 2
+   }
+  ],
+  "hiring": [
+   {
+    "title": "aTyr Pharma announces alignment with FDA on Phase 3 study of efzofitimod - TipRanks",
+    "clean": "aTyr Pharma announces alignment with FDA on Phase 3 study of efzofitimod",
+    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPRzlud1Y1cm1PLXBxdmVuUDNwTEhOa09IaEl2LU5lR242OHBLeFdOTHhPN2p1eU44Q0ZFMy1XUG9GRWlEdTlyOHdMYXZZaWpDNE1DQk5Dck9ldWRTMGtJbC1pcE0yX2R2N0hHbllIcVRDV3h0a25zb3hLbUt5RU5FTmFaWXFXRWtIeTZ1T2t6TzhTNUZiamRPV19UNUJFM3lscEQ0U25vMGpxS3N6T3FGZm9zQ0lROHZJcFZZUExVRQ?oc=5",
+    "source": "TipRanks",
+    "desc": " aTyr Pharma announces alignment with FDA on Phase 3 study of efzofitimod &nbsp;&nbsp; TipRanks ",
+    "date": "2026-09-24",
+    "cat": "hiring",
+    "n_outlets": 3
+   },
+   {
+    "title": "Engitix appoints Sonia Quaratino as EVP Chief Medical Officer - PMLiVE",
+    "clean": "Engitix appoints Sonia Quaratino as EVP Chief Medical Officer",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYTVELWlHblpiQ0JvdW43enBBYzU5d2hnQ1lnU3g3SkJ2bEZ1OWd3SjdEcnBWZU1ZeWM3c1FrUHhEUnYwMVJlQVp2M2lzUmJQZ3JrSmNpTHVTRVZuV2luVllVcXpyMmkyWWNNclQwOWVVc0NjQ2NDNGNjOVhyY05jak1XdGhrdm91aTR1RWRCeEJvUk5aQ2xxZFVGR19QTHdhVFFj?oc=5",
+    "source": "PMLiVE",
+    "desc": " Engitix appoints Sonia Quaratino as EVP Chief Medical Officer &nbsp;&nbsp; PMLiVE ",
+    "date": "2026-09-23",
+    "cat": "hiring",
+    "n_outlets": 2
+   },
+   {
+    "title": "Engitix appoints Sonia Quaratino as CMO - The Pharma Letter",
+    "clean": "Engitix appoints Sonia Quaratino as CMO",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdXFycWFyRGg5WVB0QllxQ2pxZnQzS2Z2QXllWUlhODVMWU5xckVpQS1nQUY5blg4c3VzcWZLdGVUZFE1RjlHLUxENWR2dXRmc0JOQ0sxbkhqNUZqLUVKdktiN29TSFRuM1lNZ3c3aUZ5NHRlQ3FuZ1BJLU1oRUUtaUV5dE9zRU1UaXZZcQ?oc=5",
+    "source": "The Pharma Letter",
+    "desc": " Engitix appoints Sonia Quaratino as CMO &nbsp;&nbsp; The Pharma Letter ",
+    "date": "2026-09-23",
+    "cat": "hiring",
+    "n_outlets": 2
+   },
+   {
+    "title": "Diageo Appoints WPP\u2019s Joanne Wilson As Chief Financial Officer - directorstalkinterviews.com",
+    "clean": "Diageo Appoints WPP\u2019s Joanne Wilson As Chief Financial Officer",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUW1KTjJBU0pzLTRjSWFoOExMVmJtS1JCaTBGaVUwcmEzMXBjZ0pWMjBsS0NkNVp3TGFqMlJRM3FXUkIzWldYRllpQ0U1dHdoQ0hnTWZhcVBmQUZuVktpZ2VlRFpCVkxRZ1BEZmp1R3BqNlc3dW93M3JWNHJHQ21tVy1pNXpTZ2NrZ1prVWRLNWEtVXNOVlU2NUh4MGtISFlOZDlDbk15cTB2OU1tRjh1Q0U5dw?oc=5",
+    "source": "directorstalkinterviews.com",
+    "desc": " Diageo Appoints WPP\u2019s Joanne Wilson As Chief Financial Officer &nbsp;&nbsp; directorstalkinterviews.com ",
+    "date": "2026-09-23",
+    "cat": "hiring",
+    "n_outlets": 2
+   },
+   {
+    "title": "Hikma appoints Rebecca Hall as chief financial officer - The Pharma Letter",
+    "clean": "Hikma appoints Rebecca Hall as chief financial officer",
+    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYWNyV0NqZ09PcnhUcEg1NnZYSjhiNmtoNEdRS3RvZkpmdDJ2bU5OSVBXMmkxYnhQV2hFWHZLUGlBYTlBRGc3QkhOMUh3Q2FQcHpFd1JQUlFJWGhmcTJaODNBVi1acWdJM29xZjNsWXdzdndjOWl5NUVXTkJOU3pjd3MzYmZ3WC1Ea1VlMHZIWG4yYWx3NE9JMkE3SVd1UTdtRDE2SlY3aGJKQWJ0dHY5akdmdWZUV00?oc=5",
+    "source": "The Pharma Letter",
+    "desc": " Hikma appoints Rebecca Hall as chief financial officer &nbsp;&nbsp; The Pharma Letter ",
+    "date": "2026-09-24",
+    "cat": "hiring",
+    "n_outlets": 2
+   }
+  ],
+  "trials": [
+   {
+    "title": "Rise Therapeutics Completes Dose Escalation in R-5780 Phase 1 Cancer Trial, Advances to Dose Expansion - PR Newswire",
+    "clean": "Rise Therapeutics Completes Dose Escalation in R-5780 Phase 1 Cancer Trial, Advances to Dose Expansion",
+    "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNY0Ezc3NRbTJfOGJmQkc5WHdYeDBrME8xdTNVdUtBV2czdmZRbW1oMjYxWXJhN2ttUnhWRXJMalJLSDcwNHNiaEdGUnZKbVk0MHgwUGtxU0Z5aHJiYlJDc01GU05Wb1JNcmNrVzlmSzVrZjI1SXYxdzVWejVDb0sxazFLcFFacHdNSmpOa1ozOWRoWWRmQjFRYkdxU0c5TXp5SWV6WEQ0VnpETHotc25HdVVCdkFRb2JPRFBuMUVPdDJUVVpFRVBWQmh1R3F6b3pFWmgxazhxWVZDV1pzYzdSZEwtSF9kWG1NSGt5YzZn?oc=5",
+    "source": "PR Newswire",
+    "desc": " Rise Therapeutics Completes Dose Escalation in R-5780 Phase 1 Cancer Trial, Advances to Dose Expansion &nbsp;&nbsp; PR Newswire ",
+    "date": "2026-09-22",
+    "cat": "trials",
+    "n_outlets": 3
+   },
+   {
+    "title": "Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis - psychiatrictimes.com",
+    "clean": "Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis",
+    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQTFYtVTFCMTFDZUJxQ0VVSFEyTVFZbXoxV3NxUGFWY3FhNU53T1BJZlJWY05YSFRmaFhxZ180ZFBxVldZVXdHc2pkbXZleU4ySmJ2VHY0RlhFbmVrLTV3bVByMlRwZFp5b1YzY0tRM21haFlCbDQ4eGoyYlBpc1Q3RENnVE1oT2VXRGZXb2JXbHZHQkkzQ2Z4NHhLOTRYV0FnQTFCdENkVHVWUF9OT3ZDbFNaR28tTzBLeFpZN0NLN1RUMGFFRXl1RVVnU1ByZw?oc=5",
+    "source": "psychiatrictimes.com",
+    "desc": " Positive Phase 2 Topline Results: Remlifanserin for the Treatment of Alzheimer Disease Psychosis &nbsp;&nbsp; psychiatrictimes.com ",
+    "date": "2026-09-24",
+    "cat": "trials",
+    "n_outlets": 3
+   },
+   {
+    "title": "Acadia Pharmaceuticals Announces Phase 3 Enabling Topline Results from Phase 2 RADIANT Study of Remlifanserin for the Treatment of Alzheimer\u2019s Disease Psychosis (ADP) - Yahoo Finance",
+    "clean": "Acadia Pharmaceuticals Announces Phase 3 Enabling Topline Results from Phase 2 RADIANT Study of Remlifanserin for the Treatment of Alzheimer\u2019s Disease Psychosis (ADP)",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTFFrbUxPYUJmOU9wbnVFV2hOUlozWXdld3Npb29EV2xPNnJWRGdGVXFKVGExMVF5eGxPa01JckVSNmdCNVBmOU1Zci1iN1dwS0xiRjctOGlGUmJuS1hFMHlENWwyUDFRd3RRYk9vdWpDdEhobHJ1clRRc0ViYktGN24zZkhUZDhmRVI1RXZOVUFTUXl6a1ktZWlQMnVYOGNxSWdz?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " Acadia Pharmaceuticals Announces Phase 3 Enabling Topline Results from Phase 2 RADIANT Study of Remlifanserin for the Treatment of Alzheimer\u2019s Disease Psychosis (ADP) &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-09-24",
+    "cat": "trials",
+    "n_outlets": 3
+   },
+   {
+    "title": "aTyr Pharma Announces Alignment with FDA on Phase 3 Study of Efzofitimod in Pulmonary Sarcoidosis - GlobeNewswire",
+    "clean": "aTyr Pharma Announces Alignment with FDA on Phase 3 Study of Efzofitimod in Pulmonary Sarcoidosis",
+    "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNUV9lUHpVU2FtM3UwRk1qbWNCZUk2cmZEaGp4UG8xblNvYW9SU2lhSjJldnpNeG8xb092N2tJQjFjUnVhWm9MTGFrc2M4Z1NWbHd1dlJNUFFmOU5xUDJySzR3OXJoZk5INVFrV0pjMDQxcDdTMlZobmowaDJ1d2JZOXJmdGNXR2lLTlltM3JvX19EVXc2T1htTHdhZTROanFoSDNLblduUS1TeDNuMWFteWYzVlo0NGtueWs4WWZxci0tbTc1T3F2S3JFZWdUYVVCaWd5NWg1bGY1Qm5JOHFxM1ZpX25nVHR2X1lndWVZZlEzaC1mWWs0SFNhZnJQUQ?oc=5",
+    "source": "GlobeNewswire",
+    "desc": " aTyr Pharma Announces Alignment with FDA on Phase 3 Study of Efzofitimod in Pulmonary Sarcoidosis &nbsp;&nbsp; GlobeNewswire ",
+    "date": "2026-09-24",
+    "cat": "trials",
+    "n_outlets": 3
+   },
+   {
+    "title": "aTyr Pharma Reaches FDA Protocol Agreement for Efzofitimod Phase 3 Trial - clinicaltrialvanguard.com",
+    "clean": "aTyr Pharma Reaches FDA Protocol Agreement for Efzofitimod Phase 3 Trial",
+    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPc2lyMnR6d2E4MU5mc0ZrMHR2MkV5RUZPSUJ3MllPQUUzbnNjbFpDdWM1Qjd4RFhUOUVGTDFtb09KV3ZCUWUxOGd1VmFnTXJqT253clNTZW9mZHY1U1NJdGxuVGU0VUh1bnVLSnJ1a0lqSW9SUnBualJiZEtpa0RRSVlLOTltYVNnbzg3b1VxbmZFS19JNW8ydm1NQ0NtZThhRnlueHI0dWVuOEtpejBsejY2VGRQT0E?oc=5",
+    "source": "clinicaltrialvanguard.com",
+    "desc": " aTyr Pharma Reaches FDA Protocol Agreement for Efzofitimod Phase 3 Trial &nbsp;&nbsp; clinicaltrialvanguard.com ",
+    "date": "2026-09-25",
+    "cat": "trials",
+    "n_outlets": 3
+   }
+  ],
+  "drugs": [
+   {
+    "title": "FDA approves Eli Lilly's once-a-week insulin injection for type 2 diabetes treatment - LiveNOW from FOX",
+    "clean": "FDA approves Eli Lilly's once-a-week insulin injection for type 2 diabetes treatment",
+    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMUgzOEZjQTMzYVBlT1V3cXBZUjRKY1hxYnBoc3JrR01HSy1kTTNmVmxJa2pIdndSMk8xRnpQTDQzOFl5S096WFJMak1qRDR1bjV5cERPaGNraTdLeFd0NlhXOFlmUk1sMWlGTURoMHo2LTBNOWtQclNkdEtIQlZDTnZ4ZkJGSl9JYlQxamRudmJvUDZnckllZUVyZ0Q5eU1oOFE?oc=5",
+    "source": "LiveNOW from FOX",
+    "desc": " FDA approves Eli Lilly's once-a-week insulin injection for type 2 diabetes treatment &nbsp;&nbsp; LiveNOW from FOX ",
+    "date": "2026-09-24",
+    "cat": "drugs",
+    "n_outlets": 7
+   },
+   {
+    "title": "FDA Approves Insulin Efsitora, Once-Weekly Basal Insulin Injection for Adults With T2D - Pharmacy Times",
+    "clean": "FDA Approves Insulin Efsitora, Once-Weekly Basal Insulin Injection for Adults With T2D",
+    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNS0YtVm5VeVBnYWRNTVlLajJKemc1NmV4YWVNUnhyWG0xaXVIVUhQMjhhbG14dGlWZkVKTXJjYWNXaE1vY1FXWG1sX2dhbWtDaHZhdFdKZ2E5bEdPS3Bvek03dDllUnVtMDNaSlctRHFCNzdUMklCVGdINkJjNkYyRGdHUWx5LWRqS0RTbjVnRmtjbUdnU0V5enl4UXdQY2JYSmlUV2hQdDlOeTgtVXVSdVhiLWxyMmZMdllJcA?oc=5",
+    "source": "Pharmacy Times",
+    "desc": " FDA Approves Insulin Efsitora, Once-Weekly Basal Insulin Injection for Adults With T2D &nbsp;&nbsp; Pharmacy Times ",
+    "date": "2026-09-24",
+    "cat": "drugs",
+    "n_outlets": 7
+   },
+   {
+    "title": "U.S. Food and Drug Administration (FDA) approves Lilly's Onswik\u2122 (insulin efsitora alfa-gobe), a once-weekly basal insulin injection treatment for adults living with type 2 diabetes - Eli Lilly",
+    "clean": "U.S. Food and Drug Administration (FDA) approves Lilly's Onswik\u2122 (insulin efsitora alfa-gobe), a once-weekly basal insulin injection treatment for adults living with type 2 diabetes",
+    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNV3FNMlhIRnBEdEdrd013dEVDZU53S21XSzZCR2RyM3A1S2M2c19pSDVpdnUxbzJjUFVuYTFodGlHNDdNeTlmdzVmOVVqTGlFZjIxR2pqaGFwLTJNLTFPYXhyc1d3dFFmTmZxcnBaQzl4ZG9ROHYxQWRBTHM5R1ZqMWtaQ1dRNWl1UXM3d1JsRUFCdFBkMVJWTVFqV1VlZ2hVcWhlS2k3Y3lmX2cyc0M5YWxCS1FTcHNkeWF6RGNZTQ?oc=5",
+    "source": "Eli Lilly",
+    "desc": " U.S. Food and Drug Administration (FDA) approves Lilly's Onswik\u2122 (insulin efsitora alfa-gobe), a once-weekly basal insulin injection treatment for adults living with type 2 diabetes &nbsp;&nbsp; Eli Lilly ",
+    "date": "2026-09-24",
+    "cat": "drugs",
+    "n_outlets": 7
+   },
+   {
+    "title": "FDA Approves Insulin Efsitora Alfa-Gobe for Adults With Type 2 Diabetes - patientcareonline.com",
+    "clean": "FDA Approves Insulin Efsitora Alfa-Gobe for Adults With Type 2 Diabetes",
+    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPell1d3RQOFdtMkVlekhIdldyendkbk5laDN5RUJiZGtFenZiWGRyVHBubUpQb3RBRl9ESjVDbmJSeWxGYkFGNUdSRFk3U04yVzZtN3ZuenpWbzc3Vlk2NXdTR0drWmE3QWxyTGEwNzlQV0FubmRWeHB5dWRHbEdYWWxJa0xaU3VqNGFrVGFidFRqZzBTVWlmel85eW1aVFBjalhGb1hVZVBRSzU3T3VxdzhrdXhXNGRwNlRJ?oc=5",
+    "source": "patientcareonline.com",
+    "desc": " FDA Approves Insulin Efsitora Alfa-Gobe for Adults With Type 2 Diabetes &nbsp;&nbsp; patientcareonline.com ",
+    "date": "2026-09-24",
+    "cat": "drugs",
+    "n_outlets": 7
+   },
+   {
+    "title": "FDA Approves Onswik: A Once-Weekly Insulin For Adults With Type 2 Diabetes - Beyond Type 1",
+    "clean": "FDA Approves Onswik: A Once-Weekly Insulin For Adults With Type 2 Diabetes",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9IN2hua2NFYXdkU0NnWXRMNmtPRkNic3pGblhFQVNVUzZvcVRYcDFaR2dXS3dsNmxUaVl6M0x4cmp3bU5kX29MMHc5aG1DOFRvcXM4Snd4YTJCNUJSRVE?oc=5",
+    "source": "Beyond Type 1",
+    "desc": " FDA Approves Onswik: A Once-Weekly Insulin For Adults With Type 2 Diabetes &nbsp;&nbsp; Beyond Type 1 ",
+    "date": "2026-09-25",
+    "cat": "drugs",
+    "n_outlets": 7
+   }
+  ],
+  "academia": [
+   {
+    "title": "White House plans to put NIH grants under political control: reports - Fierce Biotech",
+    "clean": "White House plans to put NIH grants under political control: reports",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVEwxNE1RR2ktakdVZmtfSmxuXzR5LV92cU1FcGZUUHJuVVlKcmNtNHRFMTlWWnlXV3B6SHVCUXptcTc5ek9WVDdwLVRPdDdqb2NnTmRqM0VFRlphYkxNV2o5bzBacml5eDJ0X3hMbmY3cW01akZsMi0zS0dVZW5mSDBRa3Zrc3hBaUpnTU5zQjEzQ1c5OFBCNzVvMUJ3V1NLZTVwVE5n?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " White House plans to put NIH grants under political control: reports &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-09-21",
+    "cat": "academia",
+    "n_outlets": 2
+   },
+   {
+    "title": "White House plan to increase control of NIH grants appears \u2018dead\u2019 - STAT",
+    "clean": "White House plan to increase control of NIH grants appears \u2018dead\u2019",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOd2VSWG90WmF4RkZyMWxqendhdE41YUhpWks0TmtQWmhhbWhtN1ljeTdjWGlKZWVqamxabnVJdWN0MDBwbHhvSEstUjFhSmpwb0Y0UjZEZ1VvekJ4anl5Q1NCN0pwZTZUM3paYXpESjNUZFJfdktmZ2t4T2h0eTBVanlWZ3oxRVBPQmxWY09xX3h5czBGWTJOcS1mTVp5M0JTM3Bv?oc=5",
+    "source": "STAT",
+    "desc": " White House plan to increase control of NIH grants appears \u2018dead\u2019 &nbsp;&nbsp; STAT ",
+    "date": "2026-09-24",
+    "cat": "academia",
+    "n_outlets": 2
+   },
+   {
+    "title": "Reports: Trump Wants More Control Over NIH Funding - Inside Higher Ed",
+    "clean": "Reports: Trump Wants More Control Over NIH Funding",
+    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWUM0b0NRa3BFTmE1b3VXM3MyR3JjeXI1aE5zSTVxU202cUppNjVCX3pTaEVLLUppVm5aclhYYXdieENJMW1RTXFuWXZPLVRxbHFFNV9ESUdlbXFnMUhoWmxKUWl3aEhvZjVZeTBLd3pUS0UtcGlhS0xBQWdmZDNyb3Q1Y01YalBmZzg5TnFuUC1NQ3U0a0FiRXdMWXplQVFxNUtEU0VSS1BaUS1s?oc=5",
+    "source": "Inside Higher Ed",
+    "desc": " Reports: Trump Wants More Control Over NIH Funding &nbsp;&nbsp; Inside Higher Ed ",
+    "date": "2026-09-21",
+    "cat": "academia",
+    "n_outlets": 2
+   },
+   {
+    "title": "Trump pushes for more control over NIH research dollars - CIDRAP",
+    "clean": "Trump pushes for more control over NIH research dollars",
+    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQbVhBYl9NY2x2R2FmV2lQUUpjYWlhWFNmVlV4U0FtTXJFamtNd2FUazlRRWhUTnVITGFvaW00YU4wUjFueFlnVmNZOC1QNkxyLXZpb1NfWmZXZUVvM3Vqa0J6UklmQ2ttOUY1MlBnZVZJZFJDV2NwNmIzV1lqTzdOQnVodGQ3Q2JDeEVRUzZtWHBsUFM4dlRF?oc=5",
+    "source": "CIDRAP",
+    "desc": " Trump pushes for more control over NIH research dollars &nbsp;&nbsp; CIDRAP ",
+    "date": "2026-09-21",
+    "cat": "academia",
+    "n_outlets": 2
+   }
+  ],
+  "platform": [
+   {
+    "title": "New research shows genetic changes were behind the Kent meningitis outbreak - Meningitis Now",
+    "clean": "New research shows genetic changes were behind the Kent meningitis outbreak",
+    "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNNEYwRWxmSHVTZEhQZWRTbXBTVFJDWEJfRWxkMnU3Y3ZXak1fNXZHR0t1TXdQY3RwTEhvMm9BNWhQN3ZWdGxKZnJ0aDRrempiNzRFYTZVM1h5T3diS3BSZHBQTUV0VDE5WWxnaXpOZDR6ZWtram1PZF95ek9nUjhpTVl6VHRWMU5Sb0N3Z1ZjU1lOUTllUkpIMGRCdkNucEVKRC1qMGtUakFHQklwRTk0UlNMcHdRLW9XcVJ2d1RKYzZwRHAwX2Y0eUlSMDJrbWZjVTd2TXByZFRkZVRJQzRr?oc=5",
+    "source": "Meningitis Now",
+    "desc": " New research shows genetic changes were behind the Kent meningitis outbreak &nbsp;&nbsp; Meningitis Now ",
+    "date": "2026-09-22",
+    "cat": "virology",
+    "n_outlets": 2
+   },
+   {
+    "title": "A Common Virus Shows Signs of Reactivating Up to 3 Months Before a Multiple Sclerosis Attack - ScienceAlert",
+    "clean": "A Common Virus Shows Signs of Reactivating Up to 3 Months Before a Multiple Sclerosis Attack",
+    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSHVPY19nNjNvN0owNW1OMWVEZ2IyOU9RR25fdzh5bXFDZEZnVFNRTTNmc1hlcURXWG5IZVRERDV3NG1tclhFYzFTc2ktVC1XZlhfa3JzMnltanVmZ2s5YnRvOElBTHFMWkE5WlQyanVfUHJhUERnOV9TdW1ZVDdxblhkbjlFelBzcGJnWmlzVUhnR3FhWDVrckJvRHBpaUZWemREdHpsWDVFS0VJVnc?oc=5",
+    "source": "ScienceAlert",
+    "desc": " A Common Virus Shows Signs of Reactivating Up to 3 Months Before a Multiple Sclerosis Attack &nbsp;&nbsp; ScienceAlert ",
+    "date": "2026-09-22",
+    "cat": "virology",
+    "n_outlets": 2
+   },
+   {
+    "title": "Scientists reveal genetic changes behind severe Kent meningitis outbreak - Qazinform",
+    "clean": "Scientists reveal genetic changes behind severe Kent meningitis outbreak",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOREE5SFh4Z0cxSnFNZU8tbTB0U00yWlBBbjQyX3Y5UHNyaUQ1d0t2SlNoQ1VadEE0WkJ5YUxSenhmanVGM0NmS19ibWxKaXpiRjBlWFlaSl9abHVLaTZndldnQkRyVnJyOTVsVVZ4RXVKWFJpdlI1ckpfXzhQam4xVUZlY3JITUdHNG93NVBxeGg4RmlWMzc0MEljTmZnTE5heG9neUJkSnN6UdIBqgFBVV95cUxQUHFaRkNzN1ZibTltc2VnY1ZEMXNldjdkakdsaWhrTFhMMnNVOGl4aDJIX2lhVGUtanY1OUdJc1BjUW9saER2UjNlS1N4amEtSVR0YXhXZ04tNkU4SDlUZXZ1VXY3VzQ1Y0VBUXV0a3o4bm5LUGM3UG9DRXFSRm4xcjk0UmVoWjBJTU52dHFnSG1MVEpLbWtYblZOR0p4eURud0dqSDBTbUdkUQ?oc=5",
+    "source": "Qazinform",
+    "desc": " Scientists reveal genetic changes behind severe Kent meningitis outbreak &nbsp;&nbsp; Qazinform ",
+    "date": "2026-09-22",
+    "cat": "virology",
+    "n_outlets": 2
+   },
+   {
+    "title": "Elanco Animal Health (ELAN) CEO adds 126 deferred stock units - Stock Titan",
+    "clean": "Elanco Animal Health (ELAN) CEO adds 126 deferred stock units",
+    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOaklNRlVmR29sOFhiUVhYWWpERnpHdUpjOXgxX2N2VmdJTkNwNTlXS3hTZDJZUmdFeXlxSHJJbHVSMG1JY2hCWXJBUGM5YmlvZEhQUDJqQ0NwSUhBMXlvS19CUGJndlhHd2s0UGJtUTRiMWRXY09Zck52SlhTSWJwMHhIcFE1MFhVYUNTdlNqNzhBYjBKVU0wZ0xkR2dFOWJpbkdfX0UyN3JvWHg1LTR3RkNxblhLMkRpWXc?oc=5",
+    "source": "Stock Titan",
+    "desc": " Elanco Animal Health (ELAN) CEO adds 126 deferred stock units &nbsp;&nbsp; Stock Titan ",
+    "date": "2026-09-22",
+    "cat": "vet",
+    "n_outlets": 2
+   },
+   {
+    "title": "Elanco Animal Health (ELAN) Climbs 2.70% to $23.04, Nearing Key Resistance - Seasonality Effect - siam.in",
+    "clean": "Elanco Animal Health (ELAN) Climbs 2.70% to $23.04, Nearing Key Resistance - Seasonality Effect",
+    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVjFmU2M0cDZFbmN6bDZVZVppR0IwUzFqbTNEM003ZWI5TkdHUE1NMm1IRzEyUk1DSFZSaW56Mk1lUmtyc0xpQ0Q1Z1dfQmxMakdXcG1GQks2bXA1dmduTWowdGlrTnNFdE5VTmN2dThMTUN0Vi1mcWJOX2dyOWs4eS00QUZKWWt4OF9JSVNOdnJHZVVYNGdKXzBiNV9iS2VTSXFXc1pfVXdLd1FnWTJV?oc=5",
+    "source": "siam.in",
+    "desc": " Elanco Animal Health (ELAN) Climbs 2.70% to $23.04, Nearing Key Resistance - Seasonality Effect &nbsp;&nbsp; siam.in ",
+    "date": "2026-09-22",
+    "cat": "vet",
+    "n_outlets": 2
+   }
+  ]
+ },
+ "radar": {
+  "Merck": [
+   {
+    "title": "Merck (MRK) Stock May Be 37% Undervalued On Fresh FDA Approval - Yahoo Finance",
+    "clean": "Merck (MRK) Stock May Be 37% Undervalued On Fresh FDA Approval",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxObTl5aGVPRXd6ZHg2SlpJd0d1OUpMN0toMXNLcVQ2ZnRiel9kN3doZ1BIemd3VUp4Nk1Sa1NaaVJlbF8zWG14R3JKbkhBc3M0cENQWEVpQnhGV1dUMXB2YVhnb1RsN1JIRHhIMGlaVkJ5Zm5sakZscUdLajNPV2tLRmtrVTgzVUZPc0JYbzlGSVc?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " Merck (MRK) Stock May Be 37% Undervalued On Fresh FDA Approval &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-09-26",
+    "cat": "drugs"
+   },
+   {
+    "title": "Merck Animal Health talks flea, tick prevention | PA Live! \u2013 28/22 News - 28/22 News",
+    "clean": "Merck Animal Health talks flea, tick prevention | PA Live! \u2013 28/22 News",
+    "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOaC14ZGc3RFpiWUlEVmFPUkFWUzdBQ2d6Ny1vaVdLNTZ6UEZNTE1DTVg5dU4yaVZsa0hvcnFZSFBlbHBxNEoyNE9ySTJlUnUwUGIzTlI0SkpnRlhaYVVJYlQxNzFlU3FaNjVMUEEycUMxZ1pRUk5TNmFLRXFnbGFZTFlXd1RvY2Q1WTRCT2NtU0Q5MjkzZEFXWm84TQ?oc=5",
+    "source": "28/22 News",
+    "desc": " Merck Animal Health talks flea, tick prevention | PA Live! \u2013 28/22 News &nbsp;&nbsp; 28/22 News ",
+    "date": "2026-09-26",
+    "cat": "vet"
+   },
+   {
+    "title": "Merck & Co., Daiichi withdraw US submission for ADC in lung cancer - FirstWord",
+    "clean": "Merck & Co., Daiichi withdraw US submission for ADC in lung cancer",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5CS2J1U3J0RDFwazFtblk1Z193T2dkWWkyMjRNOFloaW1fQ0J2Y0I3TVVtMi1VVlhJTWM1RGRtSlZuRnRicXRraEdIVVhCN2FULUJF?oc=5",
+    "source": "FirstWord",
+    "desc": " Merck & Co., Daiichi withdraw US submission for ADC in lung cancer &nbsp;&nbsp; FirstWord ",
+    "date": "2026-09-26",
+    "cat": "onco"
+   }
+  ],
+  "Boehringer Ingelheim": [
+   {
+    "title": "Boehringer Ingelheim offloads Shanghai CDMO to local antibody developer - fiercepharma.com",
+    "clean": "Boehringer Ingelheim offloads Shanghai CDMO to local antibody developer",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTlpDOUh3RkEtVVF5VnRmb3lyREFVbUhVOGRZV2JiZ0hTMmNmZzBRai1kTThPeFZNNDFWSHFveG1oWXhSVVRRV3ZQZTJoM2I4VW5wQ0FqZkRvRGxncXloLVBnemt0TExCY2RsNHRzRHNfTTNzUjFIZFR4ZXc3ZGk3c0Y3dW54UnJYR3dGOTR0d0szUEhFYjZMcUNUTnU4bmZyOTByNG8wMA?oc=5",
+    "source": "fiercepharma.com",
+    "desc": " Boehringer Ingelheim offloads Shanghai CDMO to local antibody developer &nbsp;&nbsp; fiercepharma.com ",
+    "date": "2026-09-24",
+    "cat": "mergers"
+   }
+  ],
+  "Lexeo Therapeutics": [
+   {
+    "title": "Lexeo takes up the Mantle in $8M acquisition for Friedreich ataxia assets - Fierce Biotech",
+    "clean": "Lexeo takes up the Mantle in $8M acquisition for Friedreich ataxia assets",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSy0xYmJVWEhBWmFfb2ZiZFYtdTBvckZhWDFYN3VCRHBVOHljNlJFWGdfXzNnWkpYREhZSDByOE1kOFhZRG9jczdjQ1ZvY3N2Z2ZwS0lPeHlqZWt5RzJLVGVpNVhVVkQ3VkdVZGNDS0tTRHNGaEdmcmVBOFZoZGVJdHlRQmZ6c05BM21wRGtNT2Jfd2pvN0VtcTVDeHY?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Lexeo takes up the Mantle in $8M acquisition for Friedreich ataxia assets &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-09-22",
+    "cat": "mergers"
+   }
+  ],
+  "Novartis": [
+   {
+    "title": "Novartis secures new radioligand in $900M deal as competition strengthens - Fierce Biotech",
+    "clean": "Novartis secures new radioligand in $900M deal as competition strengthens",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcDdCcmRCMm5lbzRWclRrYVVKT3lFY3IxNFN6eFN2MTcyOW1CbEVCdnJOWXQwcjhqcm5lM011S1lGVDIwWElLbUdsdTBxRUdtRG9udk4xZzBLR2toZkhsV1Iwc0VCakNCaXJBTHJVWG5KRmlEQVJOWjktdFdyWFFQLXZNa3RFNGM5QWxiOUJiQlRJVHhTZm01eGt0ZzMzVHlFcDVhN2VnRQ?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Novartis secures new radioligand in $900M deal as competition strengthens &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-09-22",
+    "cat": "mergers"
+   },
+   {
+    "title": "Analysts \u2018extremely bullish\u2019 as Telix beams into Novartis\u2019 territory with $1.6B ITM acquisition - Fierce Biotech",
+    "clean": "Analysts \u2018extremely bullish\u2019 as Telix beams into Novartis\u2019 territory with $1.6B ITM acquisition",
+    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPOTQyOERfQnA1blJDOUFWNFFpSnlVZGtyZWl1dmVoaWtJTHYyYUd0eXpMNWhXTzl4ZlYxZE1WS18wTXgzMlJlTlRhbXFiNlpydzRJSFRyenlDaXlJaTB1dnFMeENVUUZUQ3kyTTlpM2NkcTV6T2RsU3FoU0tnR1Q2dlhjZktGamtsUlpFWHEwdDJJeHFacGJ1bmZKLWlyNFY3OEozOTQtVGc0QzVNNUFlVzdEb2ZDTjA?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Analysts \u2018extremely bullish\u2019 as Telix beams into Novartis\u2019 territory with $1.6B ITM acquisition &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-09-21",
+    "cat": "mergers"
+   }
+  ],
+  "Regeneron": [
+   {
+    "title": "Mirum bags FDA approval for ultra-rare bone lesion disorder, heating up rivalry with Regeneron - fiercepharma.com",
+    "clean": "Mirum bags FDA approval for ultra-rare bone lesion disorder, heating up rivalry with Regeneron",
+    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPeENIQzBSd0xUdXdfRDdGNXlKOHFpRlMxOU01cnZPVkpoVGpHeFdTcUxud0hsbzdyajRJazVKZGlwZUNHbkY1Q0JNUHE2azVxekZaRXVKVmxHMmdKSHV2allRdW8xNVE5X2FyRzZzM3lKSlhFcHpvdng3bm9adkZLbDEzZTRPSWNPUWZIOXVUX0Jla1N1Y1FxVlVKTmhoX0ZNWVNtWFdXUko1SDRqM1RVT1dVX1BaTkxZV1o5QlRIM3lobDBSa1E?oc=5",
+    "source": "fiercepharma.com",
+    "desc": " Mirum bags FDA approval for ultra-rare bone lesion disorder, heating up rivalry with Regeneron &nbsp;&nbsp; fiercepharma.com ",
+    "date": "2026-09-25",
+    "cat": "drugs"
+   }
+  ],
+  "Mount Sinai": [
+   {
+    "title": "Mount Sinai Researchers Receive $3.6 Million NIH Grant to Improve Mitral Valve Surgery Decisions | Newswise - Newswise",
+    "clean": "Mount Sinai Researchers Receive $3.6 Million NIH Grant to Improve Mitral Valve Surgery Decisions | Newswise",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZXVKRkhWNklVMUR0Z0NYcXBuWExNZmVUZDJOX2pRME9EU3dldHFCZkpGVG1KYk5GaFRMWkxCSS04YzFqd2RHZ002b1hScnhORTRfMEFmWWRFOHhIR3NuTDJ3cVFBdE9ib05rNHlkRm1aSFBQWV9BYl9keUQybXI3Q1JFY194NzBDTGExR3NSSl9SbDlSQUNsS0c3dVBpb213MXdCcWxnUDB4a3pnbjNOMEplbkVPSmw3cno4bk9zcHU0b3FNc3hCSNIByAFBVV95cUxOZXVKRkhWNklVMUR0Z0NYcXBuWExNZmVUZDJOX2pRME9EU3dldHFCZkpGVG1KYk5GaFRMWkxCSS04YzFqd2RHZ002b1hScnhORTRfMEFmWWRFOHhIR3NuTDJ3cVFBdE9ib05rNHlkRm1aSFBQWV9BYl9keUQybXI3Q1JFY194NzBDTGExR3NSSl9SbDlSQUNsS0c3dVBpb213MXdCcWxnUDB4a3pnbjNOMEplbkVPSmw3cno4bk9zcHU0b3FNc3hCSA?oc=5",
+    "source": "Newswise",
+    "desc": " Mount Sinai Researchers Receive $3.6 Million NIH Grant to Improve Mitral Valve Surgery Decisions | Newswise &nbsp;&nbsp; Newswise ",
+    "date": "2026-09-22",
+    "cat": "academia"
+   }
+  ]
+ },
+ "top5": [
+  {
+   "pmid": "42774133",
+   "title": "The influence of canine parvovirus infection on the metabolome of captive Chinese and Malaysia pangolins",
+   "journal": "Front Cell Infect Microbiol",
+   "date": "2026",
+   "doi": "10.3389/fcimb.2026.1910730",
+   "authors": "Xiang C \u2026 Han M",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42774133/",
+   "field": "Virology",
+   "score": 16,
+   "hits": [
+    "canine"
+   ],
+   "why": "Overlaps my bench work: canine."
+  },
+  {
+   "pmid": "42790423",
+   "title": "iPSC-derived retinal organoids: Biological insights and progress toward photoreceptor replacement therapy",
+   "journal": "Cell Rep Med",
+   "date": "2026 Sep 25",
+   "doi": "10.1016/j.xcrm.2026.103053",
+   "authors": "Maeda A \u2026 Mandai M",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42790423/",
+   "field": "Cell Biology",
+   "score": 14,
+   "hits": [
+    "organoid"
+   ],
+   "why": "Overlaps my bench work: organoid."
+  },
+  {
+   "pmid": "42780883",
+   "title": "Ferroptosis-driven cell death perpetuates the chronic inflammatory cycle in periodontitis: a single-cell transcriptomic study",
+   "journal": "Front Cell Dev Biol",
+   "date": "2026",
+   "doi": "10.3389/fcell.2026.1904996",
+   "authors": "Yang H \u2026 Zhou Z",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42780883/",
+   "field": "NGS / Genomics",
+   "score": 14,
+   "hits": [
+    "single-cell"
+   ],
+   "why": "Overlaps my bench work: single-cell."
+  },
+  {
+   "pmid": "42798197",
+   "title": "The role of fibronectin in the tumor microenvironment - implications for immunotherapy",
+   "journal": "Cell Cycle",
+   "date": "2026 Dec 15",
+   "doi": "10.1080/15384101.2026.2735503",
+   "authors": "Kasprzak A \u2026 Pupek M",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42798197/",
+   "field": "Oncology",
+   "score": 13,
+   "hits": [
+    "immunotherapy"
+   ],
+   "why": "Overlaps my bench work: immunotherapy."
+  },
+  {
+   "pmid": "42778537",
+   "title": "Personalized single-cell transcriptomics reveals molecular diversity in Alzheimer's disease",
+   "journal": "Nat Commun",
+   "date": "2026 Sep 23",
+   "doi": "10.1038/s41467-026-72310-1",
+   "authors": "Chandrashekar PB \u2026 Wang D",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42778537/",
+   "field": "Molecular Biology",
+   "score": 12,
+   "hits": [
+    "single-cell"
+   ],
+   "why": "Overlaps my bench work: single-cell."
+  }
+ ],
+ "also": [
+  {
+   "pmid": "42771312",
+   "title": "Adeno-Associated Viral Vector (AAV)-Mediated In Vivo CRISPR-Cas9 Delivery",
+   "journal": "Methods Mol Biol",
+   "date": "2027",
+   "doi": "10.1007/978-1-0716-5547-4_9",
+   "authors": "Llanos-Ardaiz A \u2026 Gonzalez-Aseguinolaza G",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42771312/",
+   "field": "Virology",
+   "score": 16,
+   "hits": [
+    "viral vector",
+    "crispr",
+    "adeno-associated"
+   ],
+   "why": "Overlaps my bench work: viral vector, crispr, adeno-associated."
+  },
+  {
+   "pmid": "42785308",
+   "title": "HOPX regulates the development and lineage progression of human stem cell-derived outer radial glia-like cells",
+   "journal": "Stem Cell Reports",
+   "date": "2026 Sep 24",
+   "doi": "10.1016/j.stemcr.2026.103087",
+   "authors": "Dong XX \u2026 Li Y",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42785308/",
+   "field": "Molecular Biology",
+   "score": 10,
+   "hits": [],
+   "why": "High-profile result in one of my fields."
+  },
+  {
+   "pmid": "42782750",
+   "title": "ELAVL Proteins, miRNA Fate, and Extracellular RNA Communication in Brain Aging and Neurodegeneration",
+   "journal": "Cells",
+   "date": "2026 Sep 11",
+   "doi": "10.3390/cells15181649",
+   "authors": "Mukherjee K \u2026 Bhattacharyya SN",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42782750/",
+   "field": "Cell Biology",
+   "score": 10,
+   "hits": [],
+   "why": "High-profile result in one of my fields."
+  },
+  {
+   "pmid": "42768024",
+   "title": "Eggerthella lenta disrupts the gut vascular barrier to drive colorectal cancer liver metastasis",
+   "journal": "Cell Discov",
+   "date": "2026 Sep 22",
+   "doi": "10.1038/s41421-026-00922-4",
+   "authors": "Kong C \u2026 Ma Y",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42768024/",
+   "field": "NGS / Genomics",
+   "score": 10,
+   "hits": [],
+   "why": "High-profile result in one of my fields."
+  },
+  {
+   "pmid": "42767770",
+   "title": "Intravenously deliverable oncolytic virus VET3-TGI favorably alters the tumor microenvironment",
+   "journal": "J Immunother Cancer",
+   "date": "2026 Sep 21",
+   "doi": "10.1136/jitc-2026-015643",
+   "authors": "Zhang M \u2026 Thorne SH",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42767770/",
+   "field": "Oncology",
+   "score": 8,
+   "hits": [
+    "oncolytic"
+   ],
+   "why": "Overlaps my bench work: oncolytic."
+  },
+  {
+   "pmid": "42800809",
+   "title": "Galectin-3 restrains T cell-driven inflammation in the testis and epididymis",
+   "journal": "Cell Death Dis",
+   "date": "2026 Sep 26",
+   "doi": "10.1038/s41419-026-09304-w",
+   "authors": "Hasan H \u2026 Fijak M",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42800809/",
+   "field": "Veterinary Medicine",
+   "score": 10,
+   "hits": [],
+   "why": "High-profile result in one of my fields."
+  }
+ ]
+}
