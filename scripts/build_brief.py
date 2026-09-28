@@ -256,20 +256,36 @@ def cluster_news(news, threshold=0.34):
         for member in cluster["members"]:
             member.pop("tk", None)
     clusters.sort(key=lambda c: (-c["n_outlets"], -len(c["members"]), c["rep"]["date"]))
+    # Stable identity per story, assigned after the sort so it is the id the
+    # section fill dedups on.
+    for index, cluster in enumerate(clusters):
+        cluster["id"] = index
     return clusters, items
 
 
 def pick_sections(news, clusters):
-    """Top-10 multi-outlet stories, then per-section picks that don't repeat them."""
+    """Top-10 multi-outlet stories, then per-section picks that don't repeat them.
+
+    Deduplication keys on cluster membership, never on headline text. The same
+    event arrives from several outlets under different wordings -- "US FDA
+    approves Lilly's once-weekly insulin injection" and "FDA approves Eli
+    Lilly's once-a-week insulin injection" are one story -- so a prefix match on
+    the headline lets every one of them through. cluster_news has already done
+    the grouping; this just honours it, across sections and within each one.
+    """
+    story = {}
+    for cluster in clusters:
+        for member in cluster["members"]:
+            story[member["link"]] = cluster["id"]
+
     picked, used = {}, set()
     buzz = []
     for cluster in clusters:
         if cluster["n_outlets"] < 2:
             break
-        sig = cluster["rep"]["clean"].lower()[:60]
-        if sig in used:
+        if cluster["id"] in used:
             continue
-        used.add(sig)
+        used.add(cluster["id"])
         buzz.append(dict(cluster["rep"], n_outlets=cluster["n_outlets"],
                          outlets=cluster["outlets"][:6]))
         if len(buzz) == 10:
@@ -291,18 +307,19 @@ def pick_sections(news, clusters):
         pool.sort(key=lambda r: (-reach.get(r["link"], 1),
                                  0 if r["source"] in TIER_OUTLETS else 1,
                                  r["date"]))
-        rows, seen = [], set()
+        rows = []
         for row in pool:
-            sig = row["clean"].lower()[:60]
-            if sig in seen or sig in used:
+            # A row with no cluster should not happen; fall back to the old
+            # headline key rather than letting it through unchecked.
+            sid = story.get(row["link"], "raw:" + row["clean"].lower()[:60])
+            if sid in used:
                 continue
-            seen.add(sig)
+            used.add(sid)
             rows.append(dict(row, n_outlets=reach.get(row["link"], 1)))
             if len(rows) == count:
                 break
         picked[key] = rows
     return picked
-
 
 def journal_tier(journal):
     low = (journal or "").lower()
@@ -464,6 +481,16 @@ border-radius:5px;background:var(--bg);color:var(--ink);font:400 14px/1.3 inheri
 color:var(--bg);font:600 13px/1.3 inherit;cursor:pointer}
 .sub button:hover{background:var(--amber)}
 .sub-note{display:block;margin-top:8px;font-size:11.5px;color:var(--ink-2)}
+.subbar{background:var(--panel-2);border-bottom:1px solid var(--line-soft)}
+.subbar .wrap{padding-top:12px;padding-bottom:12px}
+.sub-inline{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.subbar-label{color:var(--ink);font:600 13px/1.4 'Space Grotesk',sans-serif}
+.sub-inline input{flex:1 1 220px;min-width:0;padding:8px 11px;border:1px solid var(--line);
+border-radius:5px;background:var(--bg);color:var(--ink);font:400 13.5px/1.3 inherit}
+.sub-inline button{padding:8px 16px;border:0;border-radius:5px;background:var(--ink);
+color:var(--bg);font:600 12.5px/1.3 inherit;cursor:pointer;white-space:nowrap}
+.sub-inline button:hover{background:var(--amber)}
+@media(max-width:620px){.subbar-label{flex:1 1 100%}}
 """
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
@@ -474,6 +501,14 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
 
 
 def shell(title, description, body, canonical):
+    sub_top = (
+        f'<div class="subbar"><div class="wrap">'
+        f'<form class="sub-inline" action="{SUBSCRIBE_ACTION}" method="post" target="_blank">'
+        f'<span class="subbar-label">The brief, in your inbox every Monday.</span>'
+        f'<input type="email" name="email" placeholder="you@example.com" '
+        f'aria-label="Email address" autocomplete="email" required>'
+        f'<button type="submit">Subscribe</button>'
+        f'</form></div></div>') if SUBSCRIBE_ACTION else ""
     subscribe = (
         f'<form class="sub" action="{SUBSCRIBE_ACTION}" method="post" target="_blank">'
         f'<label for="sub-email">Get the brief by email, Monday mornings.</label>'
@@ -496,6 +531,7 @@ def shell(title, description, body, canonical):
 <header class="top"><div class="wrap"><span class="brand">Taylor Flaat</span>
 <span class="eyebrow">The Monday Brief</span>
 <a class="back" href="{SITE}/">&larr; taylorflaat.com</a></div></header>
+{sub_top}
 {body}
 <footer><div class="wrap">{subscribe}<b>How this is built</b>
 Papers are pulled from PubMed by entry date across virology, molecular biology, cell biology,
