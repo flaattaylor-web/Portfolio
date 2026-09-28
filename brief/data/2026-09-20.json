@@ -584,7 +584,7 @@
     "vaccine",
     "immunotherapy"
    ],
-   "why": "Overlaps my bench work: vaccine, immunotherapy."
+   "why": "Matches this issue's focus areas: vaccine, immunotherapy."
   },
   {
    "pmid": "42752133",
@@ -599,7 +599,7 @@
    "hits": [
     "crispr"
    ],
-   "why": "Overlaps my bench work: crispr."
+   "why": "Matches this issue's focus areas: crispr."
   },
   {
    "pmid": "42749812",
@@ -614,7 +614,7 @@
    "hits": [
     "organoid"
    ],
-   "why": "Overlaps my bench work: organoid."
+   "why": "Matches this issue's focus areas: organoid."
   },
   {
    "pmid": "42736414",
@@ -629,7 +629,7 @@
    "hits": [
     "nanopore"
    ],
-   "why": "Overlaps my bench work: nanopore."
+   "why": "Matches this issue's focus areas: nanopore."
   },
   {
    "pmid": "42743921",
@@ -644,7 +644,7 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Overlaps my bench work: single-cell."
+   "why": "Matches this issue's focus areas: single-cell."
   }
  ],
  "also": [
@@ -659,7 +659,7 @@
    "field": "Virology",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of my fields."
+   "why": "High-profile result in one of the covered fields."
   },
   {
    "pmid": "42760507",
@@ -674,7 +674,7 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Overlaps my bench work: single-cell."
+   "why": "Matches this issue's focus areas: single-cell."
   },
   {
    "pmid": "42759501",
@@ -689,7 +689,7 @@
    "hits": [
     "organoid"
    ],
-   "why": "Overlaps my bench work: organoid."
+   "why": "Matches this issue's focus areas: organoid."
   },
   {
    "pmid": "42754741",
@@ -704,7 +704,7 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Overlaps my bench work: single-cell."
+   "why": "Matches this issue's focus areas: single-cell."
   },
   {
    "pmid": "42755487",
@@ -719,7 +719,7 @@
    "hits": [
     "immunotherapy"
    ],
-   "why": "Overlaps my bench work: immunotherapy."
+   "why": "Matches this issue's focus areas: immunotherapy."
   },
   {
    "pmid": "42755045",
@@ -734,7 +734,7 @@
    "hits": [
     "canine"
    ],
-   "why": "Overlaps my bench work: canine."
+   "why": "Matches this issue's focus areas: canine."
   }
  ]
 }

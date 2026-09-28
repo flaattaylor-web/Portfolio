@@ -637,7 +637,7 @@
    "hits": [
     "canine"
    ],
-   "why": "Overlaps my bench work: canine."
+   "why": "Matches this issue's focus areas: canine."
   },
   {
    "pmid": "42790423",
@@ -652,7 +652,7 @@
    "hits": [
     "organoid"
    ],
-   "why": "Overlaps my bench work: organoid."
+   "why": "Matches this issue's focus areas: organoid."
   },
   {
    "pmid": "42780883",
@@ -667,7 +667,7 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Overlaps my bench work: single-cell."
+   "why": "Matches this issue's focus areas: single-cell."
   },
   {
    "pmid": "42798197",
@@ -682,7 +682,7 @@
    "hits": [
     "immunotherapy"
    ],
-   "why": "Overlaps my bench work: immunotherapy."
+   "why": "Matches this issue's focus areas: immunotherapy."
   },
   {
    "pmid": "42778537",
@@ -697,7 +697,7 @@
    "hits": [
     "single-cell"
    ],
-   "why": "Overlaps my bench work: single-cell."
+   "why": "Matches this issue's focus areas: single-cell."
   }
  ],
  "also": [
@@ -716,7 +716,7 @@
     "crispr",
     "adeno-associated"
    ],
-   "why": "Overlaps my bench work: viral vector, crispr, adeno-associated."
+   "why": "Matches this issue's focus areas: viral vector, crispr, adeno-associated."
   },
   {
    "pmid": "42785308",
@@ -729,7 +729,7 @@
    "field": "Molecular Biology",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of my fields."
+   "why": "High-profile result in one of the covered fields."
   },
   {
    "pmid": "42782750",
@@ -742,7 +742,7 @@
    "field": "Cell Biology",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of my fields."
+   "why": "High-profile result in one of the covered fields."
   },
   {
    "pmid": "42768024",
@@ -755,7 +755,7 @@
    "field": "NGS / Genomics",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of my fields."
+   "why": "High-profile result in one of the covered fields."
   },
   {
    "pmid": "42767770",
@@ -770,7 +770,7 @@
    "hits": [
     "oncolytic"
    ],
-   "why": "Overlaps my bench work: oncolytic."
+   "why": "Matches this issue's focus areas: oncolytic."
   },
   {
    "pmid": "42800809",
@@ -783,7 +783,7 @@
    "field": "Veterinary Medicine",
    "score": 10,
    "hits": [],
-   "why": "High-profile result in one of my fields."
+   "why": "High-profile result in one of the covered fields."
   }
  ]
 }

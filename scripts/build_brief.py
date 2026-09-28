@@ -55,7 +55,7 @@ SECTIONS = [
     ("trials", "Clinical Trials", "Readouts, starts, failures", 5),
     ("drugs", "Regulatory", "Approvals, CRLs, CHMP opinions", 5),
     ("academia", "Academia", "Grants, budgets, institutions", 4),
-    ("platform", "The Bench", "NGS, virology and animal-health industry moves", 5),
+    ("platform", "Platforms &amp; Tools", "NGS, virology and animal-health industry moves", 5),
 ]
 SECTION_FEEDS = {"funding": ["funding"], "mergers": ["mergers"], "hiring": ["hiring"],
                  "trials": ["trials"], "drugs": ["drugs", "onco"], "academia": ["academia"],
@@ -73,7 +73,7 @@ FIELDS = {
     "Veterinary Medicine": '(veterinary OR canine OR feline) AND (medicine OR oncology OR immunology OR vaccine OR "mast cell tumor")',
 }
 
-# Weighted vocabulary drawn from the CV -- drives the deterministic relevance note.
+# Weighted vocabulary for the covered fields -- drives the deterministic relevance note.
 KEYWORDS = {
     "vesicular stomatitis": 7, "oncolytic": 6, "viral vector": 6, "nanopore": 6, "mast cell": 6,
     "melanocyte": 6, "canine": 6, "long-read": 5, "library prep": 5, "flow cytometry": 5,
@@ -91,7 +91,7 @@ TIER_3 = ("nucleic acids res", "genome biol", "genome res", "elife", "plos biol"
           "j mol diagn", "biotechnol")
 TIER_2 = ("j virol", "viruses", "vet ", "j vet", "front immunol", "vaccine", "virology")
 
-# Past employers and places with an application open.
+# Standing watchlist: biopharma and life-science tooling companies.
 ALIASES = {
     "Azenta Life Sciences": ["Azenta"], "Merck": [r"\bMerck\b"], "Humane Genomics": ["Humane Genomics"],
     "Pfizer": ["Pfizer"], "Boehringer Ingelheim": ["Boehringer"], "Thermo Fisher": ["Thermo Fisher"],
@@ -346,8 +346,8 @@ def rank_papers(by_field, meta):
                 taken.add(row["pmid"])
                 break
     for row in top + extra:
-        row["why"] = ("Overlaps my bench work: " + ", ".join(row["hits"]) + "."
-                      if row["hits"] else "High-profile result in one of my fields.")
+        row["why"] = ("Matches this issue's focus areas: " + ", ".join(row["hits"]) + "."
+                      if row["hits"] else "High-profile result in one of the covered fields.")
     return top, extra
 
 
@@ -476,7 +476,7 @@ def shell(title, description, body, canonical):
 <footer><div class="wrap"><b>How this is built</b>
 Papers are pulled from PubMed by entry date across virology, molecular biology, cell biology,
 NGS/genomics, oncology and veterinary medicine, then ranked on journal tier and keyword overlap
-with my own bench work; publication dates can predate the indexing window. Industry items come
+with the fields this brief covers; publication dates can predate the indexing window. Industry items come
 from ten topic news feeds over the same window, de-duplicated, with stock-promotion and
 aggregator content dropped. &ldquo;Most-shared&rdquo; is the number of independent outlets that
 ran the same story &mdash; social platforms expose no engagement data to this pipeline, so no
@@ -513,7 +513,7 @@ def render_issue(issue):
         f' Week in review</div><h1 class="title">{e(issue["window_label"])}</h1>'
         f'<p class="lead">Funding, deals, hiring, trials and approvals across biotech, pharma and '
         f'academia &mdash; plus the newest papers in virology, molecular biology, cell biology, '
-        f'NGS, oncology and veterinary medicine, ranked against my own bench work.</p>'
+        f'NGS, oncology and veterinary medicine, ranked by journal tier and topical fit.</p>'
         f'<div class="stats">'
         f'<div class="stat"><b>{counts["news"]}</b><span>headlines screened</span></div>'
         f'<div class="stat"><b>{counts["papers"]}</b><span>papers assessed</span></div>'
@@ -540,8 +540,8 @@ def render_issue(issue):
     parts.append(
         f'<section><div class="wrap"><div class="sec-head">'
         f'<div class="eyebrow"><span class="idx">01</span> Watchlist</div>'
-        f'<h2 class="sec-title">Companies on my radar.</h2>'
-        f'<p class="sec-lead">Past employers and places I have an application open '
+        f'<h2 class="sec-title">Companies in focus.</h2>'
+        f'<p class="sec-lead">A standing roster of biopharma and life-science tooling companies '
         f'&mdash; {len(ALIASES)} tracked.</p></div>'
         f'{grid}{roster}</div></section>')
 

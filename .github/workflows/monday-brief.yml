@@ -19,6 +19,10 @@ on:
         description: "How many trailing weeks to cover (1 = previous Mon-Sun)"
         required: false
         default: "1"
+      send:
+        description: "Also email this run (scheduled runs always email)"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -44,6 +48,31 @@ jobs:
           # PubMed. Omitted is fine -- E-utilities serves anonymous requests.
           NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
         run: python scripts/build_brief.py
+
+      # The email goes out before the commit, not after. The commit is what
+      # records that this week's issue was generated AND delivered, so a failed
+      # send leaves the tree dirty-but-uncommitted and the next retry cron
+      # rebuilds and sends from clean. Once committed, later runs build nothing.
+      - name: Did the build produce a new issue?
+        id: check
+        run: |
+          if [ -n "$(git status --porcelain brief)" ]; then
+            echo "new=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "new=false" >> "$GITHUB_OUTPUT"
+            echo "this week's issue is already committed - no build, no email"
+          fi
+
+      - name: Email the issue
+        if: steps.check.outputs.new == 'true' && (github.event_name == 'schedule' || github.event.inputs.send == 'true')
+        env:
+          BRIEF_WEEKS: ${{ github.event.inputs.weeks || '1' }}
+          # Recipients and sender are repo VARIABLES, so the list changes
+          # without a commit. Only the app password is a secret.
+          BRIEF_TO: ${{ vars.BRIEF_TO }}
+          BRIEF_FROM: ${{ vars.BRIEF_FROM }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python scripts/send_brief.py
 
       - name: Commit if anything changed
         run: |
