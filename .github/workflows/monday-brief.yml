@@ -75,12 +75,21 @@ jobs:
         if: steps.check.outputs.new == 'true' && (github.event_name == 'schedule' || github.event.inputs.send == 'true')
         env:
           BRIEF_WEEKS: ${{ github.event.inputs.weeks || '1' }}
+          # Buttondown is the path once the list is public. The Gmail fallback
+          # below stays for the fixed personal list; a free Gmail account
+          # cannot serve public subscribers.
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           # Recipients and sender are repo VARIABLES, so the list changes
           # without a commit. Only the app password is a secret.
           BRIEF_TO: ${{ vars.BRIEF_TO }}
           BRIEF_FROM: ${{ vars.BRIEF_FROM }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: python scripts/send_brief.py
+        run: |
+          if [ -n "$BUTTONDOWN_API_KEY" ]; then
+            python scripts/send_broadcast.py
+          else
+            python scripts/send_brief.py
+          fi
 
       - name: Commit if anything changed
         run: |

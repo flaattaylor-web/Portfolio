@@ -10,6 +10,7 @@ is a Gmail app password, used by the send step.
     scripts/build_brief.py               the generator (standard library only)
     scripts/build_newsletter.py          renders the email-safe HTML body
     scripts/send_brief.py                sends that body over Gmail SMTP
+    scripts/send_broadcast.py            sends it to the Buttondown list
     scripts/setup_brief_email.py         one-off: stores the app password
     brief/index.html                     latest issue + full archive list
     brief/issues/<YYYY-MM-DD>.html       one permanent page per issue
@@ -41,6 +42,35 @@ build product, not source. The files you edit by hand are
 Optional: add a repository variable `NCBI_EMAIL` (Settings → Secrets and
 variables → Actions → Variables) so PubMed can identify the caller. Anonymous
 requests work fine; this is only politeness to NCBI.
+
+## Subscribers
+
+Two delivery paths. The workflow uses Buttondown whenever the
+`BUTTONDOWN_API_KEY` secret is set, and falls back to Gmail SMTP otherwise.
+A free Gmail account cannot serve a public list — its SMTP ceiling is about a
+hundred recipients a day and Gmail throttles bulk sends well below published
+quotas — so the SMTP path is only for the fixed personal list.
+
+To open signups:
+
+1. Create the newsletter at buttondown.com and copy the API key from
+   Settings → Programming.
+2. Add it as the `BUTTONDOWN_API_KEY` repository secret.
+3. Copy the form action out of Settings → Embedding and paste it into
+   `SUBSCRIBE_ACTION` at the top of `build_brief.py`. While that constant is
+   empty the signup block is omitted, so the page never shows a form that
+   posts nowhere.
+4. Subscribe the existing recipients yourself, then drop `BRIEF_TO`,
+   `BRIEF_FROM` and `GMAIL_APP_PASSWORD` if you no longer want the fallback.
+
+The send is two API calls: create the issue as a `draft`, then PATCH it to
+`about_to_send`. Under API version 2026-04-01 a create that sets
+`about_to_send` directly is refused until a one-time confirmation header is
+sent for the key, while PATCH carries no such requirement. It also fails
+safe — a PATCH that does not land leaves a draft you can send by hand.
+
+Buttondown handles double opt-in and the unsubscribe link, which a public
+list needs and the SMTP path does not provide.
 
 ## Schedule
 

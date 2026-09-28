@@ -28,6 +28,11 @@ from email.utils import format_datetime, parsedate_to_datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "brief")
 SITE = "https://taylorflaat.com"
+
+# Form action from Buttondown's embed snippet (Settings -> Embedding).
+# While this is empty the signup block is omitted entirely, so the page never
+# shows a form that posts nowhere.
+SUBSCRIBE_ACTION = ""
 UA = {"User-Agent": "taylorflaat.com monday-brief generator (+https://taylorflaat.com)"}
 NCBI = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
@@ -448,6 +453,17 @@ text-transform:uppercase;display:block;margin-bottom:9px}
 @media(max-width:620px){.card{flex-direction:column;gap:8px}
 table.also td.f{width:auto;display:block}table.also td{display:block;border:0;padding-bottom:0}
 table.also tr{display:block;border-bottom:1px solid var(--line-soft);padding:12px 0}}
+.sub{margin:0 0 20px;padding:16px 18px;background:var(--panel);
+border:1px solid var(--line-soft);border-radius:6px}
+.sub label{display:block;margin-bottom:9px;color:var(--ink);
+font:600 13px/1.4 'Space Grotesk',sans-serif}
+.sub-row{display:flex;gap:8px;flex-wrap:wrap}
+.sub input{flex:1 1 230px;padding:9px 11px;border:1px solid var(--line);
+border-radius:5px;background:var(--bg);color:var(--ink);font:400 14px/1.3 inherit}
+.sub button{padding:9px 18px;border:0;border-radius:5px;background:var(--ink);
+color:var(--bg);font:600 13px/1.3 inherit;cursor:pointer}
+.sub button:hover{background:var(--amber)}
+.sub-note{display:block;margin-top:8px;font-size:11.5px;color:var(--ink-2)}
 """
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
@@ -458,6 +474,14 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
 
 
 def shell(title, description, body, canonical):
+    subscribe = (
+        f'<form class="sub" action="{SUBSCRIBE_ACTION}" method="post" target="_blank">'
+        f'<label for="sub-email">Get the brief by email, Monday mornings.</label>'
+        f'<div class="sub-row"><input id="sub-email" type="email" name="email" '
+        f'placeholder="you@example.com" autocomplete="email" required>'
+        f'<button type="submit">Subscribe</button></div>'
+        f'<span class="sub-note">One email a week. Every issue carries an '
+        f'unsubscribe link.</span></form>') if SUBSCRIBE_ACTION else ""
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -473,7 +497,7 @@ def shell(title, description, body, canonical):
 <span class="eyebrow">The Monday Brief</span>
 <a class="back" href="{SITE}/">&larr; taylorflaat.com</a></div></header>
 {body}
-<footer><div class="wrap"><b>How this is built</b>
+<footer><div class="wrap">{subscribe}<b>How this is built</b>
 Papers are pulled from PubMed by entry date across virology, molecular biology, cell biology,
 NGS/genomics, oncology and veterinary medicine, then ranked on journal tier and keyword overlap
 with the fields this brief covers; publication dates can predate the indexing window. Industry items come
