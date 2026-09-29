@@ -2,11 +2,11 @@
  "issue": "02",
  "date": "2026-09-27",
  "window_label": "21 \u2013 27 September 2026",
- "generated": "2026-09-28",
+ "generated": "2026-09-29",
  "counts": {
-  "news": 623,
-  "papers": 229,
-  "clusters": 52,
+  "news": 599,
+  "papers": 221,
+  "clusters": 50,
   "radar": 9
  },
  "picked": {
@@ -23,10 +23,27 @@
     "outlets": [
      "Beyond Type 1",
      "Eli Lilly",
-     "LiveNOW from FOX",
      "PR Newswire",
      "Patient Care Online",
-     "Pharmacy Times"
+     "Pharmacy Times",
+     "Reuters"
+    ]
+   },
+   {
+    "title": "FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy - Pharmacy Times",
+    "clean": "FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPeU9wU0pvU1ZpanE3NDFGWjBQRFFWYVQ3SlZGSnY0Q0pyWlZiSnZ3cjhLM1Ziem9LTHlIemdJTFZ5UW82R2pDdGF1RUpybjIxN2s3QUN3dDNqN2dLWXYzLTJYYjFNZFh3WGVIUWlpT1M0TmYtUzlMWlNNcEgzYjNYN3VsNE9fUTZWY3hoTjluUmx4aXJzTTM5aGZlN2JDQmZNdlpDcElMbW9HMVZGOC10ZFRDVVFSNG1TZGVaNGQ0VzNiWUdIejF3?oc=5",
+    "source": "Pharmacy Times",
+    "desc": " FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy &nbsp;&nbsp; Pharmacy Times ",
+    "date": "2026-09-24",
+    "cat": "drugs",
+    "n_outlets": 5,
+    "outlets": [
+     "Oncology News Central",
+     "Oncology Nursing News",
+     "Pharmacy Times",
+     "Urology Times",
+     "onclive.com"
     ]
    },
    {
@@ -43,23 +60,7 @@
      "Endpoints News",
      "Investing.com",
      "The Lufkin Daily News",
-     "TradingView"
-    ]
-   },
-   {
-    "title": "FDA Approves Welireg Plus Lenvima for Previously Treated Adult Patients With ccRCC - Pharmaceutical Executive",
-    "clean": "FDA Approves Welireg Plus Lenvima for Previously Treated Adult Patients With ccRCC",
-    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdWhuNHg5eHZjS045V1hfX0VVcUhWRWxBc21hbV9vR2RBX2VSUjlEZnZBYVN1NTJ1Xy0tSHN0dDVNR0RHYnBvVC1BaUVlck83Z29JSkJ3d2JETllQbFlIb3NYd1pWYUhldHhIdEM1UjBNWXNPQmFQZmY2Nk5BcDEtM1RQS1ZGSVhKNGFBbENR?oc=5",
-    "source": "Pharmaceutical Executive",
-    "desc": " FDA Approves Welireg Plus Lenvima for Previously Treated Adult Patients With ccRCC &nbsp;&nbsp; Pharmaceutical Executive ",
-    "date": "2026-09-25",
-    "cat": "drugs",
-    "n_outlets": 4,
-    "outlets": [
-     "OncLive",
-     "Oncology News Central",
-     "Pharmaceutical Executive",
-     "curetoday.com"
+     "tradingview.com"
     ]
    },
    {
@@ -74,8 +75,8 @@
     "outlets": [
      "BusinessLine",
      "Indian Pharma Post",
-     "TradingView",
-     "scanx.trade"
+     "scanx.trade",
+     "tradingview.com"
     ]
    },
    {
@@ -88,26 +89,10 @@
     "cat": "drugs",
     "n_outlets": 4,
     "outlets": [
-     "OncLive",
+     "Cure Today",
      "Pharmacy Times",
      "The ASCO Post",
-     "curetoday.com"
-    ]
-   },
-   {
-    "title": "FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy - Pharmacy Times",
-    "clean": "FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy",
-    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPeU9wU0pvU1ZpanE3NDFGWjBQRFFWYVQ3SlZGSnY0Q0pyWlZiSnZ3cjhLM1Ziem9LTHlIemdJTFZ5UW82R2pDdGF1RUpybjIxN2s3QUN3dDNqN2dLWXYzLTJYYjFNZFh3WGVIUWlpT1M0TmYtUzlMWlNNcEgzYjNYN3VsNE9fUTZWY3hoTjluUmx4aXJzTTM5aGZlN2JDQmZNdlpDcElMbW9HMVZGOC10ZFRDVVFSNG1TZGVaNGQ0VzNiWUdIejF3?oc=5",
-    "source": "Pharmacy Times",
-    "desc": " FDA Approves Belzutifan Plus Lenvatinib for Advanced Renal Cell Carcinoma After Immunotherapy &nbsp;&nbsp; Pharmacy Times ",
-    "date": "2026-09-24",
-    "cat": "drugs",
-    "n_outlets": 4,
-    "outlets": [
-     "CancerNetwork",
-     "Pharmacy Times",
-     "Urology Times",
-     "oncnursingnews.com"
+     "onclive.com"
     ]
    },
    {
@@ -127,18 +112,34 @@
     ]
    },
    {
-    "title": "FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma - oncnursingnews.com",
-    "clean": "FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma",
-    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUHVsMmRhbzc0MEdKdkFmVzhKWXFMdGZ0MlY2TGQwNENNQUdFdnk3NGhDelBrY0k1WVhWbm9PUm9YWndyczJ1b1VRd00zUGFDb1liQ3lRNW1pbnhWNkpZQV9keXo4Q0cxSndWQ3RlLXV4N2dHWWc2WGtCbWhxSGcyLTNqZEhvSFl1ZXJNUGkxYlNZOWR2aGNyQS00TTBCd2NZUzBV?oc=5",
-    "source": "oncnursingnews.com",
-    "desc": " FDA Approves Lirafugratinib for Advanced FGFR2+ Cholangiocarcinoma &nbsp;&nbsp; oncnursingnews.com ",
-    "date": "2026-09-23",
+    "title": "ADARx Pharmaceuticals raises $446.3 million in upsized US IPO - Yahoo Finance Singapore",
+    "clean": "ADARx Pharmaceuticals raises $446.3 million in upsized US IPO",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONm96T0htaE95dElOWHFwVUl1dmYyVUNNbzFsM2Q3S2NvSENHeVNJQS14X253SXVlRFpBRUluOFFqQnFEQ0RzU1RrRnFYLTVNRzhJTVlSOFNJTVZDRUd4QXhScTRfbEkyYk9FekRTbmZJZDRPTGRNbzJZRWE1TndId3R0UTl0OFJadE84?oc=5",
+    "source": "Yahoo Finance Singapore",
+    "desc": " ADARx Pharmaceuticals raises $446.3 million in upsized US IPO &nbsp;&nbsp; Yahoo Finance Singapore ",
+    "date": "2026-09-25",
+    "cat": "funding",
+    "n_outlets": 4,
+    "outlets": [
+     "AOL.ca",
+     "Yahoo Finance Singapore",
+     "qz.com",
+     "wtvbam.com"
+    ]
+   },
+   {
+    "title": "FDA Approves Lirafugratinib Capsules for FGFR2+ Cholangiocarcinoma Care - Oncology Nursing News",
+    "clean": "FDA Approves Lirafugratinib Capsules for FGFR2+ Cholangiocarcinoma Care",
+    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUGd1MWdKSnVIbEc5MVUxOGQ3S1NwUEk4T1Y4djV3bm13TGNUNTU4QktldXdPcXB5WnRQTlBqTXVvVGtEcnNUVkN3cXduVEtpQ243M0NfRE1yWVpKX1hqa1hZc3NUUFVCa1FGOEZ4Ym14OVRXby1PZVVxa3NRcWw4Wk1HZHhFUGhreldvOHJIRGd1VkVic1BHRmlsbDdJMGlSVU8xaTJfNHF5QXMx?oc=5",
+    "source": "Oncology Nursing News",
+    "desc": " FDA Approves Lirafugratinib Capsules for FGFR2+ Cholangiocarcinoma Care &nbsp;&nbsp; Oncology Nursing News ",
+    "date": "2026-09-24",
     "cat": "drugs",
     "n_outlets": 3,
     "outlets": [
      "Oncology News Central",
-     "Targeted Oncology",
-     "oncnursingnews.com"
+     "Oncology Nursing News",
+     "targetedonc.com"
     ]
    },
    {
@@ -194,32 +195,32 @@
     "n_outlets": 2
    },
    {
-    "title": "ADARx Pharmaceuticals raised $446 million in a biotech IPO backed by AbbVie - qz.com",
-    "clean": "ADARx Pharmaceuticals raised $446 million in a biotech IPO backed by AbbVie",
-    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMHJES0VvRzVLQk40Y3Iwb2pvX1h3MC1UVXpmZnZYSExkYzd1S0FiOURRUDNCNE9UQ2tGY1B1RGlhdkNNQXNkanh1SGx0YXRKSU9HZzRtSlp2MEFBdUlLazFqMF9abnR0ZjJrWEg5bzBMRTdIdjR0Mm5GWlVzMzVxenM3M2dTaExDMmJNQnUxNDU0aF9iVHJfWmhGMU1KSy1Mb3BJek1VMlBpUHdSQWg4dXE0eEwyWVVtQkwzak9DTVltdXg0czlhWWpEaUVvTktSUDdhRmxGSQ?oc=5",
-    "source": "qz.com",
-    "desc": " ADARx Pharmaceuticals raised $446 million in a biotech IPO backed by AbbVie &nbsp;&nbsp; qz.com ",
-    "date": "2026-09-25",
-    "cat": "funding",
-    "n_outlets": 2
-   },
-   {
-    "title": "ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO - WTVB",
-    "clean": "ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO",
-    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVm5RSlA4LS1ZajJPalVhZkM2LW9XaGV2eG9WX1JSR1ppbElOYTBCdDBtblpxcjFEYm9OcVItYVdPcmxCSHVYRzhfY3pyN296TnQ2cWhNaUhBd0k4eGVDZTJHbHMwYjAxZjJlbDF6bmJobF94YnBhMnp2SDRoYTFvdlNCVUpFcmV5UmlEQUxCM1pSa1hmb0E?oc=5",
-    "source": "WTVB",
-    "desc": " ADARx Pharmaceuticals shares soar in Nasdaq debut after upsized IPO &nbsp;&nbsp; WTVB ",
-    "date": "2026-09-25",
-    "cat": "funding",
-    "n_outlets": 2
-   },
-   {
     "title": "Retension and Lilly-backed TRex Bio both set out plans to join biotech IPO stampede - Fierce Biotech",
     "clean": "Retension and Lilly-backed TRex Bio both set out plans to join biotech IPO stampede",
     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQN0VCNGhRS25haUpwbWZNVUpTQjJsZnVPbFpkVkQ4a2VKTTk5QXNSa3BzVVB4VHFxLVFfcWxfeXFzeUNYZzdWcTBNUEpmZFI0U0pDOEgxSENOUHFTRzczV0lSNUFwN1lQZTFNOGowNnMyMWpDR3BiSk4tc01YcTV4OTRIUmRmM3JlV2dvX2I5X3FYRDdRaWkza2JNcTFwVlpFNC1KeENXbjJ6UGVKUDh2Y0l4RDQ2SWlyRnc?oc=5",
     "source": "Fierce Biotech",
     "desc": " Retension and Lilly-backed TRex Bio both set out plans to join biotech IPO stampede &nbsp;&nbsp; Fierce Biotech ",
     "date": "2026-09-21",
+    "cat": "funding",
+    "n_outlets": 1
+   },
+   {
+    "title": "Enveda, an AI drugmaker, banks $311M in venture funding - BioPharma Dive",
+    "clean": "Enveda, an AI drugmaker, banks $311M in venture funding",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUS1Sb0UyVEk1ZGZ2cXBIWDQ5ZDlLQ010bmlsQUJFZnoxaWwxZkNNRHdPcTlGeEZDTEJ4d280VkNPd2NaclRESWN1LWtOUG5tckFKNnFSTjNaeE5KZHF4S1VlUWp3Q2VaMEF2M2l0d3FFcnJLMHlBcG5lQTBOaWhQSkdR?oc=5",
+    "source": "BioPharma Dive",
+    "desc": " Enveda, an AI drugmaker, banks $311M in venture funding &nbsp;&nbsp; BioPharma Dive ",
+    "date": "2026-09-23",
+    "cat": "funding",
+    "n_outlets": 1
+   },
+   {
+    "title": "Enveda reaps $311M series E to feed ambition to become a \u2018household name\u2019 - Fierce Biotech",
+    "clean": "Enveda reaps $311M series E to feed ambition to become a \u2018household name\u2019",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdWFQZnhQYkJpalBIajlwNzhETE5DM0w5YnM4UWRxWHN2XzVrOUduV3FmWGZWVEhKRzRuUEtzWnFGeTVsRkh4bHZzZmZaSS15RXBHeWhmRWlmTkpxNmtkVXI0cTJYcnJSdk1CUnZTNnk4cFdfQnpaVDFUUkhHOUZ0LV9RQ3VoT3QyYUdPazIzc1NJX3JZU1FaZ2I4YWlRWjZWbnhZ?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Enveda reaps $311M series E to feed ambition to become a \u2018household name\u2019 &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-09-23",
     "cat": "funding",
     "n_outlets": 1
    }
@@ -236,11 +237,11 @@
     "n_outlets": 2
    },
    {
-    "title": "Gr\u00fcnenthal acquires cancer treatment Stivarga - The Pharma Letter",
+    "title": "Gr\u00fcnenthal acquires cancer treatment Stivarga - thepharmaletter.com",
     "clean": "Gr\u00fcnenthal acquires cancer treatment Stivarga",
     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVlBIblRzSFZXaVE4V0FyTl8ybmhYM05CeDJscXQzUkpCTWZCN1pXUW44WUxVcEQxbGtQOFUyXzI5TFY5WEpwSUtVSW9QZE82UDM0bFFzRVB3QmVCblBvamFKaFpxZDBUdHdzQVhtQWR0cmIzN2F1Nl9pMHdRUDBpVUdkRFRDSi1pWWNxeE1jQjgzMHM?oc=5",
-    "source": "The Pharma Letter",
-    "desc": " Gr\u00fcnenthal acquires cancer treatment Stivarga &nbsp;&nbsp; The Pharma Letter ",
+    "source": "thepharmaletter.com",
+    "desc": " Gr\u00fcnenthal acquires cancer treatment Stivarga &nbsp;&nbsp; thepharmaletter.com ",
     "date": "2026-09-21",
     "cat": "mergers",
     "n_outlets": 2
@@ -288,11 +289,11 @@
     "n_outlets": 3
    },
    {
-    "title": "ImmunoScape Appoints Peter Olagunju as Chief Executive Officer - businesswire.com",
+    "title": "ImmunoScape Appoints Peter Olagunju as Chief Executive Officer - Business Wire",
     "clean": "ImmunoScape Appoints Peter Olagunju as Chief Executive Officer",
     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPT0ozN1JycDhtNEJ6YVJQSVJXTC1USU5WdkdsQXRPVndvRDZ1X0dBOTVaWmNWSE1TTTRaWW1vUDlyS29RV2p3SWpiZmNrbFNKbk5XRV9lQlZua2FkMFBPZVVZRkkwQmhkTUQ0ei1vMy1uN3g3UnBpbEVIS2NUVjNrU2ZUdnNIbGI1SFNTRUpOQjVxRmJvcl9ldk9uVjB5V2JWSHZycXBkVEE1ZGwzWVNJVkdvN2xfdHRnaWtr?oc=5",
-    "source": "businesswire.com",
-    "desc": " ImmunoScape Appoints Peter Olagunju as Chief Executive Officer &nbsp;&nbsp; businesswire.com ",
+    "source": "Business Wire",
+    "desc": " ImmunoScape Appoints Peter Olagunju as Chief Executive Officer &nbsp;&nbsp; Business Wire ",
     "date": "2026-09-23",
     "cat": "hiring",
     "n_outlets": 2
@@ -318,14 +319,14 @@
     "n_outlets": 2
    },
    {
-    "title": "Novo struggles to appease restive investors with consumer plans, blockbuster ambitions - Fierce Pharma",
-    "clean": "Novo struggles to appease restive investors with consumer plans, blockbuster ambitions",
-    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQSk5RT3ItZHctNllUV29mamxnWHFPZVowN3Fncl9SYm4wWlVTWWxjSl9uYnoxRDFmYTdacWRkX185TGxQOWxxTjJuVk1HS3M5OXVyYWdUYk03V2ZiemRmdGU2V1p4YlJBLWduVDVXSk1jUFFhc0FvckYwd1JuU0FybnFvczU1NTZYdExBVlU5V0UzWmRlaXE2bkFWQW1ISV9VajNxOW1XRVJtYVk?oc=5",
-    "source": "Fierce Pharma",
-    "desc": " Novo struggles to appease restive investors with consumer plans, blockbuster ambitions &nbsp;&nbsp; Fierce Pharma ",
-    "date": "2026-09-21",
+    "title": "Bliss GVS Pharma appoints Rahul Adakmol as Chief Executive Officer - scanx.trade",
+    "clean": "Bliss GVS Pharma appoints Rahul Adakmol as Chief Executive Officer",
+    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU2hZdF9sRmp4NTVkRmpXdDRoem1WanA1U2dGSUhQanZ1c1dXNzZNcXExMm9UemQzNXh0WTdZOURxOC1UendtLWE2OTNfeDhjLXZZSDZKT1JwYUVldTJTN1NtWWwwd0c2Q1RkUDE3ZDc4ck1KX2ZkX3hURUhFOTVWZmg5SDNFeHVmbjQwR3ZPc25MbXE1bExPSnRCcW1RS0NVcEpmNERoTTNoT1QtLXR0Q3MxY3VCLU83RzJjaDFyVjM?oc=5",
+    "source": "scanx.trade",
+    "desc": " Bliss GVS Pharma appoints Rahul Adakmol as Chief Executive Officer &nbsp;&nbsp; scanx.trade ",
+    "date": "2026-09-24",
     "cat": "hiring",
-    "n_outlets": 1
+    "n_outlets": 2
    }
   ],
   "trials": [
@@ -340,16 +341,6 @@
     "n_outlets": 3
    },
    {
-    "title": "New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder - Psychiatric Times",
-    "clean": "New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder",
-    "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOZ09LaWNFVEZ3cjlYUlgyaW9kMzJISTNsbU83aGJNVkpKcmMycWo1TnZIeWFubzBSVHpzUEdpLXVXOGZUVWlCbDJybUlXQkFCaUlRWDVFTUxBUl8yUEdzUkxyUE81LWpwOUNBcW5EODBERUFtb3ZZOXdsNldHenNuTS1iS2t3QUdtOGRPMjhuc0Nvc1NXRHZkSGRfN1BZNV9ZSUNIdUdjTFhkYkJZVlFHZnQxZ1h3UjRnNUUyQnpqWlA4NVY3bFEtQ3hUMEdSb1VlcWZvN1FCbGxVXzlBTVhaM3BQM1VPekdHMVRjQ0tCR3FXa04tREhkbzhrR0dBS0RKTWc?oc=5",
-    "source": "Psychiatric Times",
-    "desc": " New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder &nbsp;&nbsp; Psychiatric Times ",
-    "date": "2026-09-22",
-    "cat": "trials",
-    "n_outlets": 2
-   },
-   {
     "title": "Rise Therapeutics Completes Dose Escalation in R-5780 Phase 1 Cancer Trial, Advances to Dose Expansion - PR Newswire",
     "clean": "Rise Therapeutics Completes Dose Escalation in R-5780 Phase 1 Cancer Trial, Advances to Dose Expansion",
     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNY0Ezc3NRbTJfOGJmQkc5WHdYeDBrME8xdTNVdUtBV2czdmZRbW1oMjYxWXJhN2ttUnhWRXJMalJLSDcwNHNiaEdGUnZKbVk0MHgwUGtxU0Z5aHJiYlJDc01GU05Wb1JNcmNrVzlmSzVrZjI1SXYxdzVWejVDb0sxazFLcFFacHdNSmpOa1ozOWRoWWRmQjFRYkdxU0c5TXp5SWV6WEQ0VnpETHotc25HdVVCdkFRb2JPRFBuMUVPdDJUVVpFRVBWQmh1R3F6b3pFWmgxazhxWVZDV1pzYzdSZEwtSF9kWG1NSGt5YzZn?oc=5",
@@ -360,11 +351,11 @@
     "n_outlets": 2
    },
    {
-    "title": "Roche Obesity Drug Enicepatide Delivers 15.5% Weight Loss in Phase 2 Diabetes Trial - Yahoo Finance",
-    "clean": "Roche Obesity Drug Enicepatide Delivers 15.5% Weight Loss in Phase 2 Diabetes Trial",
-    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOd3dDcmZ5emFud0VYRjV6ODdVbmV0RmliWnc4ZDJCRmMyY0lZOTFBTExuUS1NbkNaS3NHS0FCRHdscDVXdnVCUHNqMlNLMG9KZHZQbEtKLXp0UUl1LWNsRGRCNjlvWURyaTN3c1kteU9vN0JnblBzN2pWalV2QlRpVjhMa0IySjUwZlVqMjRHQ3NOTW1Ia1E5VDhpcFNPRTZpdXc?oc=5",
-    "source": "Yahoo Finance",
-    "desc": " Roche Obesity Drug Enicepatide Delivers 15.5% Weight Loss in Phase 2 Diabetes Trial &nbsp;&nbsp; Yahoo Finance ",
+    "title": "New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder - Psychiatric Times",
+    "clean": "New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder",
+    "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOZ09LaWNFVEZ3cjlYUlgyaW9kMzJISTNsbU83aGJNVkpKcmMycWo1TnZIeWFubzBSVHpzUEdpLXVXOGZUVWlCbDJybUlXQkFCaUlRWDVFTUxBUl8yUEdzUkxyUE81LWpwOUNBcW5EODBERUFtb3ZZOXdsNldHenNuTS1iS2t3QUdtOGRPMjhuc0Nvc1NXRHZkSGRfN1BZNV9ZSUNIdUdjTFhkYkJZVlFHZnQxZ1h3UjRnNUUyQnpqWlA4NVY3bFEtQ3hUMEdSb1VlcWZvN1FCbGxVXzlBTVhaM3BQM1VPekdHMVRjQ0tCR3FXa04tREhkbzhrR0dBS0RKTWc?oc=5",
+    "source": "Psychiatric Times",
+    "desc": " New Preliminary Positive Data From Open-Label Extension of Phase 3 Study: Fasedienol for the Acute Treatment of Social Anxiety Disorder &nbsp;&nbsp; Psychiatric Times ",
     "date": "2026-09-22",
     "cat": "trials",
     "n_outlets": 2
@@ -375,6 +366,16 @@
     "link": "https://news.google.com/rss/articles/CBMiggNBVV95cUxNeEJUMXZzZy1PSlRfekhKRlZ6M2F1M1FlZW9xMk5DemZtMlBvTFQ5Z3lobVJKZ2dTcnB3UVRjalB6QlE5OVdDSVJIMG1NdE8yay1hRUlkVmhNVEs0cEs4akl2Qy1DZ040V042TlNPazl2QjZkY1FKWlE1YXdVVGRCbS00STJfQm5NclFuRW9PQkNYeExzY0ZCTDRlNmxnakNSakd3MXcweTlybDVDcXk5OTBUdUc1alhoT0JlM29iRVBJWTktc0szMmRCQVZUYk9QTzZZbFo4SFZVX1dtVHlfdzExVWVzY3JHaGNzSEhWdEJVVjAyN2ZBd0RWN21xZHppc3NmYU14TVZoSjlmT3JYVGpMMW85TFptMmtCVnp0cXRNVWZoenEwOHMxNFZYUDFqV182ZEZGSERLQWFfQVIzTUFWS1lacVFSNGhDTm12T1NQVXN5T25VX1RoYlVsQ1A5QlFoZG1oTUR0ZHVsY3IwQlhXZkx0RWlBWlBTNW1CY3QyUQ?oc=5",
     "source": "BioSpace",
     "desc": " U.S. FDA Approves Update to the Label for WINREVAIR\u2122 (sotatercept-csrk) to Include Data from the Phase 3 HYPERION Trial Evaluating Adults Recently Diagnosed with Pulmonary Arterial Hypertension (PAH, WHO* Group 1 Pulmonary Hypertension) &nbsp;&nbsp; BioSpace ",
+    "date": "2026-09-22",
+    "cat": "trials",
+    "n_outlets": 2
+   },
+   {
+    "title": "Roche Obesity Drug Enicepatide Delivers 15.5% Weight Loss in Phase 2 Diabetes Trial - Yahoo Finance",
+    "clean": "Roche Obesity Drug Enicepatide Delivers 15.5% Weight Loss in Phase 2 Diabetes Trial",
+    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOd3dDcmZ5emFud0VYRjV6ODdVbmV0RmliWnc4ZDJCRmMyY0lZOTFBTExuUS1NbkNaS3NHS0FCRHdscDVXdnVCUHNqMlNLMG9KZHZQbEtKLXp0UUl1LWNsRGRCNjlvWURyaTN3c1kteU9vN0JnblBzN2pWalV2QlRpVjhMa0IySjUwZlVqMjRHQ3NOTW1Ia1E5VDhpcFNPRTZpdXc?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " Roche Obesity Drug Enicepatide Delivers 15.5% Weight Loss in Phase 2 Diabetes Trial &nbsp;&nbsp; Yahoo Finance ",
     "date": "2026-09-22",
     "cat": "trials",
     "n_outlets": 2
@@ -392,11 +393,11 @@
     "n_outlets": 3
    },
    {
-    "title": "FDA Approves Efsitora Once-Weekly Basal Insulin Injection - medscape.com",
+    "title": "FDA Approves Efsitora Once-Weekly Basal Insulin Injection - Medscape",
     "clean": "FDA Approves Efsitora Once-Weekly Basal Insulin Injection",
     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcDJNMjhZcG5zUkJCUGh3dm5NdkhhVXMxSEpqdHkydEp3eTlhX2RrS1BacEVQaDg2UEFjcEoxb0FiQUpHOXZUTk1rQl9nbGNBbXBKUFZDT3RqVGhrNlF4enVoZkluT0tra3FsTTRHMURZZG1hTTl0QTcwZFd5a21udUxHeDltXzlzVGZaT0EzSmNLUGNYZUVuSEwwY1I2THMwb0JxZGkzTTB6aEk?oc=5",
-    "source": "medscape.com",
-    "desc": " FDA Approves Efsitora Once-Weekly Basal Insulin Injection &nbsp;&nbsp; medscape.com ",
+    "source": "Medscape",
+    "desc": " FDA Approves Efsitora Once-Weekly Basal Insulin Injection &nbsp;&nbsp; Medscape ",
     "date": "2026-09-24",
     "cat": "drugs",
     "n_outlets": 3
@@ -412,16 +413,6 @@
     "n_outlets": 3
    },
    {
-    "title": "Cordis\u2019 sirolimus drug-coated balloon earns FDA approval as a breakthrough device - Fierce Biotech",
-    "clean": "Cordis\u2019 sirolimus drug-coated balloon earns FDA approval as a breakthrough device",
-    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRFNlZlRmVlRRd1ZqUEQwclhHR3RrbHBGVVl1bmYzQ0lXaTNvZmRHWU05T09EVlByclNOcmh2RjUyeDJJR1ptRFdEVFJKaU1NaHJ5dmwwM2FILUlNb1h6ODhzbFAzTFhVTmpudGp0em9YN0FuVGx4VUl0OFF4Y3pPdHpqUXI4X1N4Wkd3MmtJLWlGNHMwYzZSYnB2d29NY2paQlZfWWRVaHc2TWJKd2dkakQ0Zw?oc=5",
-    "source": "Fierce Biotech",
-    "desc": " Cordis\u2019 sirolimus drug-coated balloon earns FDA approval as a breakthrough device &nbsp;&nbsp; Fierce Biotech ",
-    "date": "2026-09-22",
-    "cat": "drugs",
-    "n_outlets": 2
-   },
-   {
     "title": "Mirum bags FDA approval for ultra-rare bone lesion disorder, heating up rivalry with Regeneron - Fierce Pharma",
     "clean": "Mirum bags FDA approval for ultra-rare bone lesion disorder, heating up rivalry with Regeneron",
     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPeENIQzBSd0xUdXdfRDdGNXlKOHFpRlMxOU01cnZPVkpoVGpHeFdTcUxud0hsbzdyajRJazVKZGlwZUNHbkY1Q0JNUHE2azVxekZaRXVKVmxHMmdKSHV2allRdW8xNVE5X2FyRzZzM3lKSlhFcHpvdng3bm9adkZLbDEzZTRPSWNPUWZIOXVUX0Jla1N1Y1FxVlVKTmhoX0ZNWVNtWFdXUko1SDRqM1RVT1dVX1BaTkxZV1o5QlRIM3lobDBSa1E?oc=5",
@@ -429,6 +420,16 @@
     "desc": " Mirum bags FDA approval for ultra-rare bone lesion disorder, heating up rivalry with Regeneron &nbsp;&nbsp; Fierce Pharma ",
     "date": "2026-09-25",
     "cat": "drugs",
+    "n_outlets": 2
+   },
+   {
+    "title": "Study unveils \u2018plug-and-play\u2019 CAR T technology designed to adapt as cancer changes - eurekalert.org",
+    "clean": "Study unveils \u2018plug-and-play\u2019 CAR T technology designed to adapt as cancer changes",
+    "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9QNF9kQl9mNWhMVnUycDBFc1NXblBQZHc4SWJCZnA1OHQ4ZVd0clhWOG1SLVJhZ2FhTW5VTjdSZkJlR29lZmNiNXowc3FBbExVTlkyYUpha3BhZ3pZ?oc=5",
+    "source": "eurekalert.org",
+    "desc": " Study unveils \u2018plug-and-play\u2019 CAR T technology designed to adapt as cancer changes &nbsp;&nbsp; eurekalert.org ",
+    "date": "2026-09-22",
+    "cat": "onco",
     "n_outlets": 2
    }
   ],
@@ -454,21 +455,21 @@
     "n_outlets": 2
    },
    {
+    "title": "UH Manoa secures $5.9M NIH grant to expand Maui wildfire study - Hawaii News Now",
+    "clean": "UH Manoa secures $5.9M NIH grant to expand Maui wildfire study",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZzFPRm9TOVUxTUVmSjhMUmNBamlhSTVlOXBEQ0JzNnUtZDJJYld3N1VsYkcyUzZmeDdXQUx0YUxYYVZ6ZnN1VzNaSUFjajN0S2w4S01RbDFOa2tsZ29YWlZ3dVYtcGgxcDVXR25xaVJ5V2VSV3EyMHdsY2Q0S2daemx5VFNHVHpNWXlBUUJ5VF9yd3Y5bHdrMXRRVE1KZkE50gG0AUFVX3lxTFBDSjNXVGhmOTFYM0RMSlZ1clhCbGpKSkVNRkNfcnBlZE1mNFNlZVpWSmRWQ0tnMVExSHQ1UHJqZWFLb2VFdDFyY1FueWFyNmRaQzZlbkticzNka3E5ZVZNZXZNX2NZUl8yRVFrYURJUk5KZjBEa2p3UEsxNDY0cmo3TkNuRU54VTZVVG5pYVU5Y2pnZTNkMmlMVV96cGtWRXNFZ2daRVo0a0RtUnM1VU9OWm5naw?oc=5",
+    "source": "Hawaii News Now",
+    "desc": " UH Manoa secures $5.9M NIH grant to expand Maui wildfire study &nbsp;&nbsp; Hawaii News Now ",
+    "date": "2026-09-22",
+    "cat": "academia",
+    "n_outlets": 2
+   },
+   {
     "title": "These 6 charts show how NIH research funding has been reshaped under Trump - NPR",
     "clean": "These 6 charts show how NIH research funding has been reshaped under Trump",
     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWV96Y3ZXMHJwRDJEQk51Nm5EcnBpNFpaRkxWNDVVWnhCVXhUSWNiWnhjSTg5WExVR2hvYkpSU0RQVEx0VjBveWstNnprWXBiSlhxaDl0VVhFUy1HM213Y2ptM3R4ellYaHczY040N2MyY0JkeW9UdjhOVk9Jd2F1SnZpNnQwRGNhTzVyMXZYVHczYkk?oc=5",
     "source": "NPR",
     "desc": " These 6 charts show how NIH research funding has been reshaped under Trump &nbsp;&nbsp; NPR ",
-    "date": "2026-09-24",
-    "cat": "academia",
-    "n_outlets": 2
-   },
-   {
-    "title": "University of Minnesota to cut $225 million from its budget over next 2 years - CBS News",
-    "clean": "University of Minnesota to cut $225 million from its budget over next 2 years",
-    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMTBnOXJWUm1nMEZ3TlFUc1VSZDBaRWRFSHNzbjVnbEYwMU9UbzNZSldLdnh5VGc3ZU5XZ3VhSi03b05KaFFnb1ZXVTByQVpnV0NzZXRBVGRXWExuUllnUWQyNW5zVU9tOU9xX0lHNXd3WktJU01OMjlnbEJScmM1UzZqRUhYUFNfX0pDUnVDS0E?oc=5",
-    "source": "CBS News",
-    "desc": " University of Minnesota to cut $225 million from its budget over next 2 years &nbsp;&nbsp; CBS News ",
     "date": "2026-09-24",
     "cat": "academia",
     "n_outlets": 2
@@ -506,22 +507,22 @@
     "n_outlets": 2
    },
    {
-    "title": "Elanco Animal Health (ELAN) Climbs 2.70% to $23.04, Nearing Key Resistance - Seasonality Effect - siam.in",
-    "clean": "Elanco Animal Health (ELAN) Climbs 2.70% to $23.04, Nearing Key Resistance - Seasonality Effect",
-    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVjFmU2M0cDZFbmN6bDZVZVppR0IwUzFqbTNEM003ZWI5TkdHUE1NMm1IRzEyUk1DSFZSaW56Mk1lUmtyc0xpQ0Q1Z1dfQmxMakdXcG1GQks2bXA1dmduTWowdGlrTnNFdE5VTmN2dThMTUN0Vi1mcWJOX2dyOWs4eS00QUZKWWt4OF9JSVNOdnJHZVVYNGdKXzBiNV9iS2VTSXFXc1pfVXdLd1FnWTJV?oc=5",
-    "source": "siam.in",
-    "desc": " Elanco Animal Health (ELAN) Climbs 2.70% to $23.04, Nearing Key Resistance - Seasonality Effect &nbsp;&nbsp; siam.in ",
-    "date": "2026-09-22",
-    "cat": "vet",
-    "n_outlets": 2
-   },
-   {
     "title": "Animal use in veterinary vaccines quality control falls to lowest levels in a decade - gov.uk",
     "clean": "Animal use in veterinary vaccines quality control falls to lowest levels in a decade",
     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMG9KMWl3bGo0VVJGUjFQcGRpLUZvOVl3TGl1LXRnTjZiM1VidGVnTW5ya3RqdmVqU1o3YWNLOFRmTXQ1czEwQVg1YmdqNkZUU2RnNXRsZnFrMGJDbXZydGVxa1VtWEtib0h0b2NfTTNHWHVNSGppU2xCcU5aVmFuMlhrcmRMMUEwcEpSVUEwMnJKeVpiczRoMEdZMndTc0c0c092d2dnQXhlUDlvTHk1Q29JejFxRjJLd293?oc=5",
     "source": "gov.uk",
     "desc": " Animal use in veterinary vaccines quality control falls to lowest levels in a decade &nbsp;&nbsp; gov.uk ",
     "date": "2026-09-23",
+    "cat": "vet",
+    "n_outlets": 2
+   },
+   {
+    "title": "Elanco Animal Health Eyes Growth, Deleveraging as Quattro and Zenrelia Gain Ground - Yahoo Finance",
+    "clean": "Elanco Animal Health Eyes Growth, Deleveraging as Quattro and Zenrelia Gain Ground",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPOVU0QzUtbzc4djQ5WFBMbXFCdExnYWRWZUxLMlg5TzdTZHpoRnllODBRdmdLUkdRUlZMeDRhY0xUY3ZCbTIwNlFNS0pHYUdNSlQ2TzBoY0RNTnJvbUxQQUpvbnhnN09NaFJrb29JY2NadlZCbG5HamlCMHNkNXk2dEZ2blN6eFJEN3RUSl83Z3lMU0xuUThUdA?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " Elanco Animal Health Eyes Growth, Deleveraging as Quattro and Zenrelia Gain Ground &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-09-26",
     "cat": "vet",
     "n_outlets": 2
    }
@@ -639,117 +640,7 @@
    "hits": [
     "canine"
    ],
-   "why": "CPV infection triggers distinct metabolic signatures in pangolins, with Malaysian species showing lipid dysregulation while Chinese pangolins exhibit amino acid and bile acid reprogramming."
-  },
-  {
-   "pmid": "42775080",
-   "title": "HOMEBRED: A unified CRISPR platform for field-ready shadowing of infectious agents and oncogenic mutations",
-   "journal": "iScience",
-   "date": "2026 Oct 16",
-   "doi": "10.1016/j.isci.2026.117532",
-   "authors": "Asadbeigi A \u2026 Bakhtiarizadeh MR",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42775080/",
-   "field": "Molecular Biology",
-   "score": 14,
-   "hits": [
-    "crispr"
-   ],
-   "why": "HOMEBRED enables field-deployable CRISPR detection of pathogens and oncogenic mutations with visual readout, overcoming vaccine-strain discrimination challenges in livestock diagnostics."
-  },
-  {
-   "pmid": "42788198",
-   "title": "Timing and Dosage of Notch Inhibition and Wnt Activation Enhanced Hair Cell-Like Cell Generation and Stereocilia Elongation in Otic Organoids",
-   "journal": "Stem Cells Dev",
-   "date": "2026 Sep 25",
-   "doi": "10.1177/15473287261490309",
-   "authors": "Kim H \u2026 Ha J",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42788198/",
-   "field": "Cell Biology",
-   "score": 14,
-   "hits": [
-    "organoid"
-   ],
-   "why": "Late-phase, low-dose Notch inhibition and Wnt activation enhance hair cell marker expression and stereocilia elongation in embryonic stem cell-derived otic organoids."
-  },
-  {
-   "pmid": "42782746",
-   "title": "Decoding PVAT Complexity in Vascular Remodeling: Multimodal Single-Cell Technologies Unveil Novel Therapeutic Targets",
-   "journal": "Cells",
-   "date": "2026 Sep 11",
-   "doi": "10.3390/cells15181645",
-   "authors": "Xu Y \u2026 Bersi MR",
-   "pubtype": [
-    "Journal Article",
-    "Review"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42782746/",
-   "field": "NGS / Genomics",
-   "score": 14,
-   "hits": [
-    "single-cell"
-   ],
-   "why": "Multimodal single-cell technologies reveal PVAT cellular heterogeneity and identify Dpp4+ preadipocytes and BMP4-induced browning as potential therapeutic targets in vascular disease."
-  },
-  {
-   "pmid": "42784692",
-   "title": "Senescence-directed nanotherapy ameliorates fibrosis and overcomes immune exclusion in cancer",
-   "journal": "Science",
-   "date": "2026 Sep 24",
-   "doi": "10.1126/science.aeg4791",
-   "authors": "Hinterleitner C \u2026 Lowe SW",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42784692/",
-   "field": "Oncology",
-   "score": 10,
-   "hits": [],
-   "why": "P-selectin-targeted nanoparticles selectively eliminate disease-driving senescent cells, reducing fibrosis and restoring immune infiltration in tumors resistant to checkpoint inhibitors."
-  }
- ],
- "also": [
-  {
-   "pmid": "42774241",
-   "title": "Post-marketing safety surveillance of tetanus, diphtheria, and acellular pertussis (Tdap) vaccine: a disproportionality analysis of the vaccine adverse event reporting system (2015-2025)",
-   "journal": "Front Cell Infect Microbiol",
-   "date": "2026",
-   "doi": "10.3389/fcimb.2026.1831548",
-   "authors": "Song W \u2026 Liang Z",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42774241/",
-   "field": "Virology",
-   "score": 14,
-   "hits": [
-    "vaccine"
-   ],
-   "why": "Tdap disproportionality analysis of 20,128 VAERS reports identified no unexpected safety signals in older adults, males, or pregnant individuals, though radiculitis brachial signals in non-pregnant females warrant further investigation."
-  },
-  {
-   "pmid": "42772142",
-   "title": "Nanopore long-read transcriptome sequencing reveals miR-22-3p-mediated transcriptomic remodeling and alternative splicing in chicken pectoral muscle",
-   "journal": "Poult Sci",
-   "date": "2026 Sep 13",
-   "doi": "10.1016/j.psj.2026.107769",
-   "authors": "Yi J \u2026 Ma Z",
-   "pubtype": [
-    "Journal Article"
-   ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42772142/",
-   "field": "Molecular Biology",
-   "score": 13,
-   "hits": [
-    "nanopore",
-    "long-read"
-   ],
-   "why": "miR-22-3p knockdown in chicken muscle suppresses ECM and focal adhesion pathways while remodeling alternative splicing patterns independently of gene-level expression changes."
+   "why": "CPV infection dysregulates distinct metabolic pathways in pangolins, with Malaysian species showing lipid metabolism and ferroptosis alterations while Chinese species display amino acid and bile acid dysregulation."
   },
   {
    "pmid": "42790423",
@@ -768,7 +659,42 @@
    "hits": [
     "organoid"
    ],
-   "why": "Both cone precursor and retinal organoid transplantation achieve functional synaptic integration with host retina, with genome editing enhancing synaptogenesis and adult primate retina retaining rewiring capacity."
+   "why": "iPSC-derived retinal organoid transplantation demonstrates functional synaptic integration with host retina and has achieved initial clinical application for photoreceptor replacement."
+  },
+  {
+   "pmid": "42798197",
+   "title": "The role of fibronectin in the tumor microenvironment - implications for immunotherapy",
+   "journal": "Cell Cycle",
+   "date": "2026 Dec 15",
+   "doi": "10.1080/15384101.2026.2735503",
+   "authors": "Kasprzak A \u2026 Pupek M",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42798197/",
+   "field": "Oncology",
+   "score": 13,
+   "hits": [
+    "immunotherapy"
+   ],
+   "why": "Oncofetal fibronectin isoforms promote vascular remodeling, EMT, pre-metastatic niche formation, and immunosuppression, positioning them as biomarkers and therapeutic targets in solid tumors."
+  },
+  {
+   "pmid": "42775698",
+   "title": "Transplantation of Elderly Human Gut Microbiota Into Pigs Reprograms Intestinal Barrier Function, Plasma Metabolome, and Gut Mucosal Transcriptomic Landscape",
+   "journal": "Aging Cell",
+   "date": "2026 Oct",
+   "doi": "10.1111/acel.70725",
+   "authors": "Wang J \u2026 Ji Y",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42775698/",
+   "field": "Molecular Biology",
+   "score": 10,
+   "hits": [],
+   "why": "Elderly-derived microbiota transplantation impairs intestinal barrier function through reduced tight junction proteins and altered metabolites including prostaglandin E3, with seven interferon-response genes consistently downregulated."
   },
   {
    "pmid": "42768024",
@@ -784,39 +710,105 @@
    "field": "NGS / Genomics",
    "score": 10,
    "hits": [],
-   "why": "Eggerthella lenta disrupts the gut vascular barrier through TLR4-dependent endoplasmic reticulum stress, promoting colorectal cancer liver metastasis via tight junction compromise."
-  },
+   "why": "Eggerthella lenta disrupts the gut vascular barrier through TLR4-dependent endoplasmic reticulum stress and PERK activation, promoting colorectal cancer liver metastasis."
+  }
+ ],
+ "also": [
   {
-   "pmid": "42777708",
-   "title": "CD4 T cells convert transient responses to KRAS inhibition to durable remissions in pancreatic cancer",
-   "journal": "Cell",
-   "date": "2026 Sep 23",
-   "doi": "10.1016/j.cell.2026.08.045",
-   "authors": "Qiang L \u2026 Dougan SK",
+   "pmid": "42787051",
+   "title": "Environmental circulation of multiple avian influenza subtypes and potential association with human infections in central China",
+   "journal": "Front Cell Infect Microbiol",
+   "date": "2026",
+   "doi": "10.3389/fcimb.2026.1911586",
+   "authors": "Wu B \u2026 Ma H",
    "pubtype": [
     "Journal Article"
    ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42777708/",
-   "field": "Oncology",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42787051/",
+   "field": "Virology",
    "score": 10,
    "hits": [],
-   "why": "IL-21 mimetics combined with KRAS inhibitors achieve durable pancreatic cancer remissions through CD4 T cell-dependent macrophage activation, bypassing CD8 T cell and MHC class I requirements."
+   "why": "Live poultry markets show seven-fold higher avian influenza detection rates, with increasing circulation of H9N2, H5N6, and H3N8 subtypes linked to human infections through phylogenetic analysis."
   },
   {
-   "pmid": "42784669",
-   "title": "Fibroblasts restrain gut inflammation by IGF1-dependent regulation of innate lymphocytes",
-   "journal": "Science",
-   "date": "2026 Sep 24",
-   "doi": "10.1126/science.aei0062",
-   "authors": "Lin Q \u2026 Zhou L",
+   "pmid": "42782762",
+   "title": "METTL3/IGF2BP1 Axis Orchestrates m6A-Dependent NCAM1 Preservation to Combat Age-Related Cognitive Decline",
+   "journal": "Cells",
+   "date": "2026 Sep 15",
+   "doi": "10.3390/cells15181662",
+   "authors": "Ji G \u2026 Qu L",
    "pubtype": [
     "Journal Article"
    ],
-   "url": "https://pubmed.ncbi.nlm.nih.gov/42784669/",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42782762/",
+   "field": "Molecular Biology",
+   "score": 10,
+   "hits": [],
+   "why": "METTL3-mediated m6A modification stabilizes NCAM1 mRNA via IGF2BP1, activating CREB signaling to preserve cognition in aging mice."
+  },
+  {
+   "pmid": "42784459",
+   "title": "MCUB restricts mitochondrial calcium to support metabolic adaptation and homeostasis in glioblastoma",
+   "journal": "Cell Rep",
+   "date": "2026 Sep 24",
+   "doi": "10.1016/j.celrep.2026.118036",
+   "authors": "Sun N \u2026 Jiang C",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42784459/",
+   "field": "Cell Biology",
+   "score": 10,
+   "hits": [],
+   "why": "MCUB restricts mitochondrial calcium to enforce glycolysis in glioblastoma, and disrupting MCUB-MCU interaction sensitizes tumors to radiotherapy."
+  },
+  {
+   "pmid": "42777802",
+   "title": "The Role of Broad in Regulating Border Cell Migration During Drosophila Oogenesis",
+   "journal": "Exp Cell Res",
+   "date": "2026 Sep 23",
+   "doi": "10.1016/j.yexcr.2026.115174",
+   "authors": "Thompson T \u2026 Jia D",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42777802/",
+   "field": "NGS / Genomics",
+   "score": 10,
+   "hits": [],
+   "why": "Broad suppression by JAK/STAT signaling is required for border cell migration during Drosophila oogenesis through coordinated changes in cell migration and junction assembly genes."
+  },
+  {
+   "pmid": "42777084",
+   "title": "SCRMP-mediated SUMOylation of CSNK2B facilitates DNA damage repair to promote cisplatin resistance in small cell lung cancer",
+   "journal": "Sci Transl Med",
+   "date": "2026 Sep 23",
+   "doi": "10.1126/scitranslmed.aea5653",
+   "authors": "Chen Y \u2026 Liu X",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42777084/",
+   "field": "Oncology",
+   "score": 8,
+   "hits": [],
+   "why": "SCRMP, a microprotein from a noncanonical ORF, promotes cisplatin resistance in SCLC by SUMOylating CSNK2B to enhance DNA damage repair gene expression."
+  },
+  {
+   "pmid": "42800809",
+   "title": "Galectin-3 restrains T cell-driven inflammation in the testis and epididymis",
+   "journal": "Cell Death Dis",
+   "date": "2026 Sep 26",
+   "doi": "10.1038/s41419-026-09304-w",
+   "authors": "Hasan H \u2026 Fijak M",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42800809/",
    "field": "Veterinary Medicine",
    "score": 10,
    "hits": [],
-   "why": "IGF1-producing fibroblasts suppress ILC3-mediated CXCL10 production and pDC recruitment, a pathway reduced in inflammatory bowel disease patients."
+   "why": "Galectin-3 suppresses T cell activation and pro-inflammatory macrophage responses in testicular and epididymal tissue, preventing autoimmune-driven organ damage and infertility."
   }
  ]
 }
