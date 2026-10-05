@@ -887,19 +887,22 @@ def main():
              else f"{start:%d} – {end:%d %B %Y}")
     print(f"window {start} .. {end}")
 
-    # Retry crons must not churn the repo: if this week's issue was already
-    # built today, stop before spending any network calls. BRIEF_FORCE=1 or a
-    # manual dispatch with a different BRIEF_WEEKS still rebuilds.
+    # Stop if this week's issue is already in the repo. "Already committed" is
+    # the right test, not "already generated today". The commit runs only
+    # after a successful send, so a record that survives into a fresh CI
+    # checkout is one subscribers already received; a failed send leaves the
+    # tree uncommitted, the next run sees no record, and it resends. That is
+    # what makes both the retry crons and the Tue/Wed catch-up crons safe.
+    #
+    # The old test compared `generated` against today's date, which let any
+    # run landing on a LATER day rebuild and re-send the same week --
+    # previous_week() derives its window from the current week's Monday, so
+    # Tuesday resolves to Monday's stamp. GitHub delayed the 21:10 UTC Monday
+    # cron past midnight on 2026-09-29 and issue 02 went out a fifth time.
     prior_path = os.path.join(OUT, "data", f"{stamp}.json")
     if os.environ.get("BRIEF_FORCE", "") != "1" and os.path.exists(prior_path):
-        try:
-            with open(prior_path, encoding="utf-8") as fh:
-                prior = json.load(fh)
-        except (ValueError, OSError):
-            prior = {}
-        if prior.get("generated") == datetime.date.today().isoformat():
-            print(f"issue for {stamp} already generated today - nothing to do")
-            return 0
+        print(f"issue for {stamp} already built and committed - nothing to do")
+        return 0
 
     print("news:")
     news = fetch_news(start, end)

@@ -13,6 +13,13 @@ on:
     - cron: "10,30,50 11-13 * * 1"
     - cron: "10 16 * * 1"
     - cron: "10 21 * * 1"
+    # Catch-up. GitHub's scheduler is best-effort: on 2026-10-05 it dropped
+    # every Monday slot with no run and no failure notice, and a week earlier
+    # it delayed one by about four hours. These fire only if Monday produced
+    # nothing -- once the issue is committed the build short-circuits before
+    # spending a single network call.
+    - cron: "10 11,15 * * 2"
+    - cron: "10 12 * * 3"
   workflow_dispatch:
     inputs:
       weeks:
@@ -37,11 +44,11 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
