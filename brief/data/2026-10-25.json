@@ -1,0 +1,793 @@
+{
+ "issue": "06",
+ "date": "2026-10-25",
+ "window_label": "19 \u2013 25 October 2026",
+ "generated": "2026-10-26",
+ "counts": {
+  "news": 645,
+  "papers": 236,
+  "clusters": 66,
+  "radar": 6
+ },
+ "picked": {
+  "buzz": [
+   {
+    "title": "FDA approves bepirovirsen, first-of-its-kind chronic hepatitis B treatment - The Cancer Letter",
+    "clean": "FDA approves bepirovirsen, first-of-its-kind chronic hepatitis B treatment",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB0cEFHN0FDMGJNR01uZU96S1RaQldCRFgtb29KWW1wOXBPNGlvTTZwakw5RDdxYmlUbWNUOEd5M1JUN0Nydi1KQ1ZjVVU0THhsSENfMnlQdkJtaGk4WWoxdkRybklPblk?oc=5",
+    "source": "The Cancer Letter",
+    "desc": " FDA approves bepirovirsen, first-of-its-kind chronic hepatitis B treatment &nbsp;&nbsp; The Cancer Letter ",
+    "date": "2026-10-24",
+    "cat": "drugs",
+    "n_outlets": 7,
+    "outlets": [
+     "HCPLive",
+     "Hep Treatment News",
+     "Mega Doctor News",
+     "Pharmaceutical Executive",
+     "Pharmacy Times",
+     "The Cancer Letter"
+    ]
+   },
+   {
+    "title": "OpenAI Acquires Pharma Co Orchestra Bio to Build AI Agents for Drug Development - Analytics India Magazine",
+    "clean": "OpenAI Acquires Pharma Co Orchestra Bio to Build AI Agents for Drug Development",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdUtyVGlYTWRCQV9udUpSSjg5aFdodFBxakwzZFV1OTdoMU9Bck5VR1dBYzBoY294UmRJQWY3TXpLUXh2QXlUTmdXcEg4WFB0cW1NeUhUOVE2bmR2TnprUUxFUWJOYmJJUnpIZzNwa3hSZ19SVTVXaldUZUJfV3BsN0NMa1ltazRxb2lITGlpRWwybzVXeGd4d1NES3hhM1EwQWxvbERiUmhjeU9mQUdwbjlzYXY2aExR?oc=5",
+    "source": "Analytics India Magazine",
+    "desc": " OpenAI Acquires Pharma Co Orchestra Bio to Build AI Agents for Drug Development &nbsp;&nbsp; Analytics India Magazine ",
+    "date": "2026-10-21",
+    "cat": "mergers",
+    "n_outlets": 6,
+    "outlets": [
+     "Adgully",
+     "Analytics India Magazine",
+     "TechCrunch",
+     "The Daily Star",
+     "UA.NEWS",
+     "Yahoo Finance"
+    ]
+   },
+   {
+    "title": "FDA Approval of Dostarlimab Brings Potential Organ-Sparing Approach in dMMR Locally Advanced Rectal Cancer - OncLive",
+    "clean": "FDA Approval of Dostarlimab Brings Potential Organ-Sparing Approach in dMMR Locally Advanced Rectal Cancer",
+    "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPeXMzdlRqcExFdzJUdHNreVdoX1hfeWlUUXk1ZlkwTk9LUEdBcC1YUnNhaWhzVVAyaEtNRks2U0dpdGtZRXJ4X2RUY1pyTmRhWlZvQ2ZiTnAzMnVIQ3N3UUlXbmhTRzdaQVdLZmhhWXR1ejB5bklwVGNNWDRsSC1SejFuQ2Z3R2FqZjk0NnltV3A4ZkNja3FneG5aaTVGVnFLUFBSMGZoTEtCMi0tcG5QZW85bXlDMExSMUdCLXVCa3IyWnNiYmk2STB0UW45SnI3?oc=5",
+    "source": "OncLive",
+    "desc": " FDA Approval of Dostarlimab Brings Potential Organ-Sparing Approach in dMMR Locally Advanced Rectal Cancer &nbsp;&nbsp; OncLive ",
+    "date": "2026-10-21",
+    "cat": "drugs",
+    "n_outlets": 5,
+    "outlets": [
+     "OncLive",
+     "Oncodaily",
+     "Pharmacy Times",
+     "Targeted Oncology",
+     "The ASCO Post"
+    ]
+   },
+   {
+    "title": "FDA Grants Ultomiris Accelerated Approval in the U.S. for Adults with Primary Immunoglobulin A Nephropathy - Pharmaceutical Executive",
+    "clean": "FDA Grants Ultomiris Accelerated Approval in the U.S. for Adults with Primary Immunoglobulin A Nephropathy",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQY0tPNk5uM0FjTkFQZjRZTG1PUGxqVmI1dUVGTElwTzdRMDR6cVNMQmIwMmN4QnJ0Y3c2LWRZbVJwZnNUdlRfazlpTko0elFTbkFkSXprQ3ZlM0JuLTVmUXVqV3h6YUFmTmV4YkY1bFB5TE11cFUtaFJIbF9xSU92VzllZG5VcEVJVGJmNnZrcGhZdEN0MjZ0V3dSSDhkejJwc1U5REdfYVBpNzJ4VWVRYmhuRQ?oc=5",
+    "source": "Pharmaceutical Executive",
+    "desc": " FDA Grants Ultomiris Accelerated Approval in the U.S. for Adults with Primary Immunoglobulin A Nephropathy &nbsp;&nbsp; Pharmaceutical Executive ",
+    "date": "2026-10-22",
+    "cat": "drugs",
+    "n_outlets": 5,
+    "outlets": [
+     "BioPharm International",
+     "Dealroom",
+     "HCPLive",
+     "Pharmaceutical Executive",
+     "Pharmacy Times"
+    ]
+   },
+   {
+    "title": "Elanco names Jamie Preston as new Chief People Officer, succeeding retiring Dave Kinard. - Pluang",
+    "clean": "Elanco names Jamie Preston as new Chief People Officer, succeeding retiring Dave Kinard.",
+    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSFFPMVdSMktqejFqOHZqVTRHc1VsQWNFNVNsRUgyUUEyOWNuR3hYMDFJbVBwSVpSbHZpb0VZZDI3UFdScnRJX3lEalEtYUx3dFY3M2JFUXZQbWFJVm4xMC04YzFKamd6Vzl1UGlONGlqX0pvSi1pWWt6VEwwQ0FkbzU4ZV9Wb0htYXNXNUx5bERTdGs1MHFnclBsWVFPUmozX3FUdw?oc=5",
+    "source": "Pluang",
+    "desc": " Elanco names Jamie Preston as new Chief People Officer, succeeding retiring Dave Kinard. &nbsp;&nbsp; Pluang ",
+    "date": "2026-10-22",
+    "cat": "vet",
+    "n_outlets": 4,
+    "outlets": [
+     "PR Newswire",
+     "Pluang",
+     "TradingView",
+     "citybiz"
+    ]
+   },
+   {
+    "title": "FDA approves Pascal Precision system from Edwards Lifesciences for tricuspid valve repair - Cardiovascular Business",
+    "clean": "FDA approves Pascal Precision system from Edwards Lifesciences for tricuspid valve repair",
+    "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQSnYzV1hTWDJVTEVyWEV5b3EzN2d1TTNKTWZmUmQtUXJzU2tmRjZTbzhfa1NtdGRmQ1JFM0lzcmdBVS1YaC0yUmxmazI3WS1zMXRSODFTRVp0NW44TnM5X3lKdmU0UUVtMjJfWjVReklZbklBT3RoOVo4Y1JkZjZTNDZOSlF3clJFN1NWNTloY0tfd24xSXdHU2N0aWNwVk5UUUprNnBKY1dRa1FaQzI5eHgxTC1kbHotMjdqM1hWMlY2SmEtLVkzNDBTV0FwZDg1RTB4Sy1sMzNDdC0zc0JtVU9ya0FKa202dVBkTjVB?oc=5",
+    "source": "Cardiovascular Business",
+    "desc": " FDA approves Pascal Precision system from Edwards Lifesciences for tricuspid valve repair &nbsp;&nbsp; Cardiovascular Business ",
+    "date": "2026-10-21",
+    "cat": "drugs",
+    "n_outlets": 4,
+    "outlets": [
+     "Cardiovascular Business",
+     "MassDevice",
+     "MedTech Dive",
+     "Medical Device Network"
+    ]
+   },
+   {
+    "title": "USF reaches record $775 million in research funding, leading to more real-world impact and solutions - the University of South Florida",
+    "clean": "USF reaches record $775 million in research funding, leading to more real-world impact and solutions",
+    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObmxtTWhrR3N2Q2g1Y0RmV19mcE91elN2Sk1HelA2cldKQ2VUUnNJcHBnc2VpYUlyNzZ6aC1rbG1mWk9FV1dyQTdaWDJkczBWM2ZNWVZ6ckxsaDF5dVJFVDlpX2FKc3JhRzU4RnNVSkFrc0x6MEdJbVhHZVphb2FOWkhsbVdKSjRYWERHMmhZbllhZXdxV3BFaEtndjg3b3lLWmwxMUl3WUVuZ3pLSUYwZHNjbU1aQzNMTzI0?oc=5",
+    "source": "the University of South Florida",
+    "desc": " USF reaches record $775 million in research funding, leading to more real-world impact and solutions &nbsp;&nbsp; the University of South Florida ",
+    "date": "2026-10-22",
+    "cat": "academia",
+    "n_outlets": 4,
+    "outlets": [
+     "Business Observer",
+     "TBBW",
+     "The Business Journals",
+     "the University of South Florida"
+    ]
+   },
+   {
+    "title": "LGM Pharma Acquires Sannova Analytical, Expanding cGMP Analytical and GLP Bioanalytical Services - Yahoo Finance",
+    "clean": "LGM Pharma Acquires Sannova Analytical, Expanding cGMP Analytical and GLP Bioanalytical Services",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdzJhaHplNklBdTFBWmJ4cHlhYXJ1d2Z5eGRwd2lHeXFNTHoyY3pSMHZ5S3hSQnUxSFJFWTAxTUtzYVlybHFjQUNIZ21fQlU3X3VCZHh5R295blg0eTFZYklUODJUc3BEN3drTi15Z2hiWEpIR1pkVHhaSElwTk5Od1U2Y0FxWVhGUE4taGZKWEdiY1JGMEVnWlhwYlR0cDFn?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " LGM Pharma Acquires Sannova Analytical, Expanding cGMP Analytical and GLP Bioanalytical Services &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-10-22",
+    "cat": "mergers",
+    "n_outlets": 4,
+    "outlets": [
+     "Indian Pharma Post",
+     "Manufacturing Chemist",
+     "Yahoo Finance",
+     "citybiz"
+    ]
+   },
+   {
+    "title": "FDA Approves On-Body Injector Induction for Skyrizi in Crohn's Disease - BioPharm International",
+    "clean": "FDA Approves On-Body Injector Induction for Skyrizi in Crohn's Disease",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQX2NFYjUyaWJ2YkpPWHE2MjJES3BrSkctZjY0VWdKSUNLS0ZyY0xHanI2a3dNdTRYbFRrNXVVZ0xxUzJwYU9tZ2NXV05EWkYwdnluZW5URVdSSURQM3BzTHRJRk9TOENmNW9KbHZHeXZOYUdMVnUtSHJLMVduQXdXZWlCR2N5NTVESk5hdHhNdlJPSXpHZ3NKZ1V5cjJZUQ?oc=5",
+    "source": "BioPharm International",
+    "desc": " FDA Approves On-Body Injector Induction for Skyrizi in Crohn's Disease &nbsp;&nbsp; BioPharm International ",
+    "date": "2026-10-23",
+    "cat": "drugs",
+    "n_outlets": 4,
+    "outlets": [
+     "BioPharm International",
+     "HCPLive",
+     "Pharmaceutical Executive",
+     "The Clinical Trial Vanguard"
+    ]
+   },
+   {
+    "title": "DR Congo Ebola Outbreak Spreads To Nord-Ubangi, Kenya Cases Reach Eight: 9 outlets compared - NewsCord",
+    "clean": "DR Congo Ebola Outbreak Spreads To Nord-Ubangi, Kenya Cases Reach Eight: 9 outlets compared",
+    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZ3d0SkhtYkk5TXRXUzF6QmpMUWRNYXNKc0tjRFJKeDhkdE1VejFvZVJNaVRxSGx1WEMxdE4zNjd0cnZBTENkVGk4ZlRqU0QyWnNCSFhXcWpwRm81TjE4cXFPWjBDaDFoc20xMXVrd25QZVQ4cGZYUnVoemZtOTZEajEwSTg2cnJJUUN2Nnp1QzkxeS1lT2N1NGY5QTJ1WWZXVm1CREFIdWpEUlIxZy01aUFOUlZlNDJ1MzJWZlh6eTVoaldCS1hvTTlnUy1mR2psbDh6SXBfdXNyYThK?oc=5",
+    "source": "NewsCord",
+    "desc": " DR Congo Ebola Outbreak Spreads To Nord-Ubangi, Kenya Cases Reach Eight: 9 outlets compared &nbsp;&nbsp; NewsCord ",
+    "date": "2026-10-19",
+    "cat": "virology",
+    "n_outlets": 3,
+    "outlets": [
+     "Demokratis.co.id",
+     "NewsCord",
+     "SuaraGarut.ID"
+    ]
+   }
+  ],
+  "funding": [
+   {
+    "title": "Investment firm TCGX picks migraine biotech TriGemX to take public via SPAC - Fierce Biotech",
+    "clean": "Investment firm TCGX picks migraine biotech TriGemX to take public via SPAC",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPaElGMFBmT0ctVWRkbS0yQTRzUjhFM2FfSnhveFQ1SWtOYWpSeVRqVVJZcVZTSktiamlCN0hpQkJWS1lVZG1aZXB4RXpnQmlYYmNJVDRCUXNLb0FWamt1eUtyUE9CMWpuTkl0dTBZTGRWamFQUlVoeEloNE5qOG90NzBOdHg1Vjhhak5qd3JQVkRUN1BicWNISzBoa2I3LUVkZGlfQUJnTWhMZw?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Investment firm TCGX picks migraine biotech TriGemX to take public via SPAC &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-10-19",
+    "cat": "funding",
+    "n_outlets": 2
+   },
+   {
+    "title": "Swiss biotech Windward Bio files for Nasdaq IPO to fund China-derived assets and in-house R&D - Endpoints News",
+    "clean": "Swiss biotech Windward Bio files for Nasdaq IPO to fund China-derived assets and in-house R&D",
+    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdmRlTmI1Q2cyb0VuSzNzUXF5NHFWS01BakYtbTdRcjQwLVFEcGw4V0w3dGtybUxMcTE4U09VVGdZc1JHVlRGckVOLWpyNEl1X1JRY2lVYm95NlVJdUJnSUMyVExNa05UZmVMQklUN3ZmSWp1VHl5ZVZUQmZ6dW5aaUcwWnhRSGNyVFZBYmlaTGphbkx2aFFFS1FHWXo2bGplV1dPMA?oc=5",
+    "source": "Endpoints News",
+    "desc": " Swiss biotech Windward Bio files for Nasdaq IPO to fund China-derived assets and in-house R&D &nbsp;&nbsp; Endpoints News ",
+    "date": "2026-10-23",
+    "cat": "funding",
+    "n_outlets": 2
+   },
+   {
+    "title": "Lycia Therapeutics plans US IPO amid biotech IPO comeback - NewsBytes",
+    "clean": "Lycia Therapeutics plans US IPO amid biotech IPO comeback",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNV3F5R25ndDFQai1pWHA1c1JHNXhkd0VXdmdsb3pwOUkzTEVWQlRSY21RanByRkw2UjdwN25lSS1qMG9HdUVqMzFENDJMR3BtbW1vdnlBWVlXeTF0UmdpWmVVUEpmUlhwR2ZKVEdFM0Y3Y2VMOFZ5UTR0SUJBZ2xYZVlDTlNhVGYxVE9NTWU0U3FGd3BMRV9qeXdOQVVKUV91REJwcGpVX3c?oc=5",
+    "source": "NewsBytes",
+    "desc": " Lycia Therapeutics plans US IPO amid biotech IPO comeback &nbsp;&nbsp; NewsBytes ",
+    "date": "2026-10-20",
+    "cat": "funding",
+    "n_outlets": 2
+   },
+   {
+    "title": "IPO News - US IPO Weekly Recap: Trickle of biotech activity continues amid tech sell-off - Renaissance Capital",
+    "clean": "IPO News - US IPO Weekly Recap: Trickle of biotech activity continues amid tech sell-off",
+    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQUy1ONHpJQXVvSnlLUkVnT0s0VVc0dUZrVGxJcW4xb1M1THpuVWZfeWFSbmt0dzBTU3hTR2V0dThIbl9YYmZkOWRMWk9hODJmZnl4aHppa1ZPNXc0a2VsR01tcVlMckdKTWczZF9VcXpUcmRJbHdOUThiTW9lYlRwRzV6OU5ZWnZqTmRhOEYyMHoybVcwRDd0YVpuT3lzQmdVcktGN1l3dUZubElyT0gxeExMemc4TnVmYU8zMFZ0TXczQmNUcmV0Tk5B?oc=5",
+    "source": "Renaissance Capital",
+    "desc": " IPO News - US IPO Weekly Recap: Trickle of biotech activity continues amid tech sell-off &nbsp;&nbsp; Renaissance Capital ",
+    "date": "2026-10-23",
+    "cat": "funding",
+    "n_outlets": 2
+   },
+   {
+    "title": "Nouscom raises $135M for pivotal trial of cancer-preventing vaccine candidate - Fierce Biotech",
+    "clean": "Nouscom raises $135M for pivotal trial of cancer-preventing vaccine candidate",
+    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPREI3aWtscGZULUFieVlTQWlSTVdyUV9xdzJqODZWVEdZd0NLQVdZMEpTeVJ0akVmX29ybGtzU0hoSXBCMVl6M1NFZmpFQ2NXR1JkRXFOVkEtMzF0WnVvcEZXQnN4NE1Dd0tPZjNtRFhqUWw1cWo0WVBucTlhd083NGM1Mmd0RU1NWHlrM3ZoY3lmdnNMS2FVamtFYy0zcVYzN3E0RGRRQlFPTkE?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Nouscom raises $135M for pivotal trial of cancer-preventing vaccine candidate &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-10-19",
+    "cat": "funding",
+    "n_outlets": 1
+   }
+  ],
+  "mergers": [
+   {
+    "title": "Sun Pharma to Raise Rs 10,000 Crore Through Bond Issue to Refinance Organon Acquisition Loan - Medical Dialogues",
+    "clean": "Sun Pharma to Raise Rs 10,000 Crore Through Bond Issue to Refinance Organon Acquisition Loan",
+    "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUmlDc0YyTFVZMHdEZUJ6MElBNlQ0M0VhdjFMTUJxWWVDTXFEXy1yV2RCTGdwVk04REFoTjBKMVZrZXhETkZzSlVIZU9SU2dsTHZMTjNDdXJWTktUVjgzeFVRZm85WTBzMXZ6THlaSnREX2xsR2psbG9UWmFmNnhEd2RadHozRTVfTW82eWJ1eVVkLWVvUTk4NTRoQ0NJcGtDTTV4MU1xVXhGOTUxVzM2LXM0c2JjeGNabWRfZExZTVVPR3VPRTI5SjNsRzdCQUVnNmgzSHRxM1VnbEU2Y2JudtIB5gFBVV95cUxPQU51VW1aUWktTVlrLWFFNVlWamdaRTRXcHlfMzFtdHhDck1SUzZYbVBwWU93Rmo4eC1VV1lCcHlQTHRsbXd1aF8zWGwzQ1NOa0IwSWYxTlFmckNIR3VuZ0VnZGc0Z1pmX0U0TWZaa0ZJeDdpQllkelRkc0ExdHp2dFBLVUpqRENCMjl5RDlPWml2MkZhVVhhb2FMQ1A3OVJMUy1SbHkzd0RBTUJJS1F5LVVFWjctZnBJOHpualdtdFFWV1QtSzFBb2xlWnFXR2FYSlAtUTFwY2pSTE9zc0hRNXBBdjVaZw?oc=5",
+    "source": "Medical Dialogues",
+    "desc": " Sun Pharma to Raise Rs 10,000 Crore Through Bond Issue to Refinance Organon Acquisition Loan &nbsp;&nbsp; Medical Dialogues ",
+    "date": "2026-10-20",
+    "cat": "mergers",
+    "n_outlets": 3
+   },
+   {
+    "title": "Alcon ponies up $550M for Neurotech, bagging approved cell therapy implant Encelto - Fierce Pharma",
+    "clean": "Alcon ponies up $550M for Neurotech, bagging approved cell therapy implant Encelto",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVWRvb3ljUE1PeWR1RXhmUEhmalZiRGlRV0JnM0UybkY1amNxblJKYWZmellaY1R2YUtFOVFPVWxBMEkzMlAzckZsM01zbmJUVlpranpJVUpOdHlJWjhvZFRhZnRQazg5cTllRmd5NjRIYUZ4UHVzVXZpdTNmOEZJUS1GRXlIWWpFd19UZDY2aWN4blloV3JILXRIdFZYQQ?oc=5",
+    "source": "Fierce Pharma",
+    "desc": " Alcon ponies up $550M for Neurotech, bagging approved cell therapy implant Encelto &nbsp;&nbsp; Fierce Pharma ",
+    "date": "2026-10-21",
+    "cat": "mergers",
+    "n_outlets": 2
+   },
+   {
+    "title": "Merck KGaA to Buy Silence Therapeutics for $1.1 Billion - Bloomberg.com",
+    "clean": "Merck KGaA to Buy Silence Therapeutics for $1.1 Billion",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQa2w0YTZ0c1JydVZoaVItRHBsUVEtc0VjSC1zV0hDZ2h3LUQxZk44SWNNOW44SDUxbHQ3ZmlTYTdVeWRjbHV3OWU1US0tSmI0TXBHeW15LTI4UlVmbE4zUHNsUmtGSUFhX2tlc2lIaGYwTjZ0THVWaXdfWVcwNTVwSF9aWkhIYmRCN256MWFkNG0ycDJkblNNR3BWYkFEdHFWdTZSZGJEWms?oc=5",
+    "source": "Bloomberg.com",
+    "desc": " Merck KGaA to Buy Silence Therapeutics for $1.1 Billion &nbsp;&nbsp; Bloomberg.com ",
+    "date": "2026-10-19",
+    "cat": "mergers",
+    "n_outlets": 2
+   },
+   {
+    "title": "Exclusive: OpenAI has acquired Orchestra Bio - Axios",
+    "clean": "Exclusive: OpenAI has acquired Orchestra Bio",
+    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMkpaOUNKeWsxZVN1WXZhZkFCMkxUSnpCUWJtTTdKdDYtd2tycEdxU0RJbmgyR3QzQ2FfS1o2dVJqQ090VE9vZFJ5RVZyZ1loYTljWnVZalBTNEJuWlFCb0MycGFtcFZXeUNUTTFwYlBpQzVyRkZjclR2UzJDVDVsNVVTcGVCSTJidEE?oc=5",
+    "source": "Axios",
+    "desc": " Exclusive: OpenAI has acquired Orchestra Bio &nbsp;&nbsp; Axios ",
+    "date": "2026-10-20",
+    "cat": "mergers",
+    "n_outlets": 2
+   },
+   {
+    "title": "Ambrose Healthcare fortifies rare disease pipeline on AM-Pharma takeover - Pharmaceutical Technology",
+    "clean": "Ambrose Healthcare fortifies rare disease pipeline on AM-Pharma takeover",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPLXNMUTBjazVsN3JaY2lWZUFMUVh0ZWJzZU82YlJIVl9GRDFDLVBpTkVfdnBJQVFKdE9aYVFNWTlpLXY3Y2VKMlVsRllfVXNtWUxSSlFSTk1WOVA2XzJKZGZDc3J3RjAtWFVRb2pWLVROSFNCSU0tSGlaVXB1TzhtTmhWOTI1M3ptVnBkZGM3VWEtN3JsakdlZk5YaTMtTTd5SF83N2pn?oc=5",
+    "source": "Pharmaceutical Technology",
+    "desc": " Ambrose Healthcare fortifies rare disease pipeline on AM-Pharma takeover &nbsp;&nbsp; Pharmaceutical Technology ",
+    "date": "2026-10-20",
+    "cat": "mergers",
+    "n_outlets": 2
+   }
+  ],
+  "hiring": [
+   {
+    "title": "BetterLife Pharma Appoints Professor Richard B. Lipton as Co-Chair of its Scientific Advisory Board - Yahoo Finance",
+    "clean": "BetterLife Pharma Appoints Professor Richard B. Lipton as Co-Chair of its Scientific Advisory Board",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQ1ptZWpfLWszN1hwSm5FTmRJREdrVmZUWHo5SHlER2VTQVY0TDc2VWh1c2dBVGctQWNkTzZOa0kzbVQ2UDdZMEUzS3dLeVY2QjdzbkRyMVZWdWNOblNtWE5jS2xKMGo5ZjF1NW9mM2NhM2RLRk9yS21XTERfYXlBa1lBUUxGOFJxaC1pLWw3TWVFNXhLeXliZnZ3Qnp5YmlYb0cxM2VRMTI?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " BetterLife Pharma Appoints Professor Richard B. Lipton as Co-Chair of its Scientific Advisory Board &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-10-19",
+    "cat": "hiring",
+    "n_outlets": 2
+   },
+   {
+    "title": "PDS Biotechnology Appoints Three Accomplished Pharma Industry Executives to Board of Directors - The Manila Times",
+    "clean": "PDS Biotechnology Appoints Three Accomplished Pharma Industry Executives to Board of Directors",
+    "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOZ0lGMTV6MlZXWFpyRk5LUEVwbkxFNWhCT2p4b2duS2lMOUlQcDNGRjlwMTNpUE53MC1ib2lkZ2dnZk1tMXl1a1FvbDVIUHJBWkROUHRrTUtDOENnd2ZlbUNkUEJLMlJtZDVBNG5IRnBpc0JEWHhrWnVEcmx5OU13bzB5SkZvNmtJazc3ekFsM3lrVTRlWk9aaVBLZFl3eTQ4R2NELWhSUEtvV1YxR3R4WW9OS0ljZTN4VlVaOEJGV3dmVTU0NDhqOEJ6YnpNX29PTEhaNzUzeWFycTlVTXhuV3MxM2cxNTBkd3gwV2NUY0czN0ZHOENOd3JoSzDSAYICQVVfeXFMUGxySjFrc1FGODJnc2duNXRJSkRFYVcyVnpJZncwbGgxM2N3WnFKN3hnazh0TU95WTYxeFFqN1RWcTVBdXJzWmIxR1djems1NExBejNJYjJuLXQ1VW96TE93aVc5MkN6R2VpcFc1Z2NaN0ZKZWg3VElVRFZHZWNEX2JmRHRORHlwLWRkVEtHTzhoQThUM2lHUm4wTWZUaFNQaWVjQ3BkQjkxTkU1RTBRejNkVEhZMG9ZZFBTQ01wVzB0UndIdml3M25FeDYtbU15VHFHRXR1eDlvS2RDSl9MLTR6R0g2SVVKRVg2eE5rUkVmNnNfbWNET2VGMmdWeHl4Q0VR?oc=5",
+    "source": "The Manila Times",
+    "desc": " PDS Biotechnology Appoints Three Accomplished Pharma Industry Executives to Board of Directors &nbsp;&nbsp; The Manila Times ",
+    "date": "2026-10-20",
+    "cat": "hiring",
+    "n_outlets": 2
+   },
+   {
+    "title": "Enlivex lays off 60% of employees, scraps preclinical R&D and gives execs \u2018substantial\u2019 salary cuts - Fierce Biotech",
+    "clean": "Enlivex lays off 60% of employees, scraps preclinical R&D and gives execs \u2018substantial\u2019 salary cuts",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQ2tjbVF5VFJnNDdGTW5ST0tjbGJzb2JNMHZwVmFYNlV1WG1KZEg5bHAxTlQ1T3EtbUxHMkduZ3Y1dHRYSGVSM3B6YnBPZTNIWDJ3c2ZYeHdFdjdaVHExcC01Yklnam5uMHFmcmJ5U1pOZGtHRHpJTU1TMldKOXpJcVV6Smg3ZUNPdFN5STZwMlJwR1ZJWk9BN3dMTE1yV3ZEVGFoaUl3?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Enlivex lays off 60% of employees, scraps preclinical R&D and gives execs \u2018substantial\u2019 salary cuts &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-10-19",
+    "cat": "hiring",
+    "n_outlets": 1
+   },
+   {
+    "title": "Pfizer's latest cost-savings plan looks to get early start as layoff reports surface around Europe, US plants - Fierce Pharma",
+    "clean": "Pfizer's latest cost-savings plan looks to get early start as layoff reports surface around Europe, US plants",
+    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWVhFY3pTNzlVNUE1TThQM2d4V1RvQ21RS0NHdWpoSEhDS1FnU0JIdzVmb1ZPalV5dzF5MTFDN1E2Vkl0d19zTjc1UmRyT0puekV0ZlRlbW9FRmJYZ203RjBNZWotUGxraDhDcWFhMmtySmVuLTJqOFdJcE5LT2Vsci1xV25JVjJKUTFtNllsM2Q2Q0cyQ3dubEZTNzJQVGtqZUFYaHFMSzh3RDIzRnJoVzNXUFJIRXR3MVE?oc=5",
+    "source": "Fierce Pharma",
+    "desc": " Pfizer's latest cost-savings plan looks to get early start as layoff reports surface around Europe, US plants &nbsp;&nbsp; Fierce Pharma ",
+    "date": "2026-10-22",
+    "cat": "hiring",
+    "n_outlets": 1
+   },
+   {
+    "title": "Repairon appoints Detlef Schumann as COO - The Pharmaletter",
+    "clean": "Repairon appoints Detlef Schumann as COO",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWjBteWNRLWw0S2o0aGFGVjBjV2xUek8wcmc3enRUTkdzWnhvSElPTFVmWnhuVlFMVXU1RThFWkhQRzFoSzZvaXVhejhoem1GU2ppSjNGejE3SlB4ZGZzcmlISnc4QUwxMXMtM2doYzFmN0Y4QTVvVkZwemRiek5SQ0prLU96bG1jMHFoOVRn?oc=5",
+    "source": "The Pharmaletter",
+    "desc": " Repairon appoints Detlef Schumann as COO &nbsp;&nbsp; The Pharmaletter ",
+    "date": "2026-10-20",
+    "cat": "hiring",
+    "n_outlets": 1
+   }
+  ],
+  "trials": [
+   {
+    "title": "Revolution Medicines Begins Treating Patients in Phase 3 RASolve 308 Trial Evaluating Zoldonrasib in Combination with Pembrolizumab and Chemotherapy as First-Line Treatment for Patients with Metastatic RAS G12D Non-Squamous Non-Small Cell Lung - Yahoo Finance",
+    "clean": "Revolution Medicines Begins Treating Patients in Phase 3 RASolve 308 Trial Evaluating Zoldonrasib in Combination with Pembrolizumab and Chemotherapy as First-Line Treatment for Patients with Metastatic RAS G12D Non-Squamous Non-Small Cell Lung",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR1E4cS14bzdiY2RSX1Q5ZHRTbWFGMEd2MGF0YnBPTWdXWEFRemluUHBfUUZsbG81aWNvVXVpNDBiRkpRUEZhLVR5ZXdNTGhQY1NEWWlQaUlpSW80YzMwMXJjUFNlYldRVEVBSlpuQmVBUkxrWnpoWGVKZm1aU0FmbHNucDF1NXBmdXNscTNuWU9oZEoxbnlJcG9uQVR6azVTX1plWTdhWDJ0dw?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " Revolution Medicines Begins Treating Patients in Phase 3 RASolve 308 Trial Evaluating Zoldonrasib in Combination with Pembrolizumab and Chemotherapy as First-Line Treatment for Patients with Metastatic RAS G12D Non-Squamous Non-Small Cell Lung &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-10-20",
+    "cat": "trials",
+    "n_outlets": 2
+   },
+   {
+    "title": "US FDA Clears Way for Phase 2 Trial of Injectable rhPDGF-BB for Under-eye Hollows - The Dermatology Digest",
+    "clean": "US FDA Clears Way for Phase 2 Trial of Injectable rhPDGF-BB for Under-eye Hollows",
+    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQ28tcXEzMko5M3gxTkhReEpKR1BPdWU4aTdwYTRiZ2NrcGthcHZHZTdBMi1xbUVuMWE1S19hdzZZTU45RzgyN0JwanJVTEM4NVJSV05JcGRkdlJUWnk3akRzY19JcnFTQzlEak42SVg3QzhsNlV1QnJrUFRZYTVVLWNzZnlZOWNjUFVHOVI1eV9sOUV2OUdhdE1QaXlWZmFLVm8tdDZ3T1NITlQz?oc=5",
+    "source": "The Dermatology Digest",
+    "desc": " US FDA Clears Way for Phase 2 Trial of Injectable rhPDGF-BB for Under-eye Hollows &nbsp;&nbsp; The Dermatology Digest ",
+    "date": "2026-10-21",
+    "cat": "trials",
+    "n_outlets": 2
+   },
+   {
+    "title": "FDA Alignment Reached on Phase 3 Design for RGT-61159 in ACC - Targeted Oncology",
+    "clean": "FDA Alignment Reached on Phase 3 Design for RGT-61159 in ACC",
+    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTlIzbWhveFhUbDdFblRaYUYxTkdHN0dYMHpSbTk5RW9PcmM2ZEFUYWFVYUcxb3Z6Y1pOdlF0X1BWUjhlekxCU2RmUzd5dEZEOUMxNGdkQll3WWxsWDhwTXZPX3BWOGlEanF3R0JuWWZtdHEzS2V3SWE0d0VRZ28xSGtDaDhZcDNqYmhjaHpWd25ZZURrdzdB?oc=5",
+    "source": "Targeted Oncology",
+    "desc": " FDA Alignment Reached on Phase 3 Design for RGT-61159 in ACC &nbsp;&nbsp; Targeted Oncology ",
+    "date": "2026-10-22",
+    "cat": "trials",
+    "n_outlets": 2
+   },
+   {
+    "title": "Lilly\u2019s sofetabart mipitecan shows 79% response rate in platinum-sensitive ovarian cancer - The Clinical Trial Vanguard",
+    "clean": "Lilly\u2019s sofetabart mipitecan shows 79% response rate in platinum-sensitive ovarian cancer",
+    "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOMnVyN3pvYVZ2QklZM0NYbUZIWHJmem1RU2ZpT0JqYXk4a3BHY1dQS2UtYThvRVo5aVl3a2VfR2VNZ0E3STdLQzZhOV9JVEI1YmhmdFg1VUVlUHJJczZCTlU3cWVhY0UzZ0Z6bFFHYVo0OEVqd080MGhuaW1kWTJ2emw0NUNnYlgwVDlTLWdRR2M3eUNuOUJhakp3eTF6Uk1iUXJUQWpDSVAwRkN3djYxd1BBc1Rsd0dFT19yc1p4VFB5NkhmaXI3dGZ2aw?oc=5",
+    "source": "The Clinical Trial Vanguard",
+    "desc": " Lilly\u2019s sofetabart mipitecan shows 79% response rate in platinum-sensitive ovarian cancer &nbsp;&nbsp; The Clinical Trial Vanguard ",
+    "date": "2026-10-24",
+    "cat": "trials",
+    "n_outlets": 2
+   },
+   {
+    "title": "AbbVie\u2019s next-gen Crohn\u2019s disease combo beats Skyrizi in phase 2 trial - Fierce Biotech",
+    "clean": "AbbVie\u2019s next-gen Crohn\u2019s disease combo beats Skyrizi in phase 2 trial",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNLVhXd3hYZ3JON05ENHJzdFpKdlI2V1dMUmhpU3lKTnhiMXBZYng2LS1MVWtMVzFRbTBwU1dYS1dfLWNYczhVRFJ4blhkcFRTMFg3bWZnczM1dWI3VlphVHRINWxzbE55T2lFM0tDaVhQYml3MWpJUnM0amI3MTlIdTlaWk8wUGtWdHl5WG5ublFPVGI3UnJnMG1pbWlHYTRsZ09z?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " AbbVie\u2019s next-gen Crohn\u2019s disease combo beats Skyrizi in phase 2 trial &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-10-19",
+    "cat": "trials",
+    "n_outlets": 1
+   }
+  ],
+  "drugs": [
+   {
+    "title": "US FDA approves GSK's hepatitis B drug, offering patients chance to stop long-term treatment - Reuters",
+    "clean": "US FDA approves GSK's hepatitis B drug, offering patients chance to stop long-term treatment",
+    "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNT2t5R0w0ejBHTVE0dTd3SkJRRW5qQUdjazJGRGxGYTBBQWFVM2hIMDVnZ1hldUZDUE5kZk5WWndnbDhldVZNdDlVU3RrOUZFb0VJanFsa0s2QjFfeFJ5RUktZ3pycTVEWFkydTVlc3JCV0FWU3VFdXF5VUdXdVJpaURaN3JreDNpTVpDekRYX1V2LV94c2F2Z2ROQmhoRkZ0NldNXzdwNFhoclNoWGZNbGNHamRfN2NnbXo1aU42cmFIWXdXWVBoNXpoQnRON2tzZno4eFVzSkNQZ3V5aWE3SkQxbw?oc=5",
+    "source": "Reuters",
+    "desc": " US FDA approves GSK's hepatitis B drug, offering patients chance to stop long-term treatment &nbsp;&nbsp; Reuters ",
+    "date": "2026-10-20",
+    "cat": "drugs",
+    "n_outlets": 3
+   },
+   {
+    "title": "Amgen drug combined with immunotherapy extends survival in lung cancer trial - Reuters",
+    "clean": "Amgen drug combined with immunotherapy extends survival in lung cancer trial",
+    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQNkp5SkpQWTcySnpWVEtXVGN2azJZYnFERjh6WHJBR3NPcEE0TDNGWUVuQ0Q0WF91VnFFVkRYZjF1NFJ3N01XdzVTZzNXQ0F4NlVMMzVZY0JUNldtZW1CS0hSX3d4TUZVZ3lfX2xjeVF6UElWanluMXNOV05ybUdFb2YwbUJ2eGY3NkR0ZUhabWhaMGp5SERfajdZMzlUcGZsX3RULXNZMlI1eTMwbjFxWTlweW5uNHpNTWlVbmVKS2libTlG?oc=5",
+    "source": "Reuters",
+    "desc": " Amgen drug combined with immunotherapy extends survival in lung cancer trial &nbsp;&nbsp; Reuters ",
+    "date": "2026-10-24",
+    "cat": "onco",
+    "n_outlets": 3
+   },
+   {
+    "title": "FDA Approves Dostarlimab for Rectal Cancer - Medscape",
+    "clean": "FDA Approves Dostarlimab for Rectal Cancer",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPcW02UEVJWkpmbTdPNzJCR1B6aUNlUXpndldENHlOel9SaDF0STF2MTk2VW5lV1d3WHJZMDZEVWRhRnl2OHBvOGwyZ1VNYy1SdVU3bF9YLTdMM0dwZGZlRXlDUVlER0hnVTRaZHAzckhXYnRNY00td1lsaFBxeEFlTjZiYkljRDdPSHhFZHFTbUJCQQ?oc=5",
+    "source": "Medscape",
+    "desc": " FDA Approves Dostarlimab for Rectal Cancer &nbsp;&nbsp; Medscape ",
+    "date": "2026-10-19",
+    "cat": "drugs",
+    "n_outlets": 3
+   },
+   {
+    "title": "FDA Grants Accelerated Approval to Dostarlimab for dMMR Rectal Cancer - AJMC",
+    "clean": "FDA Grants Accelerated Approval to Dostarlimab for dMMR Rectal Cancer",
+    "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcncyaHpmWGZxa1NoQjVOTk9pWmFkUUE0UExUbzFRcGFyM2xCaV90NkNGSEtxWnZhdDBYWnA1eHpIN3EzRVc3a2hTNmplMFhsYkh1d1JiQUJBN0tFc0xkVFdiVHFVX1drQjlHRWV6UzFlaEFWdTFYQ2ZHUGFaTm9UQm81aEo0Qk1tV3lMYzZGeHBHbWtuazRfTlFHNA?oc=5",
+    "source": "AJMC",
+    "desc": " FDA Grants Accelerated Approval to Dostarlimab for dMMR Rectal Cancer &nbsp;&nbsp; AJMC ",
+    "date": "2026-10-19",
+    "cat": "drugs",
+    "n_outlets": 3
+   },
+   {
+    "title": "FDA Approves Phentolamine Eye Drop for Presbyopia in Adults - Pharmacy Times",
+    "clean": "FDA Approves Phentolamine Eye Drop for Presbyopia in Adults",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUEE1RkJIV0tob0cyb1RlbzJXZHpaMDZSUUU4ZWpJNTRHMmJtbjVSVklBZlhnNVU0NFhIS2VpZmVrOUhlcDQzWjNlMVFKSXhXSUthVnAwSmVXYjNzVkVxbDRzaEx5SW01VndHOUo3WkhPcmI3akl3S1g3d3VGdGs1VmZnZDBHbGNSYjJzTnlVTEQ0Rko2UFd1M0hn?oc=5",
+    "source": "Pharmacy Times",
+    "desc": " FDA Approves Phentolamine Eye Drop for Presbyopia in Adults &nbsp;&nbsp; Pharmacy Times ",
+    "date": "2026-10-19",
+    "cat": "drugs",
+    "n_outlets": 3
+   }
+  ],
+  "academia": [
+   {
+    "title": "NIH sees 7,400 fewer grants during fiscal year 2026 than in previous year - CIDRAP",
+    "clean": "NIH sees 7,400 fewer grants during fiscal year 2026 than in previous year",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcHNfUV85YVl6VUZZVjM3SFl6Z1RmdjV6S0VDVTgyRWp0T1ZwWGhIN2dldXEtbnM2Y3BzNWZhS1hGZ2VDcnNBSG95dG1uVG5jN3JnQWpuY2VLZmM5YWpHWnNXX3RBV2JSYXhYdzNuOEVMU0tfblVKQ25ycUxZTGxRNEVBaVBqelp4N1pZX3lINnZOQzZhako4RlFDYUR5b2k1MTRaZnFWS3I?oc=5",
+    "source": "CIDRAP",
+    "desc": " NIH sees 7,400 fewer grants during fiscal year 2026 than in previous year &nbsp;&nbsp; CIDRAP ",
+    "date": "2026-10-19",
+    "cat": "academia",
+    "n_outlets": 2
+   },
+   {
+    "title": "Sinopia Biosciences Secures $2.5 Million NIH Grant to Advance Metabolomics Foundation Model for Drug Discovery - BioSpace",
+    "clean": "Sinopia Biosciences Secures $2.5 Million NIH Grant to Advance Metabolomics Foundation Model for Drug Discovery",
+    "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOTTllbDV1WWRTR0ZJYTZ1YWpyWVJYNDNiSjFmUG5QNHlvNTFrQ2FJTnB2RWlWNTV0NkYzNVdiUE5zY01nUzNOM012UW43eHZEb1F4VFFvWldzZlV0UE9IQ1MycWVEczF0REs2TXdfYU5zTTQ1YmJxeVVXYk42WlBJaFZibnBwd3V5VC1Hai1acGFlRGdiOGVIWHBibVVWSUZscFJuTzJRVkJRQlIzQ1RxRUppdEdGcEpDUnZqWXVpeDAzaEUySnJMTlVHbFhmSkltSXBHRjV5UzI3UkhHSUxtdHhHMA?oc=5",
+    "source": "BioSpace",
+    "desc": " Sinopia Biosciences Secures $2.5 Million NIH Grant to Advance Metabolomics Foundation Model for Drug Discovery &nbsp;&nbsp; BioSpace ",
+    "date": "2026-10-20",
+    "cat": "academia",
+    "n_outlets": 2
+   },
+   {
+    "title": "NIH grant supports study of gut microbes and blood cell production - WashU",
+    "clean": "NIH grant supports study of gut microbes and blood cell production",
+    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTnRZUmkzUmJZN3pybVFoaWJXNXF0WTJ6bEx2dF9vUGxFbmNVVFZSWTV2TEtpY1F3OWxOekgxbGdCbnExQkM4Nnc4SDB4YTV0S1draEY4V0xCYTRSYnBWdS1BWGx5dGoxUGUxTGZaUWtaWXEwcjRvQXdYU1RCRWtybTZzelNueWMxSTlNcnRfOUdfWjFEMk56aFp4RTNOd05tbVE?oc=5",
+    "source": "WashU",
+    "desc": " NIH grant supports study of gut microbes and blood cell production &nbsp;&nbsp; WashU ",
+    "date": "2026-10-21",
+    "cat": "academia",
+    "n_outlets": 2
+   },
+   {
+    "title": "Greenwood Genetic Center researcher receives $1.4 million NIH grant to study metabolism and glycosylation in rare genetic diseases - EurekAlert!",
+    "clean": "Greenwood Genetic Center researcher receives $1.4 million NIH grant to study metabolism and glycosylation in rare genetic diseases",
+    "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5CWU92Vmc4YjBUTlhCaVRJN3JhWDBkTTJKd1lGTlVJVE1DSjhkUTJUZnYwWF9GclJHY3IzTEpuQUpueEg2djVQbU5mZktUTzBDU2d3WTA3QVdhMFha?oc=5",
+    "source": "EurekAlert!",
+    "desc": " Greenwood Genetic Center researcher receives $1.4 million NIH grant to study metabolism and glycosylation in rare genetic diseases &nbsp;&nbsp; EurekAlert! ",
+    "date": "2026-10-21",
+    "cat": "academia",
+    "n_outlets": 2
+   }
+  ],
+  "platform": [
+   {
+    "title": "Gilead to Present New Data Across HIV and Emerging Antiviral Research at IDWeek 2026 - Business Wire",
+    "clean": "Gilead to Present New Data Across HIV and Emerging Antiviral Research at IDWeek 2026",
+    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOdlpaZkpockhyamZJd3lmTTUxb2dlQmd4YjRGN1NNZ1l4bmlqRmNjOEZ1VDhnSllLdmkxcV8yLTRIM0FNNGU5RGhWR0pRcW4xX2hXM1BuTXd2WG56RnM1V3VkTDdCUjlYTU9YZkdkU2JzTjE4aU9BX2pxZndQaXN3Uy1qVnZLTDFyY0ZOZmpZckpmZHFRb2ZiT1h5UFdNOEN4UW1BWU5YMFBwLU9NMnJFS0htUDE2dWRPWDRNS3BFZ2lkWmpTejEtbWZIeDJnSmFobF95V0t2MWQ?oc=5",
+    "source": "Business Wire",
+    "desc": " Gilead to Present New Data Across HIV and Emerging Antiviral Research at IDWeek 2026 &nbsp;&nbsp; Business Wire ",
+    "date": "2026-10-19",
+    "cat": "virology",
+    "n_outlets": 3
+   },
+   {
+    "title": "GeneDx to Add Long-Read Whole Genome Sequencing to Testing Portfolio - Yahoo Finance",
+    "clean": "GeneDx to Add Long-Read Whole Genome Sequencing to Testing Portfolio",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxONjdoUEhQcml5N1RhVGw1T25rMjFPYm9BYUJ4dHhvMzVJLTBQeUViX01Hemk2S2pMQTBxT2EtSVJUa2JvQVp6LXpfZDF5TWZDSnhZYkxPejNQd1BFaUNpZjVpSkFUckdJakdxODhMUlNieEhlVmh1WWMwamR3YnlxZDZiQUdRNGVjeXhHQWc2aWs?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " GeneDx to Add Long-Read Whole Genome Sequencing to Testing Portfolio &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-10-20",
+    "cat": "ngs",
+    "n_outlets": 3
+   },
+   {
+    "title": "WSU researchers discover way to \u2018crank up\u2019 antiviral defenses - WSU Insider",
+    "clean": "WSU researchers discover way to \u2018crank up\u2019 antiviral defenses",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZWpVZWpPczQ5aERISXZQMXg4S3RUX3I2OW5Bd2d3STJPVXl6Tnl2dWs4RVFZRENMN05PYVJyNHJkNFBUT3NxV2c2UWcycFlkMWVjT2VMT1piLWlpc1NIaDBxemVMdkpBRzZtSk1BS2wyd2RRRHZEaWRsX3Z5bEFHaWNuZVV5aThxYUZOOUV3ZU9SQWIyZ0Z2QWJHNTlJTVlSVlNncDRwd1gzQQ?oc=5",
+    "source": "WSU Insider",
+    "desc": " WSU researchers discover way to \u2018crank up\u2019 antiviral defenses &nbsp;&nbsp; WSU Insider ",
+    "date": "2026-10-20",
+    "cat": "virology",
+    "n_outlets": 3
+   },
+   {
+    "title": "First ever human case of livestock-related Shamonda virus identified in France - CIDRAP",
+    "clean": "First ever human case of livestock-related Shamonda virus identified in France",
+    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPaFFwWHJRSVphM3c5WExWRGdmVWJzLWROTnBOd0ZCZEJYZzUycEJ0cjU2YmVhMnV3dl9pcF9ad2F2YVBLSThzQnlld0J4VUxJVmZnNlhaMWdNNGp4R2xWak45cjFOWGhLZlJRMldZUERDUENtbDZPb0RsejFlTkFsWkU3RHVIVXk3RXR3Tk5XLXlVT0RwVGg5RTQ2RU5sampRQk1Vc1U1T1loRWhrWlE3Y2kybTlXSHFtVTU4ZQ?oc=5",
+    "source": "CIDRAP",
+    "desc": " First ever human case of livestock-related Shamonda virus identified in France &nbsp;&nbsp; CIDRAP ",
+    "date": "2026-10-22",
+    "cat": "virology",
+    "n_outlets": 3
+   },
+   {
+    "title": "Elanco Animal Health Incorporated (ELAN) Stock Price, News & Analysis - Stock Titan",
+    "clean": "Elanco Animal Health Incorporated (ELAN) Stock Price, News & Analysis",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9PWU9Qd0N6bFNva1hkVzdYOUszRXVNb0ppdlV5SGl0anhPUmU0N2NzMGMyQjVBUlR2R2V3ekhqMFpuakJHTnlyOG1ldDYtRUFSdlZJ?oc=5",
+    "source": "Stock Titan",
+    "desc": " Elanco Animal Health Incorporated (ELAN) Stock Price, News & Analysis &nbsp;&nbsp; Stock Titan ",
+    "date": "2026-10-22",
+    "cat": "vet",
+    "n_outlets": 3
+   }
+  ]
+ },
+ "radar": {
+  "Merck": [
+   {
+    "title": "Lycia\u2019s $318M IPO; Merck sac-TMT trial stopped early - Endpoints News",
+    "clean": "Lycia\u2019s $318M IPO; Merck sac-TMT trial stopped early",
+    "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9IbVdnY0FRSTctMWxkbHNNUlgyTWttSFVPMGh1Yy1aZk81YnB1dFZqLXNzN2R1UE5lV0ctUlY4c1J5TzEtbkJ1S2YtanZuWFVCQUp0U0Q0WlBXckkyZl9sYlRpelFFM2hFcnZmbGpzSkxBMGVYMW9WYVJwN0oxQQ?oc=5",
+    "source": "Endpoints News",
+    "desc": " Lycia\u2019s $318M IPO; Merck sac-TMT trial stopped early &nbsp;&nbsp; Endpoints News ",
+    "date": "2026-10-23",
+    "cat": "funding"
+   },
+   {
+    "title": "Merck/Moderna's Melanoma Combination Therapy Delivers Promising Phase 3 Trial Results - Seeking Alpha",
+    "clean": "Merck/Moderna's Melanoma Combination Therapy Delivers Promising Phase 3 Trial Results",
+    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPQ2lwa3FaMUtwOGRVZFNEcGp6T2dIbkUzUjhfMDhPa1lMYXRsa1dGck1jSUFlTGxwS0d5YWp6SzJNbGQ1RDhNNUJPVHliSXN4cnJBZVRzdnh3NC1NOXZMSU1xQ29iMVZWRm5oS1hFVkJaODZrbjNNRE5XY1JMN3ZaVG5Gb3RJOUlJMjRJYWprWk1MWGZySmRNT2hvZlhvb1dSanhHRHVFeHZzbnZRTE5tUS1ZOC02QQ?oc=5",
+    "source": "Seeking Alpha",
+    "desc": " Merck/Moderna's Melanoma Combination Therapy Delivers Promising Phase 3 Trial Results &nbsp;&nbsp; Seeking Alpha ",
+    "date": "2026-10-23",
+    "cat": "trials"
+   },
+   {
+    "title": "Merck Animal Health referred over \u2018inaccurate and misleading\u2019 Bravecto Quantum claims - Vet Times",
+    "clean": "Merck Animal Health referred over \u2018inaccurate and misleading\u2019 Bravecto Quantum claims",
+    "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQM3NjQ3VqTkRLeE5LczZoaDJSVDFKZk40SmlQMEUzRTRVazViTnBzdExsSTBGUnVrbmZ4WWtldzNiRklFRWNnSGxiUGZOdWVBOHRXM0JfOWo1cFZER09oTnFhREhMT09hOU1hQVpJRTdWcUl5Ti1odEx0WVM0Nmh1LXF1WTlXNWQ5a0dEOGMwVEdHSkdyS0hldHg5ZFRKa2xHRHlRMG4wMUxra2ZQMDVQVXhRUDNyX2RnTTZwdWI0OExHenBGOGM1SXNzTU8?oc=5",
+    "source": "Vet Times",
+    "desc": " Merck Animal Health referred over \u2018inaccurate and misleading\u2019 Bravecto Quantum claims &nbsp;&nbsp; Vet Times ",
+    "date": "2026-10-23",
+    "cat": "vet"
+   }
+  ],
+  "Pfizer": [
+   {
+    "title": "Shardul Amarchand Mangaldas & Co advises Evonile Pharma Ltd. on acquisition of 'Minipress' and 'Minipres' brands from Pfizer - SCC Online",
+    "clean": "Shardul Amarchand Mangaldas & Co advises Evonile Pharma Ltd. on acquisition of 'Minipress' and 'Minipres' brands from Pfizer",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNSmVOVEhtQ21yUjZsSFN6NjBxNGw4bFA0WjdrWXdZV0UtRjFmTTVYODdCR0lOUVFpbWJCUTZXTUpHM01wcDBILTNCUzZZNmpqS2hHMHM5OXVNNkFVR2pKb3dnQWRSbFdndnpFRzVXQTJGSzdoZ2ZmV1YyalgzSWkycU9vRlMxT0piVV9ESmNEV2pkRXpmWUdnWVJLck05WTBaSzJqbTdRaVNwd2VZT0pZQmF0Qm1MdmRTa2JZdFhSVU9xckVHcGhR?oc=5",
+    "source": "SCC Online",
+    "desc": " Shardul Amarchand Mangaldas & Co advises Evonile Pharma Ltd. on acquisition of 'Minipress' and 'Minipres' brands from Pfizer &nbsp;&nbsp; SCC Online ",
+    "date": "2026-10-23",
+    "cat": "mergers"
+   },
+   {
+    "title": "Pfizer's latest cost-savings plan looks to get early start as layoff reports surface around Europe, US plants - Fierce Pharma",
+    "clean": "Pfizer's latest cost-savings plan looks to get early start as layoff reports surface around Europe, US plants",
+    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWVhFY3pTNzlVNUE1TThQM2d4V1RvQ21RS0NHdWpoSEhDS1FnU0JIdzVmb1ZPalV5dzF5MTFDN1E2Vkl0d19zTjc1UmRyT0puekV0ZlRlbW9FRmJYZ203RjBNZWotUGxraDhDcWFhMmtySmVuLTJqOFdJcE5LT2Vsci1xV25JVjJKUTFtNllsM2Q2Q0cyQ3dubEZTNzJQVGtqZUFYaHFMSzh3RDIzRnJoVzNXUFJIRXR3MVE?oc=5",
+    "source": "Fierce Pharma",
+    "desc": " Pfizer's latest cost-savings plan looks to get early start as layoff reports surface around Europe, US plants &nbsp;&nbsp; Fierce Pharma ",
+    "date": "2026-10-22",
+    "cat": "hiring"
+   },
+   {
+    "title": "Ambrose Healthcare inks $181M deal for former Pfizer target AM-Pharma - Fierce Biotech",
+    "clean": "Ambrose Healthcare inks $181M deal for former Pfizer target AM-Pharma",
+    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTEl2MHU5c0d5VXpWOUZoVG5EdGdFbWsxNkx2TzFrN1QxOGthZlRhaVhvNDF3YmJjWDE2Tnh6S1MyYjJFejBUX2xpY3dXczhQV2JLcER0Q0pRMTZQRGZib2ZkTFRsdkRoU1N2MWlsTThQc2l4Rmkwa09POVkwSDBIRnhDM3RicjJDYnZ2bHdyVlYxLUl1NVIyaThBa2pDdVNDOW5YUA?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Ambrose Healthcare inks $181M deal for former Pfizer target AM-Pharma &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-10-20",
+    "cat": "mergers"
+   }
+  ]
+ },
+ "top5": [
+  {
+   "pmid": "42913638",
+   "title": "Modeling ocular tissues with organoids: A review of techniques and applications in lacrimal gland, cornea, lens, and retina organoid",
+   "journal": "Stem Cell Reports",
+   "date": "2026 Oct 22",
+   "doi": "10.1016/j.stemcr.2026.103122",
+   "authors": "Wu Y \u2026 Fu Q",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42913638/",
+   "field": "Cell Biology",
+   "score": 14,
+   "hits": [
+    "organoid"
+   ],
+   "why": "Ocular organoids enable mechanistic study of refractory eye pathologies and tissue reconstruction, advancing translation from basic research to clinical treatment of currently incurable diseases."
+  },
+  {
+   "pmid": "42920902",
+   "title": "Low-frequency parasitized cells in bone marrow alter myelopoiesis following immunization with the live attenuated Leishmania major Cen (-/-) vaccine",
+   "journal": "iScience",
+   "date": "2026 Nov 20",
+   "doi": "10.1016/j.isci.2026.117816",
+   "authors": "Azodi N \u2026 Gannavaram S",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42920902/",
+   "field": "NGS / Genomics",
+   "score": 14,
+   "hits": [
+    "vaccine"
+   ],
+   "why": "Low-level bone marrow parasitism following Leishmania major Centrin-deficient vaccination enhances myelopoiesis and trained immunity through granulin-Sort3 signaling."
+  },
+  {
+   "pmid": "42910406",
+   "title": "Muscular and Tendinous Anatomy of the Feline Crus and Pes",
+   "journal": "Anat Histol Embryol",
+   "date": "2026 Nov",
+   "doi": "10.1111/ahe.70188",
+   "authors": "Nur IH \u2026 Erdogan E",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42910406/",
+   "field": "Veterinary Medicine",
+   "score": 13,
+   "hits": [
+    "feline"
+   ],
+   "why": "Detailed anatomical mapping of feline distal hindlimb muscles reveals sex-related morphometric differences and clarifies the absence of direct anatomical linkage between deep and superficial digital flexor tendons."
+  },
+  {
+   "pmid": "42901195",
+   "title": "Effectiveness of respiratory syncytial virus immunisation in practice",
+   "journal": "Lancet Infect Dis",
+   "date": "2026 Oct 20",
+   "doi": "10.1016/S1473-3099(26)00466-4",
+   "authors": "Groenendijk RW \u2026 Mazur NI",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42901195/",
+   "field": "Virology",
+   "score": 10,
+   "hits": [],
+   "why": "Real-world data confirm RSV vaccines and monoclonal antibodies prevent severe disease in infants and older adults, with maternal vaccination showing cardiovascular benefits, though uptake depends on healthcare integration and provider recommendation rather than product availability alone."
+  },
+  {
+   "pmid": "42920830",
+   "title": "Mediator complex: the unsung hero of hematopoiesis",
+   "journal": "Front Cell Dev Biol",
+   "date": "2026",
+   "doi": "10.3389/fcell.2026.1959663",
+   "authors": "Kuznetsova NA \u2026 Khamidullina AI",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42920830/",
+   "field": "Molecular Biology",
+   "score": 10,
+   "hits": [],
+   "why": "Mediator complex dysfunction drives hematopoietic stem cell defects and leukemia pathogenesis, with specific subunits and CDK8/19 kinases as potential therapeutic targets."
+  }
+ ],
+ "also": [
+  {
+   "pmid": "42925751",
+   "title": "Towards influenza vaccine universality: Smart vaccine regimens and adjuvant-driven germinal center responses",
+   "journal": "Virology",
+   "date": "2026 Oct 21",
+   "doi": "10.1016/j.virol.2026.111110",
+   "authors": "Arsana A \u2026 Wang BZ",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42925751/",
+   "field": "Virology",
+   "score": 8,
+   "hits": [
+    "vaccine"
+   ],
+   "why": "Adjuvants and antigen design can redirect germinal center responses toward conserved viral regions to overcome strain-specific immunity limitations in universal influenza vaccine development."
+  },
+  {
+   "pmid": "42901891",
+   "title": "Learning chemical-induced gene expression perturbations with WAVE",
+   "journal": "Nat Commun",
+   "date": "2026 Sep 18",
+   "doi": "10.1038/s41467-026-77645-3",
+   "authors": "Lv T \u2026 Fan X",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42901891/",
+   "field": "Molecular Biology",
+   "score": 8,
+   "hits": [],
+   "why": "WAVE predicts untested chemical-induced gene expression profiles from compound structures and cell basal states, enabling large-scale transcriptomics-based drug screening without experimental profiling of all combinations."
+  },
+  {
+   "pmid": "42901881",
+   "title": "The Safety of Melasma Treatment in Vitiligo Patients: An International E-Delphi Study",
+   "journal": "Pigment Cell Melanoma Res",
+   "date": "2026 Nov",
+   "doi": "10.1111/pcmr.70125",
+   "authors": "Abdallah M \u2026 El-Bassiouny M",
+   "pubtype": [
+    "Journal Article",
+    "Scoping Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42901881/",
+   "field": "Cell Biology",
+   "score": 10,
+   "hits": [],
+   "why": "Expert consensus prioritizes vitiligo treatment in coexisting vitiligo-melasma, recommends specific topical agents and phototherapy, and identifies hydroquinone as requiring replacement pending mechanistic evidence in vitiligo-prone skin."
+  },
+  {
+   "pmid": "42894102",
+   "title": "Systemic Loss of Chromosome Y Associates With Age-Related Ophthalmic Diseases in Middle-Aged Men: A Longitudinal Multi-Omic Study",
+   "journal": "Aging Cell",
+   "date": "2026 Oct",
+   "doi": "10.1111/acel.70775",
+   "authors": "Chen T \u2026 Zhao J",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42894102/",
+   "field": "NGS / Genomics",
+   "score": 10,
+   "hits": [],
+   "why": "Mosaic loss of chromosome Y predicts age-related macular degeneration risk through a monocyte-mediated inflammatory pathway detectable years before clinical onset."
+  },
+  {
+   "pmid": "42898905",
+   "title": "Epigenetic and metabolic plasticity of tumor cells in immunotherapy resistance",
+   "journal": "Front Immunol",
+   "date": "2026",
+   "doi": "10.3389/fimmu.2026.1968997",
+   "authors": "Choi JE \u2026 Baek I",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42898905/",
+   "field": "Oncology",
+   "score": 7,
+   "hits": [
+    "immunotherapy"
+   ],
+   "why": "Epigenetic and metabolic plasticity mechanisms drive immunotherapy resistance in solid tumors, with targeting these pathways potentially overcoming acquired resistance."
+  },
+  {
+   "pmid": "42901194",
+   "title": "Investing in pandemic prevention, preparedness, and response",
+   "journal": "Lancet Public Health",
+   "date": "2026 Nov",
+   "doi": "10.1016/S2468-2667(26)00201-X",
+   "authors": "Norheim OF \u2026 Oshitani H",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42901194/",
+   "field": "Veterinary Medicine",
+   "score": 10,
+   "hits": [],
+   "why": "Eighty-five feasible pandemic prevention and preparedness actions are identified, with 40 categorized as high-priority investments showing cost-benefit returns exceeding implementation expenses."
+  }
+ ]
+}
