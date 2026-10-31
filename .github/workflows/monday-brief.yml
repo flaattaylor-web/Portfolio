@@ -13,12 +13,27 @@ on:
     - cron: "10,30,50 11-13 * * 1"
     - cron: "10 16 * * 1"
     - cron: "10 21 * * 1"
+    # Catch-up. GitHub's scheduler is best-effort: on 2026-10-05 it dropped
+    # every Monday slot with no run and no failure notice, and a week earlier
+    # it delayed one by about four hours. These fire only if Monday produced
+    # nothing -- once the issue is committed the build short-circuits before
+    # spending a single network call.
+    - cron: "10 11,15 * * 2"
+    - cron: "10 12 * * 3"
   workflow_dispatch:
     inputs:
       weeks:
         description: "How many trailing weeks to cover (1 = previous Mon-Sun)"
         required: false
         default: "1"
+      send:
+        description: "Also email this run (scheduled runs always email)"
+        required: false
+        default: "false"
+      force:
+        description: "Rebuild even if this week's issue was already built today"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -29,11 +44,11 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -43,7 +58,51 @@ jobs:
           # Optional: set an NCBI_EMAIL repo variable to identify the caller to
           # PubMed. Omitted is fine -- E-utilities serves anonymous requests.
           NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+          # The retry crons rely on the "already built today" short-circuit, so
+          # forcing is manual-only: it is how you re-run a week on purpose, and
+          # how you test the email path once an issue is already committed.
+          BRIEF_FORCE: ${{ github.event.inputs.force == 'true' && '1' || '0' }}
+          # Optional. With BRIEF_LLM_KEY unset, the paper blurbs fall back to
+          # deterministic_why() -- article type, venue standing, topic -- and
+          # the build neither calls out nor fails. Set it to get one sentence
+          # of field significance written from each abstract.
+          BRIEF_LLM_KEY: ${{ secrets.BRIEF_LLM_KEY }}
+          BRIEF_LLM_MODEL: ${{ vars.BRIEF_LLM_MODEL }}
         run: python scripts/build_brief.py
+
+      # The email goes out before the commit, not after. The commit is what
+      # records that this week's issue was generated AND delivered, so a failed
+      # send leaves the tree dirty-but-uncommitted and the next retry cron
+      # rebuilds and sends from clean. Once committed, later runs build nothing.
+      - name: Did the build produce a new issue?
+        id: check
+        run: |
+          if [ -n "$(git status --porcelain brief)" ]; then
+            echo "new=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "new=false" >> "$GITHUB_OUTPUT"
+            echo "this week's issue is already committed - no build, no email"
+          fi
+
+      - name: Email the issue
+        if: steps.check.outputs.new == 'true' && (github.event_name == 'schedule' || github.event.inputs.send == 'true')
+        env:
+          BRIEF_WEEKS: ${{ github.event.inputs.weeks || '1' }}
+          # Buttondown is the path once the list is public. The Gmail fallback
+          # below stays for the fixed personal list; a free Gmail account
+          # cannot serve public subscribers.
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          # Recipients and sender are repo VARIABLES, so the list changes
+          # without a commit. Only the app password is a secret.
+          BRIEF_TO: ${{ vars.BRIEF_TO }}
+          BRIEF_FROM: ${{ vars.BRIEF_FROM }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          if [ -n "$BUTTONDOWN_API_KEY" ]; then
+            python scripts/send_broadcast.py
+          else
+            python scripts/send_brief.py
+          fi
 
       - name: Commit if anything changed
         run: |

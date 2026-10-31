@@ -28,6 +28,11 @@ from email.utils import format_datetime, parsedate_to_datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "brief")
 SITE = "https://taylorflaat.com"
+
+# Form action from Buttondown's embed snippet (Settings -> Embedding).
+# While this is empty the signup block is omitted entirely, so the page never
+# shows a form that posts nowhere.
+SUBSCRIBE_ACTION = "https://buttondown.com/api/emails/embed-subscribe/TheMondayBrief-TaylorFlaat.com"
 UA = {"User-Agent": "taylorflaat.com monday-brief generator (+https://taylorflaat.com)"}
 NCBI = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
@@ -55,7 +60,7 @@ SECTIONS = [
     ("trials", "Clinical Trials", "Readouts, starts, failures", 5),
     ("drugs", "Regulatory", "Approvals, CRLs, CHMP opinions", 5),
     ("academia", "Academia", "Grants, budgets, institutions", 4),
-    ("platform", "The Bench", "NGS, virology and animal-health industry moves", 5),
+    ("platform", "Platforms &amp; Tools", "NGS, virology and animal-health industry moves", 5),
 ]
 SECTION_FEEDS = {"funding": ["funding"], "mergers": ["mergers"], "hiring": ["hiring"],
                  "trials": ["trials"], "drugs": ["drugs", "onco"], "academia": ["academia"],
@@ -73,7 +78,7 @@ FIELDS = {
     "Veterinary Medicine": '(veterinary OR canine OR feline) AND (medicine OR oncology OR immunology OR vaccine OR "mast cell tumor")',
 }
 
-# Weighted vocabulary drawn from the CV -- drives the deterministic relevance note.
+# Weighted vocabulary for the covered fields -- drives the deterministic relevance note.
 KEYWORDS = {
     "vesicular stomatitis": 7, "oncolytic": 6, "viral vector": 6, "nanopore": 6, "mast cell": 6,
     "melanocyte": 6, "canine": 6, "long-read": 5, "library prep": 5, "flow cytometry": 5,
@@ -91,7 +96,7 @@ TIER_3 = ("nucleic acids res", "genome biol", "genome res", "elife", "plos biol"
           "j mol diagn", "biotechnol")
 TIER_2 = ("j virol", "viruses", "vet ", "j vet", "front immunol", "vaccine", "virology")
 
-# Past employers and places with an application open.
+# Standing watchlist: biopharma and life-science tooling companies.
 ALIASES = {
     "Azenta Life Sciences": ["Azenta"], "Merck": [r"\bMerck\b"], "Humane Genomics": ["Humane Genomics"],
     "Pfizer": ["Pfizer"], "Boehringer Ingelheim": ["Boehringer"], "Thermo Fisher": ["Thermo Fisher"],
@@ -164,10 +169,15 @@ def fetch_news(start, end):
     return news
 
 
+def _ncbi_suffix():
+    """NCBI asks for a contact address on automated requests; it is optional."""
+    email = os.environ.get("NCBI_EMAIL", "").strip()
+    return f"&email={urllib.parse.quote(email)}" if email else ""
+
+
 def fetch_papers(start, end):
     """PubMed esearch + esummary over the entry-date window, one pass per field."""
-    email = os.environ.get("NCBI_EMAIL", "").strip()
-    suffix = f"&email={urllib.parse.quote(email)}" if email else ""
+    suffix = _ncbi_suffix()
     by_field, meta = {}, {}
     for field, stem in FIELDS.items():
         term = f'({stem}) AND ("{start:%Y/%m/%d}"[EDAT] : "{end:%Y/%m/%d}"[EDAT])'
@@ -210,6 +220,9 @@ def fetch_papers(start, end):
                           "title": re.sub(r"\s+", " ", rec["title"]).strip().rstrip("."),
                           "journal": rec.get("source", ""), "date": rec.get("pubdate", ""),
                           "doi": doi, "authors": byline,
+                          # esummary already returns this; it costs no extra call
+                          # and distinguishes a meta-analysis from a case report.
+                          "pubtype": [p for p in rec.get("pubtype", []) if p],
                           "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"}
         time.sleep(0.4)
     print(f"  metadata: {len(meta)}/{len(every)}")
@@ -251,20 +264,36 @@ def cluster_news(news, threshold=0.34):
         for member in cluster["members"]:
             member.pop("tk", None)
     clusters.sort(key=lambda c: (-c["n_outlets"], -len(c["members"]), c["rep"]["date"]))
+    # Stable identity per story, assigned after the sort so it is the id the
+    # section fill dedups on.
+    for index, cluster in enumerate(clusters):
+        cluster["id"] = index
     return clusters, items
 
 
 def pick_sections(news, clusters):
-    """Top-10 multi-outlet stories, then per-section picks that don't repeat them."""
+    """Top-10 multi-outlet stories, then per-section picks that don't repeat them.
+
+    Deduplication keys on cluster membership, never on headline text. The same
+    event arrives from several outlets under different wordings -- "US FDA
+    approves Lilly's once-weekly insulin injection" and "FDA approves Eli
+    Lilly's once-a-week insulin injection" are one story -- so a prefix match on
+    the headline lets every one of them through. cluster_news has already done
+    the grouping; this just honours it, across sections and within each one.
+    """
+    story = {}
+    for cluster in clusters:
+        for member in cluster["members"]:
+            story[member["link"]] = cluster["id"]
+
     picked, used = {}, set()
     buzz = []
     for cluster in clusters:
         if cluster["n_outlets"] < 2:
             break
-        sig = cluster["rep"]["clean"].lower()[:60]
-        if sig in used:
+        if cluster["id"] in used:
             continue
-        used.add(sig)
+        used.add(cluster["id"])
         buzz.append(dict(cluster["rep"], n_outlets=cluster["n_outlets"],
                          outlets=cluster["outlets"][:6]))
         if len(buzz) == 10:
@@ -286,18 +315,19 @@ def pick_sections(news, clusters):
         pool.sort(key=lambda r: (-reach.get(r["link"], 1),
                                  0 if r["source"] in TIER_OUTLETS else 1,
                                  r["date"]))
-        rows, seen = [], set()
+        rows = []
         for row in pool:
-            sig = row["clean"].lower()[:60]
-            if sig in seen or sig in used:
+            # A row with no cluster should not happen; fall back to the old
+            # headline key rather than letting it through unchecked.
+            sid = story.get(row["link"], "raw:" + row["clean"].lower()[:60])
+            if sid in used:
                 continue
-            seen.add(sig)
+            used.add(sid)
             rows.append(dict(row, n_outlets=reach.get(row["link"], 1)))
             if len(rows) == count:
                 break
         picked[key] = rows
     return picked
-
 
 def journal_tier(journal):
     low = (journal or "").lower()
@@ -312,6 +342,154 @@ def score_paper(rec):
     hits = [(kw, w) for kw, w in KEYWORDS.items() if kw in hay]
     score = sum(w for _kw, w in hits) + 2 * journal_tier(rec["journal"])
     return score, [kw for kw, _w in sorted(hits, key=lambda x: -x[1])[:3]]
+
+
+# PubMed publication types, most specific first: the first match wins, so
+# "Meta-Analysis" beats the "Journal Article" that accompanies it.
+ARTICLE_KINDS = (
+    ("Meta-Analysis", "Meta-analysis"),
+    ("Systematic Review", "Systematic review"),
+    ("Evidence Synthesis", "Evidence synthesis"),
+    ("Randomized Controlled Trial", "Randomised controlled trial"),
+    ("Clinical Trial", "Clinical trial"),
+    ("Review", "Review"),
+    ("Case Reports", "Case report"),
+    ("Comment", "Commentary"),
+    ("Editorial", "Editorial"),
+    ("Preprint", "Preprint"),
+)
+
+VENUE_STANDING = {5: "a leading general journal", 4: "a leading specialist journal",
+                  3: "a well-regarded specialist journal", 2: "a field journal",
+                  1: "a specialist journal"}
+
+SIGNIFICANCE_PROMPT = """You write one-sentence significance notes for a weekly research digest read by working bench scientists.
+
+Given a paper's title, journal and abstract, write ONE sentence, at most 28 words, saying what the finding changes, enables or rules out FOR THE FIELD.
+
+Rules:
+- Ground every claim in the abstract. Never add facts that are not in it.
+- Write about the science, not the reader: no "you", no "your fields", no
+  "relevant to", no "matches".
+- No hype: avoid "groundbreaking", "novel", "important", "sheds light".
+- Do not open with "This study", "Researchers" or the journal name.
+- State the substance, e.g. what is now measurable, which mechanism is
+  implicated, which approach is shown not to work.
+- If the abstract is missing, uninformative or purely administrative, reply
+  with exactly: SKIP
+
+Reply with the sentence alone, no preamble and no quotation marks."""
+
+
+def fetch_abstracts(pmids, suffix=""):
+    """PubMed efetch, 20 at a time. Returns {pmid: abstract text}."""
+    out = {}
+    pmids = [p for p in pmids if p]
+    for i in range(0, len(pmids), 20):
+        chunk = pmids[i:i + 20]
+        blob = get(f"{NCBI}/efetch.fcgi?db=pubmed&retmode=xml&rettype=abstract"
+                   f"&id={','.join(chunk)}{suffix}")
+        if not blob:
+            continue
+        try:
+            root = ET.fromstring(blob)
+        except ET.ParseError as exc:
+            print(f"  ! abstract parse failed: {exc}", file=sys.stderr)
+            continue
+        for art in root.iter("PubmedArticle"):
+            pid = art.findtext(".//PMID") or ""
+            parts = []
+            for node in art.iter("AbstractText"):
+                label = (node.get("Label") or "").strip()
+                text = "".join(node.itertext()).strip()
+                if text:
+                    parts.append(f"{label}: {text}" if label else text)
+            if pid and parts:
+                out[pid] = re.sub(r"\s+", " ", " ".join(parts)).strip()
+        time.sleep(0.4)
+    print(f"  abstracts: {len(out)}/{len(pmids)}")
+    return out
+
+
+def article_kind(row):
+    for needle, label in ARTICLE_KINDS:
+        if any(needle.lower() == (p or "").lower() for p in row.get("pubtype", [])):
+            return label
+    return "Primary research"
+
+
+def deterministic_why(row):
+    """Fallback: article type, venue standing and topic. No significance claim.
+
+    Used when no model is configured, no abstract exists, or the call fails.
+    Everything here is read off metadata the pipeline already has, so it can
+    never be wrong about the paper -- it just says less.
+    """
+    kind = article_kind(row)
+    venue = VENUE_STANDING[journal_tier(row.get("journal", ""))]
+    topics = ", ".join(row.get("hits", []))
+    tail = f" Topics: {topics}." if topics else ""
+    return f"{kind} in {venue}.{tail}"
+
+
+def llm_significance(rows, abstracts):
+    """Ask a model for one significance sentence per paper.
+
+    Opt-in and fail-soft by design: with no BRIEF_LLM_KEY the whole step is
+    skipped and every row keeps its deterministic line, so the Monday build
+    never depends on a third-party API being up. Anthropic's messages API;
+    set BRIEF_LLM_MODEL if the default id is not right for your account.
+    """
+    key = os.environ.get("BRIEF_LLM_KEY", "").strip()
+    if not key:
+        print("  significance: BRIEF_LLM_KEY unset, keeping deterministic lines")
+        return 0
+    # Pinned snapshot, not the claude-haiku-4-5 alias: an alias silently
+    # migrates to a new snapshot, and a weekly unattended build should not
+    # change model underneath you. Override with the BRIEF_LLM_MODEL variable.
+    #
+    # `or` rather than a get() default, deliberately. Actions substitutes an
+    # unset ${{ vars.X }} as an EMPTY STRING, so the key is present and
+    # get()'s default never fires -- which sent model="" and drew HTTP 400 on
+    # every paper in run 36480949185.
+    model = os.environ.get("BRIEF_LLM_MODEL", "").strip() or "claude-haiku-4-5-20251001"
+    print(f"  significance: model {model}")
+    written = 0
+    for row in rows:
+        abstract = abstracts.get(row["pmid"], "")
+        if len(abstract) < 200:          # too thin to say anything grounded
+            continue
+        payload = json.dumps({
+            "model": model,
+            "max_tokens": 120,
+            "system": SIGNIFICANCE_PROMPT,
+            "messages": [{"role": "user", "content":
+                          f"Title: {row['title']}\nJournal: {row['journal']}\n"
+                          f"Type: {article_kind(row)}\n\nAbstract: {abstract[:4000]}"}],
+        }).encode()
+        req = urllib.request.Request(
+            "https://api.anthropic.com/v1/messages", data=payload, method="POST",
+            headers={"x-api-key": key, "anthropic-version": "2023-06-01",
+                     "content-type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                body = json.loads(resp.read())
+        except Exception as exc:         # noqa: BLE001 - keep the fallback line
+            # Name the model: a wrong or retired id is the likeliest cause, and
+            # it fails silently into the deterministic line otherwise.
+            print(f"  ! significance {row['pmid']} (model {model}): "
+                  f"{type(exc).__name__}: {exc}", file=sys.stderr)
+            continue
+        text = "".join(b.get("text", "") for b in body.get("content", [])).strip()
+        text = text.strip('"').strip()
+        if not text or text.upper().startswith("SKIP") or len(text) > 320:
+            continue
+        if not text.endswith((".", "?", "!")):
+            text += "."
+        row["why"] = text
+        written += 1
+    print(f"  significance: {written}/{len(rows)} written by model")
+    return written
 
 
 def rank_papers(by_field, meta):
@@ -346,8 +524,7 @@ def rank_papers(by_field, meta):
                 taken.add(row["pmid"])
                 break
     for row in top + extra:
-        row["why"] = ("Overlaps my bench work: " + ", ".join(row["hits"]) + "."
-                      if row["hits"] else "High-profile result in one of my fields.")
+        row["why"] = deterministic_why(row)
     return top, extra
 
 
@@ -448,6 +625,27 @@ text-transform:uppercase;display:block;margin-bottom:9px}
 @media(max-width:620px){.card{flex-direction:column;gap:8px}
 table.also td.f{width:auto;display:block}table.also td{display:block;border:0;padding-bottom:0}
 table.also tr{display:block;border-bottom:1px solid var(--line-soft);padding:12px 0}}
+.sub{margin:0 0 20px;padding:16px 18px;background:var(--panel);
+border:1px solid var(--line-soft);border-radius:6px}
+.sub label{display:block;margin-bottom:9px;color:var(--ink);
+font:600 13px/1.4 'Space Grotesk',sans-serif}
+.sub-row{display:flex;gap:8px;flex-wrap:wrap}
+.sub input{flex:1 1 230px;padding:9px 11px;border:1px solid var(--line);
+border-radius:5px;background:var(--bg);color:var(--ink);font:400 14px/1.3 inherit}
+.sub button{padding:9px 18px;border:0;border-radius:5px;background:var(--ink);
+color:var(--bg);font:600 13px/1.3 inherit;cursor:pointer}
+.sub button:hover{background:var(--amber)}
+.sub-note{display:block;margin-top:8px;font-size:11.5px;color:var(--ink-2)}
+.subbar{background:var(--panel-2);border-bottom:1px solid var(--line-soft)}
+.subbar .wrap{padding-top:12px;padding-bottom:12px}
+.sub-inline{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.subbar-label{color:var(--ink);font:600 13px/1.4 'Space Grotesk',sans-serif}
+.sub-inline input{flex:1 1 220px;min-width:0;padding:8px 11px;border:1px solid var(--line);
+border-radius:5px;background:var(--bg);color:var(--ink);font:400 13.5px/1.3 inherit}
+.sub-inline button{padding:8px 16px;border:0;border-radius:5px;background:var(--ink);
+color:var(--bg);font:600 12.5px/1.3 inherit;cursor:pointer;white-space:nowrap}
+.sub-inline button:hover{background:var(--amber)}
+@media(max-width:620px){.subbar-label{flex:1 1 100%}}
 """
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
@@ -458,6 +656,22 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
 
 
 def shell(title, description, body, canonical):
+    sub_top = (
+        f'<div class="subbar"><div class="wrap">'
+        f'<form class="sub-inline" action="{SUBSCRIBE_ACTION}" method="post" target="_blank">'
+        f'<span class="subbar-label">The brief, in your inbox every Monday.</span>'
+        f'<input type="email" name="email" placeholder="you@example.com" '
+        f'aria-label="Email address" autocomplete="email" required>'
+        f'<button type="submit">Subscribe</button>'
+        f'</form></div></div>') if SUBSCRIBE_ACTION else ""
+    subscribe = (
+        f'<form class="sub" action="{SUBSCRIBE_ACTION}" method="post" target="_blank">'
+        f'<label for="sub-email">Get the brief by email, Monday mornings.</label>'
+        f'<div class="sub-row"><input id="sub-email" type="email" name="email" '
+        f'placeholder="you@example.com" autocomplete="email" required>'
+        f'<button type="submit">Subscribe</button></div>'
+        f'<span class="sub-note">One email a week. Every issue carries an '
+        f'unsubscribe link.</span></form>') if SUBSCRIBE_ACTION else ""
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -472,11 +686,12 @@ def shell(title, description, body, canonical):
 <header class="top"><div class="wrap"><span class="brand">Taylor Flaat</span>
 <span class="eyebrow">The Monday Brief</span>
 <a class="back" href="{SITE}/">&larr; taylorflaat.com</a></div></header>
+{sub_top}
 {body}
-<footer><div class="wrap"><b>How this is built</b>
+<footer><div class="wrap">{subscribe}<b>How this is built</b>
 Papers are pulled from PubMed by entry date across virology, molecular biology, cell biology,
 NGS/genomics, oncology and veterinary medicine, then ranked on journal tier and keyword overlap
-with my own bench work; publication dates can predate the indexing window. Industry items come
+with the fields this brief covers; publication dates can predate the indexing window. Industry items come
 from ten topic news feeds over the same window, de-duplicated, with stock-promotion and
 aggregator content dropped. &ldquo;Most-shared&rdquo; is the number of independent outlets that
 ran the same story &mdash; social platforms expose no engagement data to this pipeline, so no
@@ -513,7 +728,7 @@ def render_issue(issue):
         f' Week in review</div><h1 class="title">{e(issue["window_label"])}</h1>'
         f'<p class="lead">Funding, deals, hiring, trials and approvals across biotech, pharma and '
         f'academia &mdash; plus the newest papers in virology, molecular biology, cell biology, '
-        f'NGS, oncology and veterinary medicine, ranked against my own bench work.</p>'
+        f'NGS, oncology and veterinary medicine, ranked by journal tier and topical fit.</p>'
         f'<div class="stats">'
         f'<div class="stat"><b>{counts["news"]}</b><span>headlines screened</span></div>'
         f'<div class="stat"><b>{counts["papers"]}</b><span>papers assessed</span></div>'
@@ -540,8 +755,8 @@ def render_issue(issue):
     parts.append(
         f'<section><div class="wrap"><div class="sec-head">'
         f'<div class="eyebrow"><span class="idx">01</span> Watchlist</div>'
-        f'<h2 class="sec-title">Companies on my radar.</h2>'
-        f'<p class="sec-lead">Past employers and places I have an application open '
+        f'<h2 class="sec-title">Companies in focus.</h2>'
+        f'<p class="sec-lead">A standing roster of biopharma and life-science tooling companies '
         f'&mdash; {len(ALIASES)} tracked.</p></div>'
         f'{grid}{roster}</div></section>')
 
@@ -672,19 +887,22 @@ def main():
              else f"{start:%d} – {end:%d %B %Y}")
     print(f"window {start} .. {end}")
 
-    # Retry crons must not churn the repo: if this week's issue was already
-    # built today, stop before spending any network calls. BRIEF_FORCE=1 or a
-    # manual dispatch with a different BRIEF_WEEKS still rebuilds.
+    # Stop if this week's issue is already in the repo. "Already committed" is
+    # the right test, not "already generated today". The commit runs only
+    # after a successful send, so a record that survives into a fresh CI
+    # checkout is one subscribers already received; a failed send leaves the
+    # tree uncommitted, the next run sees no record, and it resends. That is
+    # what makes both the retry crons and the Tue/Wed catch-up crons safe.
+    #
+    # The old test compared `generated` against today's date, which let any
+    # run landing on a LATER day rebuild and re-send the same week --
+    # previous_week() derives its window from the current week's Monday, so
+    # Tuesday resolves to Monday's stamp. GitHub delayed the 21:10 UTC Monday
+    # cron past midnight on 2026-09-29 and issue 02 went out a fifth time.
     prior_path = os.path.join(OUT, "data", f"{stamp}.json")
     if os.environ.get("BRIEF_FORCE", "") != "1" and os.path.exists(prior_path):
-        try:
-            with open(prior_path, encoding="utf-8") as fh:
-                prior = json.load(fh)
-        except (ValueError, OSError):
-            prior = {}
-        if prior.get("generated") == datetime.date.today().isoformat():
-            print(f"issue for {stamp} already generated today - nothing to do")
-            return 0
+        print(f"issue for {stamp} already built and committed - nothing to do")
+        return 0
 
     print("news:")
     news = fetch_news(start, end)
@@ -695,6 +913,9 @@ def main():
     print("papers:")
     by_field, meta = fetch_papers(start, end)
     top5, also = rank_papers(by_field, meta)
+    # Upgrade the deterministic blurbs to real significance notes where we can.
+    papers = top5 + also
+    llm_significance(papers, fetch_abstracts([p["pmid"] for p in papers], suffix=_ncbi_suffix()))
 
     if not items and not meta:
         print("no data fetched — leaving the site untouched", file=sys.stderr)
