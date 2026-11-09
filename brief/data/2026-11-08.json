@@ -1,0 +1,766 @@
+{
+ "issue": "08",
+ "date": "2026-11-08",
+ "window_label": "02 \u2013 08 November 2026",
+ "generated": "2026-11-09",
+ "counts": {
+  "news": 298,
+  "papers": 224,
+  "clusters": 27,
+  "radar": 4
+ },
+ "picked": {
+  "buzz": [
+   {
+    "title": "FDA grants J&J accelerated approval for head and neck cancer treatment - Reuters",
+    "clean": "FDA grants J&J accelerated approval for head and neck cancer treatment",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQUhzSmpWaGhPZG5TY05UTDc4RU9zeGY3SmpHa3gxNV9WTzA4QUFSYkFrWWdKMFg0ckloZkxQa09FMzYzSkUzNHV6SGg2VUtxeGk4LVdaNDg5dU42d0ktTERIejliMndzREZfbFlUMEtaMjZPaEFKRi1GdEltYndTT3B3ZVpYMGF3WU5ISTU4MXN4Yl9fSUVfclU2b0dzdklQWF9iNFhFUDdrckRQOG5tWkptc3U?oc=5",
+    "source": "Reuters",
+    "desc": " FDA grants J&J accelerated approval for head and neck cancer treatment &nbsp;&nbsp; Reuters ",
+    "date": "2026-11-05",
+    "cat": "drugs",
+    "n_outlets": 6,
+    "outlets": [
+     "London Daily News",
+     "Medical Daily",
+     "Medical Dialogues",
+     "Oncodaily",
+     "Pharmaceutical Executive",
+     "Reuters"
+    ]
+   },
+   {
+    "title": "HRV Pharma Acquires German Firm Phatebo, Enters European Finished Formulations Market - BW Healthcare World",
+    "clean": "HRV Pharma Acquires German Firm Phatebo, Enters European Finished Formulations Market",
+    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOLXpQX09pczNvblg4MHFQaXJDaTFPVHVLeUlzNURuR051dVI2Y0R0MlBGYXY2aUpIOGtaV0o1Rk9qSjRHTXVkMzA1Qk5qWDE2WW5aUGszRFV3QnhXX2EydVZ4aHdId2VrZXhCeWExMXhuMHhvVlhJQkc5RmV3MlZnb3VSVkFqalBUVjdkbW1ya0cxUEVkcW1aZzVIeDVSZWdnWHBoeV9pbnVLYzdoVGE2TFFsVUdWZF8yVnc1Tzh4VXN5M1hPT3dFZ0tJVVlLQQ?oc=5",
+    "source": "BW Healthcare World",
+    "desc": " HRV Pharma Acquires German Firm Phatebo, Enters European Finished Formulations Market &nbsp;&nbsp; BW Healthcare World ",
+    "date": "2026-11-04",
+    "cat": "mergers",
+    "n_outlets": 4,
+    "outlets": [
+     "BW Healthcare World",
+     "Business Standard",
+     "Express Pharma",
+     "Moneycontrol.com"
+    ]
+   },
+   {
+    "title": "FDA Approves Amivantamab and Hyaluronidase for Recurrent/Metastatic HNSCC - Targeted Oncology",
+    "clean": "FDA Approves Amivantamab and Hyaluronidase for Recurrent/Metastatic HNSCC",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNTJLaWFKeXVHTDVpQWUzN0dwQkZ0cU1BeXRnZ1FCLTNyV0NrT3ZZZXdBQTQ5RHpXMm9yRVgxNUxnSVJZV0FhSXhqSFIzd0FYUTVDdXJKSllfS2xmQmVxdjdzX0R4Mi1QeU5tZXJWbW82UFFVLU00Nlc1emNFSDg5aWlDeXoxNjdZNWM2cjV1bUczUmFxNTR6UG5ZQU85NkRCUjlxMGJNakswdw?oc=5",
+    "source": "Targeted Oncology",
+    "desc": " FDA Approves Amivantamab and Hyaluronidase for Recurrent/Metastatic HNSCC &nbsp;&nbsp; Targeted Oncology ",
+    "date": "2026-11-05",
+    "cat": "drugs",
+    "n_outlets": 4,
+    "outlets": [
+     "CancerNetwork",
+     "OncLive",
+     "Oncology Nursing News",
+     "Targeted Oncology"
+    ]
+   },
+   {
+    "title": "10x Genomics Launches Sentira AI Tool to Simplify Cell Analysis - TradingView",
+    "clean": "10x Genomics Launches Sentira AI Tool to Simplify Cell Analysis",
+    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNa1l5b2NDWFBDWWdfZXRBLXFnNEZyM2tIei1CcE9RX1ZISjNyS19oUFhqTE9Ma29Xa3MyMThVNlFicEF2Q1JDcVNOWVF4S0JMVFloVVpVRlNzV3M0bXBObnFPbDdFZUJHWHlmTVE5eGdxdkpZVFZ1OHg3UWRmQlh4M2ZSc2IxQmM1SGR6cmFCYnlabXFITy04R3VpcVozUXo1MnRhLTd4OUhRLW5jZDRJQWVKUEdERERKa1E?oc=5",
+    "source": "TradingView",
+    "desc": " 10x Genomics Launches Sentira AI Tool to Simplify Cell Analysis &nbsp;&nbsp; TradingView ",
+    "date": "2026-11-06",
+    "cat": "ngs",
+    "n_outlets": 4,
+    "outlets": [
+     "Investing.com",
+     "Pluang",
+     "TradingView",
+     "Yahoo Finance"
+    ]
+   },
+   {
+    "title": "10x Genomics ships Sentira Single Cell, a Claude agent for the \u2018last mile\u2019 of single-cell analysis - R&D World",
+    "clean": "10x Genomics ships Sentira Single Cell, a Claude agent for the \u2018last mile\u2019 of single-cell analysis",
+    "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQbXFyUXB2TnpUUVVGWUNJRWVSdElpZHZCLTZYV0RYdkN2YnpKaE9zNkFJRjh0b0tkSmwtY2xwZFNEQWd5Vkw1UnRhOUh3V2FMTjN5aFRENnp5SWE3dzNkN0Nhc2RvdjZMUDJBMW82VDlEWHA3d0sxOEdhN1ZicG81T2VHRms0TURYcEt5NFJpYU8wanR4VWxJN2xOU2hnTnM3dDNfTnhzdUJuemJmN1BSRE1kQkRDbG0xaE1sOWFOOTI3TzZ4Y2lVekQwWXZ3Z1VOVnlSNVJZUGRfV3ZEYmVJa0VlOGRRdw?oc=5",
+    "source": "R&D World",
+    "desc": " 10x Genomics ships Sentira Single Cell, a Claude agent for the \u2018last mile\u2019 of single-cell analysis &nbsp;&nbsp; R&D World ",
+    "date": "2026-11-05",
+    "cat": "ngs",
+    "n_outlets": 3,
+    "outlets": [
+     "Morningstar",
+     "PR Newswire",
+     "R&D World"
+    ]
+   },
+   {
+    "title": "Rezera launches US IPO as biotech listings wave continues - Reuters",
+    "clean": "Rezera launches US IPO as biotech listings wave continues",
+    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVzhEdHVkTkNVcDEtNEZ5UzREZXZIUDVvN0ZfWWFBdjJyaFhRM3lNX241Qk9ISW9EQ3BSd1ozdV8xMFpGZ3NXZ2l2cERyNW5qT1RUQ0kzUElFM3MxdmpTM0tKaDFkejhkRlNxTHpyRlNJOF9OMEhjTm80cHRuMU5aRmV3b21YOTJqeF9PUC01NEQ0Tzl5U1NzMG1DZENYUkJKVGxmNnNCNFU1TXVWdlgxbGpxZ0xnWENHWlhFZDBJT1BJMHFR?oc=5",
+    "source": "Reuters",
+    "desc": " Rezera launches US IPO as biotech listings wave continues &nbsp;&nbsp; Reuters ",
+    "date": "2026-11-05",
+    "cat": "funding",
+    "n_outlets": 3,
+    "outlets": [
+     "Reuters",
+     "Voice of Healthcare",
+     "www.marketscreener.com"
+    ]
+   },
+   {
+    "title": "BetterLife Pharma appoints Henry Chow to board of directors By Investing.com - Investing.com South Africa",
+    "clean": "BetterLife Pharma appoints Henry Chow to board of directors By Investing.com",
+    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMGJ2MzNYT0RlN1lLSERyR19yOG5oNDE1dGprdUJwQ0h6dTBZMEZmeGVBS2x3aHNWR0ZJVVV5UU5PWVFJSzlXbHpSVUFLazVGY3ZZSWlwMkRhSlB3SklXbF9BekJlaTVhWTA0eFRoWXF4dXNjMzg2aVJzWlpOLVd6cUFvSXd5akpMNGpuVFFhVzlVS01Ha0VXU1Jza0hPaEFsREZrOXJwTWk5ZndoT2FPSVdlREUyTXdJQW13Rw?oc=5",
+    "source": "Investing.com South Africa",
+    "desc": " BetterLife Pharma appoints Henry Chow to board of directors By Investing.com &nbsp;&nbsp; Investing.com South Africa ",
+    "date": "2026-11-05",
+    "cat": "hiring",
+    "n_outlets": 3,
+    "outlets": [
+     "Investing.com",
+     "Investing.com South Africa",
+     "TipRanks"
+    ]
+   },
+   {
+    "title": "Johnson & Johnson announces U.S. FDA Approval of RYBREVANT FASPRO\u2122 (amivantamab and hyaluronidase-lpuj) as First and Only Dual-Targeted Therapy for Advanced Head and Neck Cancer - WBOC TV",
+    "clean": "Johnson & Johnson announces U.S. FDA Approval of RYBREVANT FASPRO\u2122 (amivantamab and hyaluronidase-lpuj) as First and Only Dual-Targeted Therapy for Advanced Head and Neck Cancer",
+    "link": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxOTnJnRl8zRzR3TkJVa1VIY0d5MXRLOWhsU3VUeVdwX1VydXR6NlB1c2didWdoSjIyZWJEVEpOckJuTHFSd0NKRnkxZDJUb19iVkZpN1BocVZMck5MQ285a3QwbGROUDU1X3dqcmN1clZVal9Sc3VZa2xCdlh3b0VoMWhTQ1VybFdFYzZJQ21Oa0RNRC01MjAwWWV4T3huWnNBQUNONl9tUDJVNjE3M2YyNHRxTDZQcmFmYzAxT2JrNmlJWGd6aEtBNEdZYmNmYXpEbVUzS0NzTGk1WkdfaDV2aTBZaFFPWG5xWm1mRTltTF9IaU1kTXRvUjVoUFFDdlUzamZxa29SVWVuV3dvY0hTUmhYV29Ma2FMVlVBZHJ5Ujl3NjVadncwdjhn?oc=5",
+    "source": "WBOC TV",
+    "desc": " Johnson & Johnson announces U.S. FDA Approval of RYBREVANT FASPRO\u2122 (amivantamab and hyaluronidase-lpuj) as First and Only Dual-Targeted Therapy for Advanced Head and Neck Cancer &nbsp;&nbsp; WBOC TV ",
+    "date": "2026-11-06",
+    "cat": "drugs",
+    "n_outlets": 3,
+    "outlets": [
+     "Oncodaily",
+     "PR Newswire",
+     "WBOC TV"
+    ]
+   },
+   {
+    "title": "Elanco Animal Health Shares Jump 7.6% as Q3 Earnings Beat Forecasts and Company Raises 2026 Outlook - Yahoo Finance",
+    "clean": "Elanco Animal Health Shares Jump 7.6% as Q3 Earnings Beat Forecasts and Company Raises 2026 Outlook",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYk14YlBTQnZtS0NlZFR5b3pjVTg3b0p0ZVdUa0dfMlVDRElsUG02TkgwWU9ObnM5MEVtYy13dWRKRDF2WjdsNUN5V1M4ZURLTTlDYndETjRRa1Npem9mXzlQbnRBWnBGbHVDcVpocXNybzItc2xxOWg2SjJGSUVaQmpYLWxrTjBEOUtZUUhjTW5vSFd0RkxYTA?oc=5",
+    "source": "Yahoo Finance",
+    "desc": " Elanco Animal Health Shares Jump 7.6% as Q3 Earnings Beat Forecasts and Company Raises 2026 Outlook &nbsp;&nbsp; Yahoo Finance ",
+    "date": "2026-11-06",
+    "cat": "vet",
+    "n_outlets": 3,
+    "outlets": [
+     "Simply Wall St",
+     "Yahoo Finance",
+     "www.marketscreener.com"
+    ]
+   },
+   {
+    "title": "FDA Grants Accelerated Approval to Amivantamab and Hyaluronidase for Previously Treated HNSCC - The ASCO Post",
+    "clean": "FDA Grants Accelerated Approval to Amivantamab and Hyaluronidase for Previously Treated HNSCC",
+    "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxON0NRelhJdTFoVHoxdTN1RWtKay10TTRkemRQSFlCa1hVQXBqbi1XWU1XRzNqVnBzS3ZXdXkxMnpwMWprd0FJSUZuZVBFQzVTRTVyLTVXaHBOXzFoNHhoVkNwMEh1N2t5X013NFJZZG81YkRlS3Y3R2VHUHdiVTRWUGJOSnBBYXo2amdBeTh5SExuTXRYSUs3MlgzM2w2bENITnk3ejNkMmdBTC1zWWZMcWdmSWJUNnRvdG5qYmlqTEhVR05MVWNoczF5ekRvaVE?oc=5",
+    "source": "The ASCO Post",
+    "desc": " FDA Grants Accelerated Approval to Amivantamab and Hyaluronidase for Previously Treated HNSCC &nbsp;&nbsp; The ASCO Post ",
+    "date": "2026-11-06",
+    "cat": "drugs",
+    "n_outlets": 3,
+    "outlets": [
+     "Medscape",
+     "Pharmaceutical Executive",
+     "The ASCO Post"
+    ]
+   }
+  ],
+  "funding": [
+   {
+    "title": "NeoSci raises $54.7M first close for its debut biotech venture fund - Dealroom",
+    "clean": "NeoSci raises $54.7M first close for its debut biotech venture fund",
+    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbzhiTElxY1lST0NIeXBBSGZuWFR2NUFmeGhCUW8yN19MX3JPNWtzT1o4OWJaZjc0UWxSSEFUeWxLNngtd2FEQTNUcmVyeWp6XzNtQ25XTjlFS2ZNQ1RhQzQzd3lwWTh5ZWVkV0g2U0tXS1NuV2xfYjRvZ0xMcEtmZ1NXLVlrX01Dc2ZWYVFhM29qajZialFhQUhmb0VtYnVKWEE?oc=5",
+    "source": "Dealroom",
+    "desc": " NeoSci raises $54.7M first close for its debut biotech venture fund &nbsp;&nbsp; Dealroom ",
+    "date": "2026-11-03",
+    "cat": "funding",
+    "n_outlets": 2
+   },
+   {
+    "title": "Q-Line Biotech IPO GMP Today, Expected Listing Gain & Price Band - IndiaIPO",
+    "clean": "Q-Line Biotech IPO GMP Today, Expected Listing Gain & Price Band",
+    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1VY3J2S2FqZVNXc2k4Nzh4S3ktb1h6R2FVYXAzZGVyTE90MkFjQlhScEZ2OUdQay1CR3RXR2tVemxnZVRPNUZNVW83WC1SbkU1VmxVVUxBcWQtVDFXWmRqMlpGVlFuTWFCNGVSblh3?oc=5",
+    "source": "IndiaIPO",
+    "desc": " Q-Line Biotech IPO GMP Today, Expected Listing Gain & Price Band &nbsp;&nbsp; IndiaIPO ",
+    "date": "2026-11-03",
+    "cat": "funding",
+    "n_outlets": 2
+   },
+   {
+    "title": "Fierce Biotech Fundraising Tracker '26: Alethio attains $90M series A for rare blood cancer drugs - Fierce Biotech",
+    "clean": "Fierce Biotech Fundraising Tracker '26: Alethio attains $90M series A for rare blood cancer drugs",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPWnNIYUVmZkJnUzFkM3dqNFpZaFZRRUdTUWNxb2lMeDY4NklMMGJobEM0NDU3LUQ2ZmRhYjNNaTlRM3N4MzZHOExoV3BGQXk1a1dKNDFHaHlrT0RZX3pYd0g0OVhlNnZobEtEdzBtLTh3ZnRsSWFpbGNjRVVpU1VIMA?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Fierce Biotech Fundraising Tracker '26: Alethio attains $90M series A for rare blood cancer drugs &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-11-05",
+    "cat": "funding",
+    "n_outlets": 1
+   },
+   {
+    "title": "Alethio raises $90M to target rare blood cancers - BioPharma Dive",
+    "clean": "Alethio raises $90M to target rare blood cancers",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQjlDdWIxcGJyVUc1b2JZNEFPYmVVdmxmOUFQb1VSamc0QWtNLXM0bTdOdU93VF9vVHNILVg1eG0zeUpQYjZ4WnF2enJ3dlpiZ3B5SVRQd1VzUk92T0pBUGhhd3gtdnhwMkIwZ0lyUElMS0Yyb2VDanoyeVcyLThqZEd4Z0UyZEJsWnd5Tm92NTN2blV2YndXUU1tOV9mbUZrOUlZ?oc=5",
+    "source": "BioPharma Dive",
+    "desc": " Alethio raises $90M to target rare blood cancers &nbsp;&nbsp; BioPharma Dive ",
+    "date": "2026-11-05",
+    "cat": "funding",
+    "n_outlets": 1
+   },
+   {
+    "title": "Rezera revs up for $181M IPO to fund phase 3 trial of NLRP3 inhibitor - Fierce Biotech",
+    "clean": "Rezera revs up for $181M IPO to fund phase 3 trial of NLRP3 inhibitor",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNR2c2VE5fLTNJdjlfNmxOY2xRTnJmTDR3Ql84T2dUUjdHZ0xQQXVrUXdaVGExWG5FTm1ZaXdvNHU5YzF0Unc2YndwWG40VzRBc3JDcnVqSE82SUR0NjNtWVJSYzltOEFvLTVIcVpMdEotRlQyVVkzcUlCeWpDVUxNUktaYWZIamhuNld1NEJJYzROZlFVS0lMNw?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Rezera revs up for $181M IPO to fund phase 3 trial of NLRP3 inhibitor &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-11-05",
+    "cat": "funding",
+    "n_outlets": 1
+   }
+  ],
+  "mergers": [
+   {
+    "title": "Karyopharm files Chapter 11, lines up Ayrmid as lead bidder in planned merger - Fierce Pharma",
+    "clean": "Karyopharm files Chapter 11, lines up Ayrmid as lead bidder in planned merger",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNblY0Z1FxSTZBRzF2S3E3dno0a1RfT1E3YWZzUHFiSTRac3dsYlN4OC1JNUNSN0xERV9xZmhWZk5Dbk94SGpxbHN1RHpYR05CcEFxcDlwenRYelgwY3ZLT2QwYmZ3dmRCRnJnUGZvV3FNaDhKanhGRlhCOE1KbXo3elpZbFpKZ0VTZk5lWkJxSlg3WlBvLTlzOUdWUlg?oc=5",
+    "source": "Fierce Pharma",
+    "desc": " Karyopharm files Chapter 11, lines up Ayrmid as lead bidder in planned merger &nbsp;&nbsp; Fierce Pharma ",
+    "date": "2026-11-02",
+    "cat": "mergers",
+    "n_outlets": 1
+   },
+   {
+    "title": "ANI makes $560M play for Egetis and its approved orphan drug Emcitate - Fierce Pharma",
+    "clean": "ANI makes $560M play for Egetis and its approved orphan drug Emcitate",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOS0Q3ZHNqSHBqTmZVYlJPNkNnSDczVk1ITUVra0hGWDJBcXdsaEJjeTdqdmpZcXBNVVFtQlZWODc5N2tSQlpRZGt6YWQtNUxBMG1YZTBxSlJBUUh4MWNBWmxrN05fYUxVc01EYzhYT19aMWRMeXNEX0ZMRWlRZHJQTEMzRThkWFRxVjV5Mmg1V0hOTzBxdnc?oc=5",
+    "source": "Fierce Pharma",
+    "desc": " ANI makes $560M play for Egetis and its approved orphan drug Emcitate &nbsp;&nbsp; Fierce Pharma ",
+    "date": "2026-11-05",
+    "cat": "mergers",
+    "n_outlets": 1
+   },
+   {
+    "title": "Sun Pharma sees improvement in Ilumya sales, Organon acquisition on track - CNBC TV18",
+    "clean": "Sun Pharma sees improvement in Ilumya sales, Organon acquisition on track",
+    "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOai0ybGFBSUJFcXlSbGRFNWMyVkRfSEtfWm9EODFzRmRMbXgyNjZaa0cxY3RoZUx6U1RGSTdKUEFoaFlKWE56RTlYUS1MMnp1V200eFpPNld1QkdwQVdjTVEtaWU2QjVzcUdMVHA5bjdTZTBmeUZSQm4xY1g1UTNqMVJoWEhhVVR2SGpiQmdBWWk2SlFmQy1rYzVDU2dlTHNFZDVLQ2pqWS1VZGZPUHNjRDRuak1wUld6SWFmNi10UDROdGZZci04OUJfWUx3QzRxNk9R0gHYAUFVX3lxTFBqV3RCSjNmNUZ1Zm81dEg0dUxnc2hjakktM0pFT25yTExOS1FjQ3IwcEZzSFNLckhJZUZHREdJUkNZNFVsSFZrM2RfbDhOT3VrR0R2eXZLa3QwMXZ0Nnc2dk1fUmd0b21rSXYtdWdMeThnVmRKVGU2T3NGU19rbVc5LTJObkpFTFFuU2ZkeEpTX210bEZ2UUN6bUs3QXZ4U2swZ3d2NUx2LUhTdTJkSlhNYWpBd2lvTWlyRjZlcTVNYXV5cndfOWhqT1RBWHA3azhoQUYwMU5hVA?oc=5",
+    "source": "CNBC TV18",
+    "desc": " Sun Pharma sees improvement in Ilumya sales, Organon acquisition on track &nbsp;&nbsp; CNBC TV18 ",
+    "date": "2026-11-02",
+    "cat": "mergers",
+    "n_outlets": 1
+   },
+   {
+    "title": "Zydus Lifesciences completes acquisition of Sterling Biotech API business - scanx.trade",
+    "clean": "Zydus Lifesciences completes acquisition of Sterling Biotech API business",
+    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOT0dUWGhxeExzdjFrQkZhMkRPaWh1ZUEtemxHLWhyQVdac2hDemF4d3lWRWlRNW93WVFrVmR5aWR1WU5XS0M3dy1PQVk4SmxrZmNsSFdpQTQyRUVuQmE0aUxNai1mMmVSZ1Zpbi1aMWpyZDd1UlFmX3RvS3g3ZVJzWkdGOExfNTRINmhPUUlVUVhWdXFBNG52em1KdnA3Nlh2cVltX2V1blJjMS1VQ3R2ZlJjZGE5bXVjNVcxR0RpRzBaSWt1N1E?oc=5",
+    "source": "scanx.trade",
+    "desc": " Zydus Lifesciences completes acquisition of Sterling Biotech API business &nbsp;&nbsp; scanx.trade ",
+    "date": "2026-11-02",
+    "cat": "mergers",
+    "n_outlets": 1
+   },
+   {
+    "title": "India's cancer drug price cuts meet pharma acquisition boom - The Pharma Letter",
+    "clean": "India's cancer drug price cuts meet pharma acquisition boom",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNallHNkU4bFNWWEpGckQ1Sy1VUnFaSDZnSGMteGRPM2FMLVJkUWQ1YmhIajBmcTVwTEtDeksxaVh5Rmd5ZFJOWkdBdHRoT19YQVZRamdDNFF2R2prbGN2WHUtblMwV0RmWUtORTJlN3hDazRfMEtVX0lhZnZUU2N4RG93Z3Z4Y1l5VVBhbElnTUNOS3A5dW13WFlJMVQ3YXk4Q1BESDVB?oc=5",
+    "source": "The Pharma Letter",
+    "desc": " India's cancer drug price cuts meet pharma acquisition boom &nbsp;&nbsp; The Pharma Letter ",
+    "date": "2026-11-03",
+    "cat": "mergers",
+    "n_outlets": 1
+   }
+  ],
+  "hiring": [
+   {
+    "title": "Catalent Appoints Wetteny Joseph Group President of Pharma and Consumer Health - citybiz",
+    "clean": "Catalent Appoints Wetteny Joseph Group President of Pharma and Consumer Health",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNakxGWEVRcnpiVDdTLVdWcnhMTjNGMld4VkttWV9uRHlKS3EtT25iS2dOLVdVbjJfSlJVaUpoQ3Y4YW55M1l1Nl9RNENmNHczM2JxVXZXdnViUkw5NVNVUlRvbGxqV29YdEVUV3RmUTF0d0hGS1BpMnc4TkFwbG5xRDRsYm5IUzdIalphcWRnVEphYnZyNl9oVExtVmdpNnBoX0VHVjZhQ0RtTWk2RGhkajU5SFpUS21E?oc=5",
+    "source": "citybiz",
+    "desc": " Catalent Appoints Wetteny Joseph Group President of Pharma and Consumer Health &nbsp;&nbsp; citybiz ",
+    "date": "2026-11-02",
+    "cat": "hiring",
+    "n_outlets": 2
+   },
+   {
+    "title": "Gland Pharma names Ajay Sahni CEO of Singapore subsidiary - pharma.economictimes.indiatimes.com",
+    "clean": "Gland Pharma names Ajay Sahni CEO of Singapore subsidiary",
+    "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNR25QMEtCZHVuVVhsUW9XSkpEOS12WUZPRzVkX0U3WFI2bzA5SVczQ1VHQlpyN1ZBYnNKZmtJcDFmSVZNUlUwV0tyVzIwYnRDTkRjVGV4MTIzZGkzeHE1OVV3NEZnQ2pzZENLb0g4Tm5TZ19mcmJvOHZ3T3FSX1hjN0ljazdyWGxDb2dtSVZIWnZMeWVrV0dmOGlnNlRmcWhSV1o5WGxXN0JtbUo1NWFjMlJCN3RYN3FoVEhwd2VOcjZxZW13Zk8wQm5oWVnSAdIBQVVfeXFMT3BIX2lvRjlualVRVm0yUS04TTBOSEZFdlNCNVRmUkkxOHZWMnJlSVZHVWM5c3lkUWVyd0s3WERSZ3JlcmF5QWQ0VVZ3M1RaNFZyNF9tNzJvVE42MmRxalRmUHdwRDlXSGxwLU40Vkx3d09TbUhUVW5HTUx2cVFmZ05MNzVNaENsLVM5dzk5bEZpang5T3JCdEZEMTdzMzRNcGgtSW1ObkNzZW9LcEh3bUpQeDR6eURVc25KVEMzaWNjWUhZVUZrWEZXazVNRy10TW53?oc=5",
+    "source": "pharma.economictimes.indiatimes.com",
+    "desc": " Gland Pharma names Ajay Sahni CEO of Singapore subsidiary &nbsp;&nbsp; pharma.economictimes.indiatimes.com ",
+    "date": "2026-11-02",
+    "cat": "hiring",
+    "n_outlets": 2
+   },
+   {
+    "title": "Fierce Biotech Layoff Tracker 2026: Agios trims 100 R&D roles; Ultragenyx lays off 20% - Fierce Biotech",
+    "clean": "Fierce Biotech Layoff Tracker 2026: Agios trims 100 R&D roles; Ultragenyx lays off 20%",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE54YTd6U0Z6bkhSVmR3cEFEd2lESjRaQjRpZU1paTR6T1dmQjVJTFJETkd3UXNSaGdja1NQbDFocDVaZHV0M0NyRThZT2REM1RWYldvMTJQanRiYS00NzEzVTB1Njl1bEpOQ19ST0x6cmUzTlRKZ2pOZDQtNnI?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Fierce Biotech Layoff Tracker 2026: Agios trims 100 R&D roles; Ultragenyx lays off 20% &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-11-05",
+    "cat": "hiring",
+    "n_outlets": 1
+   },
+   {
+    "title": "Agios aims to shed over 100 R&D roles this year ahead of hoped-for sickle cell disease approval - Fierce Biotech",
+    "clean": "Agios aims to shed over 100 R&D roles this year ahead of hoped-for sickle cell disease approval",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxONnNQMXJVYVJIbzNnTnZ6cWNvMFA1Q0dTczRBQnV6ZGtzS3BWOTJpZzJzTzlvUGVBRVFfQ2lkOUJDRW9jRVQ1eTR2enFhQnIwcC1zaUpScmUtYWlxZFdCeVV5QUZNT2hpcEVlc2NqTFNqZFhtbFY0QjV5N3JBVGZxamdlcjJURWtmYjRrLWZuS3RDN1NqYW9ib0JCNlY?oc=5",
+    "source": "Fierce Biotech",
+    "desc": " Agios aims to shed over 100 R&D roles this year ahead of hoped-for sickle cell disease approval &nbsp;&nbsp; Fierce Biotech ",
+    "date": "2026-11-05",
+    "cat": "hiring",
+    "n_outlets": 1
+   },
+   {
+    "title": "Oculis appoints scientific chief as neurology plans expand - The Pharma Letter",
+    "clean": "Oculis appoints scientific chief as neurology plans expand",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPU1ZYcTdzUk5MU0p3MS0tV0pKM09KRkRmZWpIVmRtQ1F3MER6R19sS3Y1VGhFTFJMd3JXM2daTlBVMWlZWG9oZkh3eVh1YXYtNkRDRFo5SGs3cmdDMUc0UmItLURRcWRuRTMtM3FoRHVnbjcydGRkOE5HWWkyMTNSbjg0am14VmUtbFVVWDFiSXdxR293a3p6WXVtZHEyWWFJcC0zZExn?oc=5",
+    "source": "The Pharma Letter",
+    "desc": " Oculis appoints scientific chief as neurology plans expand &nbsp;&nbsp; The Pharma Letter ",
+    "date": "2026-11-02",
+    "cat": "hiring",
+    "n_outlets": 1
+   }
+  ],
+  "trials": [
+   {
+    "title": "Progentos Therapeutics Announces First Participant Dosed in Phase 1/2a Study of PRO\u20111562 for Remyelination in Multiple Sclerosis - Business Wire",
+    "clean": "Progentos Therapeutics Announces First Participant Dosed in Phase 1/2a Study of PRO\u20111562 for Remyelination in Multiple Sclerosis",
+    "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNblVWcHRSWW9rdDFGRjJmMGhqREZoVVZGVkZ2NlNJdjFRay10R1NieUNJcTNhbG52ZWoyVTVhZ09iMnhNaHVhZzY3ZkxoSXV1My1qdXhPcndFZ2llNW44Y2tXb2RCM2JDaC1abl9GQzZPcmdsQ25hcFRPSmZqRk1jOUxwcEsySG1KbGRGeGI0NUE2WUtObVIycG51anVfcDRDVVhVLUNzVXk0Q2FyTHBPMndpVUdDWUpVZEFiNEtvOVZhWVdaRDlia1Y5T1RxYy02WXZ0c1ZoRFdOZ09lOXhfQVFjTkd6MW41ZmloRnF1WkxacUVBSV9jWXVVWTlhZnhpODlUOXN1c0YtanhrVXRUTw?oc=5",
+    "source": "Business Wire",
+    "desc": " Progentos Therapeutics Announces First Participant Dosed in Phase 1/2a Study of PRO\u20111562 for Remyelination in Multiple Sclerosis &nbsp;&nbsp; Business Wire ",
+    "date": "2026-11-03",
+    "cat": "trials",
+    "n_outlets": 2
+   },
+   {
+    "title": "Povorcitinib for nonsegmental vitiligo: two randomized, controlled, phase 3 STOP-V trials - Nature",
+    "clean": "Povorcitinib for nonsegmental vitiligo: two randomized, controlled, phase 3 STOP-V trials",
+    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1pdjN1ZTFmYnJudEUyWU5IOE5LbXRwdUFlTC1BWmlkemszY191NzUzOV9raHFSdHR5YUcyV1dXREpjcEEyREJPWHczRGJ1MVJvVHh4eDdZQlJ5QjI0YlVF?oc=5",
+    "source": "Nature",
+    "desc": " Povorcitinib for nonsegmental vitiligo: two randomized, controlled, phase 3 STOP-V trials &nbsp;&nbsp; Nature ",
+    "date": "2026-11-02",
+    "cat": "trials",
+    "n_outlets": 1
+   },
+   {
+    "title": "Janux Therapeutics to Host Virtual Event Presenting Initial Phase 1 Clinical Data for JANX011 in Healthy Volunteers - Business Wire",
+    "clean": "Janux Therapeutics to Host Virtual Event Presenting Initial Phase 1 Clinical Data for JANX011 in Healthy Volunteers",
+    "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNc2J6YWNXeFdlRGFJNmhaNmRtNzBsSkwycUVITF9fdG9JREJDd3ZQdXUyRUhIT1RqeHFVVGtPc1Z3cnk5NlJkUUFlbkQ4XzBEcGwwRWZJdmtBTHFzMFRTaE16WjVENnhvbGhUa2puMjN3ai11UXd3N0dSQW93VUFwZ2NLamJsbmg1Umg4QmtpRzNUN2xxeTZseFpJY2ZncW1NV2VsRHBWekUtRFNPRmpmS0IzWlo1NThyRzJwUGZSR3NpRmNScmlpY1BfUE1TZG9qUDZta1dCQ2o0QlZfUjdiZXJtaExEVjktWVFJRXZ0Yk1SRnlZNWhWWVAwUFhEQUxyZkE?oc=5",
+    "source": "Business Wire",
+    "desc": " Janux Therapeutics to Host Virtual Event Presenting Initial Phase 1 Clinical Data for JANX011 in Healthy Volunteers &nbsp;&nbsp; Business Wire ",
+    "date": "2026-11-02",
+    "cat": "trials",
+    "n_outlets": 1
+   },
+   {
+    "title": "Statement from the Muscular Dystrophy Association on Servier\u2019s Announcement of Topline Results in Becker Muscular Dystrophy Study - Muscular Dystrophy Association",
+    "clean": "Statement from the Muscular Dystrophy Association on Servier\u2019s Announcement of Topline Results in Becker Muscular Dystrophy Study",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxONHBxV1gwQVA2bHhPQktMZzI5b2ZGZnc1Q0Q1Wm40cXdKMHQ1UHdSMXhkcWwzQVNGRk4zMlZLOHZyWk9JY2hKLUlvU3U1ZGEyblhfdDhjcE4wSmN2dy1HcEF4a0NPRVNRMTJIc1I3UWpXOENNbk1CYjdJakdSOFZxdy02OEZPeEdGZVBXTFpyWXhXdXBFdVVaYkhGTlNmUGo3WUVJc3I0S0VHUE8tX1QwLUZiRDNXTndxWUI5eEpWTEdWMGlFbFNHXzVENmRrVjZ5amc0bE1sSQ?oc=5",
+    "source": "Muscular Dystrophy Association",
+    "desc": " Statement from the Muscular Dystrophy Association on Servier\u2019s Announcement of Topline Results in Becker Muscular Dystrophy Study &nbsp;&nbsp; Muscular Dystrophy Association ",
+    "date": "2026-11-03",
+    "cat": "trials",
+    "n_outlets": 1
+   },
+   {
+    "title": "Experimental MS therapy reduces brain inflammation in Phase 2 trial - Multiple Sclerosis News Today",
+    "clean": "Experimental MS therapy reduces brain inflammation in Phase 2 trial",
+    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPSFhZcmlzNjVwT0UweUNSWm1PQnpvTEt6WWpqME5DVEFuN2tFd0x5ano4NS0tUkRLbzBhaVpGeGtadWs4VW5mdDdSUlpDTjZOMmxKZEltbHFTSE4weXVmRm1aWEhyRzc3MHczNmk0RTlaS3h6UnBZTHBtNjFfbDhiREthb0s1eDFUOWJtbE5DMHg5Q3B1Z1AwWDNXRXVhTnhveTNfaE9YZk9oTUxWdFoyd0stLXJWazhUbUhfUw?oc=5",
+    "source": "Multiple Sclerosis News Today",
+    "desc": " Experimental MS therapy reduces brain inflammation in Phase 2 trial &nbsp;&nbsp; Multiple Sclerosis News Today ",
+    "date": "2026-11-03",
+    "cat": "trials",
+    "n_outlets": 1
+   }
+  ],
+  "drugs": [
+   {
+    "title": "FDA Approves Dual-Targeted Therapy for Head and Neck Cancer - MedPage Today",
+    "clean": "FDA Approves Dual-Targeted Therapy for Head and Neck Cancer",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1wYUdBQlhPQVpOTzY5QWR6Ym5qenQ0cXpKbllzNmwzbjN5WEQ0akpQdDA2OXVQYXBPS1pJUVRRMXdIZkZaZ3dSREY3SElTc0tuLWd2N3VtQTctby1RandNVmgyVFdSeU94U1BNZXZuczJRY1ljVWc?oc=5",
+    "source": "MedPage Today",
+    "desc": " FDA Approves Dual-Targeted Therapy for Head and Neck Cancer &nbsp;&nbsp; MedPage Today ",
+    "date": "2026-11-06",
+    "cat": "drugs",
+    "n_outlets": 3
+   },
+   {
+    "title": "FDA Approves Rybrevant Faspro for Advanced Head and Neck Cancer - Cure Today",
+    "clean": "FDA Approves Rybrevant Faspro for Advanced Head and Neck Cancer",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNb3dQdTBPaE5xQnhuX3kzdGxKeVQ3THBpMDdBWUJYTGthOGlPTTFURmRDeDh0N3dRNU5fdnNENlNOX0phNGpnRUd3ZjZHZm9xLW5yVUxObkxWNG1WZF9JMFdNU25PanA3Vzd5LThPNXF1M0MxX3l3aUVTWElEZUpCVkN0bHhPamxOdFpEUHdYVzI4S2hYY1VvWnZB?oc=5",
+    "source": "Cure Today",
+    "desc": " FDA Approves Rybrevant Faspro for Advanced Head and Neck Cancer &nbsp;&nbsp; Cure Today ",
+    "date": "2026-11-06",
+    "cat": "drugs",
+    "n_outlets": 3
+   },
+   {
+    "title": "FDA Approves First Generic Of HIV Prevention Drug, Lenacapavir - Health Policy Watch",
+    "clean": "FDA Approves First Generic Of HIV Prevention Drug, Lenacapavir",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWEZfdHNwQl80dTdVX2dZa3huRGZoM1JvMkZxRmUtLVN2bzIwbUUtd1ZPUE9FbEM1b3lJLVBTU1NxekVnaDZjOURxUGNzcGFCV2xQZVhnQTk0ZXJFZWZDZE9MbXpRV3BDTGpZMHhNUmVRNzFoUGJmVjJhcnZNb0NPa3cyN1M3UWpTbXZram1ramhlYVo2WVFhVlNB?oc=5",
+    "source": "Health Policy Watch",
+    "desc": " FDA Approves First Generic Of HIV Prevention Drug, Lenacapavir &nbsp;&nbsp; Health Policy Watch ",
+    "date": "2026-11-02",
+    "cat": "drugs",
+    "n_outlets": 2
+   },
+   {
+    "title": "Breakthrough: FDA Approves First Drug Offering a 'Functional Cure' For Chronic Hepatitis B - ScienceAlert",
+    "clean": "Breakthrough: FDA Approves First Drug Offering a 'Functional Cure' For Chronic Hepatitis B",
+    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOc0tRYkZJWkd6Uzk3eEdjaWdodWNQODNkTW1xUUFUSVFFU2hEVWJDc1Z5dDUzSWtCckNMV2cyc3RWX0xSbS1hOEUyZnVnZVU0eTVmdWFfTUZrSGIxaDBzdFJrWW9TQXRkc18wSEVweGJkMUN2VHBrRHJKNEhIOUpkSlZSckFMc0tISlhkUU16aTlwbnFvQW1NNW1GVWJHZGR0Tkd2QzJDUllGcnFhemRiQV9CSEJFRUU?oc=5",
+    "source": "ScienceAlert",
+    "desc": " Breakthrough: FDA Approves First Drug Offering a 'Functional Cure' For Chronic Hepatitis B &nbsp;&nbsp; ScienceAlert ",
+    "date": "2026-11-05",
+    "cat": "drugs",
+    "n_outlets": 2
+   },
+   {
+    "title": "Bispecific J&J Drug Wins Speedy FDA Approval for Treating Head & Neck Cancer - MedCity News",
+    "clean": "Bispecific J&J Drug Wins Speedy FDA Approval for Treating Head & Neck Cancer",
+    "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNYUpvM3ZLSjFNOXdFbEtsZHhQVjhrbi1vUE9lMWF6dndaSHQySm1USl9JRkJ5aW9nWTZjZUNrc1FHeFFaSDV6S0l3WjdGYlFzZ1p4bHRzb29sOG8wQXo1SVI2VUpIbHZ6U1hJaERyamlLRDk1Q2dnVDdvVWsyMXVFYUNja0Y3ZzhJOFRzazcwZmo0aUJkaTRuT3I1NnlHZUN5YjRLLXNXSHBON3M1VHZ1T1MwN2ZTRFhtSkFJTDB2VmZLOXJJQVpfMTY4RlFTM2UyZnYw?oc=5",
+    "source": "MedCity News",
+    "desc": " Bispecific J&J Drug Wins Speedy FDA Approval for Treating Head & Neck Cancer &nbsp;&nbsp; MedCity News ",
+    "date": "2026-11-06",
+    "cat": "drugs",
+    "n_outlets": 2
+   }
+  ],
+  "academia": [
+   {
+    "title": "Feinstein Institutes Secures $3.4 Million NIH Grant to Develop AI Tools for Early Delirium Detection - citybiz",
+    "clean": "Feinstein Institutes Secures $3.4 Million NIH Grant to Develop AI Tools for Early Delirium Detection",
+    "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNM2NOMks0cHdiWlRPbFliNUdyQkh4X1JFdFk0c2o0b1FjZjVIOHNCN0paSjBHelc3OXdxX0p1YVRrN2I0VEdWQy1hbUFqSU5sMU40dG4xY1BESS1VUGJQS3YwY1loRkxTQ0VMYmcyYjFYdTRVN2pENTRsOWljWjE5ZFVRYXVwNlA0TGJrMi10MUd0RVlid1dtMHJyMHNPQ2xkSDczZ0Y2dTBaeHNRM256R3V4cXFOT19Tbno0d09sb0pXRHBTMHYwSnVhbFJGVmdndVNZYg?oc=5",
+    "source": "citybiz",
+    "desc": " Feinstein Institutes Secures $3.4 Million NIH Grant to Develop AI Tools for Early Delirium Detection &nbsp;&nbsp; citybiz ",
+    "date": "2026-11-06",
+    "cat": "academia",
+    "n_outlets": 2
+   },
+   {
+    "title": "Science Grant Rule Changes May Have a \u2018Chilling\u2019 Effect on University Research - The Cornell Daily Sun",
+    "clean": "Science Grant Rule Changes May Have a \u2018Chilling\u2019 Effect on University Research",
+    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTlY2MGt6OHp2bUJ0b3c0dW9yMnpOOE4zWXNob3RUaFFGT3N3T3hneS05SVc0Um1YZTZvNl96bEdlcFBLc2FaMzEzUDY1ZzBFWTVGanI1dFJKalQ5QU1aU2VDVkpzRWg3SzFmT0oxdUJCVVNIWUw3cnhzQl9uRVFCN3lXRXhuekVtWDNLRTRETkRlQ05tNE1fNTMwWjZjczFPRHlMbkFSbnktVTNLcW9yM0x5WW5ralFzMk5J?oc=5",
+    "source": "The Cornell Daily Sun",
+    "desc": " Science Grant Rule Changes May Have a \u2018Chilling\u2019 Effect on University Research &nbsp;&nbsp; The Cornell Daily Sun ",
+    "date": "2026-11-02",
+    "cat": "academia",
+    "n_outlets": 1
+   },
+   {
+    "title": "North Park University Receives Its First-Ever NIH Grant to Study Lymphoma Spread to the Brain - North Park University",
+    "clean": "North Park University Receives Its First-Ever NIH Grant to Study Lymphoma Spread to the Brain",
+    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1fY0haSHVKVmpveGtCT0RqYkUzQjlPaFFrMldhdnVvMFl3RUVPQU1QYkM0cUpUMmlSUE9zemtYZDAxX2x1WW9xcENKUmxvM1FNQW5VODlxUkpoS2gyR1FFMm54UmZINnJ3bndILQ?oc=5",
+    "source": "North Park University",
+    "desc": " North Park University Receives Its First-Ever NIH Grant to Study Lymphoma Spread to the Brain &nbsp;&nbsp; North Park University ",
+    "date": "2026-11-02",
+    "cat": "academia",
+    "n_outlets": 1
+   },
+   {
+    "title": "The State of U.S. Tariffs - The Budget Lab",
+    "clean": "The State of U.S. Tariffs",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFAxY2I2anZhamx5LWVnbndrMF9weDNOOUxyb2J0YXVzdDZ6aEFaYldGdFZsZ0I4ZjAtWmJfanBJVnc5ckVpeU1iczJ6dWdKYTNfTmc2ckoyd1dnN1hJd3hBU2FR?oc=5",
+    "source": "The Budget Lab",
+    "desc": " The State of U.S. Tariffs &nbsp;&nbsp; The Budget Lab ",
+    "date": "2026-11-02",
+    "cat": "academia",
+    "n_outlets": 1
+   }
+  ],
+  "platform": [
+   {
+    "title": "Elanco Animal Health Q3 2026 Earnings Call Transcript - Benzinga",
+    "clean": "Elanco Animal Health Q3 2026 Earnings Call Transcript",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUng5aFFsTEE3Q05LUHM0SGdrN1pJZUxLZVl4Uk52VWFPbkd6czVPM1ZOeWFObjBhWmVscUJ2Ylp5akNQeXJMeDl6cllzemtrbmJqbnhpUktZcHJBNTFCQ01VVmZ3QTgtY3daMDZMbHYtRWMwY0IzdXRDVGgyc0JrcXVfdG5wYXB4N3VENnFhVklGZTFCVkNsaFNCZUZjdUk?oc=5",
+    "source": "Benzinga",
+    "desc": " Elanco Animal Health Q3 2026 Earnings Call Transcript &nbsp;&nbsp; Benzinga ",
+    "date": "2026-11-06",
+    "cat": "vet",
+    "n_outlets": 3
+   },
+   {
+    "title": "Elanco Animal Health Incorporated Provides Earnings Guidance for the Fourth Quarter 2026 - www.marketscreener.com",
+    "clean": "Elanco Animal Health Incorporated Provides Earnings Guidance for the Fourth Quarter 2026",
+    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNRVdZbW1VTHpSbUpXVlNzam5BbVNhMDRiaUkwZWFBQkRoZ2xjVFZaaDk2cW1oLVNOVzJ0SWtlNG0wUjUwbDZQMUtsVGM1aGpaRmFxcmExaC1SeEFoSnZ0TnF0TlNOd1liS3ZHc2xCT0wySEVkNlNTNXQtVFFRUnl6WWgxOE9XUGZTRUVON184SEJoSjJrQjZSSTY5bzlrTjUxR2FidnJVTFZ4c0lROS04cmRMS2dqOEYtVjJlQUpYLV91cEI3bTFJMXBHME0tTWxRVExiX1BVWUI?oc=5",
+    "source": "www.marketscreener.com",
+    "desc": " Elanco Animal Health Incorporated Provides Earnings Guidance for the Fourth Quarter 2026 &nbsp;&nbsp; www.marketscreener.com ",
+    "date": "2026-11-06",
+    "cat": "vet",
+    "n_outlets": 3
+   },
+   {
+    "title": "Bigger-Than-Expected Atera Demand Pushes 10x Genomics to Raise 2026 Revenue Guidance - GenomeWeb",
+    "clean": "Bigger-Than-Expected Atera Demand Pushes 10x Genomics to Raise 2026 Revenue Guidance",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTW9sSDhiNXRrM285RERieFRzWG5FOVNUUUpEOW1xVUpnT1Jqc0UxdTRSQkhBTHVNeHZmbFdxLUtOQ21CdGVqOE5WTmd5YmJva2lOeHFXTHNCdkhkTC03RlRpMGg0NTNDd19NUmV0OE5TTzdhaUxFZmdKUGZoZjc0SERSUENxQTY5c0d0Mi02Y2JYMWg4Qmc?oc=5",
+    "source": "GenomeWeb",
+    "desc": " Bigger-Than-Expected Atera Demand Pushes 10x Genomics to Raise 2026 Revenue Guidance &nbsp;&nbsp; GenomeWeb ",
+    "date": "2026-11-06",
+    "cat": "ngs",
+    "n_outlets": 2
+   },
+   {
+    "title": "Wisconsin measles death comes as school immunization rates remain near record lows - WMTV 15 NEWS",
+    "clean": "Wisconsin measles death comes as school immunization rates remain near record lows",
+    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNXM2NlZpT0E1NE5sUXc2V1E1aXlYSmZ4dFFuS1piXzJ4WkNnWWdoeWExV3dqSkpmbnNLTXJJVkJRdXpzbW03WVpmUTZ6S2VORkFjTG1RZVUwel9NTFRSWURuUlktNVdSdzRoTktlR0NXZXM4NXBUbS1MUTBIeWdoTUhuS1o4bFJCZWZKQXhneU5JVmVxaGoxRXlKM3dfeFp6eVZHbUNGOXdXYlVsbkl2Z3BSTDNjdlZiU2fSAc4BQVVfeXFMTVNSM3RXTnAtR2lUZXhLWXhvdHZaeVFEdlpDMVQ4MUlvalZicFBlaEZLQVV1dTZ2WmxsR0xMYVdjVDI5aEw0TDE0NDROVXZWc19LbDN4dnJKUXgzUHk5bklfeVE3cndGS040UEdyV0trMXAyYWlUbzMxWmVJczVPcTNZTVR6MGl2Z1JtWlJ1T1lxX3BzWngwMHQzNS1tZnNGS0h6eTRFYThpblBjWkhPblo0OVJfTVFPWFZaUGxEbzlBd1FzeEo4UTBKSGFyUUE?oc=5",
+    "source": "WMTV 15 NEWS",
+    "desc": " Wisconsin measles death comes as school immunization rates remain near record lows &nbsp;&nbsp; WMTV 15 NEWS ",
+    "date": "2026-11-06",
+    "cat": "virology",
+    "n_outlets": 2
+   },
+   {
+    "title": "WHO recommends two new Ebola vaccines for clinical trials as DRC battles Bundibugyo outbreak - Premium Times Nigeria",
+    "clean": "WHO recommends two new Ebola vaccines for clinical trials as DRC battles Bundibugyo outbreak",
+    "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZEthQ0Y4aXR5LUpYMDdPZ2dsMzFUTnhmeVljZFRTTGVUZm91OHNmbkc1d2ZtYjFua3F0dTBSVlY1MjhBMmdtWFZOWHRLWDlicEF5VXVOVDZpS2Y4Zk1ZSV91UHdXQ2lrSzZQMTFHcHM2dHpKNXBEVm5ZY1U5RnRJVGo2ODJkWmFObXAzSlZHX2JhUE5MWUZjeXRLRURYLWxGa2JzV2ZEOGFadWN6ZW1KSEZrR2dxZGg3RGtMZVV6dlNybU1RZ0FyZ2liRkhIalFHcWxnRkU2enMzcjk0T3hBQUxITQ?oc=5",
+    "source": "Premium Times Nigeria",
+    "desc": " WHO recommends two new Ebola vaccines for clinical trials as DRC battles Bundibugyo outbreak &nbsp;&nbsp; Premium Times Nigeria ",
+    "date": "2026-11-06",
+    "cat": "virology",
+    "n_outlets": 2
+   }
+  ]
+ },
+ "radar": {
+  "Merck": [
+   {
+    "title": "Merck Initiates Phase 3 Study Evaluating Ohtuvayre\u00ae (ensifentrine) for the Prevention of COPD Exacerbations in Adult Patients Receiving Standard of Care With a History of Exacerbations - Business Wire",
+    "clean": "Merck Initiates Phase 3 Study Evaluating Ohtuvayre\u00ae (ensifentrine) for the Prevention of COPD Exacerbations in Adult Patients Receiving Standard of Care With a History of Exacerbations",
+    "link": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxPTHhLVHNZSGRVZjJOdFIya09iSXo0V2JFNkFPeGhOU1ludWRwcjlfUnZlU3U0N3ZkUzlsM3dmYU1nWktzamFLVkVOVHlIQ19PYnJ0TERGVW1JOWhObmRfTTloVkI3UnJaaW1vNDVjTVI1bnViZHRJcTMxbVVHQWpsY2ZhbWl2U3BEWXJ4X3JrbUp1ck5SWlAyemU5N2tScWhacl9DNUtsRURVQ2R1aU5DUzVaZ0xOamhrNTN5X1VLSnlxV1dGeVkyUE14ZHAtbnQtdVJFcHpZZko1ME1DdExzZ3NMUG5lY0N0bW1IUjV0cVROdFZmc0lBNl9kelJZWXVYeW5SbENFZTZTX011eXY1NkdQXzBEZmpRTHF1QThFRTBOT0s5M3c4TXZMaVRZd3pNckRTeS1HbVdrN1EwNGdnV21qTnUzSGFjU1VSQkEySVVuZGNOWkRPbW13?oc=5",
+    "source": "Business Wire",
+    "desc": " Merck Initiates Phase 3 Study Evaluating Ohtuvayre\u00ae (ensifentrine) for the Prevention of COPD Exacerbations in Adult Patients Receiving Standard of Care With a History of Exacerbations &nbsp;&nbsp; Business Wire ",
+    "date": "2026-11-03",
+    "cat": "trials"
+   },
+   {
+    "title": "Merck Animal Health launches nonadjuvanted rabies vaccines for dogs and cats as human exposures rise - DVM360",
+    "clean": "Merck Animal Health launches nonadjuvanted rabies vaccines for dogs and cats as human exposures rise",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPb1dtVTBDT05lRmM0ZlNEUjdVVFczUjJVNE5MRWVTNEh5aWtETkNYQzk4RkJLejlCeDdkaDRxa0dtWFpoYnJvOUZTcEVZbG5qSFNyLU9HRDRxV3A0d1hBcFMtWHZ2aGdzYjlncnl5bzJZaW52dzAwSWpzM1gtMXZrbHZDM1NSa1BMWm9SRW1QbGNEaVJLX1VYTjNlbzNqMVJsMVRwbng5Ni1ZeEZkSjZFRjhRRmZsd2wyNGFWdExZR2M5TDlCVXdV?oc=5",
+    "source": "DVM360",
+    "desc": " Merck Animal Health launches nonadjuvanted rabies vaccines for dogs and cats as human exposures rise &nbsp;&nbsp; DVM360 ",
+    "date": "2026-11-03",
+    "cat": "vet"
+   },
+   {
+    "title": "Merck Animal Health Receives EU CVMP Positive Opinion for NUMELVI\u2122 (atinvicitinib) Tablets for Dogs - BioSpace",
+    "clean": "Merck Animal Health Receives EU CVMP Positive Opinion for NUMELVI\u2122 (atinvicitinib) Tablets for Dogs",
+    "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNci1UbGlfQVhzUUh4bkhGbVB3MXNmN2V5TmdOV2RWTHpjWUpDR0x6SEEtZHAxLXJrT25Ec05ZQUlDcFJaRzRuTnVjR1gzMmgwbFlEV19xUW5MeTE3V2FpWENsUlkzd3dtWDRSTHFQcjhpN0tKdTFZQ2Fqa1p0VVB2S29RRE1fN0pqeGR6elBvU1A1ZDBZRE9lNGdXbTk3Z0pGekNHVEszMlhLVDhiQURsY1U3NURwblRmNmQ3bzhvZi10eHl3d3QxcTlhOFU5S1c4VVE?oc=5",
+    "source": "BioSpace",
+    "desc": " Merck Animal Health Receives EU CVMP Positive Opinion for NUMELVI\u2122 (atinvicitinib) Tablets for Dogs &nbsp;&nbsp; BioSpace ",
+    "date": "2026-11-03",
+    "cat": "vet"
+   }
+  ],
+  "Genmab": [
+   {
+    "title": "Genmab\u2019s Phase 3 LiGeR-HN1 Trial Met Primary Endpoints of Overall Survival and Response Rate in HNSCC - Oncodaily",
+    "clean": "Genmab\u2019s Phase 3 LiGeR-HN1 Trial Met Primary Endpoints of Overall Survival and Response Rate in HNSCC",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB2dXFRSXFIMGx5dTdzQ0hTdHVOUkM1Vnc1WEdobDdEZlBEa1pMcTYyTk5HdF9HMEpZMTBUVnJzZW9pNUUxUzJRWklsa1Y1aWV3QV8tSDhUVWZvclRCQW04azhwaw?oc=5",
+    "source": "Oncodaily",
+    "desc": " Genmab\u2019s Phase 3 LiGeR-HN1 Trial Met Primary Endpoints of Overall Survival and Response Rate in HNSCC &nbsp;&nbsp; Oncodaily ",
+    "date": "2026-11-06",
+    "cat": "trials"
+   }
+  ]
+ },
+ "top5": [
+  {
+   "pmid": "42987792",
+   "title": "Subtractive genetic circuits improve organoid development",
+   "journal": "Cell Stem Cell",
+   "date": "2026 Nov 5",
+   "doi": "10.1016/j.stem.2026.10.001",
+   "authors": "Kinstlinger IS \u2026 Wong WW",
+   "pubtype": [
+    "Journal Article",
+    "Comment"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42987792/",
+   "field": "Cell Biology",
+   "score": 14,
+   "hits": [
+    "organoid"
+   ],
+   "why": "Synthetic gene circuits can selectively eliminate immature cells during organoid development, enriching for mature cell populations."
+  },
+  {
+   "pmid": "42986753",
+   "title": "Single-cell and spatial characterization of the human pancreas in cystic fibrosis",
+   "journal": "Cell Rep",
+   "date": "2026 Nov 4",
+   "doi": "10.1016/j.celrep.2026.118167",
+   "authors": "Mummey HM \u2026 Gaulton KJ",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42986753/",
+   "field": "NGS / Genomics",
+   "score": 14,
+   "hits": [
+    "single-cell"
+   ],
+   "why": "Beta cell dysfunction in cystic fibrosis-related diabetes involves niche-specific signaling from adipocytes, macrophages, stellate cells, and ductal cells distinct from type 1/2 diabetes pathology."
+  },
+  {
+   "pmid": "42991555",
+   "title": "Spatial and single-cell insights into the prostate cancer microenvironment: overcoming immunotherapy resistance through multidimensional strategies",
+   "journal": "Front Immunol",
+   "date": "2026",
+   "doi": "10.3389/fimmu.2026.1979117",
+   "authors": "Liu D \u2026 Zheng Y",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42991555/",
+   "field": "Oncology",
+   "score": 11,
+   "hits": [
+    "single-cell",
+    "immunotherapy"
+   ],
+   "why": "Prostate cancer's resistance to immunotherapy stems from multicellular immune suppression involving TAMs, Tregs, CAFs, and MDSCs shaped by PTEN/TP53 mutations and epigenetic dysregulation, requiring combination therapies targeting chemotaxis and metabolism rather than checkpoint inhibition alone."
+  },
+  {
+   "pmid": "42989040",
+   "title": "Converging pathomechanisms link SARS-CoV-2 infection with major neurodegenerative diseases",
+   "journal": "Cell Mol Neurobiol",
+   "date": "2026 Aug 10",
+   "doi": "10.1007/s10571-026-01785-9",
+   "authors": "HeFeng FQ \u2026 on the behalf of WP4, the COMMUTE Consortium",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42989040/",
+   "field": "Virology",
+   "score": 10,
+   "hits": [],
+   "why": "SARS-CoV-2 infection shares molecular mechanisms with neurodegenerative diseases through systemic inflammation, BBB dysfunction, neuroinflammation, mitochondrial dysfunction, and protein aggregation."
+  },
+  {
+   "pmid": "42981195",
+   "title": "Sex-biased enhancers shape transcriptional sex differences across human tissues",
+   "journal": "Cell Rep",
+   "date": "2026 Nov 3",
+   "doi": "10.1016/j.celrep.2026.118243",
+   "authors": "Lin J \u2026 Chen B",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42981195/",
+   "field": "Molecular Biology",
+   "score": 10,
+   "hits": [],
+   "why": "Nearly half of active enhancers show sex-biased activity across tissues, frequently organized into super-enhancers derived from transposable elements and regulating genes linked to sex-differentiated traits."
+  }
+ ],
+ "also": [
+  {
+   "pmid": "42985382",
+   "title": "Aqueous humor exosomal microRNAs as emerging biomarkers in HSV-1 anterior uveitis",
+   "journal": "Front Cell Infect Microbiol",
+   "date": "2026",
+   "doi": "10.3389/fcimb.2026.1986644",
+   "authors": "Saturno MC \u2026 Iannetta D",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42985382/",
+   "field": "Virology",
+   "score": 10,
+   "hits": [],
+   "why": "Aqueous humor exosomal microRNAs offer potential biomarkers for HSV-1 anterior uveitis by providing molecular information beyond viral DNA detection in the intraocular environment."
+  },
+  {
+   "pmid": "42982929",
+   "title": "RNA biology and therapeutics: emerging mechanisms, technologies, and future leaders",
+   "journal": "Cell Res",
+   "date": "2026 Nov 4",
+   "doi": "10.1038/s41422-026-01321-w",
+   "authors": "Zhao Q \u2026 Chen LL",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42982929/",
+   "field": "Molecular Biology",
+   "score": 10,
+   "hits": [],
+   "why": "Primary research in a leading general journal."
+  },
+  {
+   "pmid": "42972492",
+   "title": "Modeling perinatal brain injury with human brain organoids: from pathophysiology to treatment development",
+   "journal": "Stem Cell Res Ther",
+   "date": "2026 Aug 5",
+   "doi": "10.1186/s13287-026-05228-6",
+   "authors": "Dehghani Z \u2026 Schoeberlein A",
+   "pubtype": [
+    "Journal Article",
+    "Review"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42972492/",
+   "field": "Cell Biology",
+   "score": 14,
+   "hits": [
+    "organoid"
+   ],
+   "why": "Human brain organoids enable modeling of perinatal brain injury pathophysiology and drug discovery by recapitulating fetal-neonatal development's cellular complexity, gene expression, and electrophysiological properties."
+  },
+  {
+   "pmid": "42983097",
+   "title": "In vivo CAR-T double knockout screen maps synergistic antitumour gene pairs",
+   "journal": "Nature",
+   "date": "2026 Nov 4",
+   "doi": "10.1038/s41586-026-10956-z",
+   "authors": "Zhou L \u2026 Chen S",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42983097/",
+   "field": "NGS / Genomics",
+   "score": 14,
+   "hits": [
+    "car-t"
+   ],
+   "why": "In vivo CRISPR screening identifies NR4A1-SOCS3 deletion as synergistically enhancing CAR-T metabolic fitness and antitumor activity beyond single-gene modifications."
+  },
+  {
+   "pmid": "42996212",
+   "title": "Temporal clinical trajectories and Day+14 landmark stratification of infection risk after CD19 CAR T-cell therapy",
+   "journal": "Front Cell Infect Microbiol",
+   "date": "2026",
+   "doi": "10.3389/fcimb.2026.1933555",
+   "authors": "Yang L \u2026 Wang Y",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42996212/",
+   "field": "Oncology",
+   "score": 10,
+   "hits": [],
+   "why": "Day+14 clinical data can stratify infection risk after CD19 CAR-T therapy, identifying a low-risk subgroup suitable for reduced monitoring protocols."
+  },
+  {
+   "pmid": "42971080",
+   "title": "Assessment of cytotoxicity of human CAR-NK cells against various canine tumor cell lines",
+   "journal": "Res Vet Sci",
+   "date": "2026 Oct 21",
+   "doi": "10.1016/j.rvsc.2026.106448",
+   "authors": "Kang Y \u2026 Youn HY",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42971080/",
+   "field": "Veterinary Medicine",
+   "score": 10,
+   "hits": [
+    "canine"
+   ],
+   "why": "Human CAR-NK cells engineered to target CD19 kill canine tumor cells more effectively than unmodified NK cells, suggesting cross-species CAR recognition of canine CD19."
+  }
+ ]
+}
